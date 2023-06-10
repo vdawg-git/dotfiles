@@ -1,0 +1,26 @@
+# Pacman
+pamac
+bitwarden
+kitty
+obsidian
+latte-dock
+dolphin
+ttf-jetbrains-mono-nerd
+
+# AUR
+neovim-git
+mullvad-vpn
+vivaldi-snapshot
+vivaldi-snapshot-ffmpeg-codecs
+visual-studio-code-bin
+neovim-git
+keyd
+telegram-desktop
+tutanota-desktop-bin
+degit
+nvim-packer-git
+visual-studio-code-bin
+mailspring
+morgen-bin
+chezmoi
+kwin-bismuth

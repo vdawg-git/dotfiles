@@ -1,0 +1,218 @@
+
+/* ############################
+	######### Webview #############
+	#############################*/
+#browser:not(.tabs-off) #webview-container {
+	border-radius: 8px;
+	overflow: auto;
+	box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.2), 0px 0px 8px rgba(0, 0, 0, 0.2),
+		0px 0px 4px rgba(0, 0, 0, 0.2);
+	z-index: 1;
+	margin: 8px;
+	margin-top: 4px;
+}
+
+#main > .inner {
+	overflow: hidden;
+}
+#main {
+	overflow: visible;
+}
+
+webview::-webkit-scrollbar-track {
+	background-color: transparent !important;
+}
+webview::-webkit-scrollbar {
+	background-color: transparent !important;
+	width: 8px;
+}
+webview::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	background-color: var(--colorBgFaded);
+}
+
+/* ############################
+######### Mainbar ############
+#############################*/
+.UrlBar-AddressField.button-textonly.below {
+	border-radius: 24px;
+	padding: 4px 8px;
+	height: 32px;
+}
+
+.address-top .mainbar > .toolbar-mainbar .toolbar-extensions:before,
+.address-top .mainbar > .toolbar-mainbar .page-zoom-controls:before,
+.address-top .mainbar > .toolbar-mainbar:before {
+	height: 0px;
+}
+
+.button-toolbar ExtensionIcon {
+	filter: saturate(0.7);
+}
+
+.address-top .mainbar > .toolbar-mainbar {
+	border: none;
+}
+
+#browser.win.address-top .toolbar:has(.window-buttongroup.on-mainbar) {
+	padding-left: 4px;
+	padding-right: calc((32px * 3) / var(--uiZoomLevel));
+}
+
+.toolbar-large .button-toolbar .button-icon:not(.favicon), .toolbar-large .button-toolbar .button-icon svg, .toolbar-medium .button-toolbar .button-icon:not(.favicon), .toolbar-medium .button-toolbar .button-icon svg {
+	max-width: 24px ;
+	max-height: 24px ;
+	filter: sepia(0.6);
+	opacity: 0.9;
+}
+
+/* Vivaldi logo tabbar */
+button.vivaldi {
+	display: none;
+}
+.window-buttongroup.on-mainbar {
+	height: 32px;
+	display: flex;
+	align-items: center;
+}
+.window-buttongroup.on-mainbar button {
+	background: #000 ;
+	height: 32px !important;
+	width: 32px !important;
+	border-radius: 8px;
+	overflow: hidden;
+}
+
+/* ############################
+	########## TABBAR #############
+	#############################*/
+#browser.transparent-tabbar #tabs-tabbar-container.right {
+	box-shadow: none;
+}
+
+#browser.transparent-tabbar #tabs-tabbar-container.left,
+#browser.transparent-tabbar #tabs-tabbar-container.right {j
+	background-color: transparent;
+}
+
+/* When  the tabbar is not transparent  */
+#browser:not(.transparent-tabbar) #tabs-tabbar-container {
+	border-radius: 16px;
+}
+
+#tabs-tabbar-container {
+	margin-top: 6px;
+	padding: 0px 6px 4px 0px;
+}
+
+.tabs-left .tab-position .tab,
+.tabs-right .tab-position .tab {
+	margin: 0px;
+	padding-top: 2px;
+	padding-left: 12px;
+	padding-right: 12px;
+}
+
+#browser.color-behind-tabs-on .tab-position .tab.active.active {
+	background-color: var(--colorAccentBg);
+}
+
+#browser.color-behind-tabs-on .tab-position .tab {
+	border-radius: 12px;
+}
+
+#browser.color-behind-tabs-on .tab-position .tab:hover {
+	background-color: var(--colorBgLighter);
+}
+
+#tabs-container.left .tab-strip,
+#tabs-container.right .tab-strip {
+	border-radius: 16px;
+	overflow: hidden;
+}
+
+.tab-position {
+	height: calc(var(--Height) + 1px);
+}
+
+#vivaldi-tooltip .tooltip .tab-solo .tooltip-item {
+	border-radius: 8px;
+	overflow: hidden;
+}
+
+.speeddial .dial,
+.speeddial .dial:last-of-type {
+	border-radius: 12px;
+	overflow: hidden;
+}
+
+#tabs-container .tab-strip::-webkit-scrollbar-track {
+	background-color: transparent !important;
+}
+
+#tabs-container .tab-strip::-webkit-scrollbar {
+	background-color: transparent !important;
+	width: 8px;
+}
+
+#tabs-container .tab-strip::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	background-color: var(--colorBgFaded);
+}
+
+.sync-and-trash-container,
+.button-toolbar.newtab {
+	display: none;
+}
+
+/* Tabswitcher */
+.tabswitcher.list {
+	font-size: 0.875rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.tabswitcher.list li {
+	align-items: center;
+	margin: 0;
+	padding: 4px 8px;
+	gap: 4px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+#modal-bg.modal-tabswitcher {
+}
+
+#modal-bg > div {
+	box-shadow: 0px 40px 1000px rgba(0, 0, 0, 0.4),
+		0px 10px 44px rgba(0, 0, 0, 0.6);
+	border-radius: 16px;
+}
+
+.BookmarkButton-Button .ToolbarButton-Button {
+	display: none;
+}
+
+/* ############################
+	########## Omnibar / Search Results #############
+	#############################*/
+.OmniDropdown::-webkit-scrollbar-track {
+	background-color: transparent !important;
+}
+
+.OmniDropdown::-webkit-scrollbar {
+	background-color: transparent !important;
+	min-height: 110%;
+}
+
+.OmniDropdown::-webkit-scrollbar-button:decrement,
+.OmniDropdown ::-webkit-scrollbar-button:increment {
+	width: 0px !important;
+}
+.OmniDropdown::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	background-color: var(--colorHighlightBg);
+}
