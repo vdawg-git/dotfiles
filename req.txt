@@ -6,8 +6,9 @@ obsidian
 latte-dock
 dolphin
 ttf-jetbrains-mono-nerd
-zsh
+fish
 thefuck
+starship
 
 # AUR
 neovim-git
@@ -25,7 +26,6 @@ visual-studio-code-bin
 mailspring
 morgen-bin
 chezmoi
-kwin-bismuth
 fsearch
 kwin-effect-rounded-corners-git
 hyper
