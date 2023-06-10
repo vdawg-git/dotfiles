@@ -1,0 +1,25 @@
+[Added Associations]
+application/json=code.desktop;nvim.desktop;firefox.desktop;
+application/pdf=vivaldi-snapshot.desktop;firefox.desktop;
+inode/directory=org.kde.dolphin.desktop;
+x-scheme-handler/geo=google-maps-geo-handler.desktop;
+x-scheme-handler/http=vivaldi-snapshot.desktop;
+x-scheme-handler/https=vivaldi-snapshot.desktop;
+x-scheme-handler/mailto=tutanota-desktop.desktop;
+ 
+[Default Applications]
+application/json=code.desktop;
+application/pdf=vivaldi-snapshot.desktop;
+inode/directory=org.kde.dolphin.desktop;
+x-scheme-handler/obsidian=obsidian.desktop
+x-scheme-handler/http=vivaldi-snapshot.desktop
+x-scheme-handler/https=vivaldi-snapshot.desktop
+text/html=vivaldi-snapshot.desktop
+text/plain=code.desktop
+x-scheme-handler/geo=google-maps-geo-handler.desktop;
+x-scheme-handler/http=vivaldi-snapshot.desktop;
+x-scheme-handler/https=vivaldi-snapshot.desktop;
+x-scheme-handler/mailspring=Mailspring.desktop
+x-scheme-handler/mailto=tutanota-desktop.desktop;
+x-scheme-handler/obsidian=obsidian.desktop
+text/plain=code.desktop

@@ -6,6 +6,8 @@ obsidian
 latte-dock
 dolphin
 ttf-jetbrains-mono-nerd
+zsh
+thefuck
 
 # AUR
 neovim-git
@@ -25,3 +27,5 @@ morgen-bin
 chezmoi
 kwin-bismuth
 fsearch
+kwin-effect-rounded-corners-git
+hyper
