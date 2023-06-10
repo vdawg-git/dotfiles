@@ -24,3 +24,4 @@ mailspring
 morgen-bin
 chezmoi
 kwin-bismuth
+fsearch
