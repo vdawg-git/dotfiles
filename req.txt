@@ -9,6 +9,9 @@ ttf-jetbrains-mono-nerd
 fish
 thefuck
 starship
+neofetch
+htop
+tree
 
 # AUR
 neovim-git
@@ -30,3 +33,5 @@ fsearch
 kwin-effect-rounded-corners-git
 hyper
 code-translucent
+betterdiscordctl
+insomnia-bin

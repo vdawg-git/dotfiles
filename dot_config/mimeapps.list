@@ -23,3 +23,4 @@ x-scheme-handler/mailspring=Mailspring.desktop
 x-scheme-handler/mailto=tutanota-desktop.desktop;
 x-scheme-handler/obsidian=obsidian.desktop
 text/plain=code.desktop
+x-scheme-handler/insomnia=insomnia.desktop
