@@ -2,6 +2,8 @@
 string match -q "$TERM_PROGRAM" "vscode"
 and . (code --locate-shell-integration-path fish)
 
+fish_vi_key_bindings
+
 # set fish_color_search_match
 # pnpm
 set -gx PNPM_HOME "/home/vdawg/.local/share/pnpm"
@@ -10,12 +12,20 @@ if not string match -q -- $PNPM_HOME $PATH
 end
 # pnpm end
 
-set EDITOR "code --wait"
+set EDITOR "code-oss --wait"
 # set EDITOR("code --wait")
 
+
+function multicd
+    echo cd (string repeat -n (math (string length -- $argv[1]) - 1) ../)
+end
+abbr --add dotdot --regex '^\.\.+$' --function multicd
+
+abbr --add cz "chezmoi"
+
 alias pn="pnpm"
-alias cz="chezmoi"
-alias pac="sudo pacman -S"
+abbr --add pac "sudo pacman -S "
+abbr --add yays "yay -S "
 
 if status is-interactive
     # Commands to run in interactive sessions can go here

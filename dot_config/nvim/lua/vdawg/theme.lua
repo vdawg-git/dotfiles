@@ -1,5 +1,4 @@
-vim.o.background = 'dark' -- or 'light'
-
+-- vim.o.background = 'dark' -- or 'light'
 -- Set contrast.
 -- This configuration option should be placed before `require('gruvbox-material').setup()`.
 -- Available values: 'hard', 'medium'(default), 'soft'

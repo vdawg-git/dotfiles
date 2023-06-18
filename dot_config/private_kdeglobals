@@ -108,7 +108,7 @@ XftSubPixel=rgb
 fixed=JetBrainsMono Nerd Font Mono,10,-1,5,50,0,0,0,0,0
 
 [Icons]
-Theme=Reversal-dark
+Theme=WhiteSur-orange-dark
 
 [KDE]
 LookAndFeelPackage=com.github.vinceliuice.Layan

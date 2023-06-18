@@ -1,0 +1,11 @@
+{
+    "version": "1.9.2",
+    "drawerStates": {
+        "settings": {
+            "addons": true,
+            "customcss": true,
+            "window": true,
+            "developer": true
+        }
+    }
+}

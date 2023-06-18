@@ -1,6 +1,7 @@
 # Pacman
 pamac
 bitwarden
+xclip
 kitty
 obsidian
 latte-dock
@@ -12,6 +13,19 @@ starship
 neofetch
 htop
 tree
+dunst
+pipewire
+wireplumber
+polkit-kde-agent
+qt5-wayland
+qt6-wayland
+xdg-desktop-portal-hyprland
+pipewire
+wireplumber
+polkit-kde-agent
+xdg-desktop-portal-hyprland
+qt5-wayland
+qt6-wayland
 
 # AUR
 neovim-git
@@ -35,3 +49,7 @@ hyper
 code-translucent
 betterdiscordctl
 insomnia-bin
+waybar-hyprland
+megasync
+wg_tool
+swaync

@@ -7,4 +7,4 @@ SETUVAR _fisher_jorgebucaran_2F_fisher_files:\x7e/\x2econfig/fish/functions/fish
 SETUVAR _fisher_plugins:jorgebucaran/fisher\x1ejorgebucaran/autopair\x2efish\x1efranciscolourenco/done\x1ettscoff/fuzzy_cd
 SETUVAR _fisher_ttscoff_2F_fuzzy__cd_files:\x7e/\x2econfig/fish/functions/__fuzzy_cd\x2efish\x1e\x7e/\x2econfig/fish/functions/fcd_ffdir\x2efish\x1e\x7e/\x2econfig/fish/functions/fcd_ffmark\x2efish\x1e\x7e/\x2econfig/fish/functions/fcd_jump\x2efish\x1e\x7e/\x2econfig/fish/functions/fcd_shortest\x2efish\x1e\x7e/\x2econfig/fish/functions/fcd_warn\x2efish\x1e\x7e/\x2econfig/fish/conf\x2ed/fuzzy_cd\x2efish\x1e\x7e/\x2econfig/fish/conf\x2ed/fuzzy_cd_common\x2efish
 SETUVAR _fisher_upgraded_to_4_4:\x1d
-SETUVAR fish_key_bindings:fish_default_key_bindings
+SETUVAR fish_key_bindings:fish_vi_key_bindings
