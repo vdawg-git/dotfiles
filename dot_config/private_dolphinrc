@@ -1,0 +1,33 @@
+MenuBar=Disabled
+
+[$Version]
+update_info=dolphin_detailsmodesettings.upd:rename-leading-padding
+
+[DetailsMode]
+PreviewSize=22
+
+[General]
+ConfirmClosingMultipleTabs=false
+GlobalViewProps=false
+ShowSpaceInfo=false
+ShowZoomSlider=false
+UseTabForSwitchingSplitView=true
+Version=202
+ViewPropsTimestamp=2023,6,9,13,28,22.315
+
+[KFileDialog Settings]
+Places Icons Auto-resize=false
+Places Icons Static Size=22
+
+[MainWindow]
+MenuBar=Disabled
+ToolBarsMovable=Disabled
+
+[MainWindow][Toolbar mainToolBar]
+ToolButtonStyle=IconOnly
+
+[PreviewSettings]
+Plugins=appimagethumbnail,audiothumbnail,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,directorythumbnail,fontthumbnail,imagethumbnail,jpegthumbnail,kraorathumbnail,windowsexethumbnail,windowsimagethumbnail,opendocumentthumbnail,svgthumbnail
+
+[Toolbar mainToolBar]
+ToolButtonStyle=IconOnly

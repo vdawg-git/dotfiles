@@ -2,18 +2,19 @@
 string match -q "$TERM_PROGRAM" "vscode"
 and . (code --locate-shell-integration-path fish)
 
+thefuck --alias | source
+
 fish_vi_key_bindings
 
 # set fish_color_search_match
 # pnpm
-set -gx PNPM_HOME "/home/vdawg/.local/share/pnpm"
+set -gx PNPM_HOME "~/vdawg/.local/share/pnpm"
 if not string match -q -- $PNPM_HOME $PATH
   set -gx PATH "$PNPM_HOME" $PATH
 end
 # pnpm end
 
 set EDITOR "code-oss --wait"
-# set EDITOR("code --wait")
 
 
 function multicd
@@ -24,6 +25,8 @@ abbr --add dotdot --regex '^\.\.+$' --function multicd
 abbr --add cz "chezmoi"
 
 alias pn="pnpm"
+alias xclip="xclip -selection c"
+
 abbr --add pac "sudo pacman -S "
 abbr --add yays "yay -S "
 

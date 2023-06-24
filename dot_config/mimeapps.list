@@ -1,23 +1,23 @@
 [Added Associations]
 application/json=nvim.desktop;firefox.desktop;
-application/pdf=vivaldi-snapshot.desktop;firefox.desktop;
+application/pdf=vivaldi-stable.desktop;firefox.desktop;
 inode/directory=org.kde.dolphin.desktop;
 x-scheme-handler/geo=google-maps-geo-handler.desktop;
-x-scheme-handler/http=vivaldi-snapshot.desktop;
-x-scheme-handler/https=vivaldi-snapshot.desktop;
+x-scheme-handler/http=vivaldi-stable.desktop;
+x-scheme-handler/https=vivaldi-stable.desktop;
 x-scheme-handler/mailto=tutanota-desktop.desktop;
  
 [Default Applications]
 application/json=code-oss.desktop;
-application/pdf=vivaldi-snapshot.desktop;
+application/pdf=vivaldi-stable.desktop;
 inode/directory=org.kde.dolphin.desktop;
 x-scheme-handler/obsidian=obsidian.desktop
-x-scheme-handler/http=vivaldi-snapshot.desktop
-x-scheme-handler/https=vivaldi-snapshot.desktop
-text/html=vivaldi-snapshot.desktop
+x-scheme-handler/http=vivaldi-stable.desktop
+x-scheme-handler/https=vivaldi-stable.desktop
+text/html=vivaldi-stable.desktop
 x-scheme-handler/geo=google-maps-geo-handler.desktop;
-x-scheme-handler/http=vivaldi-snapshot.desktop;
-x-scheme-handler/https=vivaldi-snapshot.desktop;
+x-scheme-handler/http=vivaldi-stable.desktop;
+x-scheme-handler/https=vivaldi-stable.desktop;
 x-scheme-handler/mailspring=Mailspring.desktop
 x-scheme-handler/mailto=tutanota-desktop.desktop;
 x-scheme-handler/obsidian=obsidian.desktop

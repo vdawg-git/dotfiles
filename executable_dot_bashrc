@@ -93,8 +93,8 @@ export PATH="/home/vdawg/.local/share/fnm:$PATH"
 eval "`fnm env`"
 
 # Use --wait to make vscode work with chezmoi porperly
-export EDITOR="code --wait"
-export VISUAL="code --wait"
+export EDITOR="code-oss --wait"
+export VISUAL="code-oss --wait"
 
 # Blur kitty background
 if [[ $(ps --no-header -p $PPID -o comm) =~ yakuake|kitty ]]; then

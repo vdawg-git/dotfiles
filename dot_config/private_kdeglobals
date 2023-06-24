@@ -98,7 +98,7 @@ DirSelectDialog Size=881,604
 History Items[$e]=file:$HOME/.local/share/chezmoi/manual/vivaldi-css/chrome%253A/vivaldi-data/css-mods,file:$HOME/.local/share/chezmoi/manual/vivaldi-css/,file:$HOME/Documents/VD_QT,file:$HOME/Documents/VD_Kvantum,file:$HOME/Documents/VD_Kvantum,file:$HOME/Documents/VD_Kvantum,file:$HOME/.config/VD_Kvantum,file:$HOME/Downloads/Layan,file:$HOME/.config/VD_Kvantum,file:$HOME/.config/Kvantum/VDawg,file:$HOME/.config/Kvantum,file:$HOME/.config/vivaldi-css/chrome%253A/vivaldi-data/css-mods,file:$HOME/Downloads/Layan,file:$HOME/Downloads
 
 [General]
-BrowserApplication=vivaldi-snapshot.desktop
+BrowserApplication=vivaldi-stable.desktop
 ColorSchemeHash=f9a2b28f079136ae0d836dcb97c59c13d03a74b9
 TerminalApplication=kitty
 TerminalService=kitty.desktop
