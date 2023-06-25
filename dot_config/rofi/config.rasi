@@ -34,7 +34,7 @@ mainbox {
     orientation:                 horizontal;
     children:                    [  "inputbar" , "listbox" ];
     background-color:            transparent;
-	background-image:            url("~/.config/swww/wall.blur", height);
+	background-image:            url("~/.config/hypr/wallpaper/carl_bille.png", height);
 }
 
 
@@ -44,7 +44,7 @@ inputbar {
     width:                       25%;
 	children:                    [ "mode-switcher" , "entry" ];
 	background-color:            transparent;
-	background-image:            url("~/.config/swww/wall.set", height);
+	background-image:            url("~/.config/hypr/wallpaper/carl_bille.png", height);
 }
 entry {
     enabled:                     false;
@@ -60,7 +60,7 @@ mode-switcher{
     padding:                     160px 10px 160px 10px;
     spacing:                     25px;
     background-color:            transparent;
-	background-image:            url("~/.config/swww/wall.blur", height);
+	background-image:            url("~/.config/hypr/wallpaper/blur.png", height);
 }
 button {
     cursor:                      pointer;

@@ -1,4 +1,5 @@
 ark
+git-lfs
 betterdiscordctl
 bitwarden
 blueman
@@ -52,6 +53,7 @@ qt5ct
 qt6-wayland
 rofi-lbonn-wayland-git
 sddm-git
+ocs-url 
 slurp
 starship
 swappy

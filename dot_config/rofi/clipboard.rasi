@@ -53,7 +53,7 @@ entry {
     padding:                     70px;
     text-color:                  @foreground;
 	background-color:            @background;
-    background-image:            url("~/.config/swww/wall.blur", width);
+    background-image:            url("~/.config/hyper/wallpaper/blur.png", width);
 }
 
 

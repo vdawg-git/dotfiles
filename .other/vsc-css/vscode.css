@@ -2,7 +2,10 @@
 	--panel-roundess: 16px;
 }
 
-.nopanel[role="application"]:not(.nosidebar) #workbench\.parts\.editor {
+[role="application"]:not(.nosidebar) #workbench\.parts\.editor {
+	border-radius: var(--panel-roundess) 0px 0px var(--panel-roundess) !important;
+}
+/* .nopanel[role="application"]:not(.nosidebar) #workbench\.parts\.editor {
 	border-radius: var(--panel-roundess) 0px 0px var(--panel-roundess) !important;
 }
 [role="application"]:not(.nosidebar) #workbench\.parts\.editor {
@@ -10,7 +13,7 @@
 }
 [role="application"]:not(.nosidebar) #workbench\.parts\.panel {
 	border-radius: 0px 0px 0px var(--panel-roundess);
-}
+} */
 
 .monaco-workbench footer {
 	background-color: transparent !important;
@@ -32,4 +35,18 @@
 .monaco-workbench .activitybar.bordered:before {
 	border-color: none !important;
 	display: none;
+}
+
+.monaco-editor .cursors-layer .cursor {
+	border-radius: 2px;
+}
+
+.slider {
+	border-radius: 8px;
+	max-width: 8px;
+}
+
+.monaco-icon-label:before {
+	filter: sepia(0.3);
+	opacity: 0.9;
 }
