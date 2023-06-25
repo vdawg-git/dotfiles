@@ -1,3 +1,3 @@
-EDITOR=code-oss
-VISUAL=code-oss
+EDITOR=nvim
+VISUAL=nvim
 TERMINAL=kitty
