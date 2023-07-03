@@ -3,12 +3,11 @@
 	######### Webview #############
 	#############################*/
 #browser:not(.tabs-off) #webview-container {
-	border-radius: 8px;
+	border-radius: 0 8px 0 0;
 	overflow: auto;
-	box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.2), 0px 0px 8px rgba(0, 0, 0, 0.2),
-		0px 0px 4px rgba(0, 0, 0, 0.2);
+	box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2), 0px 0px 4px rgba(0, 0, 0, 0.2), 0px 0px 2px rgba(0, 0, 0, 0.2);
 	z-index: 1;
-	margin: 8px;
+	margin-right: 8px;
 	margin-top: 4px;
 }
 
@@ -52,6 +51,8 @@ webview::-webkit-scrollbar-thumb {
 
 .address-top .mainbar > .toolbar-mainbar {
 	border: none;
+	padding-block: 24px;
+	padding-inline: 8px;
 }
 
 #browser.win.address-top .toolbar:has(.window-buttongroup.on-mainbar) {
@@ -101,8 +102,8 @@ button.vivaldi {
 }
 
 #tabs-tabbar-container {
-	margin-top: 6px;
-	padding: 0px 6px 4px 0px;
+	 /* margin-top: 6px; */
+	/* padding: 0px 6px 4px 0px; */
 }
 
 .tabs-left .tab-position .tab,
@@ -186,10 +187,32 @@ button.vivaldi {
 #modal-bg.modal-tabswitcher {
 }
 
-#modal-bg > div {
+#modal-bg {
 	box-shadow: 0px 40px 1000px rgba(0, 0, 0, 0.4),
-		0px 10px 44px rgba(0, 0, 0, 0.6);
-	border-radius: 16px;
+	0px 10px 44px rgba(0, 0, 0, 0.6),
+	0px 4px 20px rgba(0, 0, 0, 0.2);
+	border-radius: 16pxi;
+	overflow: hidden;
+}
+
+#modal-bg input {
+	background-color: var(--colorBgDarker);
+	padding: 8px 16px;
+	margin: 12px;
+	border-radius: 12px;
+	width: calc(100% - 24px);
+}
+
+.quick-command-container .quick-commands .quick-command {
+	padding: 8px 16px;
+	border-radius: 4px;
+}
+.quick-command-container .quick-commands .quick-command-workspace-icon {
+	margin: 0;
+	margin-right: 12px;
+}
+ .hasFocus .isblurred .quick-command-container .quick-commands .quick-command[data-selected] {
+ background-color: red !important;
 }
 
 .BookmarkButton-Button .ToolbarButton-Button {

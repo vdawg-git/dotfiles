@@ -1,8 +1,12 @@
 # VS Code shell integration - see https://code.visualstudio.com/docs/terminal/shell-integration
 string match -q "$TERM_PROGRAM" "vscode"
-and . (code --locate-shell-integration-path fish)
+and . (code-oss --locate-shell-integration-path fish)
+
 
 thefuck --alias | source
+
+starship init fish | source # Prompt
+zoxide init fish --cmd cd | source # Folder auto jumping
 
 fish_vi_key_bindings
 
@@ -14,18 +18,21 @@ if not string match -q -- $PNPM_HOME $PATH
 end
 # pnpm end
 
-set EDITOR "code-oss --wait"
+set EDITOR "nvim"
 
 
 function multicd
     echo cd (string repeat -n (math (string length -- $argv[1]) - 1) ../)
 end
+
+
 abbr --add dotdot --regex '^\.\.+$' --function multicd
 
 abbr --add cz "chezmoi"
 
 alias pn="pnpm"
 alias xclip="xclip -selection c"
+alias icat="kitty +kitten icat"
 
 abbr --add pac "sudo pacman -S "
 abbr --add yays "yay -S "
@@ -34,6 +41,9 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
+function fish_greeting
+  kitten icat --align left  /home/vdawg/.local/share/chezmoi/.other/assets/see_you.png  2>/dev/null
+end
 
 set red #EA6962
 set blue #7DAEA3

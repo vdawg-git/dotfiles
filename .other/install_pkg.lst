@@ -12,8 +12,10 @@ dolphin
 dunst
 exa
 fish
-fsearch
 grim
+zoxide
+fzf
+fsearch
 gst-plugin-pipewire
 htop
 hyprpaper
@@ -22,6 +24,7 @@ imagemagick
 insomnia-bin
 keyd
 kitty
+swaync
 kvantum
 mailspring
 megasync
@@ -60,6 +63,7 @@ swappy
 swaylock-effects-git
 tree
 ttf-jetbrains-mono-nerd
+blanket
 tutanota-desktop-bin
 udiskie
 vivaldi
@@ -70,3 +74,4 @@ wireplumber
 wlogout
 wlr-randr
 xdg-desktop-portal-hyprland
+wlsunset-git
