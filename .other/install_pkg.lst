@@ -1,5 +1,6 @@
 ark
 git-lfs
+ttf-joypixels
 betterdiscordctl
 bitwarden
 blueman
@@ -58,9 +59,9 @@ rofi-lbonn-wayland-git
 sddm-git
 ocs-url 
 slurp
+ranger
 starship
 swappy
-swaylock-effects-git
 tree
 ttf-jetbrains-mono-nerd
 blanket

@@ -1,3 +1,8 @@
+# yaml
 edit:
   command: "code-oss"
   flags: ["--wait"]
+
+merge:
+  command: "nvim"
+  args: ["-d", "{{ "{{" }} .Destination {{ "}}" }} ", "{{ "{{" }} .Source }}", "{{ "{{" }} .Target {{ "}}" }} "]
