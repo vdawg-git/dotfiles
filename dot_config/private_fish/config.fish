@@ -4,13 +4,11 @@ and . (code-oss --locate-shell-integration-path fish)
 
 
 thefuck --alias | source
-
 starship init fish | source # Prompt
 zoxide init fish --cmd cd | source # Folder auto jumping
 
 fish_vi_key_bindings
 
-# set fish_color_search_match
 # pnpm
 set -gx PNPM_HOME "~/vdawg/.local/share/pnpm"
 if not string match -q -- $PNPM_HOME $PATH
@@ -35,6 +33,7 @@ alias xclip="xclip -selection c"
 alias icat="kitty +kitten icat"
 
 abbr --add pac "sudo pacman -S "
+abbr --add pacr "sudo pacman -R "
 abbr --add yays "yay -S "
 
 if status is-interactive
@@ -50,8 +49,8 @@ set blue #7DAEA3
 set orange #E78A4E
 set white #DDC7A1
 set black #252423
-set gray 928374 
-set lightgray A89984
+set gray #928374 
+set lightgray #A89984
 set yellow #D8A657
 set purple #D3869B
 set aqua #89B482

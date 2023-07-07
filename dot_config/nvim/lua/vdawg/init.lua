@@ -19,10 +19,13 @@ autocmd('TextYankPost', {
     end
 })
 
-vim.cmd( [[
+
+vim.cmd [[
 	augroup kitty_mp
 		autocmd!
 		au VimLeave * :silent !kitty @ set-spacing padding=24 margin=24
 		au VimEnter * :silent !kitty @ set-spacing padding=0 margin=0
 	augroup END
-]])
+]]
+
+vim.cmd [[ set noswapfile ]]

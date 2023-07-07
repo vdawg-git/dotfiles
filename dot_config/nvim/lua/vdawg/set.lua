@@ -14,6 +14,10 @@ vim.opt.incsearch = true
 
 vim.g.surround_no_mappings = 1
 
+
 if not vim.g.vscodde then
     vim.opt.colorcolumn = "80"
+
+    --Line numbers
+	vim.wo.number = true
 end

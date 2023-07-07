@@ -10,4 +10,3 @@ vim.g.gruvbox_material_better_performance = true
 vim.g.gruvbox_material_foreground = 'material'
 
 vim.cmd.colorscheme('gruvbox-material')
-
