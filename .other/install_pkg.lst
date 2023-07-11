@@ -8,12 +8,12 @@ bluez
 bluez-utils
 chezmoi
 cliphist
-code-translucent
 dolphin
-dunst
 exa
 fish
 grim
+node
+npm
 zoxide
 fzf
 fsearch
@@ -76,3 +76,4 @@ wlogout
 wlr-randr
 xdg-desktop-portal-hyprland
 wlsunset-git
+rhythmbox

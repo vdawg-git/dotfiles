@@ -1,13 +1,13 @@
 @define-color bar-bg transparent;
 
 @define-color main-color @theme_text_color;
-@define-color main-bg #32302f;
+@define-color main-bg #1c1c1c;
 
-@define-color tool-bg #32302f;
+@define-color tool-bg #292828;
 @define-color tool-color #c5b18d;
 @define-color tool-border #383432;
 
-@define-color wb-color #c5b18d;
+@define-color wb-color #a89984;
 
 @define-color wb-act-bg #7c6f64;
 @define-color wb-act-color #504945;
@@ -29,12 +29,13 @@ window#waybar {
 }
 
 tooltip {
-	background: @tool-bg;
+	background: @main-bg;
 	color: @tool-color;
-	border-radius: 20px;
-	border-width: 1px;
+	border-radius: 16px;
+	padding: 16px;
+	/* border-width: 1px;
 	border-style: solid;
-	border-color: @tool-border;
+	border-color: @tool-border; */
 }
 
 #workspaces button {
@@ -53,7 +54,7 @@ tooltip {
 }
 
 #workspaces button.active {
-	background: @wb-act-bg;
+	background: @wb-hvr-bg;
 	color: @wb-act-color;
 	margin-left: 2px;
 	padding-left: 12px;
@@ -79,19 +80,19 @@ tooltip {
 	border-radius: 8px;
 	/* margin-top: 2px;
 	margin-bottom: 2px; */
-	padding-left: 2px;
-	padding-right: 2px;
+	padding-left: 4px;
+	padding-right: 4px;
 	color: @wb-color;
 	animation: gradient_f 20s ease-in infinite;
 	transition: all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.682);
 }
 
 #taskbar button.active {
-	background: @wb-act-bg;
-	color: @wb-act-color;
+	background: @wb-hvr-bg;
+	color: @main-bg;
 	/* margin-left: 2px; */
-	padding-left: 11px;
-	padding-right: 11px;
+	/* padding-left: 24px;
+	padding-right: 24px; */
 	/* margin-right: 2px; */
 	animation: gradient_f 20s ease-in infinite;
 	transition: all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.682);
@@ -99,14 +100,15 @@ tooltip {
 
 #taskbar button:hover {
 	background: @wb-hvr-bg;
-	color: @wb-hvr-color;
-	padding-left: 2px;
-	padding-right: 2px;
+	color: @wb-active-color;
+	/* padding-left: 2px;
+	padding-right: 2px; */
 	animation: gradient_f 20s ease-in infinite;
 	transition: all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.682);
 }
 
 #cpu,
+#battery,
 #memory,
 #clock,
 #workspaces,
@@ -130,9 +132,9 @@ tooltip {
 	color: @main-color;
 	background: @main-bg;
 	opacity: 1;
-	/* margin: 4px 0px 4px 0px; */
-	padding-left: 4px;
-	padding-right: 4px;
+	margin: 4px 0px 0px 0px;
+	padding-left: 12px;
+	padding-right: 12px;
 }
 
 #workspaces,
