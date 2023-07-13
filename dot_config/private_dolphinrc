@@ -19,6 +19,9 @@ ViewPropsTimestamp=2023,6,9,13,28,22.315
 Places Icons Auto-resize=false
 Places Icons Static Size=22
 
+[KPropertiesDialog]
+1680x1120 screen: Window-Maximized=true
+
 [MainWindow]
 MenuBar=Disabled
 ToolBarsMovable=Disabled

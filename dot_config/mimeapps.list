@@ -6,7 +6,8 @@ x-scheme-handler/geo=google-maps-geo-handler.desktop;
 x-scheme-handler/http=vivaldi-stable.desktop;
 x-scheme-handler/https=vivaldi-stable.desktop;
 x-scheme-handler/mailto=tutanota-desktop.desktop;
- 
+video/x-matroska=org.kde.dolphin.desktop;
+
 [Default Applications]
 application/json=code-oss.desktop;
 application/pdf=vivaldi-stable.desktop;

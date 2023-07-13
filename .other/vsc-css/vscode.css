@@ -60,7 +60,10 @@
 /* round buttons */
 .monaco-button-dropdown,
 .scm-view .scm-editor-container,
-.suggest-input-container {
+.suggest-input-container,
+.monaco-workbench select,
+.monaco-inputbox,
+.setting-item-contents {
 	border-radius: 8px;
 }
 /* selections */
