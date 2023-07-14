@@ -1,17 +1,17 @@
 [Added Associations]
 application/json=nvim.desktop;firefox.desktop;
 application/pdf=vivaldi-stable.desktop;firefox.desktop;
-inode/directory=org.kde.dolphin.desktop;
+inode/directory=org.gnome.Nautilus;
 x-scheme-handler/geo=google-maps-geo-handler.desktop;
 x-scheme-handler/http=vivaldi-stable.desktop;
 x-scheme-handler/https=vivaldi-stable.desktop;
 x-scheme-handler/mailto=tutanota-desktop.desktop;
-video/x-matroska=org.kde.dolphin.desktop;
+video/x-matroska=org.gnome.Nautilus;
 
 [Default Applications]
 application/json=code-oss.desktop;
 application/pdf=vivaldi-stable.desktop;
-inode/directory=org.kde.dolphin.desktop;
+inode/directory=org.gnome.Nautilus;
 x-scheme-handler/obsidian=obsidian.desktop
 x-scheme-handler/http=vivaldi-stable.desktop
 x-scheme-handler/https=vivaldi-stable.desktop
