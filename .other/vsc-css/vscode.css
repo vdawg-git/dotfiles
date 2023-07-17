@@ -41,6 +41,7 @@
 	display: none;
 }
 
+/* Tint icons to match Gruvbox theme */
 .monaco-icon-label:before {
 	filter: sepia(0.3);
 	opacity: 0.9;
@@ -52,6 +53,25 @@
 
 .monaco-workbench .part.panel.bottom .composite.title {
 	border: none !important;
+}
+
+/* Quick input list */
+.quick-input-widget {
+	border-radius: 24px;
+	padding: 12px;
+	padding-bottom: 0px;
+	top: 30% !important;
+	translate: 0px -30%;
+}
+.quick-input-header {
+	padding: 8px 8px 12px 8px;
+}
+
+.quick-input-list .monaco-list-row {
+	border-radius: 8px;
+	position: relative;
+	min-height: 32px;
+	display: flex;
 }
 
 /* ################### */

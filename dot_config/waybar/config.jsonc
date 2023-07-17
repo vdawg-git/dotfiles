@@ -6,12 +6,11 @@
 	"exclusive": true,
 	"passthrough": false,
 	"gtk-layer-shell": true,
+	"margin": "0px",
 
 	"modules-left": [
 		"custom/padd",
 		"custom/l_end",
-		"cpu",
-		"memory",
 		"clock",
 		"custom/r_end",
 		"custom/l_end",
@@ -84,7 +83,7 @@
 	"wlr/taskbar": {
 		"format": "{icon}",
 		"icon-size": 20,
-		"icon-theme": "WhiteSur-orange-dark",
+		"icon-theme": "Adwaita",
 		"spacing": 24,
 		"tooltip-format": "{title}",
 		"on-click": "activate",
@@ -96,7 +95,6 @@
 	},
 
 	"battery": {
-		// "format": "<span font='Font Awesome 5 Free 11'>{icon}</span>  {capacity}% - {time}",
 		"format": "{icon}  {capacity}% - {time}",
 		"format-icons": ["", "", "", "", ""],
 		"format-time": "{H}h{M}m",

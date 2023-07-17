@@ -6,5 +6,5 @@ sudo flatpak override --filesystem=$HOME/.themes
 sudo flatpak override --filesystem=$HOME/.icons
 # And apply the theme settings
 sudo flatpak override --env=GTK_THEME=Colloid-Orange-Dark-Gruvbox
-sudo flatpak override --env=ICON_THEME=WhiteSur-orange-dark
+sudo flatpak override --env=ICON_THEME=Colloid-yellow-dark
 
