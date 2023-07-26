@@ -1,9 +1,8 @@
 # VS Code shell integration - see https://code.visualstudio.com/docs/terminal/shell-integration
 string match -q "$TERM_PROGRAM" "vscode"
-and . (code-oss --locate-shell-integration-path fish)
+and . (code --locate-shell-integration-path fish)
 
 
-thefuck --alias | source
 starship init fish | source # Prompt
 zoxide init fish --cmd cd | source # Folder auto jumping
 
@@ -34,7 +33,8 @@ alias icat="kitty +kitten icat"
 
 abbr --add pac "sudo pacman -S "
 abbr --add pacr "sudo pacman -R "
-abbr --add yays "yay -S "
+abbr --add yays "yay -Sy"
+abbr --add yayr "yay -R "
 
 if status is-interactive
     # Commands to run in interactive sessions can go here

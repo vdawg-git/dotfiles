@@ -6,10 +6,10 @@
 	"exclusive": true,
 	"passthrough": false,
 	"gtk-layer-shell": true,
-	"margin": "0px",
+	"margin": "4px 10px 0px 10px",
 
 	"modules-left": [
-		"custom/padd",
+		// "custom/padd",
 		"custom/l_end",
 		"clock",
 		"custom/r_end",
@@ -19,11 +19,11 @@
 		"custom/padd"
 	],
 	"modules-center": [
-		"custom/padd",
-		"custom/l_end",
-		"wlr/taskbar",
-		"custom/r_end",
-		"custom/padd"
+		// "custom/padd",
+		// "custom/l_end",
+		"wlr/taskbar"
+		// "custom/r_end",
+		// "custom/padd"
 	],
 	"modules-right": [
 		"custom/padd",
@@ -36,8 +36,8 @@
 		"battery",
 		"custom/cliphist",
 		"custom/power",
-		"custom/r_end",
-		"custom/padd"
+		"custom/r_end"
+		// "custom/padd"
 	],
 
 	"cpu": {
@@ -57,8 +57,8 @@
 	},
 
 	"clock": {
-		"format": "{: %I:%M %p 󰃭 %a %d}",
-		"format-alt": "{:󰥔 %H:%M  %b %Y}",
+		"format": "{:  %I:%M  %p  󰃭  %a %d}",
+		"format-alt": "{:󰥔 %H:%M    %b %Y}",
 		"tooltip-format": "<tt><big>{calendar}</big></tt>"
 	},
 
@@ -82,7 +82,7 @@
 
 	"wlr/taskbar": {
 		"format": "{icon}",
-		"icon-size": 20,
+		"icon-size": 24,
 		"icon-theme": "Adwaita",
 		"spacing": 24,
 		"tooltip-format": "{title}",

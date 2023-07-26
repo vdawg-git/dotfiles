@@ -27,9 +27,13 @@
 	border-radius: 0px 0px 0px var(--panel-roundess);
 } */
 
+/* Disable borders */
 .monaco-workbench footer {
 	background-color: transparent !important;
 	--status-border-top-color: "transparent" !important;
+}
+.part {
+	border: none !important;
 }
 
 #workbench\.parts\.titlebar {
@@ -149,8 +153,13 @@
 	rotate: 180deg;
 	scale: -1 1;
 } */
-.monaco-editor .wordHighlightStrong {
-	border-radius: 8px;
+.monaco-editor .wordHighlightStrong,
+.monaco-editor .bracket-match,
+.monaco-editor .wordHighlight,
+.monaco-editor .wordHighlightText,
+.monaco-editor .hoverHighlight,
+.statusbar-item a {
+	border-radius: 0.5rem !important;
 }
 
 /* Hover Popus and content */

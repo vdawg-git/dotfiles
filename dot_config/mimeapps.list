@@ -7,6 +7,7 @@ x-scheme-handler/http=vivaldi-stable.desktop;
 x-scheme-handler/https=vivaldi-stable.desktop;
 x-scheme-handler/mailto=tutanota-desktop.desktop;
 video/x-matroska=org.gnome.Nautilus;
+text/plain=nvim.desktop
 
 [Default Applications]
 application/json=code-oss.desktop;
@@ -22,6 +23,7 @@ x-scheme-handler/https=vivaldi-stable.desktop;
 x-scheme-handler/mailspring=Mailspring.desktop
 x-scheme-handler/mailto=tutanota-desktop.desktop;
 x-scheme-handler/obsidian=obsidian.desktop
-text/plain=code-oss.desktop
+text/plain=nvim.desktop
 -x-scheme-handler/insomnia=insomnia.desktop
 -x-scheme-handler/morgen=morgen.desktop
+x-scheme-handler/etcher=balena-etcher.desktop
