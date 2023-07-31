@@ -1,7 +1,8 @@
 @define-color bar-bg transparent;
 
 @define-color main-color @theme_text_color;
-@define-color main-bg #1c1c1c;
+@define-color main-bg rgba(28, 28, 28, 0.51);
+@define-color dark #292828;
 
 @define-color tool-bg #292828;
 @define-color tool-color #c5b18d;
@@ -12,7 +13,7 @@
 @define-color wb-act-bg #7c6f64;
 @define-color wb-act-color #504945;
 
-@define-color wb-hvr-bg #d8a657;
+@define-color wb-hvr-bg rgba(216, 166, 87,0.1);
 @define-color wb-hvr-color #5a524c;
 
 * {
@@ -38,16 +39,22 @@ tooltip {
 	border-color: @tool-border; */
 }
 
+#workspaces {
+	padding-left: 16px;
+}
+
 #workspaces button {
 	box-shadow: none;
 	text-shadow: none;
 	padding: 0px;
-	border-radius: 4px;
-	/* margin-top: 2px;
-	margin-bottom: 2px; */
-	/* padding: 2px; */
-	padding-left: 12px;
-	padding-right: 12px;
+	border-radius: 999px;
+	/* max-height: 18px; */
+	margin-bottom: 8px;
+	margin-top: 8px;
+	margin-right: 4px;
+	min-width: 24px;
+	/* padding-left: 12px;
+	padding-right: 12px; */
 	color: @wb-color;
 	animation: gradient_f 20s ease-in infinite;
 	transition: all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.682);
@@ -55,13 +62,13 @@ tooltip {
 
 #workspaces button.active {
 	background: @wb-hvr-bg;
-	color: @wb-act-color;
-	margin-left: 2px;
+	color: @tool-color;
+	/* margin-left: 2px;
 	padding-left: 12px;
 	padding-right: 12px;
-	margin-right: 2px;
+	margin-right: 2px; */
 	animation: gradient_f 20s ease-in infinite;
-	transition: all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+	transition: all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.682);
 }
 
 #workspaces button:hover {
@@ -75,11 +82,13 @@ tooltip {
 
 #taskbar button {
 	box-shadow: none;
+	border-bottom: 2px solid transparent;
 	text-shadow: none;
 	padding: 0px;
 	border-radius: 8px;
-	/* margin-top: 2px;
-	margin-bottom: 2px; */
+	margin: 0px 2px;
+	margin-top: 2px;
+	margin-bottom: 2px;
 	padding-left: 4px;
 	padding-right: 4px;
 	color: @wb-color;
@@ -88,6 +97,8 @@ tooltip {
 }
 
 #taskbar button.active {
+	border-bottom: solid 2px @dark;
+	border-bottom: solid 2px @tool-color;
 	background: @wb-hvr-bg;
 	color: @main-bg;
 	/* margin-left: 2px; */
@@ -104,14 +115,13 @@ tooltip {
 	/* padding-left: 2px;
 	padding-right: 2px; */
 	animation: gradient_f 20s ease-in infinite;
-	transition: all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+	transition: all 320ms cubic-bezier(0.55, 0.18, 0.048, 1);
 }
 
 #cpu,
 #battery,
 #memory,
 #clock,
-#workspaces,
 #window,
 /* #taskbar, */
 #network,
@@ -122,25 +132,29 @@ tooltip {
 #custom-wallchange,
 #custom-mode,
 #custom-cliphist,
-#custom-power,
 #custom-wbar,
-#custom-l_end,
+#custom-power,
+/* #custom-l_end,
 #custom-r_end,
 #custom-sl_end,
-#custom-sr_end,
+#custom-sr_end, */
 #tray {
 	color: @main-color;
 	background: @main-bg;
 	opacity: 1;
 	margin: 0px 0px 0px 0px;
-	padding-left: 8px;
-	padding-right: 8px;
+	padding-left: 12px;
+	padding-right: 12px;
 }
 
-#workspaces,
 #window,
 #taskbar {
 	padding: 0px;
+}
+
+#custom-power {
+	padding-left: 24px;
+	padding-right: 24px;
 }
 
 #custom-r_end {
@@ -150,15 +164,16 @@ tooltip {
 }
 
 #custom-l_end {
-	border-radius: 20px 0px 0px 20px;
+	border-radius: 999px 0px 0px 999px;
 	/* margin-left: 4px; */
-	padding-left: 0px;
+	padding-left: 8px;
+	background: @main-bg;
 }
 
 #custom-sr_end {
 	border-radius: 0px;
 	/* margin-right: 8px; */
-	padding-right: 0px;
+	padding-right: 8px;
 }
 
 #custom-sl_end {

@@ -2,18 +2,17 @@
 	"layer": "top",
 	"position": "top",
 	"mod": "dock",
-	"height": 32,
+	"height": 40,
 	"exclusive": true,
 	"passthrough": false,
 	"gtk-layer-shell": true,
-	"margin": "4px 10px 0px 10px",
+	"margin": "0px 0px 0px 0px",
 
 	"modules-left": [
 		// "custom/padd",
-		"custom/l_end",
-		"clock",
-		"custom/r_end",
-		"custom/l_end",
+		//"custom/l_end",
+		//		"custom/r_end",
+		//		"custom/l_end",
 		"wlr/workspaces",
 		"custom/r_end",
 		"custom/padd"
@@ -26,7 +25,7 @@
 		// "custom/padd"
 	],
 	"modules-right": [
-		"custom/padd",
+		//"custom/padd",
 		"custom/l_end",
 		"bluetooth",
 		"pulseaudio",
@@ -35,9 +34,10 @@
 		"tray",
 		"battery",
 		"custom/cliphist",
-		"custom/power",
-		"custom/r_end"
-		// "custom/padd"
+		"clock",
+		"custom/power"
+		//"custom/r_end"
+		//"custom/padd"
 	],
 
 	"cpu": {
@@ -57,9 +57,9 @@
 	},
 
 	"clock": {
-		"format": "{:  %I:%M  %p  󰃭  %a %d}",
-		"format-alt": "{:󰥔 %H:%M    %b %Y}",
-		"tooltip-format": "<tt><big>{calendar}</big></tt>"
+		"format": "{:%H:%M  %p  %a %d}",
+		"format-alt": "{:%H:%M  %b %Y}",
+		"tooltip-format": "{calendar}"
 	},
 
 	"wlr/workspaces": {
@@ -67,11 +67,11 @@
 		"all-outputs": true,
 		"on-click": "activate",
 		"persistent_workspaces": {
-			"1": [],
-			"2": [],
-			"3": [],
-			"4": [],
-			"5": [],
+			"y": [],
+			"u": [],
+			"i": [],
+			"o": [],
+			"p": [],
 			"6": [],
 			"7": [],
 			"8": [],
@@ -84,7 +84,6 @@
 		"format": "{icon}",
 		"icon-size": 24,
 		"icon-theme": "Adwaita",
-		"spacing": 24,
 		"tooltip-format": "{title}",
 		"on-click": "activate",
 		"on-click-middle": "close",
@@ -95,7 +94,8 @@
 	},
 
 	"battery": {
-		"format": "{icon}  {capacity}% - {time}",
+		"format": "{icon}  {time}",
+		"format-alt": "{icon}  {capacity}% - {time}",
 		"format-icons": ["", "", "", "", ""],
 		"format-time": "{H}h{M}m",
 		"format-charging": "  {icon}  {capacity}% - {time}",
@@ -112,8 +112,8 @@
 	"bluetooth": {
 		"format": "",
 		"format-disabled": "", // an empty format will hide the module
-		"format-connected": " {num_connections}",
-		"tooltip-format": " {device_alias}",
+		"format-connected": "",
+		"tooltip-format": "",
 		"tooltip-format-connected": "{device_enumerate}",
 		"tooltip-format-enumerate-connected": " {device_alias}"
 	},
@@ -188,7 +188,7 @@
 
 	"custom/power": {
 		"format": "{}",
-		"exec": "echo ; echo  logout",
+		// "exec": "echo ; echo  logout",
 		"on-click": "wlogout -b 2 -c 0 -r 0 -L 930 -R 930 -T 300 -B 300 --protocol layer-shell",
 		"interval": 86400, // once every day
 		"tooltip": true
