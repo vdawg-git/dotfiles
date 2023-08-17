@@ -3,8 +3,6 @@ string match -q "$TERM_PROGRAM" "vscode"
 and . (code --locate-shell-integration-path fish)
 
 
-starship init fish | source # Prompt
-zoxide init fish --cmd cd | source # Folder auto jumping
 
 fish_vi_key_bindings
 
@@ -14,6 +12,7 @@ if not string match -q -- $PNPM_HOME $PATH
   set -gx PATH "$PNPM_HOME" $PATH
 end
 # pnpm end
+
 
 set EDITOR "nvim"
 
@@ -28,6 +27,7 @@ abbr --add dotdot --regex '^\.\.+$' --function multicd
 abbr --add cz "chezmoi"
 
 alias pn="pnpm"
+alias cat="bat"
 alias xclip="xclip -selection c"
 alias icat="kitty +kitten icat"
 
@@ -43,6 +43,11 @@ end
 function fish_greeting
   kitten icat --align left  /home/vdawg/.local/share/chezmoi/.other/assets/see_you.png  2>/dev/null
 end
+
+
+
+
+## THEME
 
 set red #EA6962
 set blue #7DAEA3
@@ -126,3 +131,10 @@ set fish_color_cancel red --dim
 
 # history search matches and selected pager items (background only)
 # set fish_color_search_match
+
+
+
+# Plugins
+
+starship init fish | source # prompt
+zoxide init fish --cmd cd | source # folder auto jumping

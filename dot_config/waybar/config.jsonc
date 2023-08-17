@@ -13,9 +13,7 @@
 		//"custom/l_end",
 		//		"custom/r_end",
 		//		"custom/l_end",
-		"wlr/workspaces",
-		"custom/r_end",
-		"custom/padd"
+		"wlr/workspaces"
 	],
 	"modules-center": [
 		// "custom/padd",
@@ -35,9 +33,9 @@
 		"battery",
 		"custom/cliphist",
 		"clock",
-		"custom/power"
-		//"custom/r_end"
-		//"custom/padd"
+		"custom/power",
+		"custom/r_end",
+		"custom/padd"
 	],
 
 	"cpu": {
