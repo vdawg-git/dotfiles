@@ -8,23 +8,9 @@
 	"gtk-layer-shell": true,
 	"margin": "0px 0px 0px 0px",
 
-	"modules-left": [
-		// "custom/padd",
-		//"custom/l_end",
-		//		"custom/r_end",
-		//		"custom/l_end",
-		"wlr/workspaces"
-	],
-	"modules-center": [
-		// "custom/padd",
-		// "custom/l_end",
-		"wlr/taskbar"
-		// "custom/r_end",
-		// "custom/padd"
-	],
+	"modules-left": ["wlr/workspaces"],
+	"modules-center": ["wlr/taskbar"],
 	"modules-right": [
-		//"custom/padd",
-		"custom/l_end",
 		"bluetooth",
 		"pulseaudio",
 		"pulseaudio#microphone",
@@ -33,9 +19,7 @@
 		"battery",
 		"custom/cliphist",
 		"clock",
-		"custom/power",
-		"custom/r_end",
-		"custom/padd"
+		"custom/power"
 	],
 
 	"cpu": {
@@ -190,37 +174,5 @@
 		"on-click": "wlogout -b 2 -c 0 -r 0 -L 930 -R 930 -T 300 -B 300 --protocol layer-shell",
 		"interval": 86400, // once every day
 		"tooltip": true
-	},
-
-	// modules for padding //
-
-	"custom/l_end": {
-		"format": " ",
-		"interval": "once",
-		"tooltip": false
-	},
-
-	"custom/r_end": {
-		"format": " ",
-		"interval": "once",
-		"tooltip": false
-	},
-
-	"custom/sl_end": {
-		"format": " ",
-		"interval": "once",
-		"tooltip": false
-	},
-
-	"custom/sr_end": {
-		"format": " ",
-		"interval": "once",
-		"tooltip": false
-	},
-
-	"custom/padd": {
-		"format": "  ",
-		"interval": "once",
-		"tooltip": false
 	}
 }

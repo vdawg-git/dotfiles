@@ -27,7 +27,6 @@ abbr --add dotdot --regex '^\.\.+$' --function multicd
 abbr --add cz "chezmoi"
 
 alias pn="pnpm"
-alias cat="bat"
 alias xclip="xclip -selection c"
 alias icat="kitty +kitten icat"
 

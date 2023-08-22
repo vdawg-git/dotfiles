@@ -1,7 +1,7 @@
 @define-color bar-bg transparent;
 
 @define-color main-color @theme_text_color;
-@define-color main-bg rgba(28, 28, 28, 0.51);
+@define-color main-bg rgba(28, 28, 28, 0.01);
 @define-color dark #292828;
 
 @define-color tool-bg #292828;
@@ -55,20 +55,18 @@ tooltip {
 	min-width: 24px;
 	/* padding-left: 12px;
 	padding-right: 12px; */
-	color: @wb-color;
+	color: @tool-color;
 	animation: gradient_f 20s ease-in infinite;
 	transition: all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+	opacity: 0.7;
 }
 
 #workspaces button.active {
 	background: @wb-hvr-bg;
 	color: @tool-color;
-	/* margin-left: 2px;
-	padding-left: 12px;
-	padding-right: 12px;
-	margin-right: 2px; */
 	animation: gradient_f 20s ease-in infinite;
 	transition: all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+	opacity: 1;
 }
 
 #workspaces button:hover {
@@ -94,6 +92,7 @@ tooltip {
 	color: @wb-color;
 	animation: gradient_f 20s ease-in infinite;
 	transition: all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+	opacity: 0.7;
 }
 
 #taskbar button.active {
@@ -107,6 +106,7 @@ tooltip {
 	/* margin-right: 2px; */
 	animation: gradient_f 20s ease-in infinite;
 	transition: all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+	opacity: 1;
 }
 
 #taskbar button:hover {
