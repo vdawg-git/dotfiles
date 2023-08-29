@@ -8,6 +8,7 @@ x-scheme-handler/https=vivaldi-stable.desktop;
 x-scheme-handler/mailto=tutanota-desktop.desktop;
 video/x-matroska=org.gnome.Nautilus;
 text/plain=nvim.desktop
+application/vnd.openxmlformats-officedocument.spreadsheetml.sheet=gnumeric.desktop;
 
 [Default Applications]
 application/json=code-oss.desktop;

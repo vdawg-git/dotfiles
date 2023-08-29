@@ -1,7 +1,7 @@
 @define-color bar-bg transparent;
 
 @define-color main-color @theme_text_color;
-@define-color main-bg rgba(28, 28, 28, 0.01);
+@define-color main-bg rgba(14, 14, 14, 0);
 @define-color dark #292828;
 
 @define-color tool-bg #292828;
@@ -22,7 +22,12 @@
 	font-family: "JetBrainsMono Nerd Font";
 	font-weight: bold;
 	font-size: 14px;
-	min-height: 12px;
+}
+
+.modules-right {
+	background: @main-bg;
+	border-radius: 24px 0px 0px 24px;
+	padding-left: 16px;
 }
 
 window#waybar {
@@ -41,6 +46,9 @@ tooltip {
 
 #workspaces {
 	padding-left: 16px;
+	padding-right: 16px;
+	background: @main-bg;
+	border-radius: 0px 24px 24px 0px;
 }
 
 #workspaces button {
@@ -123,7 +131,6 @@ tooltip {
 #memory,
 #clock,
 #window,
-/* #taskbar, */
 #network,
 #bluetooth,
 #pulseaudio,
@@ -134,18 +141,11 @@ tooltip {
 #custom-cliphist,
 #custom-wbar,
 #custom-power,
-/* #custom-l_end,
-#custom-r_end,
-#custom-sl_end,
-#custom-sr_end, */
 #tray {
 	color: @main-color;
-	background: @main-bg;
 	opacity: 1;
-	margin: 0px 0px 0px 0px;
 	padding-left: 12px;
 	padding-right: 12px;
-	margin-top: 4px;
 }
 
 #window,

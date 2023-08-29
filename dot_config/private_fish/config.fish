@@ -15,6 +15,8 @@ end
 
 
 set EDITOR "nvim"
+set SUDO_EDITOR "nvim"
+set VISUAL "nvim"
 
 
 function multicd
