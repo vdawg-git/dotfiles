@@ -1,4 +1,4 @@
-@define-color bar-bg transparent;
+@define-color bar-bg rgba(14, 14, 14, 0.01);
 
 @define-color main-color @theme_text_color;
 @define-color main-bg rgba(14, 14, 14, 0);
@@ -26,12 +26,12 @@
 
 .modules-right {
 	background: @main-bg;
-	border-radius: 24px 0px 0px 24px;
 	padding-left: 16px;
 }
 
 window#waybar {
 	background: @bar-bg;
+	border-radius: 12px;
 }
 
 tooltip {

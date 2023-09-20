@@ -6,9 +6,9 @@
 	"exclusive": true,
 	"passthrough": false,
 	"gtk-layer-shell": true,
-	"margin": "0px 0px 0px 0px",
+	"margin": "0px 12px 0px 12px",
 
-	"modules-left": ["wlr/workspaces"],
+	"modules-left": ["hyprland/workspaces"],
 	"modules-center": ["wlr/taskbar"],
 	"modules-right": [
 		"bluetooth",
@@ -44,22 +44,9 @@
 		"tooltip-format": "{calendar}"
 	},
 
-	"wlr/workspaces": {
-		"disable-scroll": true,
-		"all-outputs": true,
-		"on-click": "activate",
-		"persistent_workspaces": {
-			"y": [],
-			"u": [],
-			"i": [],
-			"o": [],
-			"p": [],
-			"6": [],
-			"7": [],
-			"8": [],
-			"9": [],
-			"10": []
-		}
+	"hyprland/workspaces": {
+		   "all-outputs": true,
+	     	"active-only": "false",
 	},
 
 	"wlr/taskbar": {

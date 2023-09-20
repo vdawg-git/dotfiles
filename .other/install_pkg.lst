@@ -1,8 +1,11 @@
 bat
 converseen
 ark
+eog
 brightnessctl
 gnome-calculator
+gnome-system-monitor
+puddletag
 git-lfs
 ttf-joypixels
 betterdiscordctl
@@ -14,7 +17,6 @@ bluez-utils
 nwg-panel
 chezmoi
 cliphist
-dolphin
 exa
 fish
 grim
