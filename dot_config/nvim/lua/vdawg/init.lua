@@ -1,6 +1,6 @@
 require("vdawg.set")
 require("vdawg.remap")
-require("vdawg.packer")
+require("vdawg.plugins")
 require("vdawg.theme")
 
 local augroup = vim.api.nvim_create_augroup
@@ -18,7 +18,6 @@ autocmd('TextYankPost', {
         }
     end
 })
-
 
 vim.cmd [[
 	augroup kitty_mp
