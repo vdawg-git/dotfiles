@@ -23,34 +23,34 @@ map("n", "N", "Nzzzv")
 -- Paste but keep pasted text in regiser
 map("x", "<leader>p", [["_dP]])
 -- Delete operator but does not override regiser
-map({"n", "v"}, "<leader>d", [["_d]])
+map({ "n", "v" }, "<leader>d", [["_d]])
 
 --  Yank in the system clipboard
-map({"n", "v"}, "<leader>y", [["+y]])
+map({ "n", "v" }, "<leader>y", [["+y]])
 map("n", "<leader>Y", [["+Y]])
 
+-- Do not yank with x, only delete
+map({ "n", "v" }, "x", [["_x"]])
+
 -- Replace all instances of the selected text
-map('v', '<leader><leader>f', [["hy:%s#<C-r>h##g<left><left><left>]])
+map("v", "<leader><leader>f", [["hy:%s#<C-r>h##g<left><left><left>]])
 -- Replace all instances of the word under the cursor
-map('n', '<leader><leader>f', [[:%s/\<<C-r><C-w>\>/<C-r><C-w>]])
+map("n", "<leader><leader>f", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>]])
 
 if vim.g.vscode then
+	-- Toggle comments with the native VS Code API
+	map("x", "gc", "<Plug>VSCodeCommentary")
+	map("n", "gc", "<Plug>VSCodeCommentary")
+	map("o", "gc", "<Plug>VSCodeCommentary")
+	map("n", "gcc", "<Plug>VSCodeCommentaryLine")
 
-    -- Toggle comments with the native VS Code API
-    map('x', 'gc', '<Plug>VSCodeCommentary')
-    map('n', 'gc', '<Plug>VSCodeCommentary')
-    map('o', 'gc', '<Plug>VSCodeCommentary')
-    map('n', 'gcc', '<Plug>VSCodeCommentaryLine')
+	-- Toggle quick open with tab
+	map("n", "<tab>", function()
+		vim.fn["VSCodeCall"]("workbench.action.quickOpen")
+	end)
 
-    -- Toggle quick open with tab
-    map('n', '<tab>', function()
-        vim.fn['VSCodeCall']("workbench.action.quickOpen")
-    end)
-
-    -- Close editor 
-    map('n', '<leader><C-w>', function()
-        vim.fn['VSCodeCall']("workbench.action.closeActiveEditor")
-    end)
-
+	-- Close editor
+	map("n", "<leader><C-w>", function()
+		vim.fn["VSCodeCall"]("workbench.action.closeActiveEditor")
+	end)
 end
-
