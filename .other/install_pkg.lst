@@ -1,6 +1,7 @@
 bat
 converseen
 ark
+ttf-ubuntu-nerd
 eog
 brightnessctl
 gnome-calculator
@@ -44,7 +45,6 @@ neofetch
 neovim-git
 network-manager-applet
 networkmanager
-nvim-packer-git
 nwg-displays
 nwg-look-bin
 obsidian

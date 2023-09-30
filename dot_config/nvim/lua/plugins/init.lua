@@ -1,10 +1,9 @@
 local isVscode = vim.g.vscode == 1
 
 return {
-	"wbthomason/packer.nvim",
 	"tpope/vim-repeat",
 	"sainnhe/gruvbox-material",
-	"bkad/CamelCaseMotion",
+
 	{
 		"nvim-treesitter/nvim-treesitter",
 		build = ":TSUpdate",

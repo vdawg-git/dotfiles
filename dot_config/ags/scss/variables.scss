@@ -1,0 +1,50 @@
+$red: $red_2;
+$green: $green_2;
+$yellow: $yellow_2;
+$blue: $blue_2;
+$magenta: $purple_2;
+$teal: $LIME_300;
+$orange: $orange_2;
+
+$bg_color: $theme_bg_color;
+$fg_color: $theme_fg_color;
+$hover_fg: $theme_button_foreground_active_breeze;
+$font_size: 16px;
+$font: "Ubuntu Nerd Font";
+$mono_font: "JetBrainsMono Nerd Font", monospace;
+$wallpaper_fg: $bg_color;
+$shader_fg: white;
+
+$screen_corners: true;
+$bar_style: "normal";
+$layout: "topbar";
+
+$wm_gaps: 8px;
+$radii: 8px;
+$spacing: 8px;
+
+$accent: $accent_color;
+$accent_fg: $accent_fg_color;
+
+$widget_opacity: 0.94;
+$widget_bg: transparentize($window_fg_color, $widget_opacity);
+$active_gradient: to right, $accent, lighten($accent, 6%);
+$shadow: rgba(0, 0, 0, 0.6);
+$drop_shadow: true;
+
+$hover: transparentize($widget_bg, $widget_opacity);
+$active_gradient: linear-gradient($active_gradient);
+
+$border_opacity: 0.97;
+$border_width: 1px;
+$border_color: transparentize($hover_fg, $border_opacity);
+$border: $border_width solid $border_color;
+
+$text_shadow: 2px 2px 2px $shadow;
+$icon_shadow: 2px 2px $shadow;
+
+$popover_radius: $radii * 1.7;
+$popover_border_color: mix($border_color, transparent, $border_opacity);
+$popover_padding: $spacing * 1.8;
+
+$transition: 200ms;

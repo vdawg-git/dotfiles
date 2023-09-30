@@ -31,6 +31,8 @@ abbr --add cz "chezmoi"
 alias pn="pnpm"
 alias xclip="xclip -selection c"
 alias icat="kitty +kitten icat"
+alias ls="exa --icons"
+alias ls="exa --icons -F -H --group-directories-first --git -1"
 
 abbr --add pac "sudo pacman -S "
 abbr --add pacr "sudo pacman -R "
