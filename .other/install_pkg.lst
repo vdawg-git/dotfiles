@@ -7,6 +7,7 @@ eog
 brightnessctl
 gnome-calculator
 gnome-system-monitor
+nwg-displays
 puddletag
 git-lfs
 ttf-joypixels
@@ -36,13 +37,12 @@ imagemagick
 insomnia-bin
 keyd
 kitty
-swaync
 kvantum
 mailspring
 megasync
 morgen-bin
 mullvad-vpn-bin
-neofetch
+fastfetch
 neovim-git
 network-manager-applet
 networkmanager

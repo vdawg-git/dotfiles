@@ -1,85 +1,29 @@
-$float: $spacing * 0.7;
+$float: $spacing * 0.25;
 
 @mixin panel_button($flat: false, $reactive: true) {
   all: unset;
 
-  @if $bar_style == "separated" {
-    transition: $transition;
-
-    > * {
-      @include floating_widget;
-      border-radius: $radii;
-      margin: $wm_gaps $float;
-      transition: $transition;
-    }
-
-    &:hover > * {
-      color: $hover_fg;
-
-      @if $drop_shadow {
-        box-shadow: 0 0 min(6px, $spacing/2) 0 $shadow, inset 0 0 0 99px $hover;
-      } @else {
-        box-shadow: inset 0 0 0 99px $hover;
-      }
-    }
-
-    &:active > *,
-    &.active > * {
-      label,
-      image {
-        color: $accent_fg;
-      }
-      background-image: $active_gradient;
-      background-color: $accent;
-    }
-  } @else {
-    @include accs_button($flat, $reactive);
-    > * {
-      margin: $float;
-    }
-  }
-
-  label {
-    font-weight: bold;
-  }
-
-  image {
-    font-size: $font_size * 1.2;
-  }
-
+  @include accs_button($flat, $reactive);
   > * {
-    padding: 0.3em 0.5em;
+    margin: $float;
+    font-weight: bold;
+
+    label {
+      font-weight: bold;
+    }
+
+    image {
+      font-size: $font_size * 1.2;
+    }
+
+    > * {
+      padding: 0.3em 0.5em;
+    }
   }
 }
 
 .panel {
-  @if $bar_style == "normal" {
-    background-color: $bg_color;
-  }
-
-  @if not $screen_corners and $bar_style == "normal" {
-    @if $layout == "bottombar" {
-      border-top: $border;
-    } @else {
-      border-bottom: $border;
-    }
-  }
-
-  @if $bar_style == "floating" {
-    @include floating_widget;
-    margin: $wm_gaps;
-    padding: 0;
-  }
-
-  @if $bar_style == "separated" {
-    > .end > button:last-child > * {
-      margin-right: $wm_gaps;
-    }
-
-    > .start > button:first-child > * {
-      margin-left: $wm_gaps;
-    }
-  }
+  background-color: $bar_bg;
 
   .panel-button {
     @include panel_button($flat: true);
@@ -99,19 +43,6 @@ $float: $spacing * 0.7;
     }
     &:first-child {
       margin-left: 0;
-    }
-  }
-
-  .overview {
-    label {
-      color: transparentize($accent, 0.2);
-    }
-    &:hover label {
-      color: $accent;
-    }
-    &:active label,
-    &.active label {
-      color: $accent_fg;
     }
   }
 
@@ -174,7 +105,7 @@ $float: $spacing * 0.7;
     levelbar trough {
       @include widget;
       min-width: 60px;
-      min-height: 14px;
+      min-height: 12px;
 
       block.filled {
         border-radius: max($radii - $border_width, 0);
@@ -219,14 +150,7 @@ $float: $spacing * 0.7;
     .eventbox {
       transition: $transition;
 
-      @if $bar_style == "separated" {
-        border-radius: max($radii - $border_width, 0);
-        &:hover {
-          background-color: $hover;
-        }
-      } @else {
-        @include button($flat: true);
-      }
+      @include button($flat: true);
     }
 
     button {
@@ -234,8 +158,8 @@ $float: $spacing * 0.7;
 
       .indicator {
         font-size: 0;
-        min-width: 6px;
-        min-height: 6px;
+        min-width: 8px;
+        min-height: 8px;
         border-radius: $radii * 0.6;
         border: $border;
         margin: 0 $spacing/2;

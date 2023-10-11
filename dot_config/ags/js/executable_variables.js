@@ -20,16 +20,16 @@ export const distro = ags.Utils.exec("cat /etc/os-release")
   .find((line) => line.startsWith("ID"))
   .split("=")[1]
 
-export const distroIcon =
-  {
-    fedora: "",
-    arch: "",
-    nixos: "",
-    debian: "",
-    "opensuse-tumbleweed": "",
-    ubuntu: "",
-    endeavouros: "",
-  }[distro] ?? ""
+export const distroIcon = ""
+  // {
+  //   fedora: "",
+  //   arch: "",
+  //   nixos: "",
+  //   debian: "",
+  //   "opensuse-tumbleweed": "",
+  //   ubuntu: "",
+  //   endeavouros: "",
+  // }[distro] ?? ""
 
 const divide = ([total, free]) => free / total
 export const cpu = ags.Variable(0, {

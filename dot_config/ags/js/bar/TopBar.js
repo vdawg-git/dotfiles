@@ -1,4 +1,4 @@
-import OverviewButton from "./buttons/OverviewButton.js"
+import DistroIconPanelButton from "./buttons/DistroIconPanelButton.js"
 import Workspaces from "./buttons/Workspaces.js"
 import FocusedClient from "./buttons/FocusedClient.js"
 import MediaIndicator from "./buttons/MediaIndicator.js"
@@ -37,7 +37,7 @@ const Start = () =>
   Box({
     className: "start",
     children: [
-      OverviewButton(),
+      DistroIconPanelButton(),
       SeparatorDot(),
       Workspaces(),
       SeparatorDot(),

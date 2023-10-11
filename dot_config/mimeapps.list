@@ -12,6 +12,7 @@ application/vnd.openxmlformats-officedocument.spreadsheetml.sheet=gnumeric.deskt
 image/webp=org.gnome.eog.desktop;
 image/png=org.gnome.eog.desktop;
 video/mp4=org.gnome.Totem.desktop;
+image/jpeg=org.gnome.eog.desktop;
 
 [Default Applications]
 application/json=code-oss.desktop;
@@ -36,3 +37,4 @@ image/webp=org.gnome.eog.desktop
 image/png=org.gnome.eog.desktop
 video/mp4=org.gnome.Totem.desktop
 video/x-matroska=org.gnome.Totem.desktop
+image/jpeg=org.gnome.eog.desktop

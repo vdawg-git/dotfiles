@@ -1,9 +1,9 @@
 export default {
     // if this player is running this will be shown on panel
-    preferredMpris: 'spotify',
+    preferredMpris: 'rhytmbox',
 
     // number of workspaces shown on panel and overview
-    workspaces: 7,
+    workspaces: 9,
 
     //
     dockItemSize: 56,
