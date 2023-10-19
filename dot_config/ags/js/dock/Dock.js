@@ -1,10 +1,7 @@
 import icons from "../icons.js"
+import { App, Hyprland, Applications, Widget } from "../imports.js"
 import Separator from "../misc/Separator.js"
 import options from "../options.js"
-const { App } = ags
-const { Hyprland, Applications } = ags.Service
-const { execAsync } = ags.Utils
-const { Box, Button, Icon, Overlay } = ags.Widget
 
 const pinned = [
   // "code",
@@ -16,15 +13,15 @@ const pinned = [
 ]
 
 const AppButton = ({ icon, ...rest }) =>
-  Button({
+  Widget.Button({
     ...rest,
-    child: Box({
+    child: Widget.Box({
       className: "box",
       children: [
-        Overlay({
-          child: Icon({ icon, size: options.dockItemSize }),
+        Widget.Overlay({
+          child: Widget.Icon({ icon, size: options.dockItemSize }),
           overlays: [
-            Box({
+            Widget.Box({
               className: "indicator",
               valign: "end",
               halign: "center",
@@ -36,7 +33,7 @@ const AppButton = ({ icon, ...rest }) =>
   })
 
 const Taskbar = ({ windowName, skip = [] } = {}) =>
-  Box({
+  Widget.Box({
     properties: [["apps", Applications.query("")]],
     connections: [
       [Applications, (box) => (box._apps = Applications.query(""))],
@@ -69,7 +66,7 @@ const Taskbar = ({ windowName, skip = [] } = {}) =>
   })
 
 // const PinnedApps = ({ list, vertical }) =>
-//   Box({
+//   Widget.Box({
 //     className: "pins",
 //     homogeneous: true,
 //     vertical,
@@ -118,7 +115,7 @@ const Taskbar = ({ windowName, skip = [] } = {}) =>
 //   })
 
 export default ({ vertical = false } = {}) =>
-  Box({
+  Widget.Box({
     className: "dock",
     vertical,
     children: [
@@ -126,7 +123,7 @@ export default ({ vertical = false } = {}) =>
         className: "launcher nonrunning",
         icon: icons.apps.apps,
         tooltipText: "Applications",
-        onClicked: () => ags.Utils.execAsync(["anyrun"]).catch(print),
+        onClicked: () => Utils.execAsync(["anyrun"]).catch(print),
       }),
       // PinnedApps({
       //   vertical,

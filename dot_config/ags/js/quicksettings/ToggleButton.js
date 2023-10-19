@@ -1,17 +1,17 @@
 import icons from "../icons.js"
+import { Widget, Utils, Variable, App } from "../imports.js"
 import Separator from "../misc/Separator.js"
-const { timeout } = ags.Utils
-const { Box, Button, Icon, Revealer } = ags.Widget
+const { timeout } = Utils
 
-export const opened = ags.Variable("")
-ags.App.instance.connect("window-toggled", (_, name, visible) => {
+export const opened = Variable("")
+App.connect("window-toggled", (_, name, visible) => {
   if (name === "quicksettings" && !visible)
     timeout(500, () => (opened.value = ""))
 })
 
 export const Arrow = (name, activate) =>
-  Button({
-    child: Icon({
+  Widget.Button({
+    child: Widget.Icon({
       icon: icons.ui.arrow.right,
       properties: [["deg", 0]],
       connections: [
@@ -50,7 +50,7 @@ export const ArrowToggleButton = ({
   activateOnArrow = true,
   connection: [service, condition],
 }) =>
-  Box({
+  Widget.Box({
     className: "toggle-button",
     connections: [
       [
@@ -61,8 +61,8 @@ export const ArrowToggleButton = ({
       ],
     ],
     children: [
-      Button({
-        child: Box({
+      Widget.Button({
+        child: Widget.Box({
           hexpand: true,
           children: [icon, label],
         }),
@@ -80,7 +80,7 @@ export const ArrowToggleButton = ({
   })
 
 export const Menu = ({ name, icon, title, content }) =>
-  Revealer({
+  Widget.Revealer({
     transition: "slide_down",
     connections: [
       [
@@ -90,16 +90,16 @@ export const Menu = ({ name, icon, title, content }) =>
         },
       ],
     ],
-    child: Box({
+    child: Widget.Box({
       className: "menu",
       vertical: true,
       children: [
-        Box({
+        Widget.Box({
           className: "title",
           children: [icon, title],
         }),
         Separator({ orientation: "horizontal" }),
-        Box({
+        Widget.Box({
           className: "content",
           children: [content],
         }),
@@ -113,7 +113,7 @@ export const SimpleToggleButton = ({
   toggle,
   connection: [service, condition],
 }) =>
-  Button({
+  Widget.Button({
     className: "simple-toggle",
     connections: [
       [
@@ -123,7 +123,7 @@ export const SimpleToggleButton = ({
         },
       ],
     ],
-    child: Box({
+    child: Widget.Box({
       children: [icon, label],
     }),
     onClicked: toggle,

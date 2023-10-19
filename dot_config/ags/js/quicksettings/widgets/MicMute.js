@@ -1,11 +1,10 @@
 import icons from "../../icons.js"
+import { Widget, Audio, Hyprland } from "../../imports.js"
 import { SimpleToggleButton } from "../ToggleButton.js"
-const { Audio, Hyprland } = ags.Service
-const { Icon, Label } = ags.Widget
 
 export default () =>
   SimpleToggleButton({
-    icon: Icon({
+    icon: Widget.Icon({
       connections: [
         [
           Audio,
@@ -18,7 +17,7 @@ export default () =>
         ],
       ],
     }),
-    label: Label({
+    label: Widget.Label({
       className: "simple-toggle-button_label",
       label: "test",
       connections: [

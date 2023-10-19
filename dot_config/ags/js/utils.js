@@ -1,6 +1,12 @@
 import Cairo from "cairo"
 import options from "./options.js"
 import icons from "./icons.js"
+import { Utils, App, Battery } from "./imports.js"
+
+export function forMonitors(widget) {
+  const monitors = JSON.parse(Utils.exec("hyprctl -j monitors"))
+  return monitors.map((monitor) => widget(monitor.id))
+}
 
 export function createSurfaceFromWidget(widget) {
   const alloc = widget.get_allocation()
@@ -19,11 +25,10 @@ export function createSurfaceFromWidget(widget) {
 }
 
 export function warnOnLowBattery() {
-  const { Battery } = ags.Service
-  Battery.instance.connect("changed", () => {
+  Battery.connect("changed", () => {
     const { low } = options.battaryBar
     if (Battery.percentage < low || Battery.percentage < low / 2) {
-      ags.Utils.execAsync([
+      Utils.execAsync([
         "notify-send",
         `${Battery.percentage}% Battery Percentage`,
         "-i",
@@ -49,8 +54,8 @@ export function getAudioTypeIcon(icon) {
   return icon
 }
 
-const scss = ags.App.configDir + "/scss/main.scss"
-const css = ags.App.configDir + "/scss/style.css"
+const scss = App.configDir + "/scss/main.scss"
+const css = App.configDir + "/scss/style.css"
 
 export async function setupCss() {
   await getGtkCssVariables().then(writeScss("gtk"))
@@ -61,21 +66,21 @@ export async function setupCss() {
 }
 
 function applyCss() {
-  ags.Utils.exec(`npx sass ${scss}  ${css} --no-source-map --no-charset`)
+  Utils.exec(`npx sass ${scss}  ${css} --no-source-map --no-charset`)
 
-  ags.App.resetCss()
-  ags.App.applyCss(css)
+  App.resetCss()
+  App.applyCss(css)
 }
 
 function scssWatcher() {
-  ags.Utils.subprocess(
+  Utils.subprocess(
     [
       "inotifywait",
       "--recursive",
       "--event",
       "create,modify",
       "-m",
-      ags.App.configDir + "/scss",
+      App.configDir + "/scss",
     ],
     applyCss
   )
@@ -88,17 +93,17 @@ function scssWatcher() {
 function writeScss(name) {
   const directory = `/tmp/ags/scss/`
   const filename = `${name}.scss`
-  ags.Utils.ensureDirectory(directory)
-  return (css) => ags.Utils.writeFile(css, directory + filename)
+  Utils.ensureDirectory(directory)
+  return (css) => Utils.writeFile(css, directory + filename)
 }
 
 async function getGtkCssVariables() {
-  const configFolder = ags.Utils.exec(`bash -c "echo $HOME/.config/gtk-4.0/"`)
+  const configFolder = Utils.exec(`bash -c "echo $HOME/.config/gtk-4.0/"`)
   const configs = [`${configFolder}/colors.css`, `${configFolder}/gtk-dark.css`]
 
   const variableAtSignRegex = /(@)(?=\w*;$)/
 
-  return Promise.all(configs.map(ags.Utils.readFileAsync)).then((contents) =>
+  return Promise.all(configs.map(Utils.readFileAsync)).then((contents) =>
     contents
       .join("\n") // Join the array into a single string
       .split("\n") // And split the string into lines

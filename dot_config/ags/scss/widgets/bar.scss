@@ -46,8 +46,7 @@ $float: $spacing * 0.25;
     }
   }
 
-  .powermenu,
-  .recorder {
+  .powermenu {
     image {
       color: transparentize($red, 0.3);
     }

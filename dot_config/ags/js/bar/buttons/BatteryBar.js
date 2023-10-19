@@ -2,13 +2,12 @@ import icons from "../../icons.js"
 import FontIcon from "../../misc/FontIcon.js"
 import options from "../../options.js"
 import PanelButton from "../PanelButton.js"
-const { Battery } = ags.Service
-const { Widget, Box, Stack, Icon, Revealer, Label } = ags.Widget
+import { Widget, Battery } from "../../imports.js"
 
 const Indicator = () =>
-  Stack({
+  Widget.Stack({
     items: [
-      ["false", Icon({ binds: [["icon", Battery, "iconName"]] })],
+      ["false", Widget.Icon({ binds: [["icon", Battery, "iconName"]] })],
       ["true", FontIcon({ icon: icons.battery.charging })],
     ],
     connections: [
@@ -22,10 +21,10 @@ const Indicator = () =>
   })
 
 const PercentLabel = () =>
-  Revealer({
+  Widget.Revealer({
     transition: "slide_right",
     revealChild: options.battaryBar.showPercentage,
-    child: Label({
+    child: Widget.Label({
       connections: [
         [
           Battery,
@@ -38,7 +37,7 @@ const PercentLabel = () =>
   })
 
 const LevelBar = () =>
-  Widget({
+  Widget.Widget({
     type: imports.gi.Gtk.LevelBar,
     valign: "center",
     connections: [
@@ -57,7 +56,7 @@ export default () => {
   return PanelButton({
     className: "battery-bar",
     onClicked: () => (revaler.revealChild = !revaler.revealChild),
-    content: Box({
+    content: Widget.Box({
       binds: [["visible", Battery, "available"]],
       connections: [
         [

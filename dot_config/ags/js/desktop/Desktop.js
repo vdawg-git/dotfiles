@@ -1,74 +1,10 @@
 import Separator from "../misc/Separator.js"
-import PowerMenu from "../services/powermenu.js"
 import Clock from "../misc/Clock.js"
-import icons from "../icons.js"
-const { openWindow } = ags.App
-const {
-  MenuItem,
-  Menu,
-  Box,
-  Label,
-  Icon,
-  EventBox,
-  CenterBox,
-  Window,
-  Widget,
-} = ags.Widget
-
-const Item = (label, icon, onActivate) =>
-  MenuItem({
-    onActivate,
-    child: Box({
-      children: [
-        Icon(icon),
-        Label({
-          label,
-          hexpand: true,
-          xalign: 0,
-        }),
-      ],
-    }),
-  })
+import { Widget } from "../imports.js"
 
 const Desktop = () =>
-  EventBox({
-    onSecondaryClick: (_, event) =>
-      Menu({
-        className: "desktop-menu",
-        children: [
-          MenuItem({
-            child: Box({
-              children: [
-                Icon(icons.powermenu.shutdown),
-                Label({
-                  label: "System",
-                  hexpand: true,
-                  xalign: 0,
-                }),
-              ],
-            }),
-            submenu: Menu({
-              children: [
-                Item("Shutdown", icons.powermenu.shutdown, () =>
-                  PowerMenu.action("shutdown")
-                ),
-                Item("Log Out", icons.powermenu.logout, () =>
-                  PowerMenu.action("logout")
-                ),
-                Item("Reboot", icons.powermenu.reboot, () =>
-                  PowerMenu.action("reboot")
-                ),
-                Item("Sleep", icons.powermenu.sleep, () =>
-                  PowerMenu.action("reboot")
-                ),
-              ],
-            }),
-          }),
-          Widget({ type: imports.gi.Gtk.SeparatorMenuItem }),
-        ],
-      }).popup_at_pointer(event),
-    onMiddleClick: print,
-    child: Box({
+  Widget.EventBox({
+    child: Widget.Box({
       vertical: true,
       vexpand: true,
       hexpand: true,
@@ -76,10 +12,10 @@ const Desktop = () =>
       valign: "CENTER",
       style: `margin: 64px;`,
       children: [
-        Box({
+        Widget.Box({
           className: "clock-box-shadow",
           children: [
-            CenterBox({
+            Widget.CenterBox({
               className: "clock-box",
               children: [
                 Clock({
@@ -87,7 +23,7 @@ const Desktop = () =>
                   halign: "center",
                   format: "%H",
                 }),
-                Box({
+                Widget.Box({
                   className: "separator-box",
                   vertical: true,
                   hexpand: true,
@@ -112,9 +48,9 @@ const Desktop = () =>
   })
 
 export default (monitor) =>
-  Window({
+  Widget.Window({
     monitor,
-    name: `desktop${monitor}`,
+    name: `ags-desktop${monitor}`,
     layer: "background",
     className: "desktop",
     anchor: ["top", "bottom", "left", "right"],

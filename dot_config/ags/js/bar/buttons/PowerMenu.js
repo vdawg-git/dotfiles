@@ -1,9 +1,10 @@
-import icons from '../../icons.js';
-import PanelButton from '../PanelButton.js';
-const { Icon } = ags.Widget;
+import icons from "../../icons.js"
+import { Widget } from "../../imports.js"
+import PanelButton from "../PanelButton.js"
 
-export default () => PanelButton({
-    className: 'powermenu',
-    content: Icon(icons.powermenu.shutdown),
-    onClicked: () => ags.App.openWindow('powermenu'),
-});
+export default () =>
+  PanelButton({
+    className: "powermenu",
+    content: Widget.Icon(icons.powermenu.shutdown),
+    onClicked: () => App.openWindow("powermenu"),
+  })

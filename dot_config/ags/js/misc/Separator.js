@@ -1,7 +1,9 @@
-import Gtk from 'gi://Gtk';
+import Gtk from "gi://Gtk"
+import { Widget } from "../imports.js"
 
-export default ({ orientation = 'vertical', ...rest } = {}) => ags.Widget({
+export default ({ orientation = "vertical", ...rest } = {}) =>
+  Widget.Widget({
     ...rest,
     type: Gtk.Separator,
     orientation: Gtk.Orientation[orientation.toUpperCase()],
-});
+  })

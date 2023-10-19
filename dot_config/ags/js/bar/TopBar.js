@@ -7,15 +7,20 @@ import NotificationIndicator from "./buttons/NotificationIndicator.js"
 import SysTray from "./buttons/SysTray.js"
 import SystemIndicators from "./buttons/SystemIndicators.js"
 import PowerMenu from "./buttons/PowerMenu.js"
-import Separator from "../misc/Separator.js"
-import ScreenRecord from "./buttons/ScreenRecord.js"
 import BatteryBar from "./buttons/BatteryBar.js"
 import SubMenu from "./buttons/SubMenu.js"
-const { Window, CenterBox, Box } = ags.Widget
-const { SystemTray } = ags.Service
+import {
+  SystemTray,
+  Widget,
+  Variable,
+  Mpris,
+  Battery,
+  Notifications,
+} from "../imports.js"
+import Separator from "../misc/Separator.js"
 
-const submenuItems = ags.Variable(1)
-SystemTray.instance.connect("changed", () => {
+const submenuItems = Variable(1)
+SystemTray.connect("changed", () => {
   submenuItems.setValue(SystemTray.items.length + 1)
 })
 
@@ -25,16 +30,16 @@ const SeparatorDot = (service, condition) =>
     valign: "center",
     connections: service && [
       [
-        ags.Service[service],
+        service,
         (dot) => {
-          dot.visible = condition(ags.Service[service])
+          dot.visible = condition(service)
         },
       ],
     ],
   })
 
 const Start = () =>
-  Box({
+  Widget.Widget.Box({
     className: "start",
     children: [
       DistroIconPanelButton(),
@@ -42,35 +47,36 @@ const Start = () =>
       Workspaces(),
       SeparatorDot(),
       FocusedClient(),
-      Box({ hexpand: true }),
+      Widget.Widget.Box({ hexpand: true }),
       NotificationIndicator(),
-      SeparatorDot("Notifications", (n) => n.notifications.length > 0 || n.dnd),
+      SeparatorDot(
+        Notifications,
+        (service) => service.notifications.length > 0 || service.dnd
+      ),
     ],
   })
 
 const Center = () =>
-  Box({
+  Widget.Widget.Box({
     className: "center",
     children: [DateButton()],
   })
 
 const End = () =>
-  Box({
+  Widget.Widget.Box({
     className: "end",
     children: [
-      SeparatorDot("Mpris", (m) => m.players.length > 0),
+      SeparatorDot(Mpris, (m) => m.players.length > 0),
       MediaIndicator(),
-      Box({ hexpand: true }),
+      Widget.Box({ hexpand: true }),
 
       SubMenu({
         items: submenuItems,
         children: [SysTray()],
       }),
       SeparatorDot(),
-      ScreenRecord(),
-      SeparatorDot("Recorder", (r) => r.recording),
       SystemIndicators(),
-      SeparatorDot("Battery", (b) => b.available),
+      SeparatorDot(Battery, (b) => b.available),
       BatteryBar(),
       SeparatorDot(),
       PowerMenu(),
@@ -78,12 +84,12 @@ const End = () =>
   })
 
 export default (monitor) =>
-  Window({
-    name: `bar${monitor}`,
+  Widget.Window({
+    name: `ags-bar${monitor}`,
     exclusive: true,
     monitor,
-    anchor: "top left right",
-    child: CenterBox({
+    anchor: ["top", "left", "right"],
+    child: Widget.CenterBox({
       className: "panel",
       startWidget: Start(),
       centerWidget: Center(),

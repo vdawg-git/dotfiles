@@ -1,7 +1,8 @@
-import Gtk from 'gi://Gtk';
+import Gtk from "gi://Gtk"
 
-export default props => ags.Widget({
+export default (props) =>
+  Widget.Widget({
     ...props,
     type: Gtk.Spinner,
     active: true,
-});
+  })

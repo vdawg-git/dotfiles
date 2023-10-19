@@ -1,16 +1,15 @@
 import icons from "../../icons.js"
+import { Widget, Battery } from "../../imports.js"
 import PowerMenu from "../../services/powermenu.js"
 import { uptime } from "../../variables.js"
-const { Battery } = ags.Service
-const { Box, Label, Button, Icon, Overlay, ProgressBar } = ags.Widget
 
 const Avatar = () =>
-  Box({
+  Widget.Box({
     className: "avatar",
     halign: "start",
     hexpand: false,
     children: [
-      Box({
+      Widget.Box({
         className: "shader",
         vexpand: true,
         hexpand: true,
@@ -19,7 +18,7 @@ const Avatar = () =>
   })
 
 export const BatteryProgress = () =>
-  Box({
+  Widget.Box({
     className: "battery-progress",
     vexpand: true,
     connections: [
@@ -32,9 +31,9 @@ export const BatteryProgress = () =>
       ],
     ],
     children: [
-      Overlay({
+      Widget.Overlay({
         vexpand: true,
-        child: ProgressBar({
+        child: Widget.ProgressBar({
           hexpand: true,
           vexpand: true,
           connections: [
@@ -47,7 +46,7 @@ export const BatteryProgress = () =>
           ],
         }),
         overlays: [
-          Label({
+          Widget.Label({
             connections: [
               [
                 Battery,
@@ -66,18 +65,18 @@ export const BatteryProgress = () =>
   })
 
 export default () =>
-  Box({
+  Widget.Box({
     className: "header",
     children: [
       Avatar(),
-      Box({
+      Widget.Box({
         className: "system-box",
         vertical: true,
         hexpand: true,
         children: [
-          Box({
+          Widget.Box({
             children: [
-              Label({
+              Widget.Label({
                 className: "uptime",
                 hexpand: true,
                 valign: "center",
@@ -90,15 +89,15 @@ export default () =>
                   ],
                 ],
               }),
-              Button({
+              Widget.Button({
                 valign: "center",
                 onClicked: () => PowerMenu.action("logout"),
-                child: Icon(icons.powermenu.logout),
+                child: Widget.Icon(icons.powermenu.logout),
               }),
-              Button({
+              Widget.Button({
                 valign: "center",
                 onClicked: () => PowerMenu.action("shutdown"),
-                child: Icon(icons.powermenu.shutdown),
+                child: Widget.Icon(icons.powermenu.shutdown),
               }),
             ],
           }),

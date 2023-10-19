@@ -1,3 +1,4 @@
+import { Utils, Variable } from "./imports.js"
 import options from "./options.js"
 
 const prettyUptime = (str) => {
@@ -7,7 +8,7 @@ const prettyUptime = (str) => {
 
   if (str.length === 2) return "0:" + str
 }
-export const uptime = ags.Variable(0, {
+export const uptime = Variable(0, {
   poll: [
     60_000,
     "uptime",
@@ -15,24 +16,24 @@ export const uptime = ags.Variable(0, {
   ],
 })
 
-export const distro = ags.Utils.exec("cat /etc/os-release")
+export const distro = Utils.exec("cat /etc/os-release")
   .split("\n")
   .find((line) => line.startsWith("ID"))
   .split("=")[1]
 
 export const distroIcon = ""
-  // {
-  //   fedora: "",
-  //   arch: "",
-  //   nixos: "",
-  //   debian: "",
-  //   "opensuse-tumbleweed": "",
-  //   ubuntu: "",
-  //   endeavouros: "",
-  // }[distro] ?? ""
+// {
+//   fedora: "",
+//   arch: "",
+//   nixos: "",
+//   debian: "",
+//   "opensuse-tumbleweed": "",
+//   ubuntu: "",
+//   endeavouros: "",
+// }[distro] ?? ""
 
 const divide = ([total, free]) => free / total
-export const cpu = ags.Variable(0, {
+export const cpu = Variable(0, {
   poll: [
     options.systemFetchInterval,
     "top -b -n 1",
@@ -48,7 +49,7 @@ export const cpu = ags.Variable(0, {
   ],
 })
 
-export const ram = ags.Variable(0, {
+export const ram = Variable(0, {
   poll: [
     options.systemFetchInterval,
     "free",
@@ -63,7 +64,7 @@ export const ram = ags.Variable(0, {
   ],
 })
 
-export const temp = ags.Variable(0, {
+export const temp = Variable(0, {
   poll: [
     options.systemFetchInterval,
     "cat " + options.temperature,

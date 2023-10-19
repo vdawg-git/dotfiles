@@ -11,11 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/Aylur/dotfiles.git"
   },
-  "author": "Aylur",
-  "bugs": {
-    "url": "https://github.com/Aylur/dotfiles/issues"
-  },
-  "homepage": "https://github.com/Aylur/dotfiles#readme",
+  "author": "VDawg",
   "devDependencies": {
     "eslint": "^8.44.0",
     "stylelint-config-standard-scss": "^10.0.0"

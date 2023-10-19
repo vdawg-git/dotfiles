@@ -1,11 +1,11 @@
 import icons from "../../icons.js"
+import { Widget } from "../../imports.js"
+import Notifications from "../../services/notifications.js"
 import { SimpleToggleButton } from "../ToggleButton.js"
-const { Notifications } = ags.Service
-const { Icon, Label } = ags.Widget
 
 export default () =>
   SimpleToggleButton({
-    icon: Icon({
+    icon: Widget.Icon({
       connections: [
         [
           Notifications,
@@ -17,7 +17,7 @@ export default () =>
         ],
       ],
     }),
-    label: Label({
+    label: Widget.Label({
       label: "",
       connections: [
         [

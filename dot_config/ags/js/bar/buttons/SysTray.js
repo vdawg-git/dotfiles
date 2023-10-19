@@ -1,11 +1,11 @@
+import { Widget, SystemTray } from "../../imports.js"
 import PanelButton from "../PanelButton.js"
-const { SystemTray } = ags.Service
-const { Box, Icon } = ags.Widget
+
 const { Gravity } = imports.gi.Gdk
 
 const SysTrayItem = (item) =>
   PanelButton({
-    content: Icon({ binds: [["icon", item, "icon"]] }),
+    content: Widget.Icon({ binds: [["icon", item, "icon"]] }),
     binds: [["tooltipMarkup", item, "tooltipMarkup"]],
     setup: (btn) => {
       const id = item.menu.connect("popped-up", (menu) => {
@@ -23,7 +23,7 @@ const SysTrayItem = (item) =>
   })
 
 export default () =>
-  Box({
+  Widget.Box({
     className: "systray",
     properties: [
       ["items", new Map()],

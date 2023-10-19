@@ -1,5 +1,6 @@
-const { Service } = ags
-const { exec, execAsync } = ags.Utils
+import { Service, Utils } from "../imports.js"
+
+const { exec, execAsync } = Utils
 
 // Change this to whatever keyboard you have
 // you can check with brightnessctl --list
@@ -60,15 +61,15 @@ export default class Brightness {
   static instance = new BrightnessService()
 
   static get kbd() {
-    return Brightness.instance.kbd
+    return Brightness.kbd
   }
   static get screen() {
-    return Brightness.instance.screen
+    return Brightness.screen
   }
   static set kbd(value) {
-    Brightness.instance.kbd = value
+    Brightness.kbd = value
   }
   static set screen(value) {
-    Brightness.instance.screen = value
+    Brightness.screen = value
   }
 }
