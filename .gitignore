@@ -5,3 +5,5 @@ dot_config/BetterDiscord/data/betterdiscord.asar
 **/node_modules/**
 **/weather_key
 **/generated_*
+node_modules
+**/.github
