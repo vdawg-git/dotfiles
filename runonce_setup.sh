@@ -12,4 +12,5 @@ sudo flatpak override --env=ICON_THEME=Colloid-yellow-dark
 pnpm install
 
 # Mange keyd config
+sudo mkdir -p /etc/keyd/
 sudo ln -s /home/vdawg/.local/share/chezmoi/.outside/etc/keyd/default.conf ./default.conf
