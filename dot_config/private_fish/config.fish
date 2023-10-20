@@ -36,7 +36,7 @@ alias ls="exa --icons -F -H --group-directories-first --git -1"
 
 abbr --add pac "sudo pacman -S "
 abbr --add pacr "sudo pacman -R "
-abbr --add yays "yay -Sy"
+abbr --add yays "yay -Syu "
 abbr --add yayr "yay -R "
 
 if status is-interactive
