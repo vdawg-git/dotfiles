@@ -13,3 +13,7 @@ gsettings set "$gnome_schema" gtk-theme "$gtk_theme"
 gsettings set "$gnome_schema" icon-theme "$icon_theme"
 gsettings set "$gnome_schema" cursor-theme "$cursor_theme"
 gsettings set "$gnome_schema" font-name "$font_name"
+
+export GTK_THEME="$gtk_theme"
+export GTK_ICONS="$icon_theme"
+

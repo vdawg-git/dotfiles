@@ -13,7 +13,7 @@ image/webp=org.gnome.eog.desktop;
 image/png=org.gnome.eog.desktop;
 video/mp4=org.gnome.Totem.desktop;
 image/jpeg=org.gnome.eog.desktop;
-audio/mpeg=io.bassi.Amberol.desktop;
+audio/flac=io.bassi.Amberol.desktop;
 audio/mpeg=io.bassi.Amberol.desktop;
 
 [Default Applications]
@@ -41,3 +41,4 @@ video/mp4=org.gnome.Totem.desktop
 video/x-matroska=org.gnome.Totem.desktop
 image/jpeg=org.gnome.eog.desktop
 audio/flac=io.bassi.Amberol.desktop
+

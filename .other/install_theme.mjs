@@ -11,6 +11,7 @@ process.env.FORCE_COLOR = "1"
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const gtkThemeFolder = path.join(__dirname, "gtk-theme/")
 const gtkIconsFolder = path.join(__dirname, "gtk-icons/")
+const assetsFolder = path.join(__dirname, "assets/")
 
 await $`npx degit vinceliuice/Colloid-gtk-theme ${gtkThemeFolder} --force --cache --verbose`
 await $`npx degit vinceliuice/Colloid-icon-theme ${gtkIconsFolder} --force --cache --verbose`
@@ -76,11 +77,15 @@ writeFileSync(
 //     match
 //   })
 
-$`cd ${gtkThemeFolder} && ./install.sh --theme orange --libadwaita --tweaks gruvbox rimless float`
-$`cd ${gtkIconsFolder} && ./install.sh --theme orange`
+await $`cd ${gtkThemeFolder} && ./install.sh --theme orange --libadwaita --tweaks gruvbox rimless float --color dark`
+await $`cd ${gtkIconsFolder} && ./install.sh --theme orange`
 
-$`stylepak install-system`
-$`stylepak install-user`
+await $`tar --exclude-vcs-ignores --exclude-vcs -czf  "./gtk-theme.tar.gz" ${gtkThemeFolder}`
+await $`tar --exclude-vcs-ignores --exclude-vcs -czf  "./gtk-icons.tar.gz" ${gtkIconsFolder}`
+await $`rm -r ${gtkIconsFolder} ${gtkThemeFolder}`
+
+await $`stylepak install-system`
+await $`stylepak install-user`
 
 // Gruvbox Material Colors
 // prettier-ignore

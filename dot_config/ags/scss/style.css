@@ -15,10 +15,10 @@ tooltip * {
   all: unset;
 }
 tooltip > * > * {
-  background-color: rgba(50, 48, 47, 0.6901960784);
+  background-color: #282524;
   border-radius: 16px;
   border: 1px solid rgba(2, 2, 2, 0.000291);
-  color: #ddc7a1;
+  color: #fbf1c7;
   padding: 8px;
   margin: 4px;
   box-shadow: 0 0 3px 0 rgb(0, 0, 1);
@@ -30,7 +30,7 @@ window.popup > * {
 }
 window.popup menu {
   border-radius: 27.2px;
-  background-color: rgba(50, 48, 47, 0.6901960784);
+  background-color: #282524;
   padding: 12px;
   border: 1px solid rgba(221, 199, 161, 0.03);
 }
@@ -41,8 +41,8 @@ window.popup menu menuitem {
   all: unset;
   transition: 200ms;
   border-radius: 16px;
-  color: #ddc7a1;
-  background-color: rgba(235, 219, 178, 0.06);
+  color: #fbf1c7;
+  background-color: rgba(251, 241, 199, 0.06);
   box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03);
   padding: 6px;
   margin: 6px 0;
@@ -52,28 +52,28 @@ window.popup menu menuitem * {
   font-family: "Ubuntu Nerd Font", sans-serif;
 }
 window.popup menu menuitem:focus {
-  box-shadow: inset 0 0 0 1px #fbf1c7;
-  background-color: rgba(235, 219, 178, 0);
+  box-shadow: inset 0 0 0 1px #fe8019;
+  background-color: rgba(251, 241, 199, 0);
   color: #ddc7a1;
 }
 window.popup menu menuitem:hover {
   box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03);
-  background-color: rgba(235, 219, 178, 0);
+  background-color: rgba(251, 241, 199, 0);
   color: #ddc7a1;
 }
 window.popup menu menuitem:active, window.popup menu menuitem.on, window.popup menu menuitem.active, window.popup menu menuitem:checked {
   box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03);
-  background-image: linear-gradient(to right, #fbf1c7, #fdf8e4);
-  background-color: #fbf1c7;
-  color: rgba(40, 40, 40, 0.6901960784);
+  background-image: linear-gradient(to right, #fe8019, #fe9137);
+  background-color: #fe8019;
+  color: #fbf1c7;
 }
 window.popup menu menuitem:active:hover, window.popup menu menuitem.on:hover, window.popup menu menuitem.active:hover, window.popup menu menuitem:checked:hover {
-  box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03), inset 0 0 0 99px rgba(235, 219, 178, 0);
+  box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03), inset 0 0 0 99px rgba(251, 241, 199, 0);
 }
 window.popup menu menuitem:disabled {
   box-shadow: none;
   background-color: transparent;
-  color: rgba(221, 199, 161, 0.3);
+  color: rgba(251, 241, 199, 0.3);
 }
 window.popup menu menuitem:first-child {
   margin-top: 0;
@@ -91,21 +91,21 @@ window.popup menu menuitem:last-child {
 }
 .notifications-popup-list .notification:hover .close-button {
   box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03);
-  background-color: rgba(235, 219, 178, 0);
+  background-color: rgba(251, 241, 199, 0);
   color: #ddc7a1;
   background-color: rgba(237, 51, 59, 0.5);
 }
 .notifications-popup-list .notification .content .title {
   margin-right: 12px;
-  color: #ddc7a1;
+  color: #fbf1c7;
   font-size: 1.1em;
 }
 .notifications-popup-list .notification .content .time {
-  color: rgba(221, 199, 161, 0.8);
+  color: rgba(251, 241, 199, 0.8);
 }
 .notifications-popup-list .notification .content .description {
   font-size: 0.9em;
-  color: rgba(221, 199, 161, 0.8);
+  color: rgba(251, 241, 199, 0.8);
 }
 .notifications-popup-list .notification .content .icon {
   border-radius: 12.8px;
@@ -121,8 +121,8 @@ window.popup menu menuitem:last-child {
   all: unset;
   transition: 200ms;
   border-radius: 16px;
-  color: #ddc7a1;
-  background-color: rgba(235, 219, 178, 0.06);
+  color: #fbf1c7;
+  background-color: rgba(251, 241, 199, 0.06);
   box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03);
   border-radius: 12.8px;
   font-size: 1.2em;
@@ -134,28 +134,28 @@ window.popup menu menuitem:last-child {
   font-family: "Ubuntu Nerd Font", sans-serif;
 }
 .notifications-popup-list .notification .actions button:focus {
-  box-shadow: inset 0 0 0 1px #fbf1c7;
-  background-color: rgba(235, 219, 178, 0);
+  box-shadow: inset 0 0 0 1px #fe8019;
+  background-color: rgba(251, 241, 199, 0);
   color: #ddc7a1;
 }
 .notifications-popup-list .notification .actions button:hover {
   box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03);
-  background-color: rgba(235, 219, 178, 0);
+  background-color: rgba(251, 241, 199, 0);
   color: #ddc7a1;
 }
 .notifications-popup-list .notification .actions button:active, .notifications-popup-list .notification .actions button.on, .notifications-popup-list .notification .actions button.active, .notifications-popup-list .notification .actions button:checked {
   box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03);
-  background-image: linear-gradient(to right, #fbf1c7, #fdf8e4);
-  background-color: #fbf1c7;
-  color: rgba(40, 40, 40, 0.6901960784);
+  background-image: linear-gradient(to right, #fe8019, #fe9137);
+  background-color: #fe8019;
+  color: #fbf1c7;
 }
 .notifications-popup-list .notification .actions button:active:hover, .notifications-popup-list .notification .actions button.on:hover, .notifications-popup-list .notification .actions button.active:hover, .notifications-popup-list .notification .actions button:checked:hover {
-  box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03), inset 0 0 0 99px rgba(235, 219, 178, 0);
+  box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03), inset 0 0 0 99px rgba(251, 241, 199, 0);
 }
 .notifications-popup-list .notification .actions button:disabled {
   box-shadow: none;
   background-color: transparent;
-  color: rgba(221, 199, 161, 0.3);
+  color: rgba(251, 241, 199, 0.3);
 }
 .notifications-popup-list .notification .actions button:first-child {
   margin-left: 0;
@@ -167,7 +167,7 @@ window.popup menu menuitem:last-child {
   all: unset;
   transition: 200ms;
   border-radius: 16px;
-  color: #ddc7a1;
+  color: #fbf1c7;
   background-color: transparent;
   background-image: none;
   box-shadow: none;
@@ -181,28 +181,28 @@ window.popup menu menuitem:last-child {
   font-family: "Ubuntu Nerd Font", sans-serif;
 }
 .notifications-popup-list .notification button.close-button:focus {
-  box-shadow: inset 0 0 0 1px #fbf1c7;
-  background-color: rgba(235, 219, 178, 0);
+  box-shadow: inset 0 0 0 1px #fe8019;
+  background-color: rgba(251, 241, 199, 0);
   color: #ddc7a1;
 }
 .notifications-popup-list .notification button.close-button:hover {
   box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03);
-  background-color: rgba(235, 219, 178, 0);
+  background-color: rgba(251, 241, 199, 0);
   color: #ddc7a1;
 }
 .notifications-popup-list .notification button.close-button:active, .notifications-popup-list .notification button.close-button.on, .notifications-popup-list .notification button.close-button.active, .notifications-popup-list .notification button.close-button:checked {
   box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03);
-  background-image: linear-gradient(to right, #fbf1c7, #fdf8e4);
-  background-color: #fbf1c7;
-  color: rgba(40, 40, 40, 0.6901960784);
+  background-image: linear-gradient(to right, #fe8019, #fe9137);
+  background-color: #fe8019;
+  color: #fbf1c7;
 }
 .notifications-popup-list .notification button.close-button:active:hover, .notifications-popup-list .notification button.close-button.on:hover, .notifications-popup-list .notification button.close-button.active:hover, .notifications-popup-list .notification button.close-button:checked:hover {
-  box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03), inset 0 0 0 99px rgba(235, 219, 178, 0);
+  box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03), inset 0 0 0 99px rgba(251, 241, 199, 0);
 }
 .notifications-popup-list .notification button.close-button:disabled {
   box-shadow: none;
   background-color: transparent;
-  color: rgba(221, 199, 161, 0.3);
+  color: rgba(251, 241, 199, 0.3);
 }
 .notifications-popup-list .notification button.close-button:hover {
   background-color: rgba(237, 51, 59, 0.5);
@@ -216,8 +216,8 @@ window.popup menu menuitem:last-child {
   margin: 12px;
   border: 1px solid rgba(2, 2, 2, 0.000291);
   border-radius: 27.2px;
-  background-color: rgba(50, 48, 47, 0.6901960784);
-  color: #ddc7a1;
+  background-color: #282524;
+  color: #fbf1c7;
   padding: 21.6px;
   border-radius: 16px;
 }
@@ -235,14 +235,14 @@ window.floating-dock .dock {
   margin: 12px;
   border: 1px solid rgba(2, 2, 2, 0.000291);
   border-radius: 27.2px;
-  background-color: rgba(50, 48, 47, 0.6901960784);
-  color: #ddc7a1;
+  background-color: #282524;
+  color: #fbf1c7;
   padding: 21.6px;
   padding: 6px;
 }
 window.floating-dock .dock separator {
   border-radius: 16px;
-  background-color: rgba(221, 199, 161, 0.2);
+  background-color: rgba(251, 241, 199, 0.2);
   margin: 0 8.4px;
 }
 window.floating-dock .dock.horizontal separator {
@@ -256,11 +256,11 @@ window.floating-dock .dock button {
   all: unset;
   transition: 200ms;
   border-radius: 16px;
-  color: #ddc7a1;
+  color: #fbf1c7;
   background-color: transparent;
   background-image: none;
   box-shadow: none;
-  color: #ddc7a1;
+  color: #fbf1c7;
 }
 window.floating-dock .dock button * {
   font-size: 16px;
@@ -269,7 +269,7 @@ window.floating-dock .dock button * {
 window.floating-dock .dock button:disabled {
   box-shadow: none;
   background-color: transparent;
-  color: rgba(221, 199, 161, 0.3);
+  color: rgba(251, 241, 199, 0.3);
 }
 window.floating-dock .dock button > * {
   border-radius: 16px;
@@ -278,23 +278,23 @@ window.floating-dock .dock button > * {
   box-shadow: none;
 }
 window.floating-dock .dock button:focus > *, window.floating-dock .dock button.focused > * {
-  box-shadow: inset 0 0 0 1px #fbf1c7;
-  background-color: rgba(235, 219, 178, 0);
+  box-shadow: inset 0 0 0 1px #fe8019;
+  background-color: rgba(251, 241, 199, 0);
   color: #ddc7a1;
 }
 window.floating-dock .dock button:hover > * {
   box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03);
-  background-color: rgba(235, 219, 178, 0);
+  background-color: rgba(251, 241, 199, 0);
   color: #ddc7a1;
 }
 window.floating-dock .dock button:active > *, window.floating-dock .dock button.active > *, window.floating-dock .dock button.on > *, window.floating-dock .dock button:checked > * {
   box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03);
-  background-image: linear-gradient(to right, #fbf1c7, #fdf8e4);
-  background-color: #fbf1c7;
-  color: rgba(40, 40, 40, 0.6901960784);
+  background-image: linear-gradient(to right, #fe8019, #fe9137);
+  background-color: #fe8019;
+  color: #fbf1c7;
 }
 window.floating-dock .dock button:active:hover > *, window.floating-dock .dock button.active:hover > *, window.floating-dock .dock button.on:hover > *, window.floating-dock .dock button:checked:hover > * {
-  box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03), inset 0 0 0 99px rgba(235, 219, 178, 0);
+  box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03), inset 0 0 0 99px rgba(251, 241, 199, 0);
 }
 window.floating-dock .dock button image,
 window.floating-dock .dock button .box {
@@ -303,7 +303,7 @@ window.floating-dock .dock button .box {
 window.floating-dock .dock button .indicator {
   min-width: 6px;
   min-height: 6px;
-  background-color: #ddc7a1;
+  background-color: #fbf1c7;
   border-radius: 16px;
   margin-bottom: 2px;
 }
@@ -311,7 +311,7 @@ window.floating-dock .dock button.single .indicator, window.floating-dock .dock 
   background-color: transparent;
 }
 window.floating-dock .dock button.focused .indicator {
-  background-image: linear-gradient(to right, #fbf1c7, #fdf8e4);
+  background-image: linear-gradient(to right, #fe8019, #fe9137);
 }
 window.floating-dock .dock * {
   font-size: 16px;
@@ -327,8 +327,8 @@ window#ags-quicksettings .quicksettings {
   margin: 12px;
   border: 1px solid rgba(2, 2, 2, 0.000291);
   border-radius: 27.2px;
-  background-color: rgba(50, 48, 47, 0.6901960784);
-  color: #ddc7a1;
+  background-color: #282524;
+  color: #fbf1c7;
   padding: 21.6px;
 }
 window#ags-quicksettings .quicksettings * {
@@ -344,8 +344,8 @@ window#ags-quicksettings .quicksettings .row:first-child {
 window#ags-quicksettings .quicksettings .header .avatar {
   all: unset;
   border-radius: 16px;
-  color: #ddc7a1;
-  background-color: rgba(235, 219, 178, 0.06);
+  color: #fbf1c7;
+  background-color: rgba(251, 241, 199, 0.06);
   border: 1px solid rgba(221, 199, 161, 0.03);
   margin-right: 12px;
   min-width: 122px;
@@ -359,7 +359,7 @@ window#ags-quicksettings .quicksettings .header .avatar * {
 window#ags-quicksettings .quicksettings .header .avatar .shader {
   all: unset;
   border-radius: 15px;
-  box-shadow: inset 0 0 3em 1em rgba(1, 1, 1, 0.0020705882);
+  box-shadow: inset 0 0 3em 1em rgba(40, 37, 36, 0.003);
 }
 window#ags-quicksettings .quicksettings .header .avatar .shader * {
   font-size: 16px;
@@ -371,12 +371,12 @@ window#ags-quicksettings .quicksettings .header .avatar .shader label {
 }
 window#ags-quicksettings .quicksettings .header .battery-progress label {
   margin-top: 12px;
-  color: rgba(40, 40, 40, 0.6901960784);
+  color: #fbf1c7;
   font-size: 24px;
   font-weight: bold;
 }
 window#ags-quicksettings .quicksettings .header .battery-progress.half label {
-  color: #ddc7a1;
+  color: #fbf1c7;
 }
 window#ags-quicksettings .quicksettings .header .battery-progress progressbar {
   all: unset;
@@ -394,14 +394,14 @@ window#ags-quicksettings .quicksettings .header .battery-progress progressbar tr
   transition: 200ms;
   border-radius: 16px;
   border: 1px solid rgba(221, 199, 161, 0.03);
-  background-color: rgba(235, 219, 178, 0.06);
+  background-color: rgba(251, 241, 199, 0.06);
   min-height: 40.8px;
   min-width: 40.8px;
 }
 window#ags-quicksettings .quicksettings .header .battery-progress progressbar trough highlight,
 window#ags-quicksettings .quicksettings .header .battery-progress progressbar trough progress {
   border-radius: 15px;
-  background-image: linear-gradient(to right, #fbf1c7, #fdf8e4);
+  background-image: linear-gradient(to right, #fe8019, #fe9137);
   min-height: 40.8px;
   min-width: 40.8px;
 }
@@ -416,25 +416,25 @@ window#ags-quicksettings .quicksettings .header .battery-progress progressbar sl
   margin: -0.5em;
 }
 window#ags-quicksettings .quicksettings .header .battery-progress progressbar:hover trough {
-  background-color: rgba(235, 219, 178, 0);
+  background-color: rgba(251, 241, 199, 0);
 }
 window#ags-quicksettings .quicksettings .header .battery-progress progressbar:hover slider {
-  background-color: #ddc7a1;
+  background-color: #fbf1c7;
   border-color: rgba(221, 199, 161, 0.03);
   box-shadow: 0 0 3px 0 rgb(0, 0, 1);
 }
 window#ags-quicksettings .quicksettings .header .battery-progress progressbar:disabled highlight,
 window#ags-quicksettings .quicksettings .header .battery-progress progressbar:disabled progress {
-  background-color: rgba(221, 199, 161, 0.004);
+  background-color: rgba(251, 241, 199, 0.004);
   background-image: none;
 }
 window#ags-quicksettings .quicksettings .header .battery-progress progressbar trough:focus {
-  background-color: rgba(235, 219, 178, 0);
-  box-shadow: inset 0 0 0 1px #fbf1c7;
+  background-color: rgba(251, 241, 199, 0);
+  box-shadow: inset 0 0 0 1px #fe8019;
 }
 window#ags-quicksettings .quicksettings .header .battery-progress progressbar trough:focus slider {
-  background-color: #ddc7a1;
-  box-shadow: inset 0 0 0 1px #fbf1c7;
+  background-color: #fbf1c7;
+  box-shadow: inset 0 0 0 1px #fe8019;
 }
 window#ags-quicksettings .quicksettings .header .battery-progress.low progressbar {
   all: unset;
@@ -452,7 +452,7 @@ window#ags-quicksettings .quicksettings .header .battery-progress.low progressba
   transition: 200ms;
   border-radius: 16px;
   border: 1px solid rgba(221, 199, 161, 0.03);
-  background-color: rgba(235, 219, 178, 0.06);
+  background-color: rgba(251, 241, 199, 0.06);
   min-height: 40.8px;
   min-width: 40.8px;
 }
@@ -474,31 +474,31 @@ window#ags-quicksettings .quicksettings .header .battery-progress.low progressba
   margin: -0.5em;
 }
 window#ags-quicksettings .quicksettings .header .battery-progress.low progressbar:hover trough {
-  background-color: rgba(235, 219, 178, 0);
+  background-color: rgba(251, 241, 199, 0);
 }
 window#ags-quicksettings .quicksettings .header .battery-progress.low progressbar:hover slider {
-  background-color: #ddc7a1;
+  background-color: #fbf1c7;
   border-color: rgba(221, 199, 161, 0.03);
   box-shadow: 0 0 3px 0 rgb(0, 0, 1);
 }
 window#ags-quicksettings .quicksettings .header .battery-progress.low progressbar:disabled highlight,
 window#ags-quicksettings .quicksettings .header .battery-progress.low progressbar:disabled progress {
-  background-color: rgba(221, 199, 161, 0.004);
+  background-color: rgba(251, 241, 199, 0.004);
   background-image: none;
 }
 window#ags-quicksettings .quicksettings .header .battery-progress.low progressbar trough:focus {
-  background-color: rgba(235, 219, 178, 0);
-  box-shadow: inset 0 0 0 1px #fbf1c7;
+  background-color: rgba(251, 241, 199, 0);
+  box-shadow: inset 0 0 0 1px #fe8019;
 }
 window#ags-quicksettings .quicksettings .header .battery-progress.low progressbar trough:focus slider {
-  background-color: #ddc7a1;
-  box-shadow: inset 0 0 0 1px #fbf1c7;
+  background-color: #fbf1c7;
+  box-shadow: inset 0 0 0 1px #fe8019;
 }
 window#ags-quicksettings .quicksettings .header .system-box {
   all: unset;
   border-radius: 16px;
-  color: #ddc7a1;
-  background-color: rgba(235, 219, 178, 0.06);
+  color: #fbf1c7;
+  background-color: rgba(251, 241, 199, 0.06);
   border: 1px solid rgba(221, 199, 161, 0.03);
   padding: 12px;
 }
@@ -511,8 +511,8 @@ window#ags-quicksettings .quicksettings .header .system-box .uptime {
   all: unset;
   transition: 200ms;
   border-radius: 16px;
-  color: #ddc7a1;
-  background-color: rgba(235, 219, 178, 0.06);
+  color: #fbf1c7;
+  background-color: rgba(251, 241, 199, 0.06);
   box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03);
   padding: 12px;
   font-weight: bold;
@@ -527,14 +527,14 @@ window#ags-quicksettings .quicksettings .header .system-box .uptime * {
 }
 window#ags-quicksettings .quicksettings .header .system-box button:focus,
 window#ags-quicksettings .quicksettings .header .system-box .uptime:focus {
-  box-shadow: inset 0 0 0 1px #fbf1c7;
-  background-color: rgba(235, 219, 178, 0);
+  box-shadow: inset 0 0 0 1px #fe8019;
+  background-color: rgba(251, 241, 199, 0);
   color: #ddc7a1;
 }
 window#ags-quicksettings .quicksettings .header .system-box button:hover,
 window#ags-quicksettings .quicksettings .header .system-box .uptime:hover {
   box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03);
-  background-color: rgba(235, 219, 178, 0);
+  background-color: rgba(251, 241, 199, 0);
   color: #ddc7a1;
 }
 window#ags-quicksettings .quicksettings .header .system-box button:active, window#ags-quicksettings .quicksettings .header .system-box button.on, window#ags-quicksettings .quicksettings .header .system-box button.active, window#ags-quicksettings .quicksettings .header .system-box button:checked,
@@ -543,22 +543,22 @@ window#ags-quicksettings .quicksettings .header .system-box .uptime.on,
 window#ags-quicksettings .quicksettings .header .system-box .uptime.active,
 window#ags-quicksettings .quicksettings .header .system-box .uptime:checked {
   box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03);
-  background-image: linear-gradient(to right, #fbf1c7, #fdf8e4);
-  background-color: #fbf1c7;
-  color: rgba(40, 40, 40, 0.6901960784);
+  background-image: linear-gradient(to right, #fe8019, #fe9137);
+  background-color: #fe8019;
+  color: #fbf1c7;
 }
 window#ags-quicksettings .quicksettings .header .system-box button:active:hover, window#ags-quicksettings .quicksettings .header .system-box button.on:hover, window#ags-quicksettings .quicksettings .header .system-box button.active:hover, window#ags-quicksettings .quicksettings .header .system-box button:checked:hover,
 window#ags-quicksettings .quicksettings .header .system-box .uptime:active:hover,
 window#ags-quicksettings .quicksettings .header .system-box .uptime.on:hover,
 window#ags-quicksettings .quicksettings .header .system-box .uptime.active:hover,
 window#ags-quicksettings .quicksettings .header .system-box .uptime:checked:hover {
-  box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03), inset 0 0 0 99px rgba(235, 219, 178, 0);
+  box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03), inset 0 0 0 99px rgba(251, 241, 199, 0);
 }
 window#ags-quicksettings .quicksettings .header .system-box button:disabled,
 window#ags-quicksettings .quicksettings .header .system-box .uptime:disabled {
   box-shadow: none;
   background-color: transparent;
-  color: rgba(221, 199, 161, 0.3);
+  color: rgba(251, 241, 199, 0.3);
 }
 window#ags-quicksettings .quicksettings .header .system-box button:first-child,
 window#ags-quicksettings .quicksettings .header .system-box .uptime:first-child {
@@ -571,8 +571,8 @@ window#ags-quicksettings .quicksettings .header .system-box .uptime image {
 window#ags-quicksettings .quicksettings .slider-box {
   all: unset;
   border-radius: 16px;
-  color: #ddc7a1;
-  background-color: rgba(235, 219, 178, 0.06);
+  color: #fbf1c7;
+  background-color: rgba(251, 241, 199, 0.06);
   border: 1px solid rgba(221, 199, 161, 0.03);
   padding: 12px;
 }
@@ -594,7 +594,7 @@ window#ags-quicksettings .quicksettings .slider-box .icon {
   all: unset;
   transition: 200ms;
   border-radius: 16px;
-  color: #ddc7a1;
+  color: #fbf1c7;
   background-color: transparent;
   background-image: none;
   box-shadow: none;
@@ -607,14 +607,14 @@ window#ags-quicksettings .quicksettings .slider-box .icon * {
 }
 window#ags-quicksettings .quicksettings .slider-box button:focus,
 window#ags-quicksettings .quicksettings .slider-box .icon:focus {
-  box-shadow: inset 0 0 0 1px #fbf1c7;
-  background-color: rgba(235, 219, 178, 0);
+  box-shadow: inset 0 0 0 1px #fe8019;
+  background-color: rgba(251, 241, 199, 0);
   color: #ddc7a1;
 }
 window#ags-quicksettings .quicksettings .slider-box button:hover,
 window#ags-quicksettings .quicksettings .slider-box .icon:hover {
   box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03);
-  background-color: rgba(235, 219, 178, 0);
+  background-color: rgba(251, 241, 199, 0);
   color: #ddc7a1;
 }
 window#ags-quicksettings .quicksettings .slider-box button:active, window#ags-quicksettings .quicksettings .slider-box button.on, window#ags-quicksettings .quicksettings .slider-box button.active, window#ags-quicksettings .quicksettings .slider-box button:checked,
@@ -623,22 +623,22 @@ window#ags-quicksettings .quicksettings .slider-box .icon.on,
 window#ags-quicksettings .quicksettings .slider-box .icon.active,
 window#ags-quicksettings .quicksettings .slider-box .icon:checked {
   box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03);
-  background-image: linear-gradient(to right, #fbf1c7, #fdf8e4);
-  background-color: #fbf1c7;
-  color: rgba(40, 40, 40, 0.6901960784);
+  background-image: linear-gradient(to right, #fe8019, #fe9137);
+  background-color: #fe8019;
+  color: #fbf1c7;
 }
 window#ags-quicksettings .quicksettings .slider-box button:active:hover, window#ags-quicksettings .quicksettings .slider-box button.on:hover, window#ags-quicksettings .quicksettings .slider-box button.active:hover, window#ags-quicksettings .quicksettings .slider-box button:checked:hover,
 window#ags-quicksettings .quicksettings .slider-box .icon:active:hover,
 window#ags-quicksettings .quicksettings .slider-box .icon.on:hover,
 window#ags-quicksettings .quicksettings .slider-box .icon.active:hover,
 window#ags-quicksettings .quicksettings .slider-box .icon:checked:hover {
-  box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03), inset 0 0 0 99px rgba(235, 219, 178, 0);
+  box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03), inset 0 0 0 99px rgba(251, 241, 199, 0);
 }
 window#ags-quicksettings .quicksettings .slider-box button:disabled,
 window#ags-quicksettings .quicksettings .slider-box .icon:disabled {
   box-shadow: none;
   background-color: transparent;
-  color: rgba(221, 199, 161, 0.3);
+  color: rgba(251, 241, 199, 0.3);
 }
 window#ags-quicksettings .quicksettings .slider-box scale {
   all: unset;
@@ -654,14 +654,14 @@ window#ags-quicksettings .quicksettings .slider-box scale trough {
   transition: 200ms;
   border-radius: 16px;
   border: 1px solid rgba(221, 199, 161, 0.03);
-  background-color: rgba(235, 219, 178, 0.06);
+  background-color: rgba(251, 241, 199, 0.06);
   min-height: 0.7em;
   min-width: 0.7em;
 }
 window#ags-quicksettings .quicksettings .slider-box scale trough highlight,
 window#ags-quicksettings .quicksettings .slider-box scale trough progress {
   border-radius: 15px;
-  background-image: linear-gradient(to right, #fbf1c7, #fdf8e4);
+  background-image: linear-gradient(to right, #fe8019, #fe9137);
   min-height: 0.7em;
   min-width: 0.7em;
 }
@@ -676,31 +676,31 @@ window#ags-quicksettings .quicksettings .slider-box scale slider {
   margin: -0.5em;
 }
 window#ags-quicksettings .quicksettings .slider-box scale:hover trough {
-  background-color: rgba(235, 219, 178, 0);
+  background-color: rgba(251, 241, 199, 0);
 }
 window#ags-quicksettings .quicksettings .slider-box scale:hover slider {
-  background-color: #ddc7a1;
+  background-color: #fbf1c7;
   border-color: rgba(221, 199, 161, 0.03);
   box-shadow: 0 0 3px 0 rgb(0, 0, 1);
 }
 window#ags-quicksettings .quicksettings .slider-box scale:disabled highlight,
 window#ags-quicksettings .quicksettings .slider-box scale:disabled progress {
-  background-color: rgba(221, 199, 161, 0.004);
+  background-color: rgba(251, 241, 199, 0.004);
   background-image: none;
 }
 window#ags-quicksettings .quicksettings .slider-box scale trough:focus {
-  background-color: rgba(235, 219, 178, 0);
-  box-shadow: inset 0 0 0 1px #fbf1c7;
+  background-color: rgba(251, 241, 199, 0);
+  box-shadow: inset 0 0 0 1px #fe8019;
 }
 window#ags-quicksettings .quicksettings .slider-box scale trough:focus slider {
-  background-color: #ddc7a1;
-  box-shadow: inset 0 0 0 1px #fbf1c7;
+  background-color: #fbf1c7;
+  box-shadow: inset 0 0 0 1px #fe8019;
 }
 window#ags-quicksettings .quicksettings .slider-box scale:last-child {
   margin-right: 6px;
 }
 window#ags-quicksettings .quicksettings .slider-box .menu {
-  background-color: rgba(50, 48, 47, 0.6901960784);
+  background-color: #282524;
   border: 1px solid rgba(2, 2, 2, 0.000291);
   border-radius: 16px;
 }
@@ -721,14 +721,14 @@ window#ags-quicksettings .quicksettings .mixer-item scale trough {
   transition: 200ms;
   border-radius: 16px;
   border: 1px solid rgba(221, 199, 161, 0.03);
-  background-color: rgba(235, 219, 178, 0.06);
+  background-color: rgba(251, 241, 199, 0.06);
   min-height: 7px;
   min-width: 7px;
 }
 window#ags-quicksettings .quicksettings .mixer-item scale trough highlight,
 window#ags-quicksettings .quicksettings .mixer-item scale trough progress {
   border-radius: 15px;
-  background-image: linear-gradient(to right, #fbf1c7, #fdf8e4);
+  background-image: linear-gradient(to right, #fe8019, #fe9137);
   min-height: 7px;
   min-width: 7px;
 }
@@ -743,25 +743,25 @@ window#ags-quicksettings .quicksettings .mixer-item scale slider {
   margin: -0.5em;
 }
 window#ags-quicksettings .quicksettings .mixer-item scale:hover trough {
-  background-color: rgba(235, 219, 178, 0);
+  background-color: rgba(251, 241, 199, 0);
 }
 window#ags-quicksettings .quicksettings .mixer-item scale:hover slider {
-  background-color: #ddc7a1;
+  background-color: #fbf1c7;
   border-color: rgba(221, 199, 161, 0.03);
   box-shadow: 0 0 3px 0 rgb(0, 0, 1);
 }
 window#ags-quicksettings .quicksettings .mixer-item scale:disabled highlight,
 window#ags-quicksettings .quicksettings .mixer-item scale:disabled progress {
-  background-color: rgba(221, 199, 161, 0.004);
+  background-color: rgba(251, 241, 199, 0.004);
   background-image: none;
 }
 window#ags-quicksettings .quicksettings .mixer-item scale trough:focus {
-  background-color: rgba(235, 219, 178, 0);
-  box-shadow: inset 0 0 0 1px #fbf1c7;
+  background-color: rgba(251, 241, 199, 0);
+  box-shadow: inset 0 0 0 1px #fe8019;
 }
 window#ags-quicksettings .quicksettings .mixer-item scale trough:focus slider {
-  background-color: #ddc7a1;
-  box-shadow: inset 0 0 0 1px #fbf1c7;
+  background-color: #fbf1c7;
+  box-shadow: inset 0 0 0 1px #fe8019;
 }
 window#ags-quicksettings .quicksettings .mixer-item > box {
   padding: 12px;
@@ -775,8 +775,8 @@ window#ags-quicksettings .quicksettings .mixer-item image {
 window#ags-quicksettings .quicksettings .menu {
   all: unset;
   border-radius: 16px;
-  color: #ddc7a1;
-  background-color: rgba(235, 219, 178, 0.06);
+  color: #fbf1c7;
+  background-color: rgba(251, 241, 199, 0.06);
   border: 1px solid rgba(221, 199, 161, 0.03);
   margin-top: 12px;
   padding: 12px;
@@ -796,7 +796,7 @@ window#ags-quicksettings .quicksettings .menu button {
   all: unset;
   transition: 200ms;
   border-radius: 16px;
-  color: #ddc7a1;
+  color: #fbf1c7;
   background-color: transparent;
   background-image: none;
   box-shadow: none;
@@ -807,35 +807,35 @@ window#ags-quicksettings .quicksettings .menu button * {
   font-family: "Ubuntu Nerd Font", sans-serif;
 }
 window#ags-quicksettings .quicksettings .menu button:focus {
-  box-shadow: inset 0 0 0 1px #fbf1c7;
-  background-color: rgba(235, 219, 178, 0);
+  box-shadow: inset 0 0 0 1px #fe8019;
+  background-color: rgba(251, 241, 199, 0);
   color: #ddc7a1;
 }
 window#ags-quicksettings .quicksettings .menu button:hover {
   box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03);
-  background-color: rgba(235, 219, 178, 0);
+  background-color: rgba(251, 241, 199, 0);
   color: #ddc7a1;
 }
 window#ags-quicksettings .quicksettings .menu button:active, window#ags-quicksettings .quicksettings .menu button.on, window#ags-quicksettings .quicksettings .menu button.active, window#ags-quicksettings .quicksettings .menu button:checked {
   box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03);
-  background-image: linear-gradient(to right, #fbf1c7, #fdf8e4);
-  background-color: #fbf1c7;
-  color: rgba(40, 40, 40, 0.6901960784);
+  background-image: linear-gradient(to right, #fe8019, #fe9137);
+  background-color: #fe8019;
+  color: #fbf1c7;
 }
 window#ags-quicksettings .quicksettings .menu button:active:hover, window#ags-quicksettings .quicksettings .menu button.on:hover, window#ags-quicksettings .quicksettings .menu button.active:hover, window#ags-quicksettings .quicksettings .menu button:checked:hover {
-  box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03), inset 0 0 0 99px rgba(235, 219, 178, 0);
+  box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03), inset 0 0 0 99px rgba(251, 241, 199, 0);
 }
 window#ags-quicksettings .quicksettings .menu button:disabled {
   box-shadow: none;
   background-color: transparent;
-  color: rgba(221, 199, 161, 0.3);
+  color: rgba(251, 241, 199, 0.3);
 }
 window#ags-quicksettings .quicksettings .menu switch {
   all: unset;
   transition: 200ms;
   border-radius: 16px;
-  color: #ddc7a1;
-  background-color: rgba(235, 219, 178, 0.06);
+  color: #fbf1c7;
+  background-color: rgba(251, 241, 199, 0.06);
   box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03);
 }
 window#ags-quicksettings .quicksettings .menu switch * {
@@ -843,31 +843,31 @@ window#ags-quicksettings .quicksettings .menu switch * {
   font-family: "Ubuntu Nerd Font", sans-serif;
 }
 window#ags-quicksettings .quicksettings .menu switch:focus {
-  box-shadow: inset 0 0 0 1px #fbf1c7;
-  background-color: rgba(235, 219, 178, 0);
+  box-shadow: inset 0 0 0 1px #fe8019;
+  background-color: rgba(251, 241, 199, 0);
   color: #ddc7a1;
 }
 window#ags-quicksettings .quicksettings .menu switch:hover {
   box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03);
-  background-color: rgba(235, 219, 178, 0);
+  background-color: rgba(251, 241, 199, 0);
   color: #ddc7a1;
 }
 window#ags-quicksettings .quicksettings .menu switch:active, window#ags-quicksettings .quicksettings .menu switch.on, window#ags-quicksettings .quicksettings .menu switch.active, window#ags-quicksettings .quicksettings .menu switch:checked {
   box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03);
-  background-image: linear-gradient(to right, #fbf1c7, #fdf8e4);
-  background-color: #fbf1c7;
-  color: rgba(40, 40, 40, 0.6901960784);
+  background-image: linear-gradient(to right, #fe8019, #fe9137);
+  background-color: #fe8019;
+  color: #fbf1c7;
 }
 window#ags-quicksettings .quicksettings .menu switch:active:hover, window#ags-quicksettings .quicksettings .menu switch.on:hover, window#ags-quicksettings .quicksettings .menu switch.active:hover, window#ags-quicksettings .quicksettings .menu switch:checked:hover {
-  box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03), inset 0 0 0 99px rgba(235, 219, 178, 0);
+  box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03), inset 0 0 0 99px rgba(251, 241, 199, 0);
 }
 window#ags-quicksettings .quicksettings .menu switch:disabled {
   box-shadow: none;
   background-color: transparent;
-  color: rgba(221, 199, 161, 0.3);
+  color: rgba(251, 241, 199, 0.3);
 }
 window#ags-quicksettings .quicksettings .menu switch slider {
-  background-color: #ddc7a1;
+  background-color: #fbf1c7;
   border-radius: 16px;
   min-width: 24px;
   min-height: 24px;
@@ -879,8 +879,8 @@ window#ags-quicksettings .quicksettings .toggle-button {
   all: unset;
   transition: 200ms;
   border-radius: 16px;
-  color: #ddc7a1;
-  background-color: rgba(235, 219, 178, 0.06);
+  color: #fbf1c7;
+  background-color: rgba(251, 241, 199, 0.06);
   box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03);
   margin-right: 12px;
   font-weight: bold;
@@ -890,28 +890,28 @@ window#ags-quicksettings .quicksettings .toggle-button * {
   font-family: "Ubuntu Nerd Font", sans-serif;
 }
 window#ags-quicksettings .quicksettings .toggle-button:focus {
-  box-shadow: inset 0 0 0 1px #fbf1c7;
-  background-color: rgba(235, 219, 178, 0);
+  box-shadow: inset 0 0 0 1px #fe8019;
+  background-color: rgba(251, 241, 199, 0);
   color: #ddc7a1;
 }
 window#ags-quicksettings .quicksettings .toggle-button:hover {
   box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03);
-  background-color: rgba(235, 219, 178, 0);
+  background-color: rgba(251, 241, 199, 0);
   color: #ddc7a1;
 }
 window#ags-quicksettings .quicksettings .toggle-button:active, window#ags-quicksettings .quicksettings .toggle-button.on, window#ags-quicksettings .quicksettings .toggle-button.active, window#ags-quicksettings .quicksettings .toggle-button:checked {
   box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03);
-  background-image: linear-gradient(to right, #fbf1c7, #fdf8e4);
-  background-color: #fbf1c7;
-  color: rgba(40, 40, 40, 0.6901960784);
+  background-image: linear-gradient(to right, #fe8019, #fe9137);
+  background-color: #fe8019;
+  color: #fbf1c7;
 }
 window#ags-quicksettings .quicksettings .toggle-button:active:hover, window#ags-quicksettings .quicksettings .toggle-button.on:hover, window#ags-quicksettings .quicksettings .toggle-button.active:hover, window#ags-quicksettings .quicksettings .toggle-button:checked:hover {
-  box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03), inset 0 0 0 99px rgba(235, 219, 178, 0);
+  box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03), inset 0 0 0 99px rgba(251, 241, 199, 0);
 }
 window#ags-quicksettings .quicksettings .toggle-button:disabled {
   box-shadow: none;
   background-color: transparent;
-  color: rgba(221, 199, 161, 0.3);
+  color: rgba(251, 241, 199, 0.3);
 }
 window#ags-quicksettings .quicksettings .toggle-button label {
   margin-left: 6px;
@@ -920,7 +920,7 @@ window#ags-quicksettings .quicksettings .toggle-button button {
   all: unset;
   transition: 200ms;
   border-radius: 16px;
-  color: #ddc7a1;
+  color: #fbf1c7;
   background-color: transparent;
   background-image: none;
   box-shadow: none;
@@ -931,28 +931,28 @@ window#ags-quicksettings .quicksettings .toggle-button button * {
   font-family: "Ubuntu Nerd Font", sans-serif;
 }
 window#ags-quicksettings .quicksettings .toggle-button button:focus {
-  box-shadow: inset 0 0 0 1px #fbf1c7;
-  background-color: rgba(235, 219, 178, 0);
+  box-shadow: inset 0 0 0 1px #fe8019;
+  background-color: rgba(251, 241, 199, 0);
   color: #ddc7a1;
 }
 window#ags-quicksettings .quicksettings .toggle-button button:hover {
   box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03);
-  background-color: rgba(235, 219, 178, 0);
+  background-color: rgba(251, 241, 199, 0);
   color: #ddc7a1;
 }
 window#ags-quicksettings .quicksettings .toggle-button button:active, window#ags-quicksettings .quicksettings .toggle-button button.on, window#ags-quicksettings .quicksettings .toggle-button button.active, window#ags-quicksettings .quicksettings .toggle-button button:checked {
   box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03);
-  background-image: linear-gradient(to right, #fbf1c7, #fdf8e4);
-  background-color: #fbf1c7;
-  color: rgba(40, 40, 40, 0.6901960784);
+  background-image: linear-gradient(to right, #fe8019, #fe9137);
+  background-color: #fe8019;
+  color: #fbf1c7;
 }
 window#ags-quicksettings .quicksettings .toggle-button button:active:hover, window#ags-quicksettings .quicksettings .toggle-button button.on:hover, window#ags-quicksettings .quicksettings .toggle-button button.active:hover, window#ags-quicksettings .quicksettings .toggle-button button:checked:hover {
-  box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03), inset 0 0 0 99px rgba(235, 219, 178, 0);
+  box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03), inset 0 0 0 99px rgba(251, 241, 199, 0);
 }
 window#ags-quicksettings .quicksettings .toggle-button button:disabled {
   box-shadow: none;
   background-color: transparent;
-  color: rgba(221, 199, 161, 0.3);
+  color: rgba(251, 241, 199, 0.3);
 }
 window#ags-quicksettings .quicksettings .toggle-button button:first-child {
   border-top-right-radius: 0;
@@ -963,18 +963,18 @@ window#ags-quicksettings .quicksettings .toggle-button button:last-child {
   border-bottom-left-radius: 0;
 }
 window#ags-quicksettings .quicksettings .toggle-button.active {
-  background-color: #fbf1c7;
+  background-color: #fe8019;
 }
 window#ags-quicksettings .quicksettings .toggle-button.active label,
 window#ags-quicksettings .quicksettings .toggle-button.active image {
-  color: rgba(40, 40, 40, 0.6901960784);
+  color: #fbf1c7;
 }
 window#ags-quicksettings .quicksettings .simple-toggle {
   all: unset;
   transition: 200ms;
   border-radius: 16px;
-  color: #ddc7a1;
-  background-color: rgba(235, 219, 178, 0.06);
+  color: #fbf1c7;
+  background-color: rgba(251, 241, 199, 0.06);
   box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03);
   padding: 12px;
 }
@@ -983,28 +983,28 @@ window#ags-quicksettings .quicksettings .simple-toggle * {
   font-family: "Ubuntu Nerd Font", sans-serif;
 }
 window#ags-quicksettings .quicksettings .simple-toggle:focus {
-  box-shadow: inset 0 0 0 1px #fbf1c7;
-  background-color: rgba(235, 219, 178, 0);
+  box-shadow: inset 0 0 0 1px #fe8019;
+  background-color: rgba(251, 241, 199, 0);
   color: #ddc7a1;
 }
 window#ags-quicksettings .quicksettings .simple-toggle:hover {
   box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03);
-  background-color: rgba(235, 219, 178, 0);
+  background-color: rgba(251, 241, 199, 0);
   color: #ddc7a1;
 }
 window#ags-quicksettings .quicksettings .simple-toggle:active, window#ags-quicksettings .quicksettings .simple-toggle.on, window#ags-quicksettings .quicksettings .simple-toggle.active, window#ags-quicksettings .quicksettings .simple-toggle:checked {
   box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03);
-  background-image: linear-gradient(to right, #fbf1c7, #fdf8e4);
-  background-color: #fbf1c7;
-  color: rgba(40, 40, 40, 0.6901960784);
+  background-image: linear-gradient(to right, #fe8019, #fe9137);
+  background-color: #fe8019;
+  color: #fbf1c7;
 }
 window#ags-quicksettings .quicksettings .simple-toggle:active:hover, window#ags-quicksettings .quicksettings .simple-toggle.on:hover, window#ags-quicksettings .quicksettings .simple-toggle.active:hover, window#ags-quicksettings .quicksettings .simple-toggle:checked:hover {
-  box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03), inset 0 0 0 99px rgba(235, 219, 178, 0);
+  box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03), inset 0 0 0 99px rgba(251, 241, 199, 0);
 }
 window#ags-quicksettings .quicksettings .simple-toggle:disabled {
   box-shadow: none;
   background-color: transparent;
-  color: rgba(221, 199, 161, 0.3);
+  color: rgba(251, 241, 199, 0.3);
 }
 window#ags-quicksettings .quicksettings .simple-toggle label {
   min-width: 80px;
@@ -1012,8 +1012,8 @@ window#ags-quicksettings .quicksettings .simple-toggle label {
 window#ags-quicksettings .quicksettings .media .player {
   all: unset;
   border-radius: 16px;
-  color: #ddc7a1;
-  background-color: rgba(235, 219, 178, 0.06);
+  color: #fbf1c7;
+  background-color: rgba(251, 241, 199, 0.06);
   border: 1px solid rgba(221, 199, 161, 0.03);
   margin-top: 12px;
 }
@@ -1028,7 +1028,7 @@ window#ags-quicksettings .quicksettings .media .player label {
 window#ags-quicksettings .quicksettings .media .player .shader {
   all: unset;
   border-radius: 15px;
-  box-shadow: inset 0 0 3em 1em rgba(1, 1, 1, 0.0020705882);
+  box-shadow: inset 0 0 3em 1em rgba(40, 37, 36, 0.003);
 }
 window#ags-quicksettings .quicksettings .media .player .shader * {
   font-size: 16px;
@@ -1049,7 +1049,7 @@ window#ags-quicksettings .quicksettings .media .player .cover {
 window#ags-quicksettings .quicksettings .media .player .cover .shader {
   background-color: transparent;
   border-radius: 11.8px;
-  box-shadow: inset 0 0 0 999px rgba(50, 48, 47, 0);
+  box-shadow: inset 0 0 0 999px rgba(40, 37, 36, 0.2);
 }
 window#ags-quicksettings .quicksettings .media .player .blurred-cover, window#ags-quicksettings .quicksettings .media .player .cover {
   background-size: cover;
@@ -1081,7 +1081,7 @@ window#ags-quicksettings .quicksettings .media .player .position-slider trough {
   transition: 200ms;
   border-radius: 0;
   border: 1px solid rgba(221, 199, 161, 0.03);
-  background-color: rgba(235, 219, 178, 0.06);
+  background-color: rgba(251, 241, 199, 0.06);
   min-height: 0.4em;
   min-width: 0.4em;
 }
@@ -1103,16 +1103,16 @@ window#ags-quicksettings .quicksettings .media .player .position-slider slider {
   margin: -0.5em;
 }
 window#ags-quicksettings .quicksettings .media .player .position-slider:hover trough {
-  background-color: rgba(235, 219, 178, 0);
+  background-color: rgba(251, 241, 199, 0);
 }
 window#ags-quicksettings .quicksettings .media .player .position-slider:disabled highlight,
 window#ags-quicksettings .quicksettings .media .player .position-slider:disabled progress {
-  background-color: rgba(221, 199, 161, 0.004);
+  background-color: rgba(251, 241, 199, 0.004);
   background-image: none;
 }
 window#ags-quicksettings .quicksettings .media .player .position-slider trough:focus {
-  background-color: rgba(235, 219, 178, 0);
-  box-shadow: inset 0 0 0 1px #fbf1c7;
+  background-color: rgba(251, 241, 199, 0);
+  box-shadow: inset 0 0 0 1px #fe8019;
 }
 window#ags-quicksettings .quicksettings .media .player .position-slider trough {
   border: none;
@@ -1197,8 +1197,8 @@ window#verification .verification {
   margin: 12px;
   border: 1px solid rgba(2, 2, 2, 0.000291);
   border-radius: 27.2px;
-  background-color: rgba(50, 48, 47, 0.6901960784);
-  color: #ddc7a1;
+  background-color: #282524;
+  color: #fbf1c7;
   padding: 21.6px;
   padding: 25.92px;
   min-width: 300px;
@@ -1212,7 +1212,7 @@ window#verification .verification .title {
   font-size: 1.7em;
 }
 window#verification .verification .desc {
-  color: rgba(221, 199, 161, 0.9);
+  color: rgba(251, 241, 199, 0.9);
   font-size: 1.2em;
 }
 window#verification .verification .buttons {
@@ -1222,8 +1222,8 @@ window#verification .verification .buttons button {
   all: unset;
   transition: 200ms;
   border-radius: 16px;
-  color: #ddc7a1;
-  background-color: rgba(235, 219, 178, 0.06);
+  color: #fbf1c7;
+  background-color: rgba(251, 241, 199, 0.06);
   box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03);
   font-size: 1.6em;
   padding: 12px;
@@ -1234,28 +1234,28 @@ window#verification .verification .buttons button * {
   font-family: "Ubuntu Nerd Font", sans-serif;
 }
 window#verification .verification .buttons button:focus {
-  box-shadow: inset 0 0 0 1px #fbf1c7;
-  background-color: rgba(235, 219, 178, 0);
+  box-shadow: inset 0 0 0 1px #fe8019;
+  background-color: rgba(251, 241, 199, 0);
   color: #ddc7a1;
 }
 window#verification .verification .buttons button:hover {
   box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03);
-  background-color: rgba(235, 219, 178, 0);
+  background-color: rgba(251, 241, 199, 0);
   color: #ddc7a1;
 }
 window#verification .verification .buttons button:active, window#verification .verification .buttons button.on, window#verification .verification .buttons button.active, window#verification .verification .buttons button:checked {
   box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03);
-  background-image: linear-gradient(to right, #fbf1c7, #fdf8e4);
-  background-color: #fbf1c7;
-  color: rgba(40, 40, 40, 0.6901960784);
+  background-image: linear-gradient(to right, #fe8019, #fe9137);
+  background-color: #fe8019;
+  color: #fbf1c7;
 }
 window#verification .verification .buttons button:active:hover, window#verification .verification .buttons button.on:hover, window#verification .verification .buttons button.active:hover, window#verification .verification .buttons button:checked:hover {
-  box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03), inset 0 0 0 99px rgba(235, 219, 178, 0);
+  box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03), inset 0 0 0 99px rgba(251, 241, 199, 0);
 }
 window#verification .verification .buttons button:disabled {
   box-shadow: none;
   background-color: transparent;
-  color: rgba(221, 199, 161, 0.3);
+  color: rgba(251, 241, 199, 0.3);
 }
 window#verification .verification .buttons button:first-child {
   margin-left: 0;
@@ -1270,8 +1270,8 @@ window#powermenu .powermenu {
   margin: 12px;
   border: 1px solid rgba(2, 2, 2, 0.000291);
   border-radius: 27.2px;
-  background-color: rgba(50, 48, 47, 0.6901960784);
-  color: #ddc7a1;
+  background-color: #282524;
+  color: #fbf1c7;
   padding: 21.6px;
   padding: 21.6px;
   border-radius: 48px;
@@ -1291,8 +1291,8 @@ window#powermenu .powermenu button image {
   all: unset;
   transition: 200ms;
   border-radius: 16px;
-  color: #ddc7a1;
-  background-color: rgba(235, 219, 178, 0.06);
+  color: #fbf1c7;
+  background-color: rgba(251, 241, 199, 0.06);
   box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03);
   margin: 21.6px;
   margin-bottom: 10.8px;
@@ -1306,53 +1306,53 @@ window#powermenu .powermenu button image * {
   font-family: "Ubuntu Nerd Font", sans-serif;
 }
 window#powermenu .powermenu button image:focus {
-  box-shadow: inset 0 0 0 1px #fbf1c7;
-  background-color: rgba(235, 219, 178, 0);
+  box-shadow: inset 0 0 0 1px #fe8019;
+  background-color: rgba(251, 241, 199, 0);
   color: #ddc7a1;
 }
 window#powermenu .powermenu button image:hover {
   box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03);
-  background-color: rgba(235, 219, 178, 0);
+  background-color: rgba(251, 241, 199, 0);
   color: #ddc7a1;
 }
 window#powermenu .powermenu button image:active, window#powermenu .powermenu button image.on, window#powermenu .powermenu button image.active, window#powermenu .powermenu button image:checked {
   box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03);
-  background-image: linear-gradient(to right, #fbf1c7, #fdf8e4);
-  background-color: #fbf1c7;
-  color: rgba(40, 40, 40, 0.6901960784);
+  background-image: linear-gradient(to right, #fe8019, #fe9137);
+  background-color: #fe8019;
+  color: #fbf1c7;
 }
 window#powermenu .powermenu button image:active:hover, window#powermenu .powermenu button image.on:hover, window#powermenu .powermenu button image.active:hover, window#powermenu .powermenu button image:checked:hover {
-  box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03), inset 0 0 0 99px rgba(235, 219, 178, 0);
+  box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03), inset 0 0 0 99px rgba(251, 241, 199, 0);
 }
 window#powermenu .powermenu button image:disabled {
   box-shadow: none;
   background-color: transparent;
-  color: rgba(221, 199, 161, 0.3);
+  color: rgba(251, 241, 199, 0.3);
 }
 window#powermenu .powermenu button label, window#powermenu .powermenu button image {
-  color: rgba(221, 199, 161, 0.9);
+  color: rgba(251, 241, 199, 0.9);
 }
 window#powermenu .powermenu button:hover image {
   box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03);
-  background-color: rgba(235, 219, 178, 0);
+  background-color: rgba(251, 241, 199, 0);
   color: #ddc7a1;
 }
 window#powermenu .powermenu button:hover label {
-  color: #ddc7a1;
+  color: #fbf1c7;
 }
 window#powermenu .powermenu button:focus image {
-  box-shadow: inset 0 0 0 1px #fbf1c7;
-  background-color: rgba(235, 219, 178, 0);
+  box-shadow: inset 0 0 0 1px #fe8019;
+  background-color: rgba(251, 241, 199, 0);
   color: #ddc7a1;
 }
 window#powermenu .powermenu button:active image {
   box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03);
-  background-image: linear-gradient(to right, #fbf1c7, #fdf8e4);
-  background-color: #fbf1c7;
-  color: rgba(40, 40, 40, 0.6901960784);
+  background-image: linear-gradient(to right, #fe8019, #fe9137);
+  background-color: #fe8019;
+  color: #fbf1c7;
 }
 window#powermenu .powermenu button:focus label, window#powermenu .powermenu button:active label {
-  color: #fbf1c7;
+  color: #fe8019;
 }
 
 window.corner .corner {
@@ -1365,7 +1365,7 @@ window.desktop {
   box-shadow: inset 0 0 12px 0 rgb(0, 0, 1);
 }
 window.desktop .clock-box-shadow {
-  border: 5px solid rgba(40, 40, 40, 0.6901960784);
+  border: 5px solid #fbf1c7;
   border-radius: 16px;
 }
 window.desktop .clock-box-shadow .clock-box {
@@ -1373,7 +1373,7 @@ window.desktop .clock-box-shadow .clock-box {
   padding: 0 14px;
 }
 window.desktop .clock-box-shadow .clock-box .clock {
-  color: rgba(40, 40, 40, 0.6901960784);
+  color: #fbf1c7;
   font-size: 140px;
   font-family: "JetBrainsMono Nerd Font", monospace;
 }
@@ -1384,10 +1384,10 @@ window.desktop .clock-box-shadow .clock-box .separator-box separator {
   border-radius: 16px;
   min-width: 16px;
   min-height: 16px;
-  background-color: rgba(40, 40, 40, 0.6901960784);
+  background-color: #fbf1c7;
 }
 window.desktop .date {
-  color: rgba(40, 40, 40, 0.6901960784);
+  color: #fbf1c7;
   font-size: 48px;
 }
 window.desktop .clock-box-shadow,
@@ -1412,8 +1412,8 @@ window.indicator .progress {
   margin: 12px;
   border: 1px solid rgba(2, 2, 2, 0.000291);
   border-radius: 27.2px;
-  background-color: rgba(50, 48, 47, 0.6901960784);
-  color: #ddc7a1;
+  background-color: #282524;
+  color: #fbf1c7;
   padding: 21.6px;
   padding: 6px;
 }
@@ -1423,8 +1423,8 @@ window.indicator .progress * {
 }
 window.indicator .progress .fill {
   border-radius: 27.2px;
-  background-color: #fbf1c7;
-  color: rgba(40, 40, 40, 0.6901960784);
+  background-color: #fe8019;
+  color: #fbf1c7;
 }
 window.indicator .progress .fill image {
   -gtk-icon-transform: scale(0.7);
@@ -1439,8 +1439,8 @@ window#ags-dashboard .dashboard {
   margin: 12px;
   border: 1px solid rgba(2, 2, 2, 0.000291);
   border-radius: 27.2px;
-  background-color: rgba(50, 48, 47, 0.6901960784);
-  color: #ddc7a1;
+  background-color: #282524;
+  color: #fbf1c7;
   padding: 21.6px;
 }
 window#ags-dashboard .dashboard * {
@@ -1461,8 +1461,8 @@ window#ags-dashboard .dashboard .notifications .header button {
   all: unset;
   transition: 200ms;
   border-radius: 16px;
-  color: #ddc7a1;
-  background-color: rgba(235, 219, 178, 0.06);
+  color: #fbf1c7;
+  background-color: rgba(251, 241, 199, 0.06);
   box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03);
   padding: 6px 12px;
 }
@@ -1471,28 +1471,28 @@ window#ags-dashboard .dashboard .notifications .header button * {
   font-family: "Ubuntu Nerd Font", sans-serif;
 }
 window#ags-dashboard .dashboard .notifications .header button:focus {
-  box-shadow: inset 0 0 0 1px #fbf1c7;
-  background-color: rgba(235, 219, 178, 0);
+  box-shadow: inset 0 0 0 1px #fe8019;
+  background-color: rgba(251, 241, 199, 0);
   color: #ddc7a1;
 }
 window#ags-dashboard .dashboard .notifications .header button:hover {
   box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03);
-  background-color: rgba(235, 219, 178, 0);
+  background-color: rgba(251, 241, 199, 0);
   color: #ddc7a1;
 }
 window#ags-dashboard .dashboard .notifications .header button:active, window#ags-dashboard .dashboard .notifications .header button.on, window#ags-dashboard .dashboard .notifications .header button.active, window#ags-dashboard .dashboard .notifications .header button:checked {
   box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03);
-  background-image: linear-gradient(to right, #fbf1c7, #fdf8e4);
-  background-color: #fbf1c7;
-  color: rgba(40, 40, 40, 0.6901960784);
+  background-image: linear-gradient(to right, #fe8019, #fe9137);
+  background-color: #fe8019;
+  color: #fbf1c7;
 }
 window#ags-dashboard .dashboard .notifications .header button:active:hover, window#ags-dashboard .dashboard .notifications .header button.on:hover, window#ags-dashboard .dashboard .notifications .header button.active:hover, window#ags-dashboard .dashboard .notifications .header button:checked:hover {
-  box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03), inset 0 0 0 99px rgba(235, 219, 178, 0);
+  box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03), inset 0 0 0 99px rgba(251, 241, 199, 0);
 }
 window#ags-dashboard .dashboard .notifications .header button:disabled {
   box-shadow: none;
   background-color: transparent;
-  color: rgba(221, 199, 161, 0.3);
+  color: rgba(251, 241, 199, 0.3);
 }
 window#ags-dashboard .dashboard .notifications .header button label {
   font-size: 1.2em;
@@ -1503,17 +1503,17 @@ window#ags-dashboard .dashboard .notifications .notification-scrollable scrollba
 }
 window#ags-dashboard .dashboard .notifications .notification-scrollable scrollbar.vertical {
   transition: 200ms;
-  background-color: rgba(50, 48, 47, 0);
+  background-color: rgba(40, 37, 36, 0.3);
 }
 window#ags-dashboard .dashboard .notifications .notification-scrollable scrollbar.vertical:hover {
-  background-color: rgba(50, 48, 47, 0.3901960784);
+  background-color: rgba(40, 37, 36, 0.7);
 }
 window#ags-dashboard .dashboard .notifications .notification-scrollable scrollbar.vertical:hover slider {
-  background-color: rgba(221, 199, 161, 0.7);
+  background-color: rgba(251, 241, 199, 0.7);
   min-width: 0.6em;
 }
 window#ags-dashboard .dashboard .notifications .notification-scrollable scrollbar.vertical slider {
-  background-color: rgba(221, 199, 161, 0.5);
+  background-color: rgba(251, 241, 199, 0.5);
   border-radius: 16px;
   min-width: 0.4em;
   min-height: 2em;
@@ -1534,21 +1534,21 @@ window#ags-dashboard .dashboard .notifications .notification-scrollable .notific
 }
 window#ags-dashboard .dashboard .notifications .notification-scrollable .notification:hover .close-button {
   box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03);
-  background-color: rgba(235, 219, 178, 0);
+  background-color: rgba(251, 241, 199, 0);
   color: #ddc7a1;
   background-color: rgba(237, 51, 59, 0.5);
 }
 window#ags-dashboard .dashboard .notifications .notification-scrollable .notification .content .title {
   margin-right: 12px;
-  color: #ddc7a1;
+  color: #fbf1c7;
   font-size: 1.1em;
 }
 window#ags-dashboard .dashboard .notifications .notification-scrollable .notification .content .time {
-  color: rgba(221, 199, 161, 0.8);
+  color: rgba(251, 241, 199, 0.8);
 }
 window#ags-dashboard .dashboard .notifications .notification-scrollable .notification .content .description {
   font-size: 0.9em;
-  color: rgba(221, 199, 161, 0.8);
+  color: rgba(251, 241, 199, 0.8);
 }
 window#ags-dashboard .dashboard .notifications .notification-scrollable .notification .content .icon {
   border-radius: 12.8px;
@@ -1564,8 +1564,8 @@ window#ags-dashboard .dashboard .notifications .notification-scrollable .notific
   all: unset;
   transition: 200ms;
   border-radius: 16px;
-  color: #ddc7a1;
-  background-color: rgba(235, 219, 178, 0.06);
+  color: #fbf1c7;
+  background-color: rgba(251, 241, 199, 0.06);
   box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03);
   border-radius: 12.8px;
   font-size: 1.2em;
@@ -1577,28 +1577,28 @@ window#ags-dashboard .dashboard .notifications .notification-scrollable .notific
   font-family: "Ubuntu Nerd Font", sans-serif;
 }
 window#ags-dashboard .dashboard .notifications .notification-scrollable .notification .actions button:focus {
-  box-shadow: inset 0 0 0 1px #fbf1c7;
-  background-color: rgba(235, 219, 178, 0);
+  box-shadow: inset 0 0 0 1px #fe8019;
+  background-color: rgba(251, 241, 199, 0);
   color: #ddc7a1;
 }
 window#ags-dashboard .dashboard .notifications .notification-scrollable .notification .actions button:hover {
   box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03);
-  background-color: rgba(235, 219, 178, 0);
+  background-color: rgba(251, 241, 199, 0);
   color: #ddc7a1;
 }
 window#ags-dashboard .dashboard .notifications .notification-scrollable .notification .actions button:active, window#ags-dashboard .dashboard .notifications .notification-scrollable .notification .actions button.on, window#ags-dashboard .dashboard .notifications .notification-scrollable .notification .actions button.active, window#ags-dashboard .dashboard .notifications .notification-scrollable .notification .actions button:checked {
   box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03);
-  background-image: linear-gradient(to right, #fbf1c7, #fdf8e4);
-  background-color: #fbf1c7;
-  color: rgba(40, 40, 40, 0.6901960784);
+  background-image: linear-gradient(to right, #fe8019, #fe9137);
+  background-color: #fe8019;
+  color: #fbf1c7;
 }
 window#ags-dashboard .dashboard .notifications .notification-scrollable .notification .actions button:active:hover, window#ags-dashboard .dashboard .notifications .notification-scrollable .notification .actions button.on:hover, window#ags-dashboard .dashboard .notifications .notification-scrollable .notification .actions button.active:hover, window#ags-dashboard .dashboard .notifications .notification-scrollable .notification .actions button:checked:hover {
-  box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03), inset 0 0 0 99px rgba(235, 219, 178, 0);
+  box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03), inset 0 0 0 99px rgba(251, 241, 199, 0);
 }
 window#ags-dashboard .dashboard .notifications .notification-scrollable .notification .actions button:disabled {
   box-shadow: none;
   background-color: transparent;
-  color: rgba(221, 199, 161, 0.3);
+  color: rgba(251, 241, 199, 0.3);
 }
 window#ags-dashboard .dashboard .notifications .notification-scrollable .notification .actions button:first-child {
   margin-left: 0;
@@ -1610,7 +1610,7 @@ window#ags-dashboard .dashboard .notifications .notification-scrollable .notific
   all: unset;
   transition: 200ms;
   border-radius: 16px;
-  color: #ddc7a1;
+  color: #fbf1c7;
   background-color: transparent;
   background-image: none;
   box-shadow: none;
@@ -1624,28 +1624,28 @@ window#ags-dashboard .dashboard .notifications .notification-scrollable .notific
   font-family: "Ubuntu Nerd Font", sans-serif;
 }
 window#ags-dashboard .dashboard .notifications .notification-scrollable .notification button.close-button:focus {
-  box-shadow: inset 0 0 0 1px #fbf1c7;
-  background-color: rgba(235, 219, 178, 0);
+  box-shadow: inset 0 0 0 1px #fe8019;
+  background-color: rgba(251, 241, 199, 0);
   color: #ddc7a1;
 }
 window#ags-dashboard .dashboard .notifications .notification-scrollable .notification button.close-button:hover {
   box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03);
-  background-color: rgba(235, 219, 178, 0);
+  background-color: rgba(251, 241, 199, 0);
   color: #ddc7a1;
 }
 window#ags-dashboard .dashboard .notifications .notification-scrollable .notification button.close-button:active, window#ags-dashboard .dashboard .notifications .notification-scrollable .notification button.close-button.on, window#ags-dashboard .dashboard .notifications .notification-scrollable .notification button.close-button.active, window#ags-dashboard .dashboard .notifications .notification-scrollable .notification button.close-button:checked {
   box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03);
-  background-image: linear-gradient(to right, #fbf1c7, #fdf8e4);
-  background-color: #fbf1c7;
-  color: rgba(40, 40, 40, 0.6901960784);
+  background-image: linear-gradient(to right, #fe8019, #fe9137);
+  background-color: #fe8019;
+  color: #fbf1c7;
 }
 window#ags-dashboard .dashboard .notifications .notification-scrollable .notification button.close-button:active:hover, window#ags-dashboard .dashboard .notifications .notification-scrollable .notification button.close-button.on:hover, window#ags-dashboard .dashboard .notifications .notification-scrollable .notification button.close-button.active:hover, window#ags-dashboard .dashboard .notifications .notification-scrollable .notification button.close-button:checked:hover {
-  box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03), inset 0 0 0 99px rgba(235, 219, 178, 0);
+  box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03), inset 0 0 0 99px rgba(251, 241, 199, 0);
 }
 window#ags-dashboard .dashboard .notifications .notification-scrollable .notification button.close-button:disabled {
   box-shadow: none;
   background-color: transparent;
-  color: rgba(221, 199, 161, 0.3);
+  color: rgba(251, 241, 199, 0.3);
 }
 window#ags-dashboard .dashboard .notifications .notification-scrollable .notification button.close-button:hover {
   background-color: rgba(237, 51, 59, 0.5);
@@ -1656,8 +1656,8 @@ window#ags-dashboard .dashboard .notifications .notification-scrollable .notific
 window#ags-dashboard .dashboard .notifications .notification-scrollable .notification > box {
   all: unset;
   border-radius: 16px;
-  color: #ddc7a1;
-  background-color: rgba(235, 219, 178, 0.06);
+  color: #fbf1c7;
+  background-color: rgba(251, 241, 199, 0.06);
   border: 1px solid rgba(221, 199, 161, 0.03);
   margin: 6px 0;
   padding: 12px;
@@ -1667,7 +1667,7 @@ window#ags-dashboard .dashboard .notifications .notification-scrollable .notific
   font-family: "Ubuntu Nerd Font", sans-serif;
 }
 window#ags-dashboard .dashboard .notifications .placeholder {
-  color: rgba(40, 40, 40, 0.6901960784);
+  color: #fbf1c7;
 }
 window#ags-dashboard .dashboard .notifications .placeholder image {
   font-size: 7em;
@@ -1691,13 +1691,13 @@ window#ags-dashboard .dashboard .clock {
 }
 window#ags-dashboard .dashboard .uptime {
   font-size: 2em;
-  color: rgba(221, 199, 161, 0.8);
+  color: rgba(251, 241, 199, 0.8);
 }
 window#ags-dashboard .dashboard .calendar {
   all: unset;
   border-radius: 16px;
-  color: #ddc7a1;
-  background-color: rgba(235, 219, 178, 0.06);
+  color: #fbf1c7;
+  background-color: rgba(251, 241, 199, 0.06);
   border: 1px solid rgba(221, 199, 161, 0.03);
   padding: 24px 24px 0;
   margin-top: 24px;
@@ -1715,7 +1715,7 @@ window#ags-dashboard .dashboard .calendar calendar.button {
   all: unset;
   transition: 200ms;
   border-radius: 16px;
-  color: #ddc7a1;
+  color: #fbf1c7;
   background-color: transparent;
   background-image: none;
   box-shadow: none;
@@ -1726,50 +1726,50 @@ window#ags-dashboard .dashboard .calendar calendar.button * {
   font-family: "Ubuntu Nerd Font", sans-serif;
 }
 window#ags-dashboard .dashboard .calendar calendar.button:focus {
-  box-shadow: inset 0 0 0 1px #fbf1c7;
-  background-color: rgba(235, 219, 178, 0);
+  box-shadow: inset 0 0 0 1px #fe8019;
+  background-color: rgba(251, 241, 199, 0);
   color: #ddc7a1;
 }
 window#ags-dashboard .dashboard .calendar calendar.button:hover {
   box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03);
-  background-color: rgba(235, 219, 178, 0);
+  background-color: rgba(251, 241, 199, 0);
   color: #ddc7a1;
 }
 window#ags-dashboard .dashboard .calendar calendar.button:active, window#ags-dashboard .dashboard .calendar calendar.button.on, window#ags-dashboard .dashboard .calendar calendar.button.active, window#ags-dashboard .dashboard .calendar calendar.button:checked {
   box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03);
-  background-image: linear-gradient(to right, #fbf1c7, #fdf8e4);
-  background-color: #fbf1c7;
-  color: rgba(40, 40, 40, 0.6901960784);
+  background-image: linear-gradient(to right, #fe8019, #fe9137);
+  background-color: #fe8019;
+  color: #fbf1c7;
 }
 window#ags-dashboard .dashboard .calendar calendar.button:active:hover, window#ags-dashboard .dashboard .calendar calendar.button.on:hover, window#ags-dashboard .dashboard .calendar calendar.button.active:hover, window#ags-dashboard .dashboard .calendar calendar.button:checked:hover {
-  box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03), inset 0 0 0 99px rgba(235, 219, 178, 0);
+  box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03), inset 0 0 0 99px rgba(251, 241, 199, 0);
 }
 window#ags-dashboard .dashboard .calendar calendar.button:disabled {
   box-shadow: none;
   background-color: transparent;
-  color: rgba(221, 199, 161, 0.3);
+  color: rgba(251, 241, 199, 0.3);
 }
 window#ags-dashboard .dashboard .calendar calendar:selected {
-  box-shadow: inset 0 -8px 0 0 rgba(251, 241, 199, 0.5), inset 0 0 0 1px #fbf1c7;
+  box-shadow: inset 0 -8px 0 0 rgba(254, 128, 25, 0.5), inset 0 0 0 1px #fe8019;
   border-radius: 9.6px;
 }
 window#ags-dashboard .dashboard .calendar calendar.header {
   background-color: transparent;
   border: none;
-  color: rgba(221, 199, 161, 0.5);
+  color: rgba(251, 241, 199, 0.5);
 }
 window#ags-dashboard .dashboard .calendar calendar.highlight {
   background-color: transparent;
-  color: rgba(251, 241, 199, 0.5);
+  color: rgba(254, 128, 25, 0.5);
 }
 window#ags-dashboard .dashboard .calendar calendar:indeterminate {
-  color: rgba(221, 199, 161, 0.1);
+  color: rgba(251, 241, 199, 0.1);
 }
 window#ags-dashboard .dashboard .circular-progress-box {
   all: unset;
   border-radius: 16px;
-  color: #ddc7a1;
-  background-color: rgba(235, 219, 178, 0.06);
+  color: #fbf1c7;
+  background-color: rgba(251, 241, 199, 0.06);
   border: 1px solid rgba(221, 199, 161, 0.03);
   margin-top: 12px;
   margin-right: 12px;
@@ -1787,8 +1787,8 @@ window#ags-dashboard .dashboard .circular-progress-box .circular-progress {
   min-width: 96px;
   margin: 6px;
   font-size: 12px;
-  background-color: rgba(50, 48, 47, 0.6901960784);
-  color: #fbf1c7;
+  background-color: #282524;
+  color: #fe8019;
 }
 window#ags-dashboard .dashboard .circular-progress-box .circular-progress image {
   font-size: 1.8em;
@@ -1803,11 +1803,11 @@ window#ags-dashboard .dashboard .circular-progress-box .circular-progress image 
   all: unset;
   transition: 200ms;
   border-radius: 16px;
-  color: #ddc7a1;
+  color: #fbf1c7;
   background-color: transparent;
   background-image: none;
   box-shadow: none;
-  color: #ddc7a1;
+  color: #fbf1c7;
 }
 .panel .panel-button * {
   font-size: 16px;
@@ -1816,7 +1816,7 @@ window#ags-dashboard .dashboard .circular-progress-box .circular-progress image 
 .panel .panel-button:disabled {
   box-shadow: none;
   background-color: transparent;
-  color: rgba(221, 199, 161, 0.3);
+  color: rgba(251, 241, 199, 0.3);
 }
 .panel .panel-button > * {
   border-radius: 16px;
@@ -1825,23 +1825,23 @@ window#ags-dashboard .dashboard .circular-progress-box .circular-progress image 
   box-shadow: none;
 }
 .panel .panel-button:focus > *, .panel .panel-button.focused > * {
-  box-shadow: inset 0 0 0 1px #fbf1c7;
-  background-color: rgba(235, 219, 178, 0);
+  box-shadow: inset 0 0 0 1px #fe8019;
+  background-color: rgba(251, 241, 199, 0);
   color: #ddc7a1;
 }
 .panel .panel-button:hover > * {
   box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03);
-  background-color: rgba(235, 219, 178, 0);
+  background-color: rgba(251, 241, 199, 0);
   color: #ddc7a1;
 }
 .panel .panel-button:active > *, .panel .panel-button.active > *, .panel .panel-button.on > *, .panel .panel-button:checked > * {
   box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03);
-  background-image: linear-gradient(to right, #fbf1c7, #fdf8e4);
-  background-color: #fbf1c7;
-  color: rgba(40, 40, 40, 0.6901960784);
+  background-image: linear-gradient(to right, #fe8019, #fe9137);
+  background-color: #fe8019;
+  color: #fbf1c7;
 }
 .panel .panel-button:active:hover > *, .panel .panel-button.active:hover > *, .panel .panel-button.on:hover > *, .panel .panel-button:checked:hover > * {
-  box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03), inset 0 0 0 99px rgba(235, 219, 178, 0);
+  box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03), inset 0 0 0 99px rgba(251, 241, 199, 0);
 }
 .panel .panel-button > * {
   margin: 3px;
@@ -1857,7 +1857,7 @@ window#ags-dashboard .dashboard .circular-progress-box .circular-progress image 
   padding: 0.3em 0.5em;
 }
 .panel separator {
-  background-color: rgba(221, 199, 161, 0.02);
+  background-color: rgba(251, 241, 199, 0.02);
   border-radius: 16px;
   min-height: 5px;
   min-width: 5px;
@@ -1881,7 +1881,7 @@ window#ags-dashboard .dashboard .circular-progress-box .circular-progress image 
   color: #ed333b;
 }
 .panel .quicksettings:not(.active):not(:active) .bluetooth {
-  color: rgb(98, 160, 234);
+  color: #62a0ea;
 }
 .panel .quicksettings:not(.active):not(:active) .battery.low {
   color: #ed333b;
@@ -1910,8 +1910,8 @@ window#ags-dashboard .dashboard .circular-progress-box .circular-progress image 
 .panel .battery-bar levelbar trough {
   all: unset;
   border-radius: 16px;
-  color: #ddc7a1;
-  background-color: rgba(235, 219, 178, 0.06);
+  color: #fbf1c7;
+  background-color: rgba(251, 241, 199, 0.06);
   border: 1px solid rgba(221, 199, 161, 0.03);
   min-width: 60px;
   min-height: 12px;
@@ -1922,7 +1922,7 @@ window#ags-dashboard .dashboard .circular-progress-box .circular-progress image 
 }
 .panel .battery-bar levelbar trough block.filled {
   border-radius: 15px;
-  background-image: linear-gradient(to right, #fbf1c7, #fdf8e4);
+  background-image: linear-gradient(to right, #fe8019, #fe9137);
 }
 .panel .battery-bar .medium image,
 .panel .battery-bar .medium label {
@@ -1947,10 +1947,10 @@ window#ags-dashboard .dashboard .circular-progress-box .circular-progress image 
 }
 .panel .battery-bar:active image,
 .panel .battery-bar:active label {
-  color: rgba(40, 40, 40, 0.6901960784);
+  color: #fbf1c7;
 }
 .panel .battery-bar:active block.filled {
-  background-image: linear-gradient(to right, rgba(40, 40, 40, 0.6901960784), rgba(55, 55, 55, 0.6901960784));
+  background-image: linear-gradient(to right, #fbf1c7, #fdf8e4);
 }
 .panel .workspaces > * {
   padding: 0;
@@ -1960,7 +1960,7 @@ window#ags-dashboard .dashboard .circular-progress-box .circular-progress image 
   all: unset;
   transition: 200ms;
   border-radius: 16px;
-  color: #ddc7a1;
+  color: #fbf1c7;
   background-color: transparent;
   background-image: none;
   box-shadow: none;
@@ -1970,28 +1970,28 @@ window#ags-dashboard .dashboard .circular-progress-box .circular-progress image 
   font-family: "Ubuntu Nerd Font", sans-serif;
 }
 .panel .workspaces .eventbox:focus {
-  box-shadow: inset 0 0 0 1px #fbf1c7;
-  background-color: rgba(235, 219, 178, 0);
+  box-shadow: inset 0 0 0 1px #fe8019;
+  background-color: rgba(251, 241, 199, 0);
   color: #ddc7a1;
 }
 .panel .workspaces .eventbox:hover {
   box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03);
-  background-color: rgba(235, 219, 178, 0);
+  background-color: rgba(251, 241, 199, 0);
   color: #ddc7a1;
 }
 .panel .workspaces .eventbox:active, .panel .workspaces .eventbox.on, .panel .workspaces .eventbox.active, .panel .workspaces .eventbox:checked {
   box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03);
-  background-image: linear-gradient(to right, #fbf1c7, #fdf8e4);
-  background-color: #fbf1c7;
-  color: rgba(40, 40, 40, 0.6901960784);
+  background-image: linear-gradient(to right, #fe8019, #fe9137);
+  background-color: #fe8019;
+  color: #fbf1c7;
 }
 .panel .workspaces .eventbox:active:hover, .panel .workspaces .eventbox.on:hover, .panel .workspaces .eventbox.active:hover, .panel .workspaces .eventbox:checked:hover {
-  box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03), inset 0 0 0 99px rgba(235, 219, 178, 0);
+  box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03), inset 0 0 0 99px rgba(251, 241, 199, 0);
 }
 .panel .workspaces .eventbox:disabled {
   box-shadow: none;
   background-color: transparent;
-  color: rgba(221, 199, 161, 0.3);
+  color: rgba(251, 241, 199, 0.3);
 }
 .panel .workspaces button {
   all: unset;
@@ -2004,7 +2004,7 @@ window#ags-dashboard .dashboard .circular-progress-box .circular-progress image 
   border: 1px solid rgba(221, 199, 161, 0.03);
   margin: 0 6px;
   transition: 100ms;
-  background-color: rgba(221, 199, 161, 0.2);
+  background-color: rgba(251, 241, 199, 0.2);
 }
 .panel .workspaces button:last-child .indicator {
   margin-right: 12px;
@@ -2013,15 +2013,15 @@ window#ags-dashboard .dashboard .circular-progress-box .circular-progress image 
   margin-left: 12px;
 }
 .panel .workspaces button.occupied .indicator {
-  background-color: rgba(221, 199, 161, 0.8);
+  background-color: rgba(251, 241, 199, 0.8);
   min-width: 8px;
   min-height: 8px;
 }
 .panel .workspaces button:hover .indicator {
-  box-shadow: inset 0 0 0 10px rgba(221, 199, 161, 0.2);
+  box-shadow: inset 0 0 0 10px rgba(251, 241, 199, 0.2);
 }
 .panel .workspaces button.active .indicator, .panel .workspaces button:active .indicator {
-  background-color: #fbf1c7;
+  background-color: #fe8019;
 }
 .panel .workspaces button.active .indicator {
   min-width: 24px;
@@ -2029,8 +2029,8 @@ window#ags-dashboard .dashboard .circular-progress-box .circular-progress image 
 }
 
 window#settings {
-  background-color: rgba(50, 48, 47, 0.6901960784);
-  color: #ddc7a1;
+  background-color: #282524;
+  color: #fbf1c7;
 }
 window#settings scrolledwindow scrollbar,
 window#settings scrolledwindow scrollbar * {
@@ -2038,17 +2038,17 @@ window#settings scrolledwindow scrollbar * {
 }
 window#settings scrolledwindow scrollbar.vertical {
   transition: 200ms;
-  background-color: rgba(50, 48, 47, 0);
+  background-color: rgba(40, 37, 36, 0.3);
 }
 window#settings scrolledwindow scrollbar.vertical:hover {
-  background-color: rgba(50, 48, 47, 0.3901960784);
+  background-color: rgba(40, 37, 36, 0.7);
 }
 window#settings scrolledwindow scrollbar.vertical:hover slider {
-  background-color: rgba(221, 199, 161, 0.7);
+  background-color: rgba(251, 241, 199, 0.7);
   min-width: 0.6em;
 }
 window#settings scrolledwindow scrollbar.vertical slider {
-  background-color: rgba(221, 199, 161, 0.5);
+  background-color: rgba(251, 241, 199, 0.5);
   border-radius: 16px;
   min-width: 0.4em;
   min-height: 2em;
@@ -2058,7 +2058,7 @@ window#settings .settings .content {
   padding: 21.6px;
 }
 window#settings .settings .headerbar {
-  background-color: rgba(235, 219, 178, 0.06);
+  background-color: rgba(251, 241, 199, 0.06);
   padding: 6px;
   border-bottom: 1px solid rgba(221, 199, 161, 0.03);
 }
@@ -2066,7 +2066,7 @@ window#settings .settings .tab {
   all: unset;
   transition: 200ms;
   border-radius: 16px;
-  color: #ddc7a1;
+  color: #fbf1c7;
   background-color: transparent;
   background-image: none;
   box-shadow: none;
@@ -2078,28 +2078,28 @@ window#settings .settings .tab * {
   font-family: "Ubuntu Nerd Font", sans-serif;
 }
 window#settings .settings .tab:focus {
-  box-shadow: inset 0 0 0 1px #fbf1c7;
-  background-color: rgba(235, 219, 178, 0);
+  box-shadow: inset 0 0 0 1px #fe8019;
+  background-color: rgba(251, 241, 199, 0);
   color: #ddc7a1;
 }
 window#settings .settings .tab:hover {
   box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03);
-  background-color: rgba(235, 219, 178, 0);
+  background-color: rgba(251, 241, 199, 0);
   color: #ddc7a1;
 }
 window#settings .settings .tab:active, window#settings .settings .tab.on, window#settings .settings .tab.active, window#settings .settings .tab:checked {
   box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03);
-  background-image: linear-gradient(to right, #fbf1c7, #fdf8e4);
-  background-color: #fbf1c7;
-  color: rgba(40, 40, 40, 0.6901960784);
+  background-image: linear-gradient(to right, #fe8019, #fe9137);
+  background-color: #fe8019;
+  color: #fbf1c7;
 }
 window#settings .settings .tab:active:hover, window#settings .settings .tab.on:hover, window#settings .settings .tab.active:hover, window#settings .settings .tab:checked:hover {
-  box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03), inset 0 0 0 99px rgba(235, 219, 178, 0);
+  box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03), inset 0 0 0 99px rgba(251, 241, 199, 0);
 }
 window#settings .settings .tab:disabled {
   box-shadow: none;
   background-color: transparent;
-  color: rgba(221, 199, 161, 0.3);
+  color: rgba(251, 241, 199, 0.3);
 }
 window#settings .settings .wallpaper {
   border-radius: 15px;
@@ -2110,8 +2110,8 @@ window#settings .settings button, window#settings .settings entry {
   all: unset;
   transition: 200ms;
   border-radius: 16px;
-  color: #ddc7a1;
-  background-color: rgba(235, 219, 178, 0.06);
+  color: #fbf1c7;
+  background-color: rgba(251, 241, 199, 0.06);
   box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03);
   padding: 8.4px;
 }
@@ -2120,35 +2120,35 @@ window#settings .settings button *, window#settings .settings entry * {
   font-family: "Ubuntu Nerd Font", sans-serif;
 }
 window#settings .settings button:focus, window#settings .settings entry:focus {
-  box-shadow: inset 0 0 0 1px #fbf1c7;
-  background-color: rgba(235, 219, 178, 0);
+  box-shadow: inset 0 0 0 1px #fe8019;
+  background-color: rgba(251, 241, 199, 0);
   color: #ddc7a1;
 }
 window#settings .settings button:hover, window#settings .settings entry:hover {
   box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03);
-  background-color: rgba(235, 219, 178, 0);
+  background-color: rgba(251, 241, 199, 0);
   color: #ddc7a1;
 }
 window#settings .settings button:active, window#settings .settings button.on, window#settings .settings button.active, window#settings .settings button:checked, window#settings .settings entry:active, window#settings .settings entry.on, window#settings .settings entry.active, window#settings .settings entry:checked {
   box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03);
-  background-image: linear-gradient(to right, #fbf1c7, #fdf8e4);
-  background-color: #fbf1c7;
-  color: rgba(40, 40, 40, 0.6901960784);
+  background-image: linear-gradient(to right, #fe8019, #fe9137);
+  background-color: #fe8019;
+  color: #fbf1c7;
 }
 window#settings .settings button:active:hover, window#settings .settings button.on:hover, window#settings .settings button.active:hover, window#settings .settings button:checked:hover, window#settings .settings entry:active:hover, window#settings .settings entry.on:hover, window#settings .settings entry.active:hover, window#settings .settings entry:checked:hover {
-  box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03), inset 0 0 0 99px rgba(235, 219, 178, 0);
+  box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03), inset 0 0 0 99px rgba(251, 241, 199, 0);
 }
 window#settings .settings button:disabled, window#settings .settings entry:disabled {
   box-shadow: none;
   background-color: transparent;
-  color: rgba(221, 199, 161, 0.3);
+  color: rgba(251, 241, 199, 0.3);
 }
 window#settings .settings spinbutton, window#settings .settings spinbutton:focus {
   all: unset;
   transition: 200ms;
   border-radius: 16px;
-  color: #ddc7a1;
-  background-color: rgba(235, 219, 178, 0.06);
+  color: #fbf1c7;
+  background-color: rgba(251, 241, 199, 0.06);
   box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03);
 }
 window#settings .settings spinbutton *, window#settings .settings spinbutton:focus * {
@@ -2156,28 +2156,28 @@ window#settings .settings spinbutton *, window#settings .settings spinbutton:foc
   font-family: "Ubuntu Nerd Font", sans-serif;
 }
 window#settings .settings spinbutton:focus, window#settings .settings spinbutton:focus:focus {
-  box-shadow: inset 0 0 0 1px #fbf1c7;
-  background-color: rgba(235, 219, 178, 0);
+  box-shadow: inset 0 0 0 1px #fe8019;
+  background-color: rgba(251, 241, 199, 0);
   color: #ddc7a1;
 }
 window#settings .settings spinbutton:hover, window#settings .settings spinbutton:focus:hover {
   box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03);
-  background-color: rgba(235, 219, 178, 0);
+  background-color: rgba(251, 241, 199, 0);
   color: #ddc7a1;
 }
 window#settings .settings spinbutton:active, window#settings .settings spinbutton.on, window#settings .settings spinbutton.active, window#settings .settings spinbutton:checked, window#settings .settings spinbutton:focus:active, window#settings .settings spinbutton:focus.on, window#settings .settings spinbutton:focus.active, window#settings .settings spinbutton:focus:checked {
   box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03);
-  background-image: linear-gradient(to right, #fbf1c7, #fdf8e4);
-  background-color: #fbf1c7;
-  color: rgba(40, 40, 40, 0.6901960784);
+  background-image: linear-gradient(to right, #fe8019, #fe9137);
+  background-color: #fe8019;
+  color: #fbf1c7;
 }
 window#settings .settings spinbutton:active:hover, window#settings .settings spinbutton.on:hover, window#settings .settings spinbutton.active:hover, window#settings .settings spinbutton:checked:hover, window#settings .settings spinbutton:focus:active:hover, window#settings .settings spinbutton:focus.on:hover, window#settings .settings spinbutton:focus.active:hover, window#settings .settings spinbutton:focus:checked:hover {
-  box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03), inset 0 0 0 99px rgba(235, 219, 178, 0);
+  box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03), inset 0 0 0 99px rgba(251, 241, 199, 0);
 }
 window#settings .settings spinbutton:disabled, window#settings .settings spinbutton:focus:disabled {
   box-shadow: none;
   background-color: transparent;
-  color: rgba(221, 199, 161, 0.3);
+  color: rgba(251, 241, 199, 0.3);
 }
 window#settings .settings spinbutton button, window#settings .settings spinbutton entry, window#settings .settings spinbutton:focus button, window#settings .settings spinbutton:focus entry {
   all: unset;
@@ -2194,8 +2194,8 @@ window#settings .settings switch {
   all: unset;
   transition: 200ms;
   border-radius: 16px;
-  color: #ddc7a1;
-  background-color: rgba(235, 219, 178, 0.06);
+  color: #fbf1c7;
+  background-color: rgba(251, 241, 199, 0.06);
   box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03);
 }
 window#settings .settings switch * {
@@ -2203,31 +2203,31 @@ window#settings .settings switch * {
   font-family: "Ubuntu Nerd Font", sans-serif;
 }
 window#settings .settings switch:focus {
-  box-shadow: inset 0 0 0 1px #fbf1c7;
-  background-color: rgba(235, 219, 178, 0);
+  box-shadow: inset 0 0 0 1px #fe8019;
+  background-color: rgba(251, 241, 199, 0);
   color: #ddc7a1;
 }
 window#settings .settings switch:hover {
   box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03);
-  background-color: rgba(235, 219, 178, 0);
+  background-color: rgba(251, 241, 199, 0);
   color: #ddc7a1;
 }
 window#settings .settings switch:active, window#settings .settings switch.on, window#settings .settings switch.active, window#settings .settings switch:checked {
   box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03);
-  background-image: linear-gradient(to right, #fbf1c7, #fdf8e4);
-  background-color: #fbf1c7;
-  color: rgba(40, 40, 40, 0.6901960784);
+  background-image: linear-gradient(to right, #fe8019, #fe9137);
+  background-color: #fe8019;
+  color: #fbf1c7;
 }
 window#settings .settings switch:active:hover, window#settings .settings switch.on:hover, window#settings .settings switch.active:hover, window#settings .settings switch:checked:hover {
-  box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03), inset 0 0 0 99px rgba(235, 219, 178, 0);
+  box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03), inset 0 0 0 99px rgba(251, 241, 199, 0);
 }
 window#settings .settings switch:disabled {
   box-shadow: none;
   background-color: transparent;
-  color: rgba(221, 199, 161, 0.3);
+  color: rgba(251, 241, 199, 0.3);
 }
 window#settings .settings switch slider {
-  background-color: #ddc7a1;
+  background-color: #fbf1c7;
   border-radius: 16px;
   min-width: 24px;
   min-height: 24px;
@@ -2254,8 +2254,8 @@ window#settings .settings .row entry.text {
 window#settings .settings .row .text-spin {
   all: unset;
   border-radius: 16px;
-  color: #ddc7a1;
-  background-color: rgba(235, 219, 178, 0.06);
+  color: #fbf1c7;
+  background-color: rgba(251, 241, 199, 0.06);
   border: 1px solid rgba(221, 199, 161, 0.03);
 }
 window#settings .settings .row .text-spin * {
@@ -2266,7 +2266,7 @@ window#settings .settings .row .text-spin button {
   all: unset;
   transition: 200ms;
   border-radius: 16px;
-  color: #ddc7a1;
+  color: #fbf1c7;
   background-color: transparent;
   background-image: none;
   box-shadow: none;
@@ -2279,28 +2279,28 @@ window#settings .settings .row .text-spin button * {
   font-family: "Ubuntu Nerd Font", sans-serif;
 }
 window#settings .settings .row .text-spin button:focus {
-  box-shadow: inset 0 0 0 1px #fbf1c7;
-  background-color: rgba(235, 219, 178, 0);
+  box-shadow: inset 0 0 0 1px #fe8019;
+  background-color: rgba(251, 241, 199, 0);
   color: #ddc7a1;
 }
 window#settings .settings .row .text-spin button:hover {
   box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03);
-  background-color: rgba(235, 219, 178, 0);
+  background-color: rgba(251, 241, 199, 0);
   color: #ddc7a1;
 }
 window#settings .settings .row .text-spin button:active, window#settings .settings .row .text-spin button.on, window#settings .settings .row .text-spin button.active, window#settings .settings .row .text-spin button:checked {
   box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03);
-  background-image: linear-gradient(to right, #fbf1c7, #fdf8e4);
-  background-color: #fbf1c7;
-  color: rgba(40, 40, 40, 0.6901960784);
+  background-image: linear-gradient(to right, #fe8019, #fe9137);
+  background-color: #fe8019;
+  color: #fbf1c7;
 }
 window#settings .settings .row .text-spin button:active:hover, window#settings .settings .row .text-spin button.on:hover, window#settings .settings .row .text-spin button.active:hover, window#settings .settings .row .text-spin button:checked:hover {
-  box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03), inset 0 0 0 99px rgba(235, 219, 178, 0);
+  box-shadow: inset 0 0 0 1px rgba(221, 199, 161, 0.03), inset 0 0 0 99px rgba(251, 241, 199, 0);
 }
 window#settings .settings .row .text-spin button:disabled {
   box-shadow: none;
   background-color: transparent;
-  color: rgba(221, 199, 161, 0.3);
+  color: rgba(251, 241, 199, 0.3);
 }
 window#settings .settings .row .text-spin button:last-child {
   border-radius: 0 16px 16px 0;
@@ -2311,5 +2311,5 @@ window#settings .settings .row .text-spin label {
 window#settings .settings .disclaimer {
   padding: 12px;
   padding-top: 0;
-  color: rgba(221, 199, 161, 0.5);
+  color: rgba(251, 241, 199, 0.5);
 }
