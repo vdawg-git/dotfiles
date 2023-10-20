@@ -10,3 +10,4 @@ sudo flatpak override --env=ICON_THEME=Colloid-yellow-dark
 
 # Install dependencies for the scripts
 pnpm install
+
