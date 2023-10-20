@@ -1,0 +1,14 @@
+[defaults]
+file = ""
+directory = ""
+
+[ file_exact ]
+".gitignore" = ""
+LICENSE = ""
+Makefile = ""
+Dockerfile = ""
+
+[ext]
+js = ""
+docx = ""
+rs = ""

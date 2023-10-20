@@ -1,0 +1,60 @@
+[tabs]
+
+[tabs.chars]
+divider = " "
+active_prefix = ""
+active_postfix = ""
+inactive_prefix = ""
+inactive_postfix = ""
+scroll_front_prefix = ""
+scroll_front_postfix = ""
+scroll_front_prestring = ""
+scroll_front_poststring = " "
+scroll_back_prefix = ""
+scroll_back_postfix = ""
+scroll_back_prestring = " "
+scroll_back_poststring = ""
+
+[tabs.styles]
+
+[tabs.styles.active]
+fg = "black"
+bg = "light_blue"
+bold = true
+
+[tabs.styles.active_prefix]
+fg = "light_blue"
+bg = "reset"
+
+[tabs.styles.inactive]
+fg = "black"
+bg = "gray"
+
+[tabs.styles.inactive_prefix]
+fg = "gray"
+bg = "reset"
+
+[tabs.styles.scroll_front]
+fg = "black"
+bg = "yellow"
+bold = true
+
+[tabs.styles.scroll_front_prefix]
+fg = "yellow"
+bg = "reset"
+
+[tabs.styles.scroll_front_postfix]
+invert = true
+
+[tabs.styles.scroll_back]
+fg = "black"
+bg = "yellow"
+bold = true
+
+[tabs.styles.scroll_back_prefix]
+fg = "yellow"
+bg = "reset"
+invert = true
+
+[tabs.styles.scroll_back_postfix]
+invert = false
