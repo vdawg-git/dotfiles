@@ -8,6 +8,8 @@ sudo flatpak override --filesystem=$HOME/.icons
 sudo flatpak override --env=GTK_THEME=Colloid-Orange-Dark-Gruvbox
 sudo flatpak override --env=ICON_THEME=Colloid-yellow-dark
 
-# Install dependencies for the scripts
+# Install dependencies for the config scripts
 pnpm install
 
+# Mange keyd config
+sudo ln -s /home/vdawg/.local/share/chezmoi/.outside/etc/keyd/default.conf ./default.conf

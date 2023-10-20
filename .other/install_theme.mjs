@@ -4,7 +4,7 @@ import "zx/globals"
 
 import { dirname } from "path"
 import { fileURLToPath } from "url"
-import { readFileSync, writeFileSync } from "fs"
+import { replaceInFile } from "./script-helpers/helper"
 
 process.env.FORCE_COLOR = "1"
 
@@ -16,13 +16,10 @@ const assetsFolder = path.join(__dirname, "assets/")
 await $`npx degit vinceliuice/Colloid-gtk-theme ${gtkThemeFolder} --force --cache --verbose`
 await $`npx degit vinceliuice/Colloid-icon-theme ${gtkIconsFolder} --force --cache --verbose`
 
-const colorsFile = path.join(gtkThemeFolder, "src", "sass", "_colors.scss")
+const colorsFilePath = path.join(gtkThemeFolder, "src", "sass", "_colors.scss")
 
-writeFileSync(
-  colorsFile,
-  readFileSync(colorsFile, {
-    encoding: "utf8",
-  }).replace(
+replaceInFile(colorsFilePath, [
+  [
     `@function background($type) {
   @if ($type == 'a') { @return $white; }
   @if ($type == 'b') { @return $grey-050; }
@@ -44,44 +41,44 @@ writeFileSync(
 `,
     `@function background($type) {
   @if ($type == 'a') { @return transparentize( $white, 1 ); }
-  @if ($type == 'b') { @return transparentize($grey-050, 0.9); }
-  @if ($type == 'c') { @return transparentize($grey-100, 0.7); }
-  @if ($type == 'd') { @return transparentize($grey-250, 0.3); }
+  @if ($type == 'b') { @return transparentize($grey-050, 0.0); }
+  @if ($type == 'c') { @return transparentize($grey-100, 0.0); }
+  @if ($type == 'd') { @return transparentize($grey-250, 0.0); }
 
   @if ($blackness == 'true') {
     @if ($type == 'e') { @return transparentize( $black, 1 ); }
-    @if ($type == 'f') { @return transparentize($grey-950, 0.9); }
-    @if ($type == 'g') { @return transparentize($grey-900, 0.9); }
-    @if ($type == 'h') { @return transparentize($grey-850, 0.8); }
+    @if ($type == 'f') { @return transparentize($grey-950, 0.0); }
+    @if ($type == 'g') { @return transparentize($grey-900, 0.0); }
+    @if ($type == 'h') { @return transparentize($grey-850, 0.0); }
   } @else {
     @if ($type == 'e') { @return transparentize($grey-800, 1.0); }
-    @if ($type == 'f') { @return transparentize($grey-750, 0.9); }
-    @if ($type == 'g') { @return transparentize($grey-700, 0.9); }
-    @if ($type == 'h') { @return transparentize($grey-650, 0.8); }
+    @if ($type == 'f') { @return transparentize($grey-750, 0.0); }
+    @if ($type == 'g') { @return transparentize($grey-700, 0.0); }
+    @if ($type == 'h') { @return transparentize($grey-650, 0.0); }
   }
 }
-`
-  )
-)
+`,
+  ],
+])
 
-// const hexRegex = /#[\da-zA-Z]*(?=;)/
-// const rgbaRegex = /rgba\([\d,\.\ ]*\)*(?=;)/
-// const rgbRegex = /rgb\([\d,\ ]*\)*(?=;)/
-
-// const file = fs
-//   .readFileSync(
-//     path.join(gtkThemeFolder, "sass", "_color-palette-gruvbox.scss"),
-//     { encoding: "utf8" }
-//   )
-//   .replace(hexRegex, (match) => {
-//     match
-//   })
+const transparentize = {
+  0: ["window_bg_color", "headerbar_bg_color", "headerbar_backdrop_color"],
+  0.4: ["view_bg_color"],
+  0.6: ["card_bg_color"],
+  // 0.5: ["popover_bg_color"],
+}
 
 await $`cd ${gtkThemeFolder} && ./install.sh --theme orange --libadwaita --tweaks gruvbox rimless float --color dark`
 await $`cd ${gtkIconsFolder} && ./install.sh --theme orange`
 
-await $`tar --exclude-vcs-ignores --exclude-vcs -czf  "./gtk-theme.tar.gz" ${gtkThemeFolder}`
-await $`tar --exclude-vcs-ignores --exclude-vcs -czf  "./gtk-icons.tar.gz" ${gtkIconsFolder}`
+await $`tar --exclude-vcs-ignores --exclude-vcs -czf  ${path.join(
+  assetsFolder,
+  "gtk-theme.tar.gz"
+)} ${gtkThemeFolder}`
+await $`tar --exclude-vcs-ignores --exclude-vcs -czf  ${path.join(
+  assetsFolder,
+  "gtk-icons.tar.gz"
+)} ${gtkIconsFolder}`
 await $`rm -r ${gtkIconsFolder} ${gtkThemeFolder}`
 
 await $`stylepak install-system`
@@ -104,10 +101,3 @@ await $`stylepak install-user`
 //   // Black
 //   "#1d2021",
 // ]
-
-// const transparentize = {
-//   0: ["window_bg_color", "headerbar_bg_color", "headerbar_backdrop_color"],
-//   0.1: ["view_bg_color"],
-//   0.4: ["card_bg_color"],
-//   0.5: ["popover_bg_color"],
-// }
