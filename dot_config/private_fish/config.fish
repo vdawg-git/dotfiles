@@ -3,7 +3,6 @@ string match -q "$TERM_PROGRAM" "vscode"
 and . (code --locate-shell-integration-path fish)
 
 
-
 fish_vi_key_bindings
 
 # pnpm
@@ -14,9 +13,13 @@ end
 # pnpm end
 
 
-set EDITOR "nvim"
-set SUDO_EDITOR "nvim"
-set VISUAL "nvim"
+set -Ux EDITOR "nvim"
+set -Ux SUDO_EDITOR "nvim"
+set -Ux VISUAL "nvim"
+# set -Ux MANPAGER "nvim +Man!"
+# set -Ux MANWIDTH "999"
+
+source ~/.config/fish/aliases.fish
 
 
 function multicd
@@ -24,27 +27,13 @@ function multicd
 end
 
 
-abbr --add dotdot --regex '^\.\.+$' --function multicd
-
-abbr --add cz "chezmoi"
-
-alias pn="pnpm"
-alias xclip="xclip -selection c"
-alias icat="kitty +kitten icat"
-alias ls="exa --icons"
-alias ls="exa --icons -F -H --group-directories-first --git -1"
-
-abbr --add pac "sudo pacman -S "
-abbr --add pacr "sudo pacman -R "
-abbr --add yays "yay -Syu "
-abbr --add yayr "yay -R "
 
 if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
 function fish_greeting
-  kitten icat --align left  /home/vdawg/.local/share/chezmoi/.other/assets/see_you.png  2>/dev/null
+  kitty icat --align left "/home/vdawg/.local/share/chezmoi/.other/assets/see_you.png"  2> /dev/null
 end
 
 
@@ -141,3 +130,5 @@ set fish_color_cancel red --dim
 
 starship init fish | source # prompt
 zoxide init fish --cmd cd | source # folder auto jumping
+
+set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME ; set -gx PATH $HOME/.cabal/bin /home/vdawg/.ghcup/bin $PATH # ghcup-env

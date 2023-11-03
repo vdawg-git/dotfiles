@@ -2,6 +2,10 @@
 image_default	= [
 	{ command = "eog", fork = true, silent = true },
 	]	
+text_default	= [
+	{ command = "nvim" },
+	{ command = "code", silent=true, fork=true}
+	]	
 
 [extension]
 # inherit from image_default class

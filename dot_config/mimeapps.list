@@ -41,4 +41,5 @@ video/mp4=org.gnome.Totem.desktop
 video/x-matroska=org.gnome.Totem.desktop
 image/jpeg=org.gnome.eog.desktop
 audio/flac=io.bassi.Amberol.desktop
+x-scheme-handler/gitkraken=GitKraken.desktop
 

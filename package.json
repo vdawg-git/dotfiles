@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "degit": "^2.8.4",
+    "remeda": "^1.27.1",
     "zx": "^7.2.3"
   }
 }

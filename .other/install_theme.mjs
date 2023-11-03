@@ -4,7 +4,7 @@ import "zx/globals"
 
 import { dirname } from "path"
 import { fileURLToPath } from "url"
-import { replaceInFile } from "./script-helpers/helper"
+import { replaceInFile } from "./script-helpers/helper.mjs"
 
 process.env.FORCE_COLOR = "1"
 
