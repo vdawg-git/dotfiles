@@ -8,7 +8,6 @@ const desktopFiles = [
   "/opt/discord/discord.desktop",
   "/usr/share/applications/tutanota-desktop.desktop",
   "/usr/share/applications/morgen.desktop",
-  "/usr/share/applications/Mailspring.desktop",
   "/usr/share/applications/GitKraken.desktop",
 ]
 const flag = "--ozone-platform=wayland"
