@@ -23,10 +23,10 @@ precision mediump float;
 varying vec2 v_texcoord;
 uniform sampler2D tex;
 
-uniform mediump float
-    time; // WARNING: DISABLE DAMAGE TRACKING, TO ADD SCANLINES, FLICKER AND
-          // ANALOG NOISE OR ELSE - COMMENT OUT TIME VARIABLE AND EVERY OTHER
-          // THING THAT USES TIME
+// WARNING: DISABLE DAMAGE TRACKING, TO ADD SCANLINES, FLICKER AND
+// ANALOG NOISE OR ELSE - COMMENT OUT TIME VARIABLE AND EVERY OTHER
+// THING THAT USES TIME
+uniform mediump float time;
 
 // ATTENTION!! IF YOU ENABLE FLICKER - MAKE SURE TO SET PROPER DISPLAY FRAMERATE
 // AND RESOLUTION VARIABLES FOR YOUR DISPLAY IF FRAMERATE IS WRONG - SHADER
@@ -54,10 +54,11 @@ void main() {
 
   vec2 uv = v_texcoord;
 
-  uv = curve(uv); // comment out to disable barrel distortion.
-                  // if cursor is misaligned - enable software cursor rendering
-                  // by setting envvar: run "export WLR_NO_HARDWARE_CURSORS=1"
-                  // before launching Hyprland
+  // comment out to disable barrel distortion.
+  // if cursor is misaligned - enable software cursor rendering
+  // by setting envvar: run "export WLR_NO_HARDWARE_CURSORS=1"
+  // before launching Hyprland
+  uv = curve(uv);
 
   vec3 col;
 
@@ -70,13 +71,12 @@ void main() {
   col.b =
       texture2D(tex, vec2(analog_noise + uv.x - 0.0005, uv.y + 0.0)).z + 0.05;
 
-  col = col * 0.6 + 0.4 * col * col * 1.0;
   ///////////////////////////////////////////////////////////////////////////////////////////////
 
   // Grain
   float scale = 1.0;
   float amount = 0.3;
-  vec2 offset = (rand(v_texcoord, time) - 0.5) * 2.0 * v_texcoord * scale;
+  vec2 offset = (rand(uv, time) - 0.5) * 2.0 * uv * scale;
   vec3 noise = texture2D(tex, uv + offset).rgb;
   col.rgb = mix(pixColor.rgb, noise, amount);
   ////////////////////////////////
@@ -99,7 +99,8 @@ void main() {
        d += 6.283185307180 / blur_directions) {
     for (float i = 1.0 / blur_quality; i <= 1.0; i += 1.0 / blur_quality) {
       vec3 toAdd =
-          texture2D(tex, uv + vec2(cos(d), sin(d)) * blur_radius * i).rgb;
+          texture2D(tex, v_texcoord + vec2(cos(d), sin(d)) * blur_radius * i)
+              .rgb;
       toAdd *= blur_brightness;
       toAdd.rgb *= vec3(1.5, 0.98, 0.1);
       bloomColor += toAdd;
@@ -163,7 +164,9 @@ void main() {
   col.g -= gPhosphor;
   col.b -= bPhosphor;
 
-  col *= 0.5; // after adding blur + normal color, brightness was doubled
+  col *= 0.5;
+  col = mix(col, col * smoothstep(0.0, 1.0, col),
+            0.299); // after adding blur + normal color, brightness was doubled
   ///////////////////////////////////////////////////////////////////////////////////////////////
 
   // CRUDE COLOR GAMUT REDUCTION
