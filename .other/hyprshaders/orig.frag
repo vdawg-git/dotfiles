@@ -32,7 +32,9 @@ uniform mediump float time;
 // AND RESOLUTION VARIABLES FOR YOUR DISPLAY IF FRAMERATE IS WRONG - SHADER
 // MIGHT CHANGE BRIGHTNESS RANDOMLY !! - SEE FLICKER SECTION OF THIS CODE
 
+// const float display_framerate = 30.0;
 const float display_framerate = 60.0;
+// const vec2 display_resolution = vec2(1128.0, 752.0);
 const vec2 display_resolution = vec2(2256.0, 1504.0);
 
 vec2 curve(vec2 uv) {
@@ -50,47 +52,52 @@ float rand(vec2 uv, float t) {
 }
 
 void main() {
-  vec4 pixColor = texture2D(tex, v_texcoord);
-
   vec2 uv = v_texcoord;
-
   // comment out to disable barrel distortion.
   // if cursor is misaligned - enable software cursor rendering
   // by setting envvar: run "export WLR_NO_HARDWARE_CURSORS=1"
   // before launching Hyprland
   uv = curve(uv);
+  vec4 pixColor = texture2D(tex, uv);
 
-  vec3 col;
+  vec3 col = pixColor.rgb;
 
   // Chromatic aberration from CRT ray misalignment
-  float analog_noise = fract(sin(time) * 43758.5453123 * uv.y) * 0.0005;
+  float analog_noise = fract(sin(time) * 43758.5453123 * uv.y) * 0.0006;
   col.r =
-      texture2D(tex, vec2(analog_noise + uv.x + 0.0005, uv.y + 0.0)).x + 0.05;
-  col.g = texture2D(tex, vec2(analog_noise + uv.x + 0.0000, uv.y + 0.0005)).y +
+      texture2D(tex, vec2(analog_noise + uv.x + 0.0008, uv.y + 0.0)).x + 0.05;
+  col.g = texture2D(tex, vec2(analog_noise + uv.x + 0.0008, uv.y + 0.0005)).y +
           0.05;
   col.b =
-      texture2D(tex, vec2(analog_noise + uv.x - 0.0005, uv.y + 0.0)).z + 0.05;
+      texture2D(tex, vec2(analog_noise + uv.x - 0.0008, uv.y + 0.0)).z + 0.05;
 
   ///////////////////////////////////////////////////////////////////////////////////////////////
 
+  // Contrast
+  col = mix(col, col * smoothstep(0.0, 1.0, col), 1.);
+  col = mix(col, col * smoothstep(0.0, 1.0, col), 0.5);
+  /////////////
+
   // Grain
-  float scale = 1.0;
-  float amount = 0.3;
-  vec2 offset = (rand(uv, time) - 0.5) * 2.0 * uv * scale;
+  float scale = 2.8;
+  float amount = 0.15;
+  vec2 offset = (rand(uv, time) - 0.9) * 1.8 * uv * scale;
   vec3 noise = texture2D(tex, uv + offset).rgb;
-  col.rgb = mix(pixColor.rgb, noise, amount);
+  col.rgb = mix(col.rgb, noise, amount);
   ////////////////////////////////
+  col *= 12.8;
+  /////
+
+  ///////////////////////////////////////////////////////////////////////////////////////////////
 
   // BLOOM
-  //  Bloom and lightleak parameters
   const float blur_directions =
-      40.0; // default is 12.0 but 24.0+ will look bestest
-  const float blur_quality =
-      18.0;                     // default is 3.0  but 4.0+  will look bestest
-  const float blur_size = 48.0; // radius in pixels
-  const float blur_brightness = 3.5; // radius in pixels
+      24.0;                       // default is 12.0 but 24.0+ will look bestest
+  const float blur_quality = 4.0; // default is 3.0  but 4.0+  will look bestest
+  const float blur_size = 12.0;   // radius in pixels
+  const float blur_brightness = 6.5; // radius in pixels
 
-  const vec2 blur_radius = blur_size / display_resolution.xy;
+  const vec2 blur_radius = blur_size / (display_resolution.xy * 0.5);
 
   // Blur calculations may be expensive: blur_directions * blur_quality amount
   // of iterations 12 * 3 = 36 iterations per pixel by default
@@ -99,27 +106,17 @@ void main() {
        d += 6.283185307180 / blur_directions) {
     for (float i = 1.0 / blur_quality; i <= 1.0; i += 1.0 / blur_quality) {
       vec3 toAdd =
-          texture2D(tex, v_texcoord + vec2(cos(d), sin(d)) * blur_radius * i)
-              .rgb;
-      toAdd *= blur_brightness;
-      toAdd.rgb *= vec3(1.5, 0.98, 0.1);
+          texture2D(tex, uv + vec2(cos(d), sin(d)) * blur_radius * i).rgb;
+      toAdd *= blur_brightness * vec3(1.5, 0.85, 0.40);
       bloomColor += toAdd;
     }
   }
 
   bloomColor /= blur_quality * blur_directions;
 
-  float crispness =
-      0.2; // clears out darker blurred areas, improves gray-to-white contrast
-  col += mix(bloomColor, col, col * crispness);
+  col.rgb += bloomColor;
+  ////////////////////////////////////////////////////////////////////////////////////////
 
-  ///////////////////////////////////////////////////////////////////////////////////////////////
-
-  // VIGNETTE FROM CURVATURE
-  float vignette =
-      (0.0 + 1.0 * 12.0 * uv.x * uv.y * (1.0 - uv.x) * (1.0 - uv.y));
-  col *= vec3(pow(vignette, 0.15));
-  col *= 2.8;
   ///////////////////////////////////////////////////////////////////////////////////////////////
 
   // SCANLINES
@@ -150,34 +147,51 @@ void main() {
     col *= 0.0;
 
   // PHOSPHOR COATING LINES
-  scanvar = 0.05;
+  float phosphor = 0.10;
   float rPhosphor = clamp(
-      scanvar + scanvar * sin(uv.x * display_resolution.x * 1.4), 0.0, 1.0);
-  float gPhosphor = clamp(
-      scanvar + scanvar * sin(uv.x + 0.333333333 * display_resolution.x * 1.4),
+      phosphor + phosphor * sin((uv.x) * display_resolution.x * 1.333333333),
       0.0, 1.0);
-  float bPhosphor = clamp(
-      scanvar + scanvar * sin(uv.x + 0.666666666 * display_resolution.x * 1.4),
-      0.0, 1.0);
+  float gPhosphor =
+      clamp(phosphor + phosphor * sin((uv.x + 0.333333333) *
+                                      display_resolution.x * 1.333333333),
+            0.0, 1.0);
+  float bPhosphor =
+      clamp(phosphor + phosphor * sin((uv.x + 0.666666666) *
+                                      display_resolution.x * 1.333333333),
+            0.0, 1.0);
 
   col.r -= rPhosphor;
   col.g -= gPhosphor;
   col.b -= bPhosphor;
 
+  // after adding blur + normal color, brightness was doubled
   col *= 0.5;
-  col = mix(col, col * smoothstep(0.0, 1.0, col),
-            0.299); // after adding blur + normal color, brightness was doubled
+  ///////////////////////////////////////////////////////////////////////////////////////////////
+  // VIGNETTE FROM CURVATURE
+  const float vignetteStrenght = 200.;
+  const float vignetteExtend = 0.5;
+
+  vec2 uv_ = uv * (1.0 - uv.yx);
+  // multiply with sth for intensity
+  float vignette = uv_.x * uv_.y * vignetteStrenght;
+  // change pow for modifying the extend of the  vignette
+  vignette = clamp(pow(vignette, vignetteExtend), 0., 1.0);
+
+  col *= vec3(vignette);
   ///////////////////////////////////////////////////////////////////////////////////////////////
 
   // CRUDE COLOR GAMUT REDUCTION
   // pixColor.rgb = col; // replace below lines with this to preserve colors
-  pixColor.r =
-      mix(col.r, mix(col.g, col.b, 0.9), 0.2); // decrease color quality
-  pixColor.g =
-      mix(col.g, mix(col.r, col.b, 0.6), 0.4); // by blending in other colors
-  pixColor.b = mix(col.b, mix(col.g, col.r, 0.8), 0.3); // across the spectrum
+  // decrease color quality
+  // by blending in other colors
+  // across the spectrum
+  pixColor.r = mix(col.r, mix(col.g, col.b, 0.9), 0.05);
+  pixColor.g = mix(col.g, mix(col.r, col.b, 0.3), 0.05);
+  pixColor.b = mix(col.b, mix(col.g, col.r, 0.8), 0.05);
 
-  pixColor.rb *= vec2(1.02, 0.85); // crt phosphor  tinting
+  pixColor.rb *= vec2(1.04, 0.8); // crt phosphor  tinting
 
   gl_FragColor = pixColor;
+
+  // gl_FragColor = vec4(col, 1.);
 }
