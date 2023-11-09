@@ -1,8 +1,5 @@
-local isVscode = vim.g.vscode == 1
-
 return {
 	"tpope/vim-repeat",
-	"sainnhe/gruvbox-material",
 
 	{
 		"nvim-treesitter/nvim-treesitter",
@@ -37,7 +34,7 @@ return {
 			vim.g.loaded_netrwPlugin = 1
 			vim.opt.termguicolors = true
 
-			vim.keymap.set("n", "<c-b>", ":NvimTreeFindFileToggle<CR>")
+			vim.keymap.set("n", "<c-e>", ":NvimTreeFindFileToggle<CR>")
 
 			require("nvim-tree").setup({
 				view = {
@@ -59,4 +56,50 @@ return {
 	{ "tpope/vim-commentary", cond = not isVscode },
 	{ "luckasRanarison/tree-sitter-hypr", cond = not isVscode },
 	{ "NvChad/nvim-colorizer.lua", config = true, cond = not isVscode },
+	{ "ellisonleao/gruvbox.nvim", priority = 1000 ,cond = not isVscode, 
+	   config = function()
+		print("hiii")
+		require("gruvbox").setup({
+			  terminal_colors = true, -- add neovim terminal colors
+			  undercurl = true,
+			  underline = true,
+			  bold = true,
+			  italic = {
+				strings = true,
+				emphasis = true,
+				comments = true,
+				operators = false,
+				folds = true,
+			  },
+			  strikethrough = true,
+			  invert_selection = true,
+			  invert_signs = true,
+			  invert_tabline = true,
+			  invert_intend_guides = false,
+			  inverse = true, -- invert background for search, diffs, statuslines and errors
+			  contrast = "hard", -- can be "hard", "soft" or empty string
+			  dim_inactive = false,
+			  transparent_mode = true,
+			})
+	vim.o.background = "dark" -- or "light" for light mode
+	vim.cmd("colorscheme gruvbox")
+	end},
+	
+	-- { "lukas-reineke/indent-blankline.nvim", main = "ibl", config = function() 
+
+	-- 	local highlight = {
+    -- "CursorColumn",
+    -- "Whitespace",
+-- }
+
+-- require("ibl").setup {
+    -- indent = { highlight = highlight, char = "" },
+    -- whitespace = {
+        -- highlight = highlight,
+        -- remove_blankline_trail = false,
+    -- },
+-- }
+
+	-- end, cond = not isVscode
+-- }
 }

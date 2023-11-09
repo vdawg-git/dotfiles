@@ -1,4 +1,4 @@
-@define-color bar-bg rgba(14, 14, 14, 0.01);
+@define-color bar-bg rgba(14, 14, 14, 0.00);
 
 @define-color main-color @theme_text_color;
 @define-color main-bg rgba(14, 14, 14, 0);
@@ -19,9 +19,8 @@
 * {
 	border: none;
 	border-radius: 0px;
-	font-family: "JetBrainsMono Nerd Font";
+	font-family: "Zpix";
 	font-weight: bold;
-	font-size: 14px;
 }
 
 .modules-right {
@@ -32,6 +31,8 @@
 window#waybar {
 	background: @bar-bg;
 	border-radius: 12px;
+	margin-top: 8px;
+
 }
 
 tooltip {
@@ -39,9 +40,6 @@ tooltip {
 	color: @tool-color;
 	border-radius: 16px;
 	padding: 16px;
-	/* border-width: 1px;
-	border-style: solid;
-	border-color: @tool-border; */
 }
 
 #workspaces {
@@ -52,78 +50,26 @@ tooltip {
 }
 
 #workspaces button {
+	font-size: 20px;
 	box-shadow: none;
 	text-shadow: none;
 	padding: 0px;
-	border-radius: 999px;
-	/* max-height: 18px; */
-	margin-bottom: 8px;
-	margin-top: 8px;
-	margin-right: 4px;
-	min-width: 24px;
-	/* padding-left: 12px;
-	padding-right: 12px; */
+	min-width: 32px;
 	color: @tool-color;
-	animation: gradient_f 20s ease-in infinite;
-	transition: all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.682);
-	opacity: 0.7;
+	transition: all 0.2s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+	opacity: 0.9;
 }
 
 #workspaces button.active {
-	background: @wb-hvr-bg;
-	color: @tool-color;
-	animation: gradient_f 20s ease-in infinite;
-	transition: all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.682);
-	opacity: 1;
+	color: @theme_selected_bg_color;
+	transition: all 0.2s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+	opacity: 0.95;
 }
 
 #workspaces button:hover {
-	background: @wb-hvr-bg;
 	color: @wb-hvr-color;
-	/* padding-left: 2px;
-	padding-right: 2px; */
-	animation: gradient_f 20s ease-in infinite;
-	transition: all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.682);
-}
-
-#taskbar button {
-	box-shadow: none;
-	border-bottom: 2px solid transparent;
-	text-shadow: none;
-	padding: 0px;
-	border-radius: 8px;
-	margin: 0px 2px;
-	margin-top: 2px;
-	margin-bottom: 2px;
-	padding-left: 4px;
-	padding-right: 4px;
-	color: @wb-color;
-	animation: gradient_f 20s ease-in infinite;
-	transition: all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.682);
-	opacity: 0.7;
-}
-
-#taskbar button.active {
-	border-bottom: solid 2px @dark;
-	border-bottom: solid 2px @tool-color;
-	background: @wb-hvr-bg;
-	color: @main-bg;
-	/* margin-left: 2px; */
-	/* padding-left: 24px;
-	padding-right: 24px; */
-	/* margin-right: 2px; */
-	animation: gradient_f 20s ease-in infinite;
-	transition: all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+	transition: all 0.2s cubic-bezier(0.55, -0.68, 0.48, 1.682);
 	opacity: 1;
-}
-
-#taskbar button:hover {
-	background: @wb-hvr-bg;
-	color: @wb-active-color;
-	/* padding-left: 2px;
-	padding-right: 2px; */
-	animation: gradient_f 20s ease-in infinite;
-	transition: all 320ms cubic-bezier(0.55, 0.18, 0.048, 1);
 }
 
 #cpu,
@@ -142,8 +88,9 @@ tooltip {
 #custom-wbar,
 #custom-power,
 #tray {
+	font-size: 18px;
 	color: @main-color;
-	opacity: 1;
+	opacity: 0.9;
 	padding-left: 12px;
 	padding-right: 12px;
 }
@@ -153,38 +100,19 @@ tooltip {
 	padding: 0px;
 }
 
-#custom-power {
-	padding-left: 24px;
-	padding-right: 24px;
-}
-
-#custom-notification {
-	padding-left: 24px;
-	padding-right: 24px;
-}
-
-
-#custom-r_end {
-	border-radius: 0px 24px 24px 0px;
-	padding-right: 8px;
-	background: @main-bg;
-}
-
-#custom-l_end {
-	border-radius: 999px 0px 0px 999px;
-	/* margin-left: 4px; */
-	padding-left: 8px;
-	background: @main-bg;
-}
-
-#custom-sr_end {
-	border-radius: 0px;
-	/* margin-right: 8px; */
+#custom-random {
+	color: @tool-color ;
 	padding-right: 8px;
 }
 
-#custom-sl_end {
-	border-radius: 0px;
-	/* margin-left: 8px; */
-	padding-left: 0px;
+
+#image.spacebar {
+	background-image: url("/home/vdawg/.local/share/chezmoi/.other/hyprshaders/spacebar.png");
+	background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
+	min-width: 200px;
+min-height: 36px;
+margin-top: 4px;
 }
+

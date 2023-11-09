@@ -6,7 +6,7 @@ x-scheme-handler/geo=google-maps-geo-handler.desktop;
 x-scheme-handler/http=vivaldi-stable.desktop;
 x-scheme-handler/https=vivaldi-stable.desktop;
 x-scheme-handler/mailto=tutanota-desktop.desktop;
-video/x-matroska=org.gnome.Nautilus;org.gnome.Totem.desktop;
+video/x-matroska=org.gnome.Nautilus;org.gnome.Totem.desktop;vlc.desktop;
 text/plain=org.gnome.TextEditor.desktop;nvim.desktop;
 application/vnd.openxmlformats-officedocument.spreadsheetml.sheet=gnumeric.desktop;
 image/webp=org.gnome.eog.desktop;
@@ -15,6 +15,8 @@ video/mp4=org.gnome.Totem.desktop;
 image/jpeg=org.gnome.eog.desktop;
 audio/flac=io.bassi.Amberol.desktop;
 audio/mpeg=io.bassi.Amberol.desktop;
+application/x-matroska=vlc.desktop;
+audio/vnd.wave=vlc.desktop;
 
 [Default Applications]
 application/json=code-oss.desktop;
@@ -38,8 +40,11 @@ inode/directory=org.gnome.Nautilus.desktop;
 image/webp=org.gnome.eog.desktop
 image/png=org.gnome.eog.desktop
 video/mp4=org.gnome.Totem.desktop
-video/x-matroska=org.gnome.Totem.desktop
+video/x-matroska=vlc.desktop
 image/jpeg=org.gnome.eog.desktop
 audio/flac=io.bassi.Amberol.desktop
 x-scheme-handler/gitkraken=GitKraken.desktop
+application/x-matroska=vlc.desktop
+audio/vnd.wave=vlc.desktop
+
 

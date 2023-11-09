@@ -6,12 +6,13 @@
 	"logo": {
 		"source": "~/.local/share/chezmoi/.other/assets/cowboy-bebop-logo.png",
 		"type": "kitty",
+		"height": 8,
 		"padding": {
 			"top": 0
 		}
 	},
 	"display": {
-		"percentType": 9, // colored percent number
+		"percent": { "type": 9 }, // colored percent number
 		"separator": "  "
 	},
 	"modules": [

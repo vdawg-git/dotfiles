@@ -44,9 +44,13 @@ if vim.g.vscode then
 	map("o", "gc", "<Plug>VSCodeCommentary")
 	map("n", "gcc", "<Plug>VSCodeCommentaryLine")
 
-	-- Toggle quick open with tab
-	map("n", "<tab>", function()
-		vim.fn["VSCodeCall"]("workbench.action.quickOpen")
+
+	map("n", "gcc", "<Plug>VSCodeCommentaryLine")
+
+	-- Toggle explore page
+	map("n", "<C-e>", function()
+		print("hii")
+		vim.fn["VSCodeCall"]("workbench.files.action.focusFilesExplorer")
 	end)
 
 	-- Close editor
