@@ -1,7 +1,6 @@
 require("vdawg.set")
 require("vdawg.remap")
 require("vdawg.plugins")
-require("vdawg.theme")
 
 local augroup = vim.api.nvim_create_augroup
 local autocmd = vim.api.nvim_create_autocmd

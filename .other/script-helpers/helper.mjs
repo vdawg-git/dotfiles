@@ -9,7 +9,7 @@ const rgbRegex = /rgb\([\d,\ ]*\)*(?=;)/
  * Match and replace contents of a file.
  *
  * @param {string} filePath Absolute path to the file
- * @param {readonly ( [string, string | (match: string) => string] | (file: string) => [ string, string ] )[]} replacements Multiple tuples of `toReplace` and `replacement`, or a function which gets the filecontent and returns [toReplace, replacement]
+ * @param {readonly ( [string | RegExp, string | (match: string) => string] | (file: string) => [ string, string ] )[]} replacements Multiple tuples of `toReplace` and `replacement`, or a function which gets the filecontent and returns [toReplace, replacement]
  */
 export function replaceInFile(filePath, replacements) {
   const file = readFileSync(filePath, {

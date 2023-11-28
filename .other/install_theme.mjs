@@ -47,14 +47,14 @@ replaceInFile(colorsFilePath, [
 
   @if ($blackness == 'true') {
     @if ($type == 'e') { @return transparentize( $black, 1 ); }
-    @if ($type == 'f') { @return transparentize($grey-950, 0.0); }
-    @if ($type == 'g') { @return transparentize($grey-900, 0.0); }
-    @if ($type == 'h') { @return transparentize($grey-850, 0.0); }
+    @if ($type == 'f') { @return transparentize($grey-950, 0.9); }
+    @if ($type == 'g') { @return transparentize($grey-900, 0.9); }
+    @if ($type == 'h') { @return transparentize($grey-850, 0.9); }
   } @else {
     @if ($type == 'e') { @return transparentize($grey-800, 1.0); }
-    @if ($type == 'f') { @return transparentize($grey-750, 0.0); }
-    @if ($type == 'g') { @return transparentize($grey-700, 0.0); }
-    @if ($type == 'h') { @return transparentize($grey-650, 0.0); }
+    @if ($type == 'f') { @return transparentize($grey-750, 0.9); }
+    @if ($type == 'g') { @return transparentize($grey-700, 0.9); }
+    @if ($type == 'h') { @return transparentize($grey-650, 0.9); }
   }
 }
 `,

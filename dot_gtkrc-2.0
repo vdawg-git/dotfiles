@@ -2,7 +2,7 @@
 # Any customization should be done in ~/.gtkrc-2.0.mine instead.
 
 include "/home/vdawg/.gtkrc-2.0.mine"
-gtk-theme-name="Colloid-Orange-Dark-Gruvbox"
+gtk-theme-name="Colloid-Orange-Gruvbox"
 gtk-icon-theme-name="Colloid-orange-dark"
 gtk-font-name="Ubuntu Nerd Font 10"
 gtk-cursor-theme-name="Oxygen_White"

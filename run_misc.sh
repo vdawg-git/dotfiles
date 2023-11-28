@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Allow writing to VS Code to enable custom css modifications
-sudo chown -R $(whoami) $(which code)
-sudo chown -R $(whoami) /opt/visual-studio-code
-sudo chown -R $(whoami) $(which code-oss)
-sudo chown -R $(whoami) /opt/code-translucent
+path="$HOME/.local/share/chezmoi/.other/"
+
+eval  "sudo $path/writeableVsc.sh"
+eval  "sudo $path/editDesktopEntries.mjs.mjs"
+

@@ -14,6 +14,10 @@ gsettings set "$gnome_schema" icon-theme "$icon_theme"
 gsettings set "$gnome_schema" cursor-theme "$cursor_theme"
 gsettings set "$gnome_schema" font-name "$font_name"
 
+# Allow flatpacks to use the custom theme
+sudo flatpak override --filesystem=xdg-config/gtk-4.0
+sudo flatpak override --filesystem=xdg-config/gtk-3.0
+
 export GTK_THEME="$gtk_theme"
 export GTK_ICONS="$icon_theme"
 

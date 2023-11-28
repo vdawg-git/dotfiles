@@ -4,7 +4,10 @@ ripgrep
 git-lfs
 bitwarden
 gnome-disks
-discord
+vencord-desktop-bin
+tesseract
+tesseract-data-rus
+tesseract-data-eng
 blanket
 blueman
 bluez

@@ -12,7 +12,7 @@ abbr --add yays "yay -Syu "
 abbr icat "kitty +kitten icat"
 abbr c. "code ."
 abbr n. "nvim ."
-abbr h. "cd ~/.config/hypr && nvim ."
+abbr h. "nvim ~/.config/hypr"
 
 alias ls "exa --icons"
 alias lsg "exa --icons -F -H --group-directories-first --git -1"

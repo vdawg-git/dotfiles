@@ -6,17 +6,27 @@
 	"exclusive": true,
 	"passthrough": false,
 	"gtk-layer-shell": true,
-	"margin": "0px 0px 0px 0px",
+	"margin": "0px 12px 0px 12px",
 
 	"modules-left": ["hyprland/workspaces"],
-	"modules-center": ["image#spacebar"],
-	"modules-right": ["custom/random", "cpu", "clock"],
+	"modules-center": ["wlr/taskbar"],
+	"modules-right": [
+		"bluetooth",
+		"pulseaudio",
+		"pulseaudio#microphone",
+		  "custom/notification",
+		"tray",
+		"battery",
+		"custom/cliphist",
+		"clock",
+		"custom/power"
+	],
 
 	"cpu": {
 		"interval": 10,
-		"format-alt": "󰍛 {usage}%",
-		"format": "{icon0}{icon1}{icon2}{icon3}",
-		"format-icons": ["▏", "▎", "▍", "▌", "▋", "▊", "█", "█"]
+		"format": "󰍛 {usage}%",
+		"format-alt": "{icon0}{icon1}{icon2}{icon3}",
+		"format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"]
 	},
 
 	"memory": {
@@ -29,30 +39,14 @@
 	},
 
 	"clock": {
-		"format": "{:%H:%M}",
+		"format": "{:%H:%M  %p  %a %d}",
 		"format-alt": "{:%H:%M  %b %Y}",
 		"tooltip-format": "{calendar}"
 	},
 
 	"hyprland/workspaces": {
-		"format": "{icon}",
-		"on-click": "activate",
-		"format-icons": {
-			"1": "一",
-			"2": "二",
-			"3": "三",
-			"4": "四",
-			"5": "五",
-			"6": "六",
-			"7": "七",
-			"8": "八",
-			"9": "九",
-			"10": "十"
-			// "urgent": "",
-			// "active": "",
-			// "default": ""
-		},
-		"sort-by-number": true
+		   "all-outputs": true,
+	     	"active-only": "false",
 	},
 
 	"wlr/taskbar": {
@@ -84,22 +78,90 @@
 		"on-click": "gnome-power-statistics"
 	},
 
+	"bluetooth": {
+		"format": "",
+		"format-disabled": "", // an empty format will hide the module
+		"format-connected": "",
+		"tooltip-format": "",
+		"tooltip-format-connected": "{device_enumerate}",
+		"tooltip-format-enumerate-connected": " {device_alias}"
+	},
+
+	"pulseaudio": {
+		"format": "{icon}",
+		"format-muted": "",
+		"on-click": "pavucontrol -t 3",
+		"on-click-middle": "~/.config/hypr/scripts/volumecontrol.sh m",
+		"on-scroll-up": "~/.config/hypr/scripts/volumecontrol.sh i",
+		"on-scroll-down": "~/.config/hypr/scripts/volumecontrol.sh d",
+		"tooltip-format": "{icon} {desc} // {volume}%",
+		"scroll-step": 5,
+		"format-icons": {
+			"headphone": "",
+			"hands-free": "",
+			"headset": "",
+			"phone": "",
+			"portable": "",
+			"car": "",
+			"default": ["", "", ""]
+		}
+	},
+
+	"pulseaudio#microphone": {
+		"format": "{format_source}",
+		"format-source": "",
+		"format-source-muted": "",
+		"on-click": "pavucontrol -t 4",
+		"on-click-middle": "pamixer --default-source -t",
+		"on-scroll-up": "pamixer --default-source -i 5",
+		"on-scroll-down": "pamixer --default-source -d 5",
+		"tooltip-format": "{format_source} {source_desc} // {source_volume}%",
+		"scroll-step": 5
+	},
+
 	"tray": {
 		"icon-size": 16,
 		"spacing": 8
 	},
 
-	"custom/random": {
-		"format": "{}",
-		"exec": "~/.local/share/chezmoi/.other/hyprshaders/charget.js" ,
-		"interval": 4, // Roughly 24 FPS
-		"tooltip": false
+	"custom/cliphist": {
+		"format": "{}",
+		"exec": "echo ; echo 󰅇 clipboard history",
+		"on-click": "sleep 0.1 && ~/.config/hypr/scripts/cliphist.sh c 3",
+		//"on-click-right": "sleep 0.1 && ~/.config/hypr/scripts/cliphist.sh d",
+		"on-click-middle": "sleep 0.1 && ~/.config/hypr/scripts/cliphist.sh w 3",
+		"interval": 86400, // once every day
+		"tooltip": true
 	},
 
-	"image#spacebar": {
-		"format": " {} ",
-		"exec": "echo 'x'",
-		"interval": 86400, // once every day
-		}
+	  "custom/notification": {
+    "tooltip": false,
+    "format": "{icon}",
+    "format-icons": {
+      "notification": "<span foreground='red'><sup></sup></span>",
+      "none": "",
+      "dnd-notification": "<span foreground='red'><sup></sup></span>",
+      "dnd-none": "",
+      "inhibited-notification": "<span foreground='red'><sup></sup></span>",
+      "inhibited-none": "",
+      "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
+      "dnd-inhibited-none": ""
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
+  },
 
+
+	"custom/power": {
+		"format": "{}",
+		// "exec": "echo ; echo  logout",
+		"on-click": "wlogout -b 2 -c 0 -r 0 -L 930 -R 930 -T 300 -B 300 --protocol layer-shell",
+		"interval": 86400, // once every day
+		"tooltip": true
+	}
 }
+

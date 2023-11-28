@@ -15,6 +15,8 @@
 #workbench\.parts\.editor {
 	border-radius: var(--round-lg) !important;
 }
+
+
 /* for transparent terminal */
 /* [role="application"]:not(.nosidebar) #workbench\.parts\.editor { */
 /* border-radius: var(--panel-roundess) 0px 0px var(--panel-roundess) !important; */
