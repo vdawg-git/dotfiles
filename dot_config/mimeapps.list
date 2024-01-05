@@ -18,6 +18,7 @@ audio/mpeg=io.bassi.Amberol.desktop;
 application/x-matroska=vlc.desktop;
 audio/vnd.wave=vlc.desktop;
 video/webm=vlc.desktop;
+application/vnd.openxmlformats-officedocument.wordprocessingml.document=abiword.desktop;
 
 [Default Applications]
 application/json=code-oss.desktop;
@@ -31,7 +32,7 @@ x-scheme-handler/geo=google-maps-geo-handler.desktop;
 x-scheme-handler/http=vivaldi-stable.desktop;
 x-scheme-handler/https=vivaldi-stable.desktop;
 x-scheme-handler/mailspring=Mailspring.desktop
-x-scheme-handler/mailto=tutanota-desktop.desktop;
+x-scheme-handler/mailto=vivaldi-stable.desktop
 x-scheme-handler/obsidian=obsidian.desktop;
 text/plain=org.gnome.TextEditor.desktop
 -x-scheme-handler/insomnia=insomnia.desktop;
@@ -48,3 +49,4 @@ x-scheme-handler/gitkraken=GitKraken.desktop
 application/x-matroska=vlc.desktop
 audio/vnd.wave=vlc.desktop
 video/webm=vlc.desktop
+application/vnd.openxmlformats-officedocument.wordprocessingml.document=abiword.desktop

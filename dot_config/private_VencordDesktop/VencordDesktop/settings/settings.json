@@ -1,5 +1,5 @@
 {
-    "notifyAboutUpdates": true,
+    "notifyAboutUpdates": false,
     "autoUpdate": false,
     "autoUpdateNotification": true,
     "useQuickCss": true,
@@ -62,7 +62,9 @@
             "enabled": false
         },
         "AnonymiseFileNames": {
-            "enabled": true
+            "enabled": true,
+            "method": 0,
+            "randomisedLength": 7
         },
         "WebRichPresence (arRPC)": {
             "enabled": false
@@ -361,7 +363,12 @@
             "enabled": false
         },
         "ShikiCodeblocks": {
-            "enabled": false
+            "enabled": true,
+            "theme": "https://raw.githubusercontent.com/shikijs/shiki/0b28ad8ccfbf2615f2d9d38ea8255416b8ac3043/packages/shiki/themes/dark-plus.json",
+            "tryHljs": "SECONDARY",
+            "useDevIcon": "GREYSCALE",
+            "bgOpacity": 100,
+            "customTheme": "https://raw.githubusercontent.com/sainnhe/gruvbox-material-vscode/master/themes/gruvbox-material-dark.json"
         },
         "ShowAllMessageButtons": {
             "enabled": false
@@ -487,6 +494,6 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1701157588033
+        "settingsSyncVersion": 1701351957323
     }
 }

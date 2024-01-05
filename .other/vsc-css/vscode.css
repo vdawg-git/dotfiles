@@ -1,21 +1,20 @@
 :root {
-	--round-sm: 0.25rem;
-	--round: 0.5rem;
-	--round-lg: 1rem;
-	--round-xl: 1.25rem;
-	--round-2xl: 1.5rem;
-	--round-3xl: 1.75rem;
-	--round-4xl: 2rem;
+  --round-sm: 0.25rem;
+  --round: 0.5rem;
+  --round-lg: 1rem;
+  --round-xl: 1.25rem;
+  --round-2xl: 1.5rem;
+  --round-3xl: 1.75rem;
+  --round-4xl: 2rem;
 }
 
 /* Fluid look (remove visual seperation terminal and sidebars) */
 .monaco-workbench {
-	background-color: var(--vscode-sideBar-background) !important;
+  background-color: var(--vscode-sideBar-background) !important;
 }
 #workbench\.parts\.editor {
-	border-radius: var(--round-lg) !important;
+  border-radius: var(--round-lg) !important;
 }
-
 
 /* for transparent terminal */
 /* [role="application"]:not(.nosidebar) #workbench\.parts\.editor { */
@@ -36,57 +35,57 @@
 
 /* Disable borders */
 .monaco-workbench footer {
-	background-color: transparent !important;
-	--status-border-top-color: "transparent" !important;
+  background-color: transparent !important;
+  --status-border-top-color: "transparent" !important;
 }
 .monaco-workbench .part.panel.bottom .composite.title,
 .part,
 .monaco-workbench .activitybar.bordered {
-	border: none !important;
+  border: none !important;
 }
 #workbench\.parts\.titlebar {
-	border-bottom: transparent !important;
+  border-bottom: transparent !important;
 }
 .monaco-workbench .activitybar.bordered:before {
-	border-color: none !important;
-	display: none;
+  border-color: none !important;
+  display: none;
 }
 
 /* Idk */
 #tabs-tabbar-container {
-	margin: 0px;
+  margin: 0px;
 }
 
 /* Lower opacity of explorer items */
 #workbench\.view\.explorer .monaco-tl-row {
-	opacity: 0.85;
+  opacity: 0.85;
 }
 #workbench\.view\.explorer .monaco-tl-row:hover {
-	opacity: 1;
+  opacity: 1;
 }
 
 /* Quick input list */
 .quick-input-widget {
-	border-radius: 16px;
-	padding: 16px;
-	top: 25% !important;
-	/* translate: 0px -50%; */
-	box-shadow: 0 32px 56px -24px var(--vscode-widget-shadow),
-		0 24px 40px -16px var(--vscode-widget-shadow) !important;
-	animation: fadein 80ms ease-in;
-	border: var(--vscode-textSeparator-foreground) 1px solid !important;
+  border-radius: 16px;
+  padding: 16px;
+  top: 25% !important;
+  /* translate: 0px -50%; */
+  box-shadow: 0 32px 56px -24px var(--vscode-widget-shadow),
+    0 24px 40px -16px var(--vscode-widget-shadow) !important;
+  animation: fadein 80ms ease-in;
+  border: var(--vscode-textSeparator-foreground) 1px solid !important;
 }
 .quick-input-header {
-	padding: 8px 8px 12px 8px;
+  padding: 8px 8px 12px 8px;
 }
 .quick-input-titlebar {
-	border-radius: var(--round-sm);
+  border-radius: var(--round-sm);
 }
 .quick-input-list .monaco-list-row {
-	border-radius: var(--round);
+  border-radius: var(--round);
 }
 .monaco-inputbox > .ibwrapper > .input input[type="text"] {
-	font-size: 1rem;
+  font-size: 1rem;
 }
 
 /* ################### */
@@ -99,30 +98,30 @@
 .monaco-workbench select,
 .monaco-inputbox,
 .setting-item-contents {
-	border-radius: 8px;
+  border-radius: 8px;
 }
 /* selections */
 .monaco-list-row {
-	border-radius: 4px;
+  border-radius: 4px;
 }
 /* misc */
 .monaco-editor .cursors-layer .cursor {
-	border-radius: 2px;
+  border-radius: 2px;
 }
 .slider {
-	border-radius: 8px;
-	max-width: 8px;
+  border-radius: 8px;
+  max-width: 8px;
 }
 /* Hover pop ups */
 .monaco-editor .monaco-hover {
-	border-radius: 16px;
-	box-shadow: 0px 8px 24px -8px rgba(0, 0, 0, 0.22);
-	padding: 4px;
+  border-radius: 16px;
+  box-shadow: 0px 8px 24px -8px rgba(0, 0, 0, 0.22);
+  padding: 4px;
 }
 
 /* Current line */
 .monaco-editor .view-overlays .current-line {
-	border-radius: 8px !important;
+  border-radius: 8px !important;
 }
 /* .monaco-editor .view-overlays .current-line::after,
 .monaco-editor .view-overlays .current-line::before {
@@ -160,73 +159,73 @@
 .monaco-editor .wordHighlightText,
 .search-view .findInFileMatch,
 .statusbar-item a {
-	border-radius: 0.25rem !important;
+  border-radius: 0.25rem !important;
 }
 
 /* Selections */
 .monaco-editor .top-left-radius {
-	border-top-left-radius: var(--round);
+  border-top-left-radius: var(--round);
 }
 .monaco-editor .bottom-left-radius {
-	border-bottom-left-radius: var(--round);
+  border-bottom-left-radius: var(--round);
 }
 .monaco-editor .top-right-radius {
-	border-top-right-radius: var(--round);
+  border-top-right-radius: var(--round);
 }
 .monaco-editor .bottom-right-radius {
-	border-bottom-right-radius: var(--round);
+  border-bottom-right-radius: var(--round);
 }
 
 /* Neovim selections */
 .monaco-editor .ced-2-TextEditorDecorationType681-0 {
-	border-radius: 0 var(--round) var(--round) 0;
+  border-radius: 0 var(--round) var(--round) 0;
 }
 
 /* Hover Popus and content */
 .monaco-workbench .workbench-hover {
-	border-radius: 12px;
-	padding: 8px;
+  border-radius: 12px;
+  padding: 8px;
 }
 .monaco-workbench .workbench-hover .hover-row .actions {
-	border-radius: 12px;
+  border-radius: 12px;
 }
 .monaco-editor .monaco-hover .hover-row:not(:first-child):not(:empty) {
-	border: none !important;
-	margin-top: var(--round) !important;
+  border: none !important;
+  margin-top: var(--round) !important;
 }
 
 /* Status icons */
 .monaco-hover .hover-row.status-bar .actions {
-	padding: 4px 12px;
-	border-radius: var(--round-4xl);
+  padding: 4px 12px;
+  border-radius: var(--round-4xl);
 }
 
 /* Notifications */
 .monaco-workbench
-	> .notifications-toasts
-	.notification-toast-container
-	> .notification-toast {
-	border-radius: var(--round-lg);
-	padding: var(--round-sm);
+  > .notifications-toasts
+  .notification-toast-container
+  > .notification-toast {
+  border-radius: var(--round-lg);
+  padding: var(--round-sm);
 }
 
 /* Scroll decoration */
 .monaco-editor .scroll-decoration {
-	height: 24px !important;
-	border-radius: var(--round-lg);
+  height: 24px !important;
+  border-radius: var(--round-lg);
 }
 .monaco-editor .sticky-widget {
-	border-bottom-left-radius: var(--round-lg);
-	border-bottom-right-radius: var(--round-lg);
-	overflow: hidden !important;
-	min-width: 100%;
+  border-bottom-left-radius: var(--round-lg);
+  border-bottom-right-radius: var(--round-lg);
+  overflow: hidden !important;
+  min-width: 100%;
 }
 .monaco-scrollable-element > .shadow.top {
-	height: 24px !important;
-	border-radius: var(--round-lg);
+  height: 24px !important;
+  border-radius: var(--round-lg);
 }
 
 /* Terminal selections */
 .xterm-selection div {
-	border-radius: var(--round);
+  border-radius: var(--round);
 }

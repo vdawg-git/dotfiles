@@ -1,4 +1,4 @@
-@define-color bar-bg rgba(14, 14, 14, 0.00);
+@define-color bar-bg rgba(14, 14, 14, 0.20);
 
 @define-color main-color @theme_text_color;
 @define-color main-bg rgba(14, 14, 14, 0);
@@ -31,8 +31,6 @@
 window#waybar {
 	background: @bar-bg;
 	border-radius: 12px;
-	margin-top: 8px;
-
 }
 
 tooltip {
@@ -42,35 +40,36 @@ tooltip {
 	padding: 16px;
 }
 
-#workspaces {
-	padding-left: 16px;
-	padding-right: 16px;
-	background: @main-bg;
-	border-radius: 0px 24px 24px 0px;
-}
+#workspaces { }
 
 #workspaces button {
-	font-size: 20px;
-	box-shadow: none;
-	text-shadow: none;
-	padding: 0px;
-	min-width: 32px;
-	color: @tool-color;
-	transition: all 0.2s cubic-bezier(0.55, -0.68, 0.48, 1.682);
-	opacity: 0.9;
+	min-width: 24px;
+	margin: 0px 6px; 
+    transition: none;
+}
+
+#workspaces button label {
+	min-width: 10px;
+    min-height: 10px;
+    background: @theme_bg_color;
+    color: @theme_fg_color;
+	border-radius: 999px;
+    font-size: 12px;
 }
 
 #workspaces button.active {
-	color: @theme_selected_bg_color;
-	transition: all 0.2s cubic-bezier(0.55, -0.68, 0.48, 1.682);
-	opacity: 0.95;
+	background: @theme_fg_color;
+	min-width: 56px;
+	color: @theme_bg_color;
+    transition: none;
+}
+#workspaces button.active label {
+  background: transparent;
+  color: @theme_bg_color;
+  padding: 0px 0px 0px 16px;
 }
 
-#workspaces button:hover {
-	color: @wb-hvr-color;
-	transition: all 0.2s cubic-bezier(0.55, -0.68, 0.48, 1.682);
-	opacity: 1;
-}
+
 
 #taskbar button.active {
 	border-bottom: solid 2px @dark;
@@ -112,7 +111,7 @@ tooltip {
 #custom-wbar,
 #custom-power,
 #tray {
-	font-size: 18px;
+	font-size: 14px;
 	color: @main-color;
 	opacity: 0.9;
 	padding-left: 12px;

@@ -18,8 +18,12 @@ await $`npx degit vinceliuice/Colloid-icon-theme ${gtkIconsFolder} --force --cac
 
 const colorsFilePath = path.join(gtkThemeFolder, "src", "sass", "_colors.scss")
 
-replaceInFile(colorsFilePath, [
-  [
+/* replaceInFile(colorsFilePath, [
+
+ ,
+])
+
+[
     `@function background($type) {
   @if ($type == 'a') { @return $white; }
   @if ($type == 'b') { @return $grey-050; }
@@ -41,9 +45,9 @@ replaceInFile(colorsFilePath, [
 `,
     `@function background($type) {
   @if ($type == 'a') { @return transparentize( $white, 1 ); }
-  @if ($type == 'b') { @return transparentize($grey-050, 0.0); }
-  @if ($type == 'c') { @return transparentize($grey-100, 0.0); }
-  @if ($type == 'd') { @return transparentize($grey-250, 0.0); }
+  @if ($type == 'b') { @return transparentize($grey-050, 0.9); }
+  @if ($type == 'c') { @return transparentize($grey-100, 0.9); }
+  @if ($type == 'd') { @return transparentize($grey-250, 0.9); }
 
   @if ($blackness == 'true') {
     @if ($type == 'e') { @return transparentize( $black, 1 ); }
@@ -58,11 +62,10 @@ replaceInFile(colorsFilePath, [
   }
 }
 `,
-  ],
-])
+  ] */
 
 const transparentize = {
-  0: ["window_bg_color", "headerbar_bg_color", "headerbar_backdrop_color"],
+  0.0: ["window_bg_color", "headerbar_bg_color", "headerbar_backdrop_color"],
   0.4: ["view_bg_color"],
   0.6: ["card_bg_color"],
   // 0.5: ["popover_bg_color"],

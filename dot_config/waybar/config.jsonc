@@ -2,14 +2,14 @@
 	"layer": "top",
 	"position": "top",
 	"mod": "dock",
-	"height": 40,
+	"height": 32,
 	"exclusive": true,
 	"passthrough": false,
 	"gtk-layer-shell": true,
 	"margin": "0px 12px 0px 12px",
 
 	"modules-left": ["hyprland/workspaces"],
-	"modules-center": ["wlr/taskbar"],
+	"modules-center": [],
 	"modules-right": [
 		"bluetooth",
 		"pulseaudio",
