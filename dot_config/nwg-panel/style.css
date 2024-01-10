@@ -66,14 +66,14 @@ font-weight: bold;
 
 #hyprland-workspaces #task-box-focused #hyprland-workspaces-item {
 	background: @fg2;
-	min-width: 56px;
+	min-width: 32px;
 	color: @theme_text_color;
 	border-radius: 9999px;
 }
 #hyprland-workspaces #task-box-focused #hyprland-workspaces-item label {
 	background: transparent;
 	color: @theme_bg_color;
-	padding: 0px 16px;
+	padding: 0px 8px;
 }
 
 #hyprland-workspaces #hyprland-workspaces-item label {

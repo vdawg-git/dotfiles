@@ -37,9 +37,9 @@
         "processes": "gnome-usage"
       },
       "show-values": false,
-      "interval": 1,
+      "interval": 2,
       "icon-size": 16,
-      "hover-opens": true,
+      "hover-opens": false,
       "leave-closes": true,
       "click-closes": false,
       "css-name": "controls-window",
@@ -56,7 +56,7 @@
         "items": [
           {
             "name": "Lock",
-            "cmd": "gtklock"
+            "cmd": "swaylock"
           },
           {
             "name": "Logout",
@@ -158,7 +158,7 @@
       "css-name": "hypr-taskbar"
     },
     "hyprland-workspaces": {
-      "num-ws": 10,
+      "num-ws": 9,
       "show-icon": false,
       "image-size": 16,
       "show-name": false,
@@ -185,9 +185,6 @@
       "interval": 1,
       "always-show-icon": true
     },
-    "start-hidden": false,
-    "sway-taskbar": {},
-    "sway-workspaces": {},
-    "sway-mode": {}
+    "start-hidden": false
   }
 ]

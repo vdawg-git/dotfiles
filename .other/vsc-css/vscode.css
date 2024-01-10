@@ -229,3 +229,8 @@
 .xterm-selection div {
   border-radius: var(--round);
 }
+
+/* Sidebar headers */
+.monaco-pane-view .pane > .pane-header {
+  border-radius: 8px 8px 0px 0px;
+}
