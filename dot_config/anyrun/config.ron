@@ -10,7 +10,7 @@ Config(
   y: Fraction(0.4),
 
   // The width of the runner
-  width: Absolute(620),
+  width: Absolute(520),
 
   // The minimum height of the runner, the runner will expand to fit all the entries
   height: Absolute(400),
@@ -19,7 +19,7 @@ Config(
   hide_icons: false, 
 
   // ignore exclusive zones, f.e. Waybar  
-  ignore_exclusive_zones: false, 
+  ignore_exclusive_zones: true, 
 
   // Layer shell layer: Background, Bottom, Top, Overlay  
   layer: Overlay, 

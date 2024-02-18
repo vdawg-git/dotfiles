@@ -96,3 +96,6 @@ eval "`fnm env`"
 export EDITOR="nvim"
 export VISUAL="nvim"
 
+
+[[ -f ~/.bash-preexec.sh ]] && source ~/.bash-preexec.sh
+eval "$(atuin init bash)"
