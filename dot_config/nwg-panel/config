@@ -1,7 +1,7 @@
 [
   {
     "name": "panel-top",
-    "output": "",
+    "output": "All",
     "layer": "top",
     "position": "top",
     "controls": "right",
@@ -185,6 +185,9 @@
       "interval": 1,
       "always-show-icon": true
     },
-    "start-hidden": false
+    "start-hidden": false,
+    "sway-taskbar": {},
+    "sway-workspaces": {},
+    "sway-mode": {}
   }
 ]

@@ -30,6 +30,7 @@ end
 
 if status is-interactive
     # Commands to run in interactive sessions can go here
+	atuin init fish | source
 end
 
 function fish_greeting
@@ -131,4 +132,3 @@ set fish_color_cancel red --dim
 starship init fish | source # prompt
 zoxide init fish --cmd cd | source # folder auto jumping
 
-set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME ; set -gx PATH $HOME/.cabal/bin /home/vdawg/.ghcup/bin $PATH # ghcup-env

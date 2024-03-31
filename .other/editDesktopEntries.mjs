@@ -9,34 +9,28 @@ import { replaceInFile } from "./script-helpers/helper.mjs"
 const platfromWayland = [
   // "/usr/share/applications/tutanota-desktop.desktop",
   "/usr/share/applications/morgen.desktop",
+  "/usr/share/applications/obsidian.desktop",
   "/usr/share/applications/GitKraken.desktop",
 ]
 
 /** @type {{entry: string, replacers:[RegExp, (match: string)=> string][]}[]} */
 const entries = [
-  {
-    entry: "/usr/share/applications/vencord-desktop.desktop",
-    replacers: [
-      launchAsWayland(),
-      [createRegex("Name"), () => "Discord"],
-      [createRegex("icon"), () => "discord"],
-    ],
-  },
+  // {
+  //   entry: "/usr/share/applications/vencord-desktop.desktop",
+  //   replacers: [
+  //     launchAsWayland(),
+  //     [createRegex("Name"), () => "Discord"],
+  //     [createRegex("icon"), () => "discord"],
+  //   ],
+  // },
 
-  {
-    entry: "/usr/share/applications/Mailspring.desktop",
-    replacers: [
-      [createRegex("Exec"), append('--password-store="gnome-libsecret"')],
-    ],
-  },
-
-  {
-    entry: "/usr/share/applications/code-oss.desktop",
-    replacers: [
-      [createRegex("Name"), () => "VSCode"],
-      [createRegex("Icon"), () => "visual-studio-code"],
-    ],
-  },
+  // {
+  //   entry: "/usr/share/applications/Mailspring.desktop",
+  //   replacers: [
+  //     [createRegex("Exec"), append('--password-store="gnome-libsecret"')],
+  //   ],
+  // },
+  
 
   ...platfromWayland.map((entry) => ({
     entry,

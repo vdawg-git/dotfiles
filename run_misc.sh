@@ -2,6 +2,6 @@
 
 path="$HOME/.local/share/chezmoi/.other/"
 
-eval  "sudo $path/writeableVsc.sh"
-eval  "sudo $path/editDesktopEntries.mjs"
+eval  "$path/writeableVsc.sh"
+eval  "$path/editDesktopEntries.mjs"
 
