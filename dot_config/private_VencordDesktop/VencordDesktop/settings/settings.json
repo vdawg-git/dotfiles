@@ -59,7 +59,7 @@
             "enabled": false
         },
         "AlwaysTrust": {
-            "enabled": false
+            "enabled": true
         },
         "AnonymiseFileNames": {
             "enabled": true,
@@ -154,7 +154,7 @@
             "nitroFirst": true
         },
         "FavoriteEmojiFirst": {
-            "enabled": false
+            "enabled": true
         },
         "FavoriteGifSearch": {
             "enabled": true
@@ -494,6 +494,6 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1706112049381
+        "settingsSyncVersion": 1711971397699
     }
 }

@@ -4,6 +4,7 @@ abbr --add dotdot --regex '^\.\.+$' --function multicd
 abbr pn "pnpm"
 abbr pnd "pnpm dev"
 abbr pnb "pnpm build"
+abbr pni "pnpm install"
 
 abbr g "git"
 abbr xclip "xclip -selection c"
@@ -26,18 +27,3 @@ abbr wgd "wg-quick down job "
 
 alias ls "eza --icons"
 alias lsg "eza --icons -F -H --group-directories-first --git -1"
-mod front_of_house {
-    mod hosting {
-        fn add_to_waitlist() {}
-
-        fn seat_at_table() {}
-    }
-
-    mod serving {
-        fn take_order() {}
-
-        fn serve_order() {}
-
-        fn take_payment() {}
-    }
-}

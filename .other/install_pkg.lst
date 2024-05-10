@@ -1,5 +1,5 @@
 ark
-bat
+broot
 ripgrep
 git-lfs
 bitwarden
@@ -8,6 +8,7 @@ vencord-desktop-bin
 tesseract
 tesseract-data-rus
 tesseract-data-eng
+tesseract-data-de
 blanket
 blueman
 bluez
@@ -17,7 +18,6 @@ chezmoi
 cliphist
 converseen
 eog
-exa
 fastfetch
 fish
 nextcloud
@@ -76,7 +76,6 @@ ttf-joypixels
 ttf-ubuntu-nerd
 tutanota-desktop-bin
 udiskie
-vivaldi
 firefox
 vivaldi-ffmpeg-codecs
 visual-studio-code-bin

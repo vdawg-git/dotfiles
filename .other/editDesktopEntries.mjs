@@ -11,6 +11,8 @@ const platfromWayland = [
   "/usr/share/applications/morgen.desktop",
   "/usr/share/applications/obsidian.desktop",
   "/usr/share/applications/GitKraken.desktop",
+  "/usr/share/applications/brave-browser-nightly.desktop",
+  "/usr/share/applications/brave-browser.desktop",
 ]
 
 /** @type {{entry: string, replacers:[RegExp, (match: string)=> string][]}[]} */
@@ -60,7 +62,7 @@ function launchAsWayland() {
  * @param {string} option
  * A regex to match the value of a key in a desktop entry */
 function createRegex(option) {
-  return new RegExp(`(?<=^${option}=).*`, "m")
+  return new RegExp(`(?<=^${option}=).*`, "mi")
 }
 
 /** @param {string} toAppend */
