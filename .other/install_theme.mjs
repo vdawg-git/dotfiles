@@ -13,8 +13,8 @@ const gtkThemeFolder = path.join(__dirname, "gtk-theme/")
 const gtkIconsFolder = path.join(__dirname, "gtk-icons/")
 const assetsFolder = path.join(__dirname, "assets/")
 
-await $`npx degit vinceliuice/Colloid-gtk-theme ${gtkThemeFolder} --force --cache --verbose`
-await $`npx degit vinceliuice/Colloid-icon-theme ${gtkIconsFolder} --force --cache --verbose`
+await $`pnpm dlx degit vinceliuice/Colloid-gtk-theme ${gtkThemeFolder} --force  --verbose`
+await $`pnpm dlx degit vinceliuice/Colloid-icon-theme ${gtkIconsFolder} --force  --verbose`
 
 const colorsFilePath = path.join(gtkThemeFolder, "src", "sass", "_colors.scss")
 
@@ -64,14 +64,14 @@ const colorsFilePath = path.join(gtkThemeFolder, "src", "sass", "_colors.scss")
 `,
   ] */
 
-const transparentize = {
-  0.0: ["window_bg_color", "headerbar_bg_color", "headerbar_backdrop_color"],
-  0.4: ["view_bg_color"],
-  0.6: ["card_bg_color"],
-  // 0.5: ["popover_bg_color"],
-}
+// const transparentize = {
+//   0.0: ["window_bg_color", "headerbar_bg_color", "headerbar_backdrop_color"],
+//   0.4: ["view_bg_color"],
+//   0.6: ["card_bg_color"],
+//   // 0.5: ["popover_bg_color"],
+// }
 
-await $`cd ${gtkThemeFolder} && ./install.sh --theme orange --libadwaita --tweaks gruvbox rimless float --color dark`
+await $`cd ${gtkThemeFolder} && ./install.sh --theme orange --libadwaita --tweaks gruvbox black rimless float --color dark`
 await $`cd ${gtkIconsFolder} && ./install.sh --theme orange`
 
 await $`tar --exclude-vcs-ignores --exclude-vcs -czf  ${path.join(

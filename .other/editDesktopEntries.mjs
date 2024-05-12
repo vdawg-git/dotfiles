@@ -26,12 +26,12 @@ const entries = [
   //   ],
   // },
 
-  // {
-  //   entry: "/usr/share/applications/Mailspring.desktop",
-  //   replacers: [
-  //     [createRegex("Exec"), append('--password-store="gnome-libsecret"')],
-  //   ],
-  // },
+  {
+    entry: "/usr/share/applications/Mailspring.desktop",
+    replacers: [
+      [createRegex("Exec"), append('--password-store="gnome-libsecret" %U')],
+    ],
+  },
   
 
   ...platfromWayland.map((entry) => ({
