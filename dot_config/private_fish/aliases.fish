@@ -24,6 +24,3 @@ abbr mvs "mullvad status"
 
 abbr wgu "wg-quick up job "
 abbr wgd "wg-quick down job "
-
-alias ls "eza --icons"
-alias lsg "eza --icons -F -H --group-directories-first --git -1"

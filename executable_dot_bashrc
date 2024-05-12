@@ -101,3 +101,4 @@ export VISUAL="nvim"
 eval "$(atuin init bash)"
 
 source /home/vdawg/.config/broot/launcher/bash/br
+. "$HOME/.cargo/env"

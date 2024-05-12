@@ -2,6 +2,8 @@
 string match -q "$TERM_PROGRAM" "vscode"
 and . (code --locate-shell-integration-path fish)
 
+# Rust
+source "$HOME/.cargo/env.fish"
 
 fish_vi_key_bindings
 
