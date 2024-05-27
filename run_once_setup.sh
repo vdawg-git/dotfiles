@@ -14,7 +14,7 @@ echo -e "[chaotic-aur] \n Include = /etc/pacman.d/chaotic-mirrorlist" | sudo tre
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 # Install packages
-pushd "./.other/"
+pushd "~/.local/share/chezmoi/.other/"
 ./install_pkg.sh
 # ./install_theme.mjs
 # ./install_flatpack.sh
