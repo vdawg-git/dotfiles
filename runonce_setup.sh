@@ -6,6 +6,7 @@ sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg
 
 echo -e "[chaotic-aur] \n Include = /etc/pacman.d/chaotic-mirrorlist" | sudo tree -a /etc/pacman.conf
 
+# Install rus via rustup
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 # Install packages
@@ -35,5 +36,7 @@ pnpm install
 # Mange keyd config
 sudo mkdir -p /etc/keyd/
 sudo ln -s /home/vdawg/.local/share/chezmoi/.outside/etc/keyd/default.conf ./default.conf
+sudo systemctl enable --now keyd
+
 
 
