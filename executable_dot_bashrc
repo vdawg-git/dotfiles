@@ -88,10 +88,6 @@ _open_files_for_editing() {
 
 PATH=~/.console-ninja/.bin:$PATHsource /usr/share/nvm/init-nvm.sh
 
-# fnm
-export PATH="/home/vdawg/.local/share/fnm:$PATH"
-eval "`fnm env`"
-
 # Use --wait to make vscode work with chezmoi porperly
 export EDITOR="nvim"
 export VISUAL="nvim"
