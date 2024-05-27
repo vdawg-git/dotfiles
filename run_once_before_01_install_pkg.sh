@@ -4,8 +4,8 @@
 #|-/ /--| Prasanth Rangan                        |-/ /--|#
 #|/ /---+----------------------------------------+/ /---|#
 
-echo "Installing packages.."
-cd $(chezmoi source-path)
+echo "Installing packages..";
+cd $(chezmoi source-path);
 
 if [ $? -ne 0 ] ; then
     echo "Error: unable to source global_fn.sh, please execute from $(dirname $(realpath $0))..."
