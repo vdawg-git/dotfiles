@@ -1,3 +1,4 @@
+#!/bin/sh
 echo "Running dotfiles setup.."
 
 # Chaotic Aur
