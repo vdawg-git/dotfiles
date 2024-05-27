@@ -5,9 +5,8 @@
 #|/ /---+----------------------------------------+/ /---|#
 
 echo "Installing packages.."
-chezmoi cd
+cd $(chezmoi source-path)
 
-source .global_fn.sh
 if [ $? -ne 0 ] ; then
     echo "Error: unable to source global_fn.sh, please execute from $(dirname $(realpath $0))..."
     exit 1
@@ -61,4 +60,52 @@ then
     echo "installing $pkg_aur from aur..."
     yay -S $pkg_aur
 fi
+
+pkg_installed()
+{
+    local PkgIn=$1
+
+    if pacman -Qi $PkgIn &> /dev/null
+    then
+        #echo "${PkgIn} is already installed..."
+        return 0
+    else
+        #echo "${PkgIn} is not installed..."
+        return 1
+    fi
+}
+
+pkg_available()
+{
+    local PkgIn=$1
+
+    if pacman -Si $PkgIn &> /dev/null
+    then
+        #echo "${PkgIn} available in arch repo..."
+        return 0
+    else
+        #echo "${PkgIn} not available in arch repo..."
+        return 1
+    fi
+}
+
+aur_available()
+{
+    local PkgIn=$1
+
+    if pkg_installed yay
+    then
+        if yay -Si $PkgIn &> /dev/null
+        then
+            #echo "${PkgIn} available in aur repo..."
+            return 0
+        else
+            #echo "${PkgIn} not available in aur repo..."
+            return 1
+        fi
+    else
+        #echo "yay is not installed..."
+        return 1
+    fi
+}
 
