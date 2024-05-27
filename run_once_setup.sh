@@ -15,7 +15,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 # Install packages
 pushd "./.other/"
 ./install_pkg.sh
-./install_theme.mjs
+# ./install_theme.mjs
 # ./install_flatpack.sh
 popd
 
