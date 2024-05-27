@@ -13,13 +13,6 @@ echo -e "[chaotic-aur] \n Include = /etc/pacman.d/chaotic-mirrorlist" | sudo tre
 # Install Rust via rustup
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
-# Install packages
-pushd "~/.local/share/chezmoi/.other/"
-./install_pkg.sh
-# ./install_theme.mjs
-# ./install_flatpack.sh
-popd
-
 # Fishery - Fish plugin manager
 curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
 
