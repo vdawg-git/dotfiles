@@ -21,7 +21,8 @@ pnpm install
 
 # Mange keyd config
 sudo mkdir -p /etc/keyd/
-sudo ln -s ~/.local/share/chezmoi/.outside/etc/keyd/default.conf .outside/etc/keyd/default.conf
+sudo rm /etc/keyd/default.conf
+sudo ln -s ~/.local/share/chezmoi/.outside/etc/keyd/default.conf /etc/keyd/default.conf
 sudo systemctl enable --now keyd
 
 
