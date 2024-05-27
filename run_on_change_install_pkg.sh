@@ -4,6 +4,7 @@
 #|-/ /--| Prasanth Rangan                        |-/ /--|#
 #|/ /---+----------------------------------------+/ /---|#
 
+echo "Installing packages.."
 chezmoi cd
 
 source .global_fn.sh
