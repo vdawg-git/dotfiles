@@ -13,8 +13,8 @@ const gtkThemeFolder = path.join(__dirname, "gtk-theme/")
 const gtkIconsFolder = path.join(__dirname, "gtk-icons/")
 const assetsFolder = path.join(__dirname, "assets/")
 
-await $`pnpm dlx degit vinceliuice/Colloid-gtk-theme ${gtkThemeFolder} --force  --verbose`
-await $`pnpm dlx degit vinceliuice/Colloid-icon-theme ${gtkIconsFolder} --force  --verbose`
+await $`pnpm dlx degit Visual-Dawg/Colloid-gtk-theme ${gtkThemeFolder} --force  --verbose`
+await $`pnpm dlx degit Visual-Dawg/Colloid-gtk-theme ${gtkIconsFolder} --force  --verbose`
 
 const colorsFilePath = path.join(gtkThemeFolder, "src", "sass", "_colors.scss")
 

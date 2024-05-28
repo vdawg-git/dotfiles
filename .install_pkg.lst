@@ -2,6 +2,7 @@ anyrun-git
 atuin
 bitwarden
 blanket
+visual-studio-code-bin
 blueman
 bluez
 bluez-utils
@@ -27,6 +28,8 @@ grim
 gst-plugin-pipewire
 hyprland-git
 hyprpicker-git
+hyprlock-git
+hypridle-git
 imagemagick
 keyd
 kitty
