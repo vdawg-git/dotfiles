@@ -26,5 +26,9 @@ sudo ln -s ~/.local/share/chezmoi/.outside/etc/keyd/default.conf /etc/keyd/defau
 sudo systemctl enable --now keyd
 sudo keyd reload
 
+# Git stuff
+git config --global user.name "VDawg"
+git config --global user.email "vdawg@tuta.io"
+
 # Install Material Gram (Telgram Client)
 sudo sh -c "curl -s https://raw.githubusercontent.com/materialgram/arch/x86_64/installer.sh | bash"
