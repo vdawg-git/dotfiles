@@ -15,7 +15,6 @@ echo "Include = /etc/pacman.d/chaotic-mirrorlist" | sudo tee -a /etc/pacman.conf
 
 sudo pacman -Sy
 
-
 # Install Rust via rustup
 # We do this before installing other packages to prevent them using Rust from the Arch repo
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
