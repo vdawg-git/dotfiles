@@ -71,17 +71,17 @@ const colorsFilePath = path.join(gtkThemeFolder, "src", "sass", "_colors.scss")
 //   // 0.5: ["popover_bg_color"],
 // }
 
-await $`cd ${gtkThemeFolder} && ./install.sh --theme orange --libadwaita --tweaks gruvbox black rimless float --color dark`
+await $`cd ${gtkThemeFolder} && ./install.sh --theme orange --libadwaita -l --tweaks gruvbox black rimless float --color dark`
 await $`cd ${gtkIconsFolder} && ./install.sh --theme orange`
 
-await $`tar --exclude-vcs-ignores --exclude-vcs -czf  ${path.join(
-  assetsFolder,
-  "gtk-theme.tar.gz"
-)} ${gtkThemeFolder}`
-await $`tar --exclude-vcs-ignores --exclude-vcs -czf  ${path.join(
-  assetsFolder,
-  "gtk-icons.tar.gz"
-)} ${gtkIconsFolder}`
+// await $`tar --exclude-vcs-ignores --exclude-vcs -czf  ${path.join(
+//   assetsFolder,
+//   "gtk-theme.tar.gz"
+// )} ${gtkThemeFolder}`
+// await $`tar --exclude-vcs-ignores --exclude-vcs -czf  ${path.join(
+//   assetsFolder,
+//   "gtk-icons.tar.gz"
+// )} ${gtkIconsFolder}`
 await $`rm -r ${gtkIconsFolder} ${gtkThemeFolder}`
 
 await $`stylepak install-system`
