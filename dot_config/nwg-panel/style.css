@@ -3,6 +3,10 @@
 @define-color fg2 alpha(@theme_fg_color, 0.48);
 @define-color main-border alpha(@theme_text_color, 0.1);
 
+* {
+	transition: all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+}
+
 #controls-overview > box > box > image {
 	padding: 0px 4px;
 }
@@ -43,24 +47,21 @@ button {
 	/* background: mix(@theme_bg_color, transparent, 0.9); */
 	background: transparent;
 	color: @theme_text_color;
-}
-
-#controls-overview {
+	padding-top: 2px;
 }
 
 #hyprland-workspaces {
 	padding-top: 2px;
 	padding-bottom: 2px;
-	padding-right: 16px;
-	border-radius: 0px 0px 12px 0px;
-	border-right: 1px solid @main-border;
+	font-size: 12px;
 	font-weight: bold;
 }
 
 #hyprland-workspaces #hyprland-workspaces-item {
 	min-width: 8px;
-	margin: 0px 0px;
-	margin: 2px 0px;
+	/* margin: 0px 0px;
+	margin: 2px 0px; */
+	transition: all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.682);
 }
 
 #hyprland-workspaces #task-box-focused #hyprland-workspaces-item {
@@ -77,10 +78,10 @@ button {
 
 #hyprland-workspaces #hyprland-workspaces-item label {
 	min-width: 24px;
-	min-height: 10px;
+	min-height: 18px;
 	background: @main-bg;
 	border-radius: 999px;
-	font-size: 12px;
+	font-size: 10px;
 }
 
 #player-control {
@@ -89,44 +90,25 @@ button {
 	color: @theme_text_color;
 }
 
-/* #playerctl, */
-/*  { */
-/* 	background: red; */
-/* } */
-
-/* Controls window in sample config uses this name */
-/* #controls-window { */
-/* 	border-radius: 15px; */
-/* 	background: @theme_bg_color; */
-/* } */
-/* #controls-window scale value { */
-/* 	color: @theme_text_color; */
-/* } */
-
-/* Brightness slider popup window in sample config uses this name */
-/* #brightness-popup { */
-/* 	border-radius: 24px; */
-/* 	background: @theme_bg_color; */
-/* } */
-/* #brightness-popup box { */
-/* 	padding: 24px; */
-/* } */
-
-/* Executors usually behave better in monospace fonts */
 #executor-label {
 	font-family: monospace;
 }
 
-/* and so does the Clock */
 #clock {
 	font-family: monospace;
 	font-size: 14px;
 }
 
-#controls-window {
-	border-radius: 16px;
+#controls-window,
+#calendar-window {
+	border-radius: 8px;
 	background-color: @bg-dark;
 	border: solid 1px @main-border;
+}
+
+calendar {
+	border: none;
+	background: transparent;
 }
 
 /* Sliders */
@@ -153,3 +135,26 @@ scale slider {
 scale slider:hover {
 	margin: -8px;
 } */
+
+/* #playerctl, */
+/*  { */
+/* 	background: red; */
+/* } */
+
+/* Controls window in sample config uses this name */
+/* #controls-window { */
+/* 	border-radius: 15px; */
+/* 	background: @theme_bg_color; */
+/* } */
+/* #controls-window scale value { */
+/* 	color: @theme_text_color; */
+/* } */
+
+/* Brightness slider popup window in sample config uses this name */
+/* #brightness-popup { */
+/* 	border-radius: 24px; */
+/* 	background: @theme_bg_color; */
+/* } */
+/* #brightness-popup box { */
+/* 	padding: 24px; */
+/* } */

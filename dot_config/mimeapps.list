@@ -20,6 +20,8 @@ audio/vnd.wave=vlc.desktop;
 video/webm=vlc.desktop;
 application/vnd.openxmlformats-officedocument.wordprocessingml.document=abiword.desktop;
 image/svg+xml=org.gnome.eog.desktop;
+application/x-zerosize=nvim.desktop;
+x-scheme-handler/tg=org.telegram.desktop.desktop;io.github.kukuruzka165.materialgram.desktop;
 
 [Default Applications]
 application/json=code-oss.desktop;
@@ -38,7 +40,7 @@ x-scheme-handler/obsidian=obsidian.desktop;
 text/plain=org.gnome.TextEditor.desktop
 -x-scheme-handler/insomnia=insomnia.desktop;
 -x-scheme-handler/morgen=morgen.desktop;
-x-scheme-handler/etcher=balena-etcher.desktop;
+x-scheme-handler/etcher=balena-etcher.desktop
 inode/directory=org.gnome.Nautilus.desktop;
 image/webp=org.gnome.eog.desktop
 image/png=org.gnome.eog.desktop
@@ -53,3 +55,4 @@ video/webm=vlc.desktop
 application/vnd.openxmlformats-officedocument.wordprocessingml.document=abiword.desktop
 image/svg+xml=org.gnome.eog.desktop
 x-scheme-handler/webcal=brave-browser-nightly.desktop
+x-scheme-handler/tg=io.github.kukuruzka165.materialgram.desktop

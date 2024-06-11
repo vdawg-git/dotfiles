@@ -8,6 +8,7 @@ bluez-utils
 brave-bin
 brightnessctl
 broot
+btop
 chezmoi
 cliphist
 converseen
@@ -25,6 +26,7 @@ gnome-font-viewer
 gnome-system-monitor
 grim
 gst-plugin-pipewire
+guvcview
 hyprcursor
 hypridle-git
 hyprland-git
@@ -42,6 +44,7 @@ neovim-git
 networkmanager
 network-manager-applet
 nextcloud
+nextcloud-client
 nodejs
 npm
 nwg-displays
@@ -57,6 +60,7 @@ pipewire-audio
 pipewire-jack
 pipewire-pulse
 pnpm
+podman
 polkit-kde-agent
 qt5ct
 qt5-graphicaleffects
@@ -65,7 +69,9 @@ qt5-quickcontrols
 qt5-quickcontrols2
 qt5-wayland
 qt6-wayland
+rclone
 rhythmbox
+rhythmbox-plugin-alternative-toolbar
 ripgrep
 slurp
 starship
@@ -88,6 +94,7 @@ wireguard-tools
 wireplumber
 wlr-randr
 wlsunset-git
+xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland-git
 zoxide
 zx

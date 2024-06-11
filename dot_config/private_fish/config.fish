@@ -22,6 +22,7 @@ set -Ux VISUAL "nvim"
 # set -Ux MANWIDTH "999"
 
 source ~/.config/fish/aliases.fish
+source ~/.config/fish/functions.fish
 
 
 function multicd

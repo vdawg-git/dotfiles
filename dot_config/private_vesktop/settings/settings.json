@@ -1,6 +1,6 @@
 {
     "notifyAboutUpdates": false,
-    "autoUpdate": false,
+    "autoUpdate": true,
     "autoUpdateNotification": true,
     "useQuickCss": true,
     "themeLinks": [],
@@ -355,9 +355,6 @@
         "ServerListIndicators": {
             "enabled": false
         },
-        "ServerProfile": {
-            "enabled": false
-        },
         "ShikiCodeblocks": {
             "enabled": true,
             "theme": "https://raw.githubusercontent.com/shikijs/shiki/0b28ad8ccfbf2615f2d9d38ea8255416b8ac3043/packages/shiki/themes/dark-plus.json",
@@ -594,6 +591,18 @@
         },
         "XSOverlay": {
             "enabled": false
+        },
+        "ServerInfo": {
+            "enabled": false
+        },
+        "MessageUpdaterAPI": {
+            "enabled": true
+        },
+        "AppleMusicRichPresence": {
+            "enabled": false
+        },
+        "CopyEmojiMarkdown": {
+            "enabled": false
         }
     },
     "notifications": {
@@ -606,6 +615,6 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1717081797064
+        "settingsSyncVersion": 1717905945549
     }
 }
