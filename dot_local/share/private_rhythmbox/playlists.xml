@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <rhythmdb-playlists>
-  <playlist name="Boss" show-browser="true" browser-position="193" search-type="search-match" type="automatic" sort-key="Artist" sort-direction="0">
+  <playlist name="Boss" show-browser="true" browser-position="108" search-type="search-match" type="automatic" sort-key="Artist" sort-direction="0">
     <conjunction>
       <equals prop="type">song</equals>
       <subquery>
@@ -11,12 +11,14 @@
       </subquery>
     </conjunction>
   </playlist>
-  <playlist name="Chill" show-browser="true" browser-position="114" search-type="search-match" type="automatic" sort-key="Track" sort-direction="0">
+  <playlist name="Chill" show-browser="true" browser-position="61" search-type="search-match" type="automatic" sort-key="Track" sort-direction="0">
     <conjunction>
       <equals prop="type">song</equals>
       <subquery>
         <conjunction>
-          <like prop="genre-folded">Hiphop beat&#xB1;</like>
+          <like prop="genre-folded">classic</like>
+          <disjunction/>
+          <like prop="genre-folded">Hiphop beat</like>
           <disjunction/>
           <like prop="genre-folded">world</like>
           <disjunction/>
@@ -25,7 +27,21 @@
       </subquery>
     </conjunction>
   </playlist>
-  <playlist name="HipHop" show-browser="true" browser-position="182" search-type="search-match" type="automatic" sort-key="Artist" sort-direction="0">
+  <playlist name="Code" show-browser="true" browser-position="97" search-type="search-match" type="automatic" sort-key="Artist" sort-direction="0">
+    <conjunction>
+      <equals prop="type">song</equals>
+      <subquery>
+        <conjunction>
+          <like prop="genre-folded">chant</like>
+          <disjunction/>
+          <like prop="artist-folded">erik satie</like>
+          <disjunction/>
+          <like prop="artist-folded">ensemble organum</like>
+        </conjunction>
+      </subquery>
+    </conjunction>
+  </playlist>
+  <playlist name="HipHop" show-browser="true" browser-position="97" search-type="search-match" type="automatic" sort-key="Artist" sort-direction="0">
     <conjunction>
       <equals prop="type">song</equals>
       <subquery>
@@ -39,26 +55,12 @@
       </subquery>
     </conjunction>
   </playlist>
-  <playlist name="My Top Rated" show-browser="true" browser-position="61" search-type="search-match" type="automatic" sort-key="Rating" sort-direction="1">
-    <conjunction>
-      <equals prop="type">song</equals>
-      <subquery>
-        <conjunction>
-          <greater prop="rating">4.000000</greater>
-        </conjunction>
-      </subquery>
-    </conjunction>
-  </playlist>
   <playlist name="Code" show-browser="true" browser-position="182" search-type="search-match" type="automatic" sort-key="Artist" sort-direction="0">
     <conjunction>
       <equals prop="type">song</equals>
       <subquery>
         <conjunction>
-          <like prop="genre-folded">chant</like>
-          <disjunction/>
-          <like prop="artist-folded">erik satie</like>
-          <disjunction/>
-          <like prop="artist-folded">ensemble organum</like>
+          <greater prop="rating">4.000000</greater>
         </conjunction>
       </subquery>
     </conjunction>

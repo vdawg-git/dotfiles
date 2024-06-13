@@ -5,35 +5,14 @@
 
 * {
 	transition: all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+	font-family: monospace;
 }
 
 #controls-overview > box > box > image {
-	padding: 0px 4px;
+	padding: 0px 1px;
 }
-
-#hyprland-workspaces,
-#clock,
-#right-box {
-	padding: 0 12px;
-	border-bottom: 1px solid @main-border;
-	background: @main-bg;
-}
-
-#right-box {
-	padding-left: 24px;
-	border-radius: 0px 0px 0px 12px;
-	border-left: 1px solid @main-border;
-}
-#clock {
-	border-radius: 0px 0px 12px 12px;
-	border-left: 1px solid @main-border;
-	border-right: 1px solid @main-border;
-	border-bottom: 1px solid @main-border;
-	padding: 0px 12px;
-}
-
-#panel-top > box {
-	/* padding: 0px 12px; */
+#controls-overview box box image, #inner-tray widget image, #root-executor image  {
+opacity: 0.7;
 }
 
 /* Recommended if panel "height" unset or smaller then your theme default button height */
@@ -68,34 +47,44 @@ button {
 	border: 1px solid @fg2;
 	min-width: 24px;
 	color: @theme_text_color;
-	border-radius: 9999px;
+	border-radius: 8px;
 }
 #hyprland-workspaces #task-box-focused #hyprland-workspaces-item label {
 	background: transparent;
 	color: @theme_text_color;
 	padding: 0px 8px;
+	opacity: 1;
 }
 
 #hyprland-workspaces #hyprland-workspaces-item label {
 	min-width: 24px;
 	min-height: 18px;
-	background: @main-bg;
-	border-radius: 999px;
-	font-size: 10px;
+	font-size: 12px;
+	opacity: 0.6;
 }
 
 #player-control {
 	min-height: 0px;
 	background: transparent;
 	color: @theme_text_color;
+ min-width: 0px;
+ padding: 0 4px;
+ opacity: 0.6;
+ transition: none;
+}
+button#player-control:hover {
+opacity: 1;
+}
+#player-label {
+ opacity: 0.6;
 }
 
 #executor-label {
-	font-family: monospace;
+	/* font-family: monospace; */
 }
 
 #clock {
-	font-family: monospace;
+	/* font-family: monospace; */
 	font-size: 14px;
 }
 
@@ -136,10 +125,6 @@ scale slider:hover {
 	margin: -8px;
 } */
 
-/* #playerctl, */
-/*  { */
-/* 	background: red; */
-/* } */
 
 /* Controls window in sample config uses this name */
 /* #controls-window { */
