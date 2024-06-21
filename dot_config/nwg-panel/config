@@ -37,7 +37,7 @@
       },
       "show-values": false,
       "interval": 2,
-      "icon-size": 16,
+      "icon-size": 14,
       "hover-opens": false,
       "leave-closes": true,
       "click-closes": false,
@@ -86,7 +86,7 @@
     "tray": {
       "root-css-name": "tray",
       "inner-css-name": "inner-tray",
-      "icon-size": 16,
+      "icon-size": 14,
       "smooth-scrolling-threshold": 0
     },
     "clock": {
@@ -118,7 +118,7 @@
       "scroll": false,
       "button-css-name": "player-control",
       "label-css-name": "player-label",
-      "interval": 1,
+      "interval": 2,
       "show-cover": false,
       "cover-size": 24,
       "css-name": "playerctl",

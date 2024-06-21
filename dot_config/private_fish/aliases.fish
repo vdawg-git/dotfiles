@@ -22,5 +22,8 @@ abbr mvd "mullvad disconnect"
 abbr mvc "mullvad connect"
 abbr mvs "mullvad status"
 
+abbr gitf "git add -A && git commit -m 'commit save point' && git push"
+abbr gitp "git pull"
+
 abbr wgu "wg-quick up job "
 abbr wgd "wg-quick down job "

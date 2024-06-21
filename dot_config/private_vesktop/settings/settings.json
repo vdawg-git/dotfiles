@@ -9,7 +9,7 @@
     ],
     "enableReactDevtools": false,
     "frameless": true,
-    "transparent": false,
+    "transparent": true,
     "winCtrlQ": false,
     "macosTranslucency": false,
     "disableMinSize": false,
@@ -603,6 +603,12 @@
         },
         "CopyEmojiMarkdown": {
             "enabled": false
+        },
+        "SettingsStoreAPI": {
+            "enabled": false
+        },
+        "NoOnboardingDelay": {
+            "enabled": false
         }
     },
     "notifications": {
@@ -615,6 +621,6 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1717905945549
+        "settingsSyncVersion": 1718855696776
     }
 }
