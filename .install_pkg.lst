@@ -1,5 +1,6 @@
 anyrun-git
 atuin
+bat
 bitwarden
 blanket
 blueman
@@ -33,10 +34,12 @@ hyprland-git
 hyprlock-git
 hyprpicker-git
 imagemagick
+instaloader
 keyd
 kitty
 kvantum
 mailspring
+megacmd
 morgen-bin
 mullvad-vpn-bin
 nautilus
@@ -73,6 +76,7 @@ rclone
 rhythmbox
 rhythmbox-plugin-alternative-toolbar
 ripgrep
+seahorse
 slurp
 starship
 stylepak-git
