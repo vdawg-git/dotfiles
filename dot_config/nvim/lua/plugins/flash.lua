@@ -12,23 +12,27 @@ return {
       { "<c-s>", mode = { "c" }, function() require("flash").toggle() end, desc = "Toggle Flash Search" },
     },
 	init = function()
-		if vim.g.vscode == 1 then
-			vim.cmd([[
-augroup FlashColors
-autocmd!
-autocmd ColorScheme * highlight FlashBackdrop guibg=#1c1c1c 
-autocmd ColorScheme * highlight FlashMatch guibg=#a6c8c0 guifg=black 
-autocmd ColorScheme * highlight FlashCurrent guibg=#fca972 guifg=black 
-autocmd ColorScheme * highlight FlashLabel guifg=#101010 guibg=#fda697 
-augroup
-]])
+		print("IS VS CODE:", vim.g.vscode)
+
+		if vim.g.vscode then
+			local highlights = {
+				FlashBackdrop = { bg = "#1c1c1c" },
+				FlashMatch = { bg = "black", fg = "#e78a4e" },
+				FlashCurrent = { bg = "black", fg = "#c5b18d" },
+				FlashLabel = { bg = "#fda697", fg = "#101010" },
+			}
+
+			for hl_group, hl_def in pairs(highlights) do
+				print("Setting highlight for", hl_group, "with", vim.inspect(hl_def))
+				vim.api.nvim_set_hl(0, hl_group, hl_def)
+			end
 		else
-			vim.cmd([[
-augroup FlashColors
-autocmd!
-autocmd ColorScheme * highlight FlashBackdrop guibg=#1c1c1c
-augroup
-]])
+			local augroup = vim.api.nvim_create_augroup("FlashColors", { clear = true })
+			vim.api.nvim_create_autocmd("ColorScheme", {
+				group = augroup,
+				pattern = "*",
+				command = "highlight FlashBackdrop guibg=#1c1c1c",
+			})
 		end
 	end,
 }

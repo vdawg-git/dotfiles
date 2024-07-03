@@ -6,7 +6,7 @@ window {
 }
 
 #main {
-	background: alpha( @theme_bg_color, 0.2 );
+	background: alpha( @theme_bg_color, 0.01 );
 	min-width: 0px;
 }
 

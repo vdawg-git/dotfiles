@@ -6,7 +6,6 @@ abbr pnd "pnpm dev"
 abbr pnb "pnpm build"
 abbr pni "pnpm install"
 
-abbr g "git"
 abbr xclip "xclip -selection c"
 abbr cz "chezmoi"
 abbr j "joshuto"
@@ -22,8 +21,13 @@ abbr mvd "mullvad disconnect"
 abbr mvc "mullvad connect"
 abbr mvs "mullvad status"
 
-abbr gitf "git add -A && git commit -m 'commit save point' && git push"
-abbr gitp "git pull"
+abbr lsgr "ls | rg "
+
 
 abbr wgu "wg-quick up job "
 abbr wgd "wg-quick down job "
+
+abbr g "git"
+abbr gitc "git-clone-and-cd"
+abbr gitf "git add -A && git commit -m 'commit save point' && git push"
+abbr gitp "git pull"

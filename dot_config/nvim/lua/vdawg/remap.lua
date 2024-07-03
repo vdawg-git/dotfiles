@@ -43,12 +43,10 @@ if vim.g.vscode then
 	map("o", "gc", "<Plug>VSCodeCommentary")
 	map("n", "gcc", "<Plug>VSCodeCommentaryLine")
 
-
 	map("n", "gcc", "<Plug>VSCodeCommentaryLine")
 
 	-- Toggle explore page
 	map("n", "<C-e>", function()
-		print("hii")
 		vim.fn["VSCodeCall"]("workbench.files.action.focusFilesExplorer")
 	end)
 

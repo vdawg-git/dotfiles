@@ -2,6 +2,12 @@
 # ~/.bashrc
 #
 
+# Auto-start Hyprland
+if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
+  Hyprland
+fi
+
+
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 

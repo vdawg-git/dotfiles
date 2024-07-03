@@ -1,5 +1,6 @@
 return {
 	"sainnhe/gruvbox-material",
+	cond = vim.g.vscode ~= 1,
 	config = function()
 		vim.g.gruvbox_material_background = "hard" -- hard, soft, medium
 		vim.g.gruvbox_material_foreground = "material" -- original, mix, material

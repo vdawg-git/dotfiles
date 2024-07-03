@@ -1,6 +1,7 @@
 :root {
   --round-sm: 0.25rem;
   --round: 0.5rem;
+  --round-md: 0.75rem;
   --round-lg: 1rem;
   --round-xl: 1.25rem;
   --round-2xl: 1.5rem;
@@ -13,7 +14,7 @@
   background-color: var(--vscode-sideBar-background) !important;
 }
 #workbench\.parts\.editor {
-  border-radius: var(--round-lg) !important;
+  border-radius: var(--round-sm) !important;
 }
 
 /* for transparent terminal */
@@ -66,7 +67,7 @@
 
 /* Quick input list */
 .quick-input-widget {
-  border-radius: 16px;
+  border-radius: var(--round-lg);
   padding: 16px;
   top: 25% !important;
   /* translate: 0px -50%; */
@@ -98,30 +99,30 @@
 .monaco-workbench select,
 .monaco-inputbox,
 .setting-item-contents {
-  border-radius: 8px;
+  border-radius: var(--round);
 }
 /* selections */
 .monaco-list-row {
-  border-radius: 4px;
+  border-radius: var(--round-sm);
 }
 /* misc */
 .monaco-editor .cursors-layer .cursor {
   border-radius: 2px;
 }
 .slider {
-  border-radius: 8px;
+  border-radius: var(--round);
   max-width: 8px;
 }
 /* Hover pop ups */
 .monaco-editor .monaco-hover {
-  border-radius: 16px;
+  border-radius: var(--round-lg);
   box-shadow: 0px 8px 24px -8px rgba(0, 0, 0, 0.22);
   padding: 4px;
 }
 
 /* Current line */
 .monaco-editor .view-overlays .current-line {
-  border-radius: 8px !important;
+  border-radius: var(--round) !important;
 }
 /* .monaco-editor .view-overlays .current-line::after,
 .monaco-editor .view-overlays .current-line::before {
@@ -183,11 +184,11 @@
 
 /* Hover Popus and content */
 .monaco-workbench .workbench-hover {
-  border-radius: 12px;
+  border-radius: var(--round-md);
   padding: 8px;
 }
 .monaco-workbench .workbench-hover .hover-row .actions {
-  border-radius: 12px;
+  border-radius: var(--round-md);
 }
 .monaco-editor .monaco-hover .hover-row:not(:first-child):not(:empty) {
   border: none !important;

@@ -20,6 +20,7 @@ fish
 flatpak
 fsearch
 fzf
+git-delta
 git-lfs
 gnome-calculator
 gnome-disk-utility
@@ -35,6 +36,7 @@ hyprlock-git
 hyprpicker-git
 imagemagick
 instaloader
+kew
 keyd
 kitty
 kvantum

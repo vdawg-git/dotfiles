@@ -43,6 +43,63 @@
 @define-color dark_3 #3d3846;
 @define-color dark_4 #241f31;
 @define-color dark_5 #000000;
+:root {
+  --accent-color: @accent_color;
+  --accent-bg-color: @accent_bg_color;
+  --accent-fg-color: @accent_fg_color;
+  --destructive-color: @destructive_color;
+  --destructive-bg-color: @destructive_bg_color;
+  --destructive-fg-color: @destructive_fg_color;
+  --success-color: @success_color;
+  --success-bg-color: @success_bg_color;
+  --success-fg-color: @success_fg_color;
+  --warning-color: @warning_color;
+  --warning-bg-color: @warning_bg_color;
+  --warning-fg-color: @warning_fg_color;
+  --error-color: @error_color;
+  --error-bg-color: @error_bg_color;
+  --error-fg-color: @error_fg_color;
+  --window-bg-color: @window_bg_color;
+  --window-fg-color: @window_fg_color;
+  --view-bg-color: @view_bg_color;
+  --view-fg-color: @view_fg_color;
+  --headerbar-bg-color: @headerbar_bg_color;
+  --headerbar-fg-color: @headerbar_fg_color;
+  --headerbar-border-color: @headerbar_border_color;
+  --headerbar-backdrop-color: @headerbar_backdrop_color;
+  --headerbar-shade-color: @headerbar_shade_color;
+  --headerbar-darker-shade-color: @headerbar_darker_shade_color;
+  --sidebar-bg-color: @sidebar_bg_color;
+  --sidebar-fg-color: @sidebar_fg_color;
+  --sidebar-backdrop-color: @sidebar_backdrop_color;
+  --sidebar-border-color: @sidebar_border_color;
+  --sidebar-shade-color: @sidebar_shade_color;
+  --secondary-sidebar-bg-color: @secondary_sidebar_bg_color;
+  --secondary-sidebar-fg-color: @secondary_sidebar_fg_color;
+  --secondary-sidebar-backdrop-color: @secondary_sidebar_backdrop_color;
+  --secondary-sidebar-border-color: @secondary_sidebar_border_color;
+  --secondary-sidebar-shade-color: @secondary_sidebar_shade_color;
+  --card-bg-color: @card_bg_color;
+  --card-fg-color: @card_fg_color;
+  --card-shade-color: @card_shade_color;
+  --dialog-bg-color: @dialog_bg_color;
+  --dialog-fg-color: @dialog_fg_color;
+  --popover-bg-color: @popover_bg_color;
+  --popover-fg-color: @popover_fg_color;
+  --popover-shade-color: @popover_shade_color;
+  --thumbnail-bg-color: @thumbnail_bg_color;
+  --thumbnail-fg-color: @thumbnail_fg_color;
+  --shade-color: @shade_color;
+  --scrollbar-outline-color: @scrollbar_outline_color;
+}
+
+:root {
+  --border-color: alpha(currentColor,0.12);
+  --border-opacity: 0.12;
+  --dim-opacity: 0.55;
+  --disabled-opacity: 0.45;
+}
+
 @keyframes ripple {
   to {
     background-size: 1000% 1000%;
@@ -64,9 +121,13 @@
   }
 }
 
+:root {
+  --window-radius: 12px;
+}
+
 .background {
   color: @window_fg_color;
-  background-color: alpha(window_bg_color,0.5);
+  background-color: @window_bg_color;
 }
 
 dnd {
@@ -890,7 +951,7 @@ menubutton.osd > button:focus:focus-visible, .osd button.osd:focus:focus-visible
 
 
 button.opaque {
-  background-color: mix(alpha(window_bg_color,0.5),@window_fg_color,0.15);
+  background-color: mix(@window_bg_color,@window_fg_color,0.15);
   color: @window_fg_color;
 }
 
@@ -976,7 +1037,7 @@ button.pill {
 
 
 button.card {
-  background-color: alpha(card_bg_color,0.5);
+  background-color: @card_bg_color;
   background-clip: padding-box;
   font-weight: inherit;
   padding: 0;
@@ -1009,7 +1070,7 @@ button.card:active {
 
 
 button.card:checked {
-  background-color: alpha(card_bg_color,0.5);
+  background-color: @card_bg_color;
   background-image: image(alpha(@accent_bg_color,0.25));
 }
 
@@ -1079,7 +1140,7 @@ menubutton.destructive-action {
 }
 
 menubutton.opaque {
-  background-color: mix(alpha(window_bg_color,0.5),@window_fg_color,0.15);
+  background-color: mix(@window_bg_color,@window_fg_color,0.15);
   color: @window_fg_color;
 }
 
@@ -1232,7 +1293,7 @@ splitbutton.destructive-action {
 }
 
 splitbutton.opaque {
-  background-color: mix(alpha(window_bg_color,0.5),@window_fg_color,0.15);
+  background-color: mix(@window_bg_color,@window_fg_color,0.15);
   color: @window_fg_color;
 }
 
@@ -1387,7 +1448,7 @@ radio {
   min-width: 20px;
   -gtk-icon-size: 20px;
   padding: 0;
-  box-shadow: 0 0 0 6px transparent;
+  box-shadow: 0 0 0 0 transparent;
   background-color: alpha(currentColor,0.12);
   transition: all 75ms cubic-bezier(0, 0, 0.2, 1), box-shadow 150ms cubic-bezier(0, 0, 0.2, 1);
 }
@@ -1416,12 +1477,14 @@ check:checked:hover, check:indeterminate:hover,
 radio:checked:hover,
 radio:indeterminate:hover {
   background-image: image(alpha(currentColor,0.1));
+  box-shadow: 0 0 0 6px alpha(@accent_bg_color,0.05);
 }
 
 check:checked:active, check:indeterminate:active,
 radio:checked:active,
 radio:indeterminate:active {
   background-image: image(alpha(currentColor,0.2));
+  box-shadow: 0 0 0 6px alpha(@accent_bg_color,0.12);
 }
 
 check:disabled,
@@ -1473,6 +1536,10 @@ checkbutton.selection-mode label:dir(ltr) {
 
 checkbutton.selection-mode label:dir(rtl) {
   margin-left: 6px;
+}
+
+check:not(:checked):active {
+  -gtk-icon-transform: rotate(90deg);
 }
 
 colorswatch {
@@ -1764,7 +1831,7 @@ dialog-host > dialog.background {
 }
 
 dialog-host > dialog.background sheet {
-  background-color: alpha(window_bg_color,0.5);
+  background-color: @window_bg_color;
   color: @window_fg_color;
 }
 
@@ -1806,7 +1873,7 @@ window.appchooser .dialog-action-area {
  ****************/
 window.assistant .sidebar {
   padding: 6px;
-  background-color: alpha(sidebar_bg_color,0.5);
+  background-color: @sidebar_bg_color;
   color: @sidebar_fg_color;
 }
 
@@ -1890,22 +1957,22 @@ infobar.action:active > revealer > box {
 }
 
 infobar.info > revealer > box {
-  background-color: mix(@accent_bg_color,alpha(window_bg_color,0.5),0.7);
+  background-color: mix(@accent_bg_color,@window_bg_color,0.7);
   color: @window_fg_color;
 }
 
 infobar.question > revealer > box {
-  background-color: mix(@accent_bg_color,alpha(window_bg_color,0.5),0.7);
+  background-color: mix(@accent_bg_color,@window_bg_color,0.7);
   color: @window_fg_color;
 }
 
 infobar.warning > revealer > box {
-  background-color: mix(@warning_bg_color,alpha(window_bg_color,0.5),0.7);
+  background-color: mix(@warning_bg_color,@window_bg_color,0.7);
   color: @window_fg_color;
 }
 
 infobar.error > revealer > box {
-  background-color: mix(@error_bg_color,alpha(window_bg_color,0.5),0.7);
+  background-color: mix(@error_bg_color,@window_bg_color,0.7);
   color: @window_fg_color;
 }
 
@@ -1927,8 +1994,8 @@ statusbar {
  * GtkTreeView *
  ***************/
 treeview.view, window.print treeview.dialog-action-box {
-  border-left-color: mix(currentColor,alpha(view_bg_color,0.5),0.8);
-  border-top-color: mix(currentColor,alpha(view_bg_color,0.5),0.8);
+  border-left-color: mix(currentColor,@view_bg_color,0.8);
+  border-top-color: mix(currentColor,@view_bg_color,0.8);
 }
 
 treeview.view:selected:focus, treeview.view:selected, window.print treeview.dialog-action-box:selected {
@@ -2001,7 +2068,7 @@ treeview.view ~ undershoot.top, window.print treeview.dialog-action-box ~ unders
 }
 
 treeview.view acceleditor > label, window.print treeview.dialog-action-box acceleditor > label {
-  background-color: mix(currentColor,alpha(view_bg_color,0.5),0.9);
+  background-color: mix(currentColor,@view_bg_color,0.9);
 }
 
 treeview.navigation-sidebar {
@@ -2013,14 +2080,14 @@ treeview.navigation-sidebar:selected:focus, treeview.navigation-sidebar:selected
 }
 
 treeview entry:focus-within:dir(rtl), treeview entry:focus-within:dir(ltr) {
-  background-color: alpha(view_bg_color,0.5);
+  background-color: @view_bg_color;
   transition-property: color, background;
 }
 
 treeview entry.flat, treeview entry {
   border-radius: 0;
   background-image: none;
-  background-color: alpha(view_bg_color,0.5);
+  background-color: @view_bg_color;
 }
 
 treeview entry.flat:focus-within, treeview entry:focus-within {
@@ -2208,7 +2275,7 @@ entry:focus-within {
 
 spinbutton > text > block-cursor,
 entry > text > block-cursor {
-  color: alpha(view_bg_color,0.5);
+  color: @view_bg_color;
   background-color: @view_fg_color;
 }
 
@@ -2496,6 +2563,10 @@ filechooser {
   box-shadow: 0 1px alpha(currentColor,0.12);
 }
 
+filechooser #pathbarbox {
+  border-bottom: 1px solid alpha(currentColor,0.12);
+}
+
 filechooser pathbar button:not(.image-button) {
   padding-left: 9px;
   padding-right: 9px;
@@ -2555,7 +2626,7 @@ filechooser > box > actionbar > revealer > box {
 }
 
 filechooser scrolledwindow + actionbar > revealer > box {
-  background-color: mix(@accent_bg_color,alpha(view_bg_color,0.5),0.7);
+  background-color: mix(@accent_bg_color,@view_bg_color,0.7);
   color: @window_fg_color;
   box-shadow: none;
   padding-top: 6px;
@@ -2563,7 +2634,7 @@ filechooser scrolledwindow + actionbar > revealer > box {
 }
 
 filechooser scrolledwindow + actionbar > revealer > box:backdrop {
-  background-color: mix(@accent_bg_color,alpha(view_bg_color,0.5),0.85);
+  background-color: mix(@accent_bg_color,@view_bg_color,0.85);
 }
 
 filechooser placesview > stack > scrolledwindow > undershoot.bottom {
@@ -2572,19 +2643,19 @@ filechooser placesview > stack > scrolledwindow > undershoot.bottom {
 }
 
 filechooser placesview > actionbar > revealer > box {
-  background: alpha(view_bg_color,0.5);
+  background: @view_bg_color;
   color: @view_fg_color;
   box-shadow: none;
   padding-top: 6px;
 }
 
 filechooser placesview > actionbar > revealer > box:backdrop {
-  background: alpha(view_bg_color,0.5);
+  background: @view_bg_color;
   transition: none;
 }
 
 filechooser placessidebar {
-  background-color: alpha(sidebar_bg_color,0.5);
+  background-color: @sidebar_bg_color;
   color: @sidebar_fg_color;
 }
 
@@ -2594,7 +2665,7 @@ filechooser placessidebar:backdrop {
 }
 
 filechooser paned.horizontal > separator:dir(ltr) {
-  box-shadow: inset 1px 0 alpha(sidebar_bg_color,0.5), inset 1px 0 alpha(currentColor,0.12);
+  box-shadow: inset 1px 0 @sidebar_bg_color, inset 1px 0 alpha(currentColor,0.12);
 }
 
 filechooser paned.horizontal > separator:dir(ltr):backdrop {
@@ -2602,7 +2673,7 @@ filechooser paned.horizontal > separator:dir(ltr):backdrop {
 }
 
 filechooser paned.horizontal > separator:dir(rtl) {
-  box-shadow: inset -1px 0 alpha(sidebar_bg_color,0.5), inset -1px 0 alpha(currentColor,0.12);
+  box-shadow: inset -1px 0 @sidebar_bg_color, inset -1px 0 alpha(currentColor,0.12);
 }
 
 filechooser paned.horizontal > separator:dir(rtl):backdrop {
@@ -2624,12 +2695,13 @@ headerbar {
   min-height: 48px;
   background-color: @headerbar_backdrop_color;
   color: @headerbar_fg_color;
+  margin: 0;
   box-shadow: inset 0 -1px alpha(@headerbar_border_color,0.12);
   margin: 0 -1px;
 }
 
 headerbar > windowhandle > box {
-  padding: 6px 7px;
+  padding: 6px;
 }
 
 headerbar > windowhandle > box > box.start,
@@ -2650,7 +2722,7 @@ headerbar > windowhandle > box > widget > box.end:dir(ltr) {
 }
 
 headerbar:backdrop {
-  background-color: alpha(headerbar_bg_color,0.5);
+  background-color: @headerbar_bg_color;
   transition: background-color 200ms ease-out;
 }
 
@@ -2662,9 +2734,14 @@ headerbar:backdrop > windowhandle {
 headerbar.default-decoration {
   padding: 0;
   margin: 0;
-  box-shadow: none;
   border: none;
   min-height: 36px;
+  background-color: @headerbar_backdrop_color;
+  box-shadow: none;
+}
+
+headerbar.default-decoration:backdrop {
+  background-color: @headerbar_bg_color;
 }
 
 headerbar.default-decoration > windowhandle > box {
@@ -2672,14 +2749,19 @@ headerbar.default-decoration > windowhandle > box {
 }
 
 headerbar.default-decoration windowcontrols > button {
-  min-width: 22px;
-  min-height: 22px;
+  min-width: 16px;
+  min-height: 16px;
   margin: 0 4px;
   padding: 0;
 }
 
 headerbar.default-decoration windowcontrols > .icon {
   margin: 6px;
+}
+
+.maximized headerbar, .fullscreen headerbar, .tiled headerbar, .tiled-top headerbar, .tiled-right headerbar, .tiled-bottom headerbar, .tiled-left headerbar, .solid-csd headerbar {
+  border-radius: 0;
+  box-shadow: inset 0 -1px alpha(@headerbar_border_color,0.12);
 }
 
 window > .titlebar:not(.flat) {
@@ -2703,6 +2785,7 @@ window > .titlebar headerbar > windowhandle > box {
 window > headerbar.titlebar.default-decoration,
 window > .titlebar headerbar.default-decoration {
   min-height: 36px;
+  box-shadow: none;
 }
 
 window > headerbar.titlebar.default-decoration > windowhandle > box,
@@ -2710,12 +2793,22 @@ window > .titlebar headerbar.default-decoration > windowhandle > box {
   padding: 3px;
 }
 
+leaflet:first-child > headerbar + separator {
+  background-color: @headerbar_backdrop_color;
+  box-shadow: inset 0 -1px alpha(@headerbar_border_color,0.12);
+}
+
+leaflet:first-child > headerbar + separator:backdrop {
+  background-color: @headerbar_bg_color;
+  transition: background-color 200ms ease-out;
+}
+
 toolbarview > .top-bar headerbar,
 toolbarview > .bottom-bar headerbar, headerbar.flat, window.shortcuts headerbar.titlebar, window.print headerbar.titlebar, window.pagesetup headerbar.titlebar, window.aboutdialog headerbar.titlebar, window.colorchooser headerbar.titlebar, window.appchooser headerbar.titlebar {
   background: none;
-  box-shadow: none;
   color: inherit;
   min-height: 48px;
+  box-shadow: none;
 }
 
 toolbarview > .top-bar headerbar > windowhandle > box,
@@ -2731,6 +2824,26 @@ toolbarview > .bottom-bar headerbar.default-decoration, headerbar.default-decora
 toolbarview > .top-bar headerbar.default-decoration > windowhandle > box,
 toolbarview > .bottom-bar headerbar.default-decoration > windowhandle > box, headerbar.default-decoration.flat > windowhandle > box, window.shortcuts headerbar.default-decoration.titlebar > windowhandle > box, window.print headerbar.default-decoration.titlebar > windowhandle > box, window.pagesetup headerbar.default-decoration.titlebar > windowhandle > box, window.aboutdialog headerbar.default-decoration.titlebar > windowhandle > box, window.colorchooser headerbar.default-decoration.titlebar > windowhandle > box, window.appchooser headerbar.default-decoration.titlebar > windowhandle > box {
   padding: 3px;
+}
+
+.maximized toolbarview > .top-bar headerbar, toolbarview > .top-bar .maximized headerbar,
+.maximized toolbarview > .bottom-bar headerbar,
+toolbarview > .bottom-bar .maximized headerbar, .maximized headerbar.flat, .maximized window.shortcuts headerbar.titlebar, window.shortcuts .maximized headerbar.titlebar, .maximized window.print headerbar.titlebar, window.print .maximized headerbar.titlebar, .maximized window.pagesetup headerbar.titlebar, window.pagesetup .maximized headerbar.titlebar, .maximized window.aboutdialog headerbar.titlebar, window.aboutdialog .maximized headerbar.titlebar, .maximized window.colorchooser headerbar.titlebar, window.colorchooser .maximized headerbar.titlebar, .maximized window.appchooser headerbar.titlebar, window.appchooser .maximized headerbar.titlebar, .fullscreen toolbarview > .top-bar headerbar, toolbarview > .top-bar .fullscreen headerbar,
+.fullscreen toolbarview > .bottom-bar headerbar,
+toolbarview > .bottom-bar .fullscreen headerbar, .fullscreen headerbar.flat, .fullscreen window.shortcuts headerbar.titlebar, window.shortcuts .fullscreen headerbar.titlebar, .fullscreen window.print headerbar.titlebar, window.print .fullscreen headerbar.titlebar, .fullscreen window.pagesetup headerbar.titlebar, window.pagesetup .fullscreen headerbar.titlebar, .fullscreen window.aboutdialog headerbar.titlebar, window.aboutdialog .fullscreen headerbar.titlebar, .fullscreen window.colorchooser headerbar.titlebar, window.colorchooser .fullscreen headerbar.titlebar, .fullscreen window.appchooser headerbar.titlebar, window.appchooser .fullscreen headerbar.titlebar, .tiled toolbarview > .top-bar headerbar, toolbarview > .top-bar .tiled headerbar,
+.tiled toolbarview > .bottom-bar headerbar,
+toolbarview > .bottom-bar .tiled headerbar, .tiled headerbar.flat, .tiled window.shortcuts headerbar.titlebar, window.shortcuts .tiled headerbar.titlebar, .tiled window.print headerbar.titlebar, window.print .tiled headerbar.titlebar, .tiled window.pagesetup headerbar.titlebar, window.pagesetup .tiled headerbar.titlebar, .tiled window.aboutdialog headerbar.titlebar, window.aboutdialog .tiled headerbar.titlebar, .tiled window.colorchooser headerbar.titlebar, window.colorchooser .tiled headerbar.titlebar, .tiled window.appchooser headerbar.titlebar, window.appchooser .tiled headerbar.titlebar, .tiled-top toolbarview > .top-bar headerbar, toolbarview > .top-bar .tiled-top headerbar,
+.tiled-top toolbarview > .bottom-bar headerbar,
+toolbarview > .bottom-bar .tiled-top headerbar, .tiled-top headerbar.flat, .tiled-top window.shortcuts headerbar.titlebar, window.shortcuts .tiled-top headerbar.titlebar, .tiled-top window.print headerbar.titlebar, window.print .tiled-top headerbar.titlebar, .tiled-top window.pagesetup headerbar.titlebar, window.pagesetup .tiled-top headerbar.titlebar, .tiled-top window.aboutdialog headerbar.titlebar, window.aboutdialog .tiled-top headerbar.titlebar, .tiled-top window.colorchooser headerbar.titlebar, window.colorchooser .tiled-top headerbar.titlebar, .tiled-top window.appchooser headerbar.titlebar, window.appchooser .tiled-top headerbar.titlebar, .tiled-right toolbarview > .top-bar headerbar, toolbarview > .top-bar .tiled-right headerbar,
+.tiled-right toolbarview > .bottom-bar headerbar,
+toolbarview > .bottom-bar .tiled-right headerbar, .tiled-right headerbar.flat, .tiled-right window.shortcuts headerbar.titlebar, window.shortcuts .tiled-right headerbar.titlebar, .tiled-right window.print headerbar.titlebar, window.print .tiled-right headerbar.titlebar, .tiled-right window.pagesetup headerbar.titlebar, window.pagesetup .tiled-right headerbar.titlebar, .tiled-right window.aboutdialog headerbar.titlebar, window.aboutdialog .tiled-right headerbar.titlebar, .tiled-right window.colorchooser headerbar.titlebar, window.colorchooser .tiled-right headerbar.titlebar, .tiled-right window.appchooser headerbar.titlebar, window.appchooser .tiled-right headerbar.titlebar, .tiled-bottom toolbarview > .top-bar headerbar, toolbarview > .top-bar .tiled-bottom headerbar,
+.tiled-bottom toolbarview > .bottom-bar headerbar,
+toolbarview > .bottom-bar .tiled-bottom headerbar, .tiled-bottom headerbar.flat, .tiled-bottom window.shortcuts headerbar.titlebar, window.shortcuts .tiled-bottom headerbar.titlebar, .tiled-bottom window.print headerbar.titlebar, window.print .tiled-bottom headerbar.titlebar, .tiled-bottom window.pagesetup headerbar.titlebar, window.pagesetup .tiled-bottom headerbar.titlebar, .tiled-bottom window.aboutdialog headerbar.titlebar, window.aboutdialog .tiled-bottom headerbar.titlebar, .tiled-bottom window.colorchooser headerbar.titlebar, window.colorchooser .tiled-bottom headerbar.titlebar, .tiled-bottom window.appchooser headerbar.titlebar, window.appchooser .tiled-bottom headerbar.titlebar, .tiled-left toolbarview > .top-bar headerbar, toolbarview > .top-bar .tiled-left headerbar,
+.tiled-left toolbarview > .bottom-bar headerbar,
+toolbarview > .bottom-bar .tiled-left headerbar, .tiled-left headerbar.flat, .tiled-left window.shortcuts headerbar.titlebar, window.shortcuts .tiled-left headerbar.titlebar, .tiled-left window.print headerbar.titlebar, window.print .tiled-left headerbar.titlebar, .tiled-left window.pagesetup headerbar.titlebar, window.pagesetup .tiled-left headerbar.titlebar, .tiled-left window.aboutdialog headerbar.titlebar, window.aboutdialog .tiled-left headerbar.titlebar, .tiled-left window.colorchooser headerbar.titlebar, window.colorchooser .tiled-left headerbar.titlebar, .tiled-left window.appchooser headerbar.titlebar, window.appchooser .tiled-left headerbar.titlebar, .solid-csd toolbarview > .top-bar headerbar, toolbarview > .top-bar .solid-csd headerbar,
+.solid-csd toolbarview > .bottom-bar headerbar,
+toolbarview > .bottom-bar .solid-csd headerbar, .solid-csd headerbar.flat, .solid-csd window.shortcuts headerbar.titlebar, window.shortcuts .solid-csd headerbar.titlebar, .solid-csd window.print headerbar.titlebar, window.print .solid-csd headerbar.titlebar, .solid-csd window.pagesetup headerbar.titlebar, window.pagesetup .solid-csd headerbar.titlebar, .solid-csd window.aboutdialog headerbar.titlebar, window.aboutdialog .solid-csd headerbar.titlebar, .solid-csd window.colorchooser headerbar.titlebar, window.colorchooser .solid-csd headerbar.titlebar, .solid-csd window.appchooser headerbar.titlebar, window.appchooser .solid-csd headerbar.titlebar {
+  box-shadow: none;
 }
 
 toolbarview > .top-bar headerbar:backdrop,
@@ -2780,44 +2893,61 @@ toolbarview > .bottom-bar .collapse-spacing headerbar.default-decoration > windo
  * GtkWindowControls *
  *********************/
 windowcontrols > button {
-  min-height: 22px;
-  min-width: 22px;
-  padding: 7px 0;
+  min-height: 16px;
+  min-width: 16px;
+  padding: 10px 0;
   margin-left: 4px;
   margin-right: 4px;
-}
-
-windowcontrols > button.minimize, windowcontrols > button.maximize, windowcontrols > button.close {
-  color: alpha(@headerbar_fg_color,0.75);
-}
-
-windowcontrols > button.minimize, windowcontrols > button.maximize, windowcontrols > button.close {
-  background: none;
   box-shadow: none;
 }
 
-windowcontrols > button.minimize > image, windowcontrols > button.maximize > image, windowcontrols > button.close > image {
-  background-color: alpha(currentColor,0.1);
+windowcontrols > button.minimize, windowcontrols > button.maximize, windowcontrols > button.close {
+  color: transparent;
+  background: none;
 }
 
-windowcontrols > button.minimize:hover, windowcontrols > button.maximize:hover, windowcontrols > button.close:hover {
-  color: @headerbar_fg_color;
-}
-
-windowcontrols > button.minimize:hover > image, windowcontrols > button.maximize:hover > image, windowcontrols > button.close:hover > image {
-  background-color: alpha(currentColor,0.15);
-}
-
-windowcontrols > button.minimize:active, windowcontrols > button.maximize:active, windowcontrols > button.close:active {
-  color: @headerbar_fg_color;
+windowcontrols > button.minimize:hover, windowcontrols > button.minimize:active, windowcontrols > button.maximize:hover, windowcontrols > button.maximize:active, windowcontrols > button.close:hover, windowcontrols > button.close:active {
+  box-shadow: none;
 }
 
 windowcontrols > button.minimize:active > image, windowcontrols > button.maximize:active > image, windowcontrols > button.close:active > image {
-  background-color: alpha(currentColor,0.2);
+  background-color: alpha(black,0.25);
 }
 
-windowcontrols > button.minimize:backdrop, windowcontrols > button.maximize:backdrop, windowcontrols > button.close:backdrop {
-  opacity: 0.65;
+windowcontrols > button.minimize:hover, windowcontrols > button.minimize:active, windowcontrols > button.maximize:hover, windowcontrols > button.maximize:active, windowcontrols > button.close:hover, windowcontrols > button.close:active {
+  color: white;
+}
+
+windowcontrols > button.minimize:backdrop > image, windowcontrols > button.maximize:backdrop > image, windowcontrols > button.close:backdrop > image {
+  background-color: alpha(@headerbar_fg_color,0.3);
+}
+
+windowcontrols > button.minimize:backdrop:hover, windowcontrols > button.minimize:backdrop:active, windowcontrols > button.maximize:backdrop:hover, windowcontrols > button.maximize:backdrop:active, windowcontrols > button.close:backdrop:hover, windowcontrols > button.close:backdrop:active {
+  color: alpha(@headerbar_fg_color,0.45);
+}
+
+windowcontrols > button.minimize > image {
+  background-color: #d79921;
+}
+
+windowcontrols > button.minimize:active > image {
+  background-color: mix(@headerbar_fg_color,#d79921,0.75);
+}
+
+windowcontrols > button.maximize > image {
+  background-color: #98971a;
+}
+
+windowcontrols > button.maximize:active > image {
+  background-color: mix(@headerbar_fg_color,#98971a,0.75);
+}
+
+windowcontrols > button.close > image {
+  background-color: #cc241d;
+}
+
+windowcontrols > button.close:active > image {
+  background-color: mix(@headerbar_fg_color,#cc241d,0.75);
 }
 
 windowcontrols {
@@ -2963,7 +3093,7 @@ windowtitle .subtitle, label.separator {
  *******************/
 editablelabel > stack > text {
   color: @view_fg_color;
-  background-color: alpha(view_bg_color,0.5);
+  background-color: @view_bg_color;
 }
 
 levelbar:disabled {
@@ -3326,7 +3456,7 @@ button.link > label {
 listview,
 list {
   color: @view_fg_color;
-  background-color: alpha(view_bg_color,0.5);
+  background-color: @view_bg_color;
   background-clip: padding-box;
   border-color: alpha(currentColor,0.12);
 }
@@ -3798,7 +3928,7 @@ row.combo popover > contents .combo-searchbar + scrolledwindow > undershoot.top 
  * AdwExpanderRow *
  ******************/
 list.boxed-list-separate > row, list.boxed-list, list.content {
-  background-color: alpha(card_bg_color,0.5);
+  background-color: @card_bg_color;
   color: @card_fg_color;
   border-radius: 6px;
   box-shadow: 0 0 0 1px alpha(currentColor,0.12);
@@ -3955,22 +4085,22 @@ list.boxed-list-separate > row:focus:focus-visible {
 }
 
 list.boxed-list-separate > row:not(.expander):not(:selected).activatable:hover {
-  background-color: alpha(card_bg_color,0.5);
+  background-color: @card_bg_color;
   background-image: image(alpha(currentColor,0.03));
 }
 
 list.boxed-list-separate > row:not(.expander):not(:selected).activatable:active {
-  background-color: alpha(card_bg_color,0.5);
+  background-color: @card_bg_color;
   background-image: image(alpha(currentColor,0.08));
 }
 
 list.boxed-list-separate > row:not(.expander):not(:selected).activatable.has-open-popup {
-  background-color: alpha(card_bg_color,0.5);
+  background-color: @card_bg_color;
   background-image: image(alpha(currentColor,0.03));
 }
 
 list.boxed-list-separate > row.entry:not(:selected).activatable.focused:hover, list.boxed-list-separate > row.entry:not(:selected).activatable.focused:active, list.boxed-list-separate > row.spin:not(:selected).activatable.focused:hover, list.boxed-list-separate > row.spin:not(:selected).activatable.focused:active {
-  background-color: alpha(card_bg_color,0.5);
+  background-color: @card_bg_color;
   background-image: none;
 }
 
@@ -4577,7 +4707,7 @@ statuspage.compact > scrolledwindow > viewport > box > clamp > box > .title {
 
 /* Cards */
 shortcut > .keycap, .card {
-  background-color: alpha(card_bg_color,0.5);
+  background-color: @card_bg_color;
   color: @card_fg_color;
   border-radius: 12px;
   box-shadow: 0 0 0 1px rgba(251, 241, 199, 0.12);
@@ -4906,7 +5036,7 @@ notebook > header.bottom > tabs > tab {
 }
 
 notebook > stack:not(:only-child) {
-  background-color: alpha(view_bg_color,0.5);
+  background-color: @view_bg_color;
 }
 
 paned > separator {
@@ -5214,12 +5344,13 @@ scale:focus:focus-visible > trough > slider {
 }
 
 scale > trough > slider {
-  background-color: mix(white,alpha(view_bg_color,0.5),0.2);
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.2);
+  background-color: @headerbar_bg_color;
+  box-shadow: 0 0 0 2px @accent_bg_color, 0 0 0 0 transparent;
   border-radius: 100%;
-  min-width: 20px;
-  min-height: 20px;
-  margin: -8px;
+  transition: box-shadow 200ms ease-out;
+  min-width: 16px;
+  min-height: 16px;
+  margin: -7px;
 }
 
 scale:hover > trough, scale:active > trough {
@@ -5231,7 +5362,8 @@ scale:hover > trough > highlight, scale:active > trough > highlight {
 }
 
 scale:hover > trough > slider, scale:active > trough > slider {
-  background-color: white;
+  background-color: @headerbar_backdrop_color;
+  box-shadow: 0 0 0 2px @accent_bg_color, 0 0 0 8px alpha(currentColor,0.12);
 }
 
 .osd scale:focus:focus-visible > trough {
@@ -5248,7 +5380,7 @@ scale:disabled {
 }
 
 scale:disabled > trough > slider {
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 2px 4px transparent;
+  box-shadow: 0 0 0 2px mix(@accent_bg_color,@window_bg_color,0.5);
   outline-color: rgba(0, 0, 0, 0.2);
 }
 
@@ -5270,11 +5402,11 @@ scale.fine-tune > trough > slider {
 
 scale.marks-before:not(.marks-after) > trough > slider, scale.marks-after:not(.marks-before) > trough > slider {
   transform: rotate(45deg);
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 1px 1px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 0 2px @accent_bg_color;
 }
 
 scale.marks-before:not(.marks-after) > trough > slider:disabled, scale.marks-after:not(.marks-before) > trough > slider:disabled {
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 1px 1px 4px transparent;
+  box-shadow: 0 0 0 2px mix(@accent_bg_color,@window_bg_color,0.5);
 }
 
 scale.horizontal > marks {
@@ -5667,7 +5799,7 @@ window.shortcuts searchbar {
 }
 
 .sidebar-pane {
-  background-color: alpha(sidebar_bg_color,0.5);
+  background-color: @sidebar_bg_color;
   color: @sidebar_fg_color;
 }
 
@@ -5720,7 +5852,7 @@ window.shortcuts searchbar {
 }
 
 .sidebar-pane banner > revealer > widget {
-  background-color: mix(@accent_bg_color,alpha(sidebar_bg_color,0.5),0.7);
+  background-color: mix(@accent_bg_color,@sidebar_bg_color,0.7);
   color: @sidebar_fg_color;
 }
 
@@ -5962,7 +6094,7 @@ stacksidebar row.needs-attention > label {
 }
 
 .navigation-sidebar.background, .navigation-sidebar.background:disabled {
-  background-color: alpha(window_bg_color,0.5);
+  background-color: @window_bg_color;
   color: @window_fg_color;
 }
 
@@ -6132,7 +6264,7 @@ switch > slider {
   min-width: 18px;
   min-height: 18px;
   border-radius: 50%;
-  background-color: mix(white,alpha(view_bg_color,0.5),0.2);
+  background-color: white;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.15), 0 0 0 0 transparent;
   transition: box-shadow 100ms cubic-bezier(0, 0, 0.2, 1), background-color 75ms cubic-bezier(0, 0, 0.2, 1);
 }
@@ -6169,7 +6301,7 @@ switch:checked > slider {
 }
 
 tabbar .box {
-  background-color: alpha(headerbar_bg_color,0.5);
+  background-color: @headerbar_bg_color;
   color: @headerbar_fg_color;
   box-shadow: inset 0 -1px alpha(@headerbar_border_color,0.12);
   padding: 1px;
@@ -6211,8 +6343,8 @@ tabbar tabbox > tabboxchild:focus-within:focus-visible {
 }
 
 tabbar tabbox > separator {
-  margin-top: 3px;
-  margin-bottom: 3px;
+  margin-top: 5px;
+  margin-bottom: 5px;
   transition: opacity 150ms ease-in-out;
 }
 
@@ -6257,7 +6389,7 @@ tabbar tabbox.single-tab tab, tabbar tabbox.single-tab tab:hover, tabbar tabbox.
 
 tabbar .start-action,
 tabbar .end-action {
-  padding: 6px 5px;
+  padding: 6px;
 }
 
 tabbar .start-action:dir(ltr),
@@ -6302,12 +6434,12 @@ toolbarview > .top-bar .collapse-spacing tabbar .start-action,
 toolbarview > .bottom-bar .collapse-spacing tabbar .start-action,
 toolbarview > .top-bar .collapse-spacing tabbar .end-action,
 toolbarview > .bottom-bar .collapse-spacing tabbar .end-action {
-  padding-top: 3px;
-  padding-bottom: 3px;
+  padding-top: 0;
+  padding-bottom: 6px;
 }
 
 dnd tab {
-  background-color: alpha(headerbar_bg_color,0.5);
+  background-color: @headerbar_bg_color;
   background-image: image(alpha(currentColor,0.19));
   color: @headerbar_fg_color;
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.03), 0 1px 3px 1px rgba(0, 0, 0, 0.07), 0 2px 6px 2px rgba(0, 0, 0, 0.03);
@@ -6327,7 +6459,7 @@ dnd tab button.image-button {
   margin: 0;
   min-width: 24px;
   min-height: 24px;
-  border-radius: 99px;
+  border-radius: 9999px;
 }
 
 tabbar tab indicator,
@@ -6459,7 +6591,7 @@ cursor-handle.insertion-cursor > contents {
 }
 
 magnifier {
-  background-color: alpha(view_bg_color,0.5);
+  background-color: @view_bg_color;
 }
 
 actionbar > revealer > box.osd button:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque):focus:focus-visible, searchbar > revealer > box.osd button:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque):focus:focus-visible, .osd.toolbar button:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque):focus:focus-visible, headerbar.osd button:not(.raised):not(.suggested-action):not(.destructive-action):not(.opaque):focus:focus-visible {
@@ -6496,8 +6628,8 @@ actionbar > revealer > box switch, searchbar > revealer > box switch, .toolbar s
 
 toolbarview > .top-bar .collapse-spacing .toolbar,
 toolbarview > .bottom-bar .collapse-spacing .toolbar {
-  padding-top: 3px;
-  padding-bottom: 3px;
+  padding-top: 6px;
+  padding-bottom: 6px;
 }
 
 /****************
@@ -6511,7 +6643,7 @@ searchbar > revealer > box {
 }
 
 searchbar > revealer > box:backdrop {
-  background-color: alpha(headerbar_bg_color,0.5);
+  background-color: @headerbar_bg_color;
   transition: background-color 200ms ease-out;
 }
 
@@ -6559,8 +6691,8 @@ toolbarview > .bottom-bar searchbar > revealer > box:backdrop > *, searchbar.inl
 
 toolbarview > .top-bar .collapse-spacing searchbar > revealer > box,
 toolbarview > .bottom-bar .collapse-spacing searchbar > revealer > box, window.appchooser.csd searchbar > revealer > box, window.shortcuts searchbar > revealer > box {
-  padding-top: 3px;
-  padding-bottom: 3px;
+  padding-top: 6px;
+  padding-bottom: 6px;
 }
 
 /****************
@@ -6578,7 +6710,7 @@ actionbar > revealer > box, actionbar > revealer > box > box.start, actionbar > 
 }
 
 actionbar > revealer > box:backdrop {
-  background-color: alpha(headerbar_bg_color,0.5);
+  background-color: @headerbar_bg_color;
   transition: background-color 200ms ease-out;
 }
 
@@ -6609,8 +6741,8 @@ toolbarview > .bottom-bar actionbar > revealer > box:backdrop > * {
 
 toolbarview > .top-bar .collapse-spacing actionbar > revealer > box,
 toolbarview > .bottom-bar .collapse-spacing actionbar > revealer > box {
-  padding-top: 3px;
-  padding-bottom: 3px;
+  padding-top: 6px;
+  padding-bottom: 6px;
 }
 
 /*************
@@ -6618,13 +6750,13 @@ toolbarview > .bottom-bar .collapse-spacing actionbar > revealer > box {
  *************/
 banner > revealer > widget {
   /* There are 2 more instances in _sidebars.css, keep in sync with that */
-  background-color: mix(@accent_bg_color,alpha(window_bg_color,0.5),0.7);
+  background-color: mix(@accent_bg_color,@window_bg_color,0.7);
   color: @window_fg_color;
   padding: 6px;
 }
 
 banner > revealer > widget:backdrop {
-  background-color: mix(@accent_bg_color,alpha(window_bg_color,0.5),0.85);
+  background-color: mix(@accent_bg_color,@window_bg_color,0.85);
   transition: background-color 200ms ease-out;
 }
 
@@ -6638,6 +6770,12 @@ banner > revealer > widget:backdrop > label, banner > revealer > widget:backdrop
  ******************/
 toolbarview > .top-bar .collapse-spacing,
 toolbarview > .bottom-bar .collapse-spacing {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+toolbarview > .top-bar .collapse-spacing headerbar,
+toolbarview > .bottom-bar .collapse-spacing headerbar {
   padding-top: 3px;
   padding-bottom: 3px;
 }
@@ -6670,7 +6808,7 @@ toolbarview > .bottom-bar {
 
 toolbarview > .top-bar:backdrop,
 toolbarview > .bottom-bar:backdrop {
-  background-color: alpha(headerbar_bg_color,0.5);
+  background-color: @headerbar_bg_color;
   transition: background-color 200ms ease-out;
 }
 
@@ -6736,7 +6874,7 @@ dialog-host > dialog.view sheet,
 window.print dialog-host > dialog.dialog-action-box sheet,
 iconview {
   color: @view_fg_color;
-  background-color: alpha(view_bg_color,0.5);
+  background-color: @view_bg_color;
 }
 
 .view:disabled, window.print .dialog-action-box:disabled,
@@ -6745,7 +6883,7 @@ dialog-host > dialog.view sheet:disabled,
 window.print dialog-host > dialog.dialog-action-box sheet:disabled,
 iconview:disabled {
   color: alpha(currentColor,0.5);
-  background-color: mix(alpha(window_bg_color,0.5),alpha(view_bg_color,0.5),0.4);
+  background-color: mix(@window_bg_color,@view_bg_color,0.4);
 }
 
 .view:selected:focus, .view:selected, window.print .dialog-action-box:selected,
@@ -6766,7 +6904,7 @@ textview > text {
 }
 
 textview > border {
-  background-color: mix(alpha(window_bg_color,0.5),alpha(view_bg_color,0.5),0.5);
+  background-color: mix(@window_bg_color,@view_bg_color,0.5);
 }
 
 textview:drop(active) {
@@ -6943,6 +7081,7 @@ window {
 window.csd {
   margin: 0;
   border-radius: 12px;
+  outline-offset: -1px;
   outline: 1px solid rgba(255, 255, 255, 0.08);
   outline-offset: -1px;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 15px 16px 2px rgba(0, 0, 0, 0.14), 0 6px 18px 5px rgba(0, 0, 0, 0.12), 0 0 36px transparent;
@@ -6950,7 +7089,7 @@ window.csd {
 
 window.csd:backdrop {
   transition: box-shadow 200ms ease-out;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15), 0 3px 3px 0 rgba(0, 0, 0, 0.18), 0 3px 6px 0 rgba(0, 0, 0, 0.12), 0 0 36px transparent;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15), 0 3px 3px 0 rgba(0, 0, 0, 0.18), 0 3px 6px 0 rgba(0, 0, 0, 0.12), 0 0 36px transparent, 0 0 0 1px @headerbar_darker_shade_color;
 }
 
 window.csd.tiled, window.csd.tiled-top, window.csd.tiled-left, window.csd.tiled-right, window.csd.tiled-bottom {
@@ -6969,7 +7108,7 @@ window.solid-csd {
   margin: 0;
   padding: 2px;
   border-radius: 0;
-  background-color: alpha(headerbar_bg_color,0.5);
+  background-color: @headerbar_bg_color;
   border: 1px solid @headerbar_darker_shade_color;
 }
 
@@ -7048,7 +7187,7 @@ panelresizer .top-bar {
 }
 
 .frameheader.header:backdrop {
-  background-color: alpha(headerbar_bg_color,0.5);
+  background-color: @headerbar_bg_color;
 }
 
 .frameheader.header tabbar.inline tabbox > tabboxchild {
@@ -7074,7 +7213,7 @@ panelstatusbar > paneltogglebutton button {
 }
 
 panelwidget entry.statusbar {
-  background-color: alpha(window_bg_color,0.5);
+  background-color: @window_bg_color;
   border-radius: 0;
   outline: none;
   box-shadow: none;
@@ -7291,19 +7430,19 @@ popover.menu themeswitcher checkbutton.dark {
 @define-color error_bg_color #fb4934;
 @define-color error_fg_color #fbf1c7;
 @define-color error_color #fb4934;
-@define-color window_bg_color rgba(15, 14, 14, 0.4);
+@define-color window_bg_color #0f0e0e;
 @define-color window_fg_color #fbf1c7;
-@define-color view_bg_color rgba(15, 14, 14, 0.4);
+@define-color view_bg_color #0f0e0e;
 @define-color view_fg_color #fbf1c7;
-@define-color headerbar_bg_color rgba(15, 14, 14, 0.1);
+@define-color headerbar_bg_color #0f0e0e;
 @define-color headerbar_fg_color #fbf1c7;
-@define-color headerbar_border_color rgba(251, 241, 199, 0.12);
-@define-color headerbar_backdrop_color rgba(13, 9, 7, 0.1);
+@define-color headerbar_border_color #fbf1c7;
+@define-color headerbar_backdrop_color #0d0907;
 @define-color headerbar_shade_color rgba(0, 0, 0, 0.36);
 @define-color headerbar_darker_shade_color rgba(29, 32, 33, 0.75);
-@define-color sidebar_bg_color rgba(13, 9, 7, 0.1);
+@define-color sidebar_bg_color #0d0907;
 @define-color sidebar_fg_color #fbf1c7;
-@define-color sidebar_backdrop_color rgba(15, 14, 14, 0.4);
+@define-color sidebar_backdrop_color #0f0e0e;
 @define-color sidebar_shade_color rgba(0, 0, 0, 0.25);
 @define-color sidebar_border_color rgba(251, 241, 199, 0.08);
 @define-color secondary_sidebar_bg_color #0f0e0e;
@@ -7324,19 +7463,19 @@ popover.menu themeswitcher checkbutton.dark {
 @define-color shade_color rgba(0, 0, 0, 0.25);
 @define-color scrollbar_outline_color rgba(0, 0, 0, 0.5);
 /* Public colors from Default */
-@define-color theme_bg_color alpha(alpha(window_bg_color,0.5),0.4);
+@define-color theme_bg_color @window_bg_color;
 @define-color theme_fg_color @window_fg_color;
-@define-color theme_base_color alpha(alpha(view_bg_color,0.5),0.4);
+@define-color theme_base_color @view_bg_color;
 @define-color theme_text_color @view_fg_color;
 @define-color theme_selected_bg_color @accent_bg_color;
 @define-color theme_selected_fg_color @accent_fg_color;
-@define-color insensitive_bg_color mix(alpha(window_bg_color,0.5),alpha(view_bg_color,0.5),0.4);
+@define-color insensitive_bg_color mix(@window_bg_color,@view_bg_color,0.4);
 @define-color insensitive_fg_color alpha(@window_fg_color,0.5);
-@define-color insensitive_base_color alpha(view_bg_color,0.5);
+@define-color insensitive_base_color @view_bg_color;
 @define-color borders alpha(currentColor,0.12);
-@define-color theme_unfocused_bg_color alpha(alpha(window_bg_color,0.5),0.4);
+@define-color theme_unfocused_bg_color @window_bg_color;
 @define-color theme_unfocused_fg_color @window_fg_color;
-@define-color theme_unfocused_base_color alpha(alpha(view_bg_color,0.5),0.4);
+@define-color theme_unfocused_base_color @view_bg_color;
 @define-color theme_unfocused_text_color @view_fg_color;
 @define-color theme_unfocused_selected_bg_color @accent_bg_color;
 @define-color theme_unfocused_selected_fg_color @accent_fg_color;
