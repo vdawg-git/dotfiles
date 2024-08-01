@@ -12,8 +12,6 @@ return {
       { "<c-s>", mode = { "c" }, function() require("flash").toggle() end, desc = "Toggle Flash Search" },
     },
 	init = function()
-		print("IS VS CODE:", vim.g.vscode)
-
 		if vim.g.vscode then
 			local highlights = {
 				FlashBackdrop = { bg = "#1c1c1c" },
