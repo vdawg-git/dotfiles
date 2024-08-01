@@ -2,13 +2,13 @@
 
 current_hour=$(date +"%H")
 user=$(whoami)
-capitalized_user=$(echo "$user" | awk '{print toupper(substr($0,1,1)) tolower(substr($0,2))}')
+capitalized_user=$(echo "$user" | awk '{print toupper(substr($0,1,2)) tolower(substr($0,3))}')
 
 morning_greetings=(
 	"Hail, fair morn" 
 	"Good morrow" 
 	"Bright morning to thee"
-	"Purer than snow"
+	"Purer than the snow"
 )
 afternoon_greetings=(
 	"Well met this fine afternoon"
