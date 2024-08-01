@@ -2697,7 +2697,6 @@ headerbar {
   color: @headerbar_fg_color;
   margin: 0;
   box-shadow: inset 0 -1px alpha(@headerbar_border_color,0.12);
-  margin: 0 -1px;
 }
 
 headerbar > windowhandle > box {
@@ -7083,8 +7082,7 @@ window.csd {
   border-radius: 12px;
   outline-offset: -1px;
   outline: 1px solid rgba(255, 255, 255, 0.08);
-  outline-offset: -1px;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 15px 16px 2px rgba(0, 0, 0, 0.14), 0 6px 18px 5px rgba(0, 0, 0, 0.12), 0 0 36px transparent;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 15px 16px 2px rgba(0, 0, 0, 0.14), 0 6px 18px 5px rgba(0, 0, 0, 0.12), 0 0 36px transparent, 0 0 0 1px @headerbar_darker_shade_color;
 }
 
 window.csd:backdrop {
@@ -7430,37 +7428,37 @@ popover.menu themeswitcher checkbutton.dark {
 @define-color error_bg_color #fb4934;
 @define-color error_fg_color #fbf1c7;
 @define-color error_color #fb4934;
-@define-color window_bg_color #0f0e0e;
+@define-color window_bg_color rgba(15, 14, 14, 0.5);
 @define-color window_fg_color #fbf1c7;
-@define-color view_bg_color #0f0e0e;
+@define-color view_bg_color rgba(15, 14, 14, 0.5);
 @define-color view_fg_color #fbf1c7;
-@define-color headerbar_bg_color #0f0e0e;
+@define-color headerbar_bg_color rgba(15, 14, 14, 0.5);
 @define-color headerbar_fg_color #fbf1c7;
 @define-color headerbar_border_color #fbf1c7;
 @define-color headerbar_backdrop_color #0d0907;
-@define-color headerbar_shade_color rgba(0, 0, 0, 0.36);
+@define-color headerbar_shade_color rgba(0, 0, 0, 0.1);
 @define-color headerbar_darker_shade_color rgba(29, 32, 33, 0.75);
 @define-color sidebar_bg_color #0d0907;
 @define-color sidebar_fg_color #fbf1c7;
-@define-color sidebar_backdrop_color #0f0e0e;
-@define-color sidebar_shade_color rgba(0, 0, 0, 0.25);
+@define-color sidebar_backdrop_color rgba(15, 14, 14, 0.5);
+@define-color sidebar_shade_color rgba(0, 0, 0, 0.1);
 @define-color sidebar_border_color rgba(251, 241, 199, 0.08);
 @define-color secondary_sidebar_bg_color #0f0e0e;
 @define-color secondary_sidebar_fg_color #fbf1c7;
 @define-color secondary_sidebar_backdrop_color #0f0e0e;
-@define-color secondary_sidebar_shade_color rgba(0, 0, 0, 0.25);
+@define-color secondary_sidebar_shade_color rgba(0, 0, 0, 0.1);
 @define-color secondary_sidebar_border_color rgba(251, 241, 199, 0.12);
 @define-color card_bg_color rgba(251, 241, 199, 0.04);
 @define-color card_fg_color #fbf1c7;
-@define-color card_shade_color rgba(0, 0, 0, 0.36);
+@define-color card_shade_color rgba(0, 0, 0, 0.1);
 @define-color dialog_bg_color #0d0907;
 @define-color dialog_fg_color #fbf1c7;
 @define-color popover_bg_color #0f0e0e;
 @define-color popover_fg_color #fbf1c7;
-@define-color popover_shade_color rgba(0, 0, 0, 0.25);
+@define-color popover_shade_color rgba(0, 0, 0, 0.1);
 @define-color thumbnail_bg_color #121110;
 @define-color thumbnail_fg_color #fbf1c7;
-@define-color shade_color rgba(0, 0, 0, 0.25);
+@define-color shade_color rgba(0, 0, 0, 0.05);
 @define-color scrollbar_outline_color rgba(0, 0, 0, 0.5);
 /* Public colors from Default */
 @define-color theme_bg_color @window_bg_color;
