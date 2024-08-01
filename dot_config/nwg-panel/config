@@ -165,12 +165,12 @@
       "show-name": false,
       "name-length": 40,
       "show-empty": false,
-      "mark-content": false,
-      "show-names": true,
+      "mark-content": true,
+      "show-names": false,
       "mark-floating": false,
       "mark-xwayland": false,
       "css-name": "hypr-workspaces",
-      "angle": 0
+      "angle": 0.0
     },
     "swaync": {
       "tooltip-text": "Notifications",

@@ -52,7 +52,7 @@ button {
 	border-right: 2px solid @fg2;
 	/* border-radius: 999px; */
 	color: @theme_text_color;
-	border-radius: 8px;
+
 }
 #hyprland-workspaces #task-box-focused #hyprland-workspaces-item label {
 	background: transparent;
