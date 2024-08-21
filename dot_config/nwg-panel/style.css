@@ -1,12 +1,14 @@
 @define-color main-bg alpha(black, 0.25);
 @define-color bg-dark alpha(black, 0.55);
-@define-color fg2 alpha(@theme_fg_color, 0.48);
+@define-color fg alpha(@theme_fg_color, 0.6);
+@define-color fg2 alpha(@theme_fg_color, 0.4);
 @define-color main-border alpha(@theme_text_color, 0.1);
 
 * {
 	transition: all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.682);
 	font-family: monospace;
 }
+
 
 #controls-overview > box > box > image {
 	padding: 0px 1px;
@@ -29,7 +31,7 @@ button {
 	/* background: transparentize(@theme_bg_color, 0.5); */
 	/* background: mix(@theme_bg_color, transparent, 0.9); */
 	background: transparent;
-	color: @theme_text_color;
+	color: @fg;
 	padding-top: 2px;
 }
 
@@ -51,12 +53,12 @@ button {
 	border-left: 2px solid @fg2;
 	border-right: 2px solid @fg2;
 	/* border-radius: 999px; */
-	color: @theme_text_color;
+	color: @fg;
 
 }
 #hyprland-workspaces #task-box-focused #hyprland-workspaces-item label {
 	background: transparent;
-	color: @theme_text_color;
+	color: @fg;
 	/* padding: 0px 2px; */
 	opacity: 1;
 }
@@ -71,7 +73,7 @@ button {
 #player-control {
 min-height: 0px;
 background: transparent;
-color: @theme_text_color;
+color: @fg;
  min-width: 0px;
  padding: 0 4px;
  opacity: 0.6;
@@ -102,6 +104,27 @@ opacity: 1;
 calendar {
 	border: none;
 	background: transparent;
+}
+
+#right-box > * > box {
+ padding-right: 4px;
+}
+
+#right-box > * > box,
+#controls-overview > box > box > *
+{
+ opacity: 0.6;
+}
+#controls-overview > box > box > label {
+  opacity: 1.0;
+}
+
+#right-box > #controls-overview > box {
+padding-right: 0px;
+}
+
+#right-box > #controls-overview > box > box > * {
+padding-right: 6px;
 }
 
 /* Sliders */

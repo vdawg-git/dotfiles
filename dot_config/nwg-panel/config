@@ -15,14 +15,13 @@
     "icons": "light",
     "css-name": "panel-top",
     "modules-left": [
-      "clock",
-      "playerctl"
+      "clock"
     ],
     "modules-center": [
       "hyprland-workspaces"
     ],
     "modules-right": [
-      "tray",
+      "executor-wifi",
       "swaync"
     ],
     "controls-settings": {
@@ -101,7 +100,7 @@
       "interval": 30,
       "tooltip-date-format": true,
       "root-css-name": "root-clock",
-      "angle": 0.0,
+      "angle": 0,
       "calendar-path": "",
       "calendar-css-name": "calendar-window",
       "calendar-placement": "top",
@@ -122,7 +121,7 @@
       "show-cover": false,
       "cover-size": 24,
       "css-name": "playerctl",
-      "angle": 0.0,
+      "angle": 0,
       "on-scroll-up": "playerctld shift",
       "on-scroll-down": "playerctld unshift"
     },
@@ -170,7 +169,7 @@
       "mark-floating": false,
       "mark-xwayland": false,
       "css-name": "hypr-workspaces",
-      "angle": 0.0
+      "angle": 0
     },
     "swaync": {
       "tooltip-text": "Notifications",
@@ -192,6 +191,23 @@
     "sway-taskbar": {},
     "sway-workspaces": {},
     "sway-mode": {},
-    "keyboard-layout": {}
+    "keyboard-layout": {},
+    "executor-wifi": {
+      "script": "/home/vdawg/.config/nwg-panel/executors/wifi.sh",
+      "tooltip-text": "Open Wifi settings",
+      "on-left-click": "kitty -e impala",
+      "on-middle-click": "",
+      "on-right-click": "",
+      "on-scroll-up": "",
+      "on-scroll-down": "",
+      "root-css-name": "wifi",
+      "css-name": "",
+      "icon-placement": "left",
+      "icon-size": 16,
+      "interval": 10,
+      "angle": 0.0,
+      "sigrt": 34,
+      "use-sigrt": false
+    }
   }
 ]
