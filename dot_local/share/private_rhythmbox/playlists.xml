@@ -63,7 +63,7 @@
       </subquery>
     </conjunction>
   </playlist>
-  <playlist name="Recently Added" show-browser="true" browser-position="97" search-type="search-match" type="automatic" sort-key="FirstSeen" sort-direction="1">
+  <playlist name="Recently Added" show-browser="true" browser-position="63" search-type="search-match" type="automatic" sort-key="FirstSeen" sort-direction="1">
     <conjunction>
       <equals prop="type">song</equals>
       <subquery>
@@ -73,7 +73,7 @@
       </subquery>
     </conjunction>
   </playlist>
-  <playlist name="Recently Played" show-browser="true" browser-position="97" search-type="search-match" type="automatic" sort-key="LastPlayed" sort-direction="1">
+  <playlist name="Recently Played" show-browser="true" browser-position="63" search-type="search-match" type="automatic" sort-key="LastPlayed" sort-direction="1">
     <conjunction>
       <equals prop="type">song</equals>
       <subquery>
@@ -83,5 +83,5 @@
       </subquery>
     </conjunction>
   </playlist>
-  <playlist name="Play Queue" show-browser="true" browser-position="97" search-type="search-match" type="queue"/>
+  <playlist name="Play Queue" show-browser="true" browser-position="63" search-type="search-match" type="queue"/>
 </rhythmdb-playlists>
