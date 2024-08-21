@@ -22,6 +22,7 @@ application/vnd.openxmlformats-officedocument.wordprocessingml.document=abiword.
 image/svg+xml=org.gnome.eog.desktop;
 application/x-zerosize=nvim.desktop;
 x-scheme-handler/tg=org.telegram.desktop.desktop;io.github.kukuruzka165.materialgram.desktop;
+x-scheme-handler/tonsite=io.github.kukuruzka165.materialgram.desktop;org.telegram.desktop.desktop;
 
 [Default Applications]
 application/json=code-oss.desktop;
@@ -56,3 +57,4 @@ application/vnd.openxmlformats-officedocument.wordprocessingml.document=abiword.
 image/svg+xml=org.gnome.eog.desktop
 x-scheme-handler/webcal=brave-browser-nightly.desktop
 x-scheme-handler/tg=io.github.kukuruzka165.materialgram.desktop
+x-scheme-handler/tonsite=io.github.kukuruzka165.materialgram.desktop
