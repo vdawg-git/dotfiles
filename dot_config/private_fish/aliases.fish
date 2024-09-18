@@ -8,7 +8,6 @@ abbr pni "pnpm install"
 
 abbr xclip "xclip -selection c"
 abbr cz "chezmoi"
-abbr j "joshuto"
 abbr pac "sudo pacman -S "
 abbr pacr "sudo pacman -R "
 abbr yays "yay -Syu "
@@ -21,8 +20,7 @@ abbr mvd "mullvad disconnect"
 abbr mvc "mullvad connect"
 abbr mvs "mullvad status"
 
-abbr lsgr "ls | rg "
-
+abbr lsg "ls | rg "
 
 abbr wgu "wg-quick up job "
 abbr wgd "wg-quick down job "

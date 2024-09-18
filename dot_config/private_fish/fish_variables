@@ -4,10 +4,14 @@ SETUVAR --export EDITOR:nvim
 SETUVAR --export SUDO_EDITOR:nvim
 SETUVAR --export VISUAL:nvim
 SETUVAR __fish_initialized:3400
+SETUVAR _fisher_jorgebucaran_2F_fisher_files:\x7e/\x2econfig/fish/functions/fisher\x2efish\x1e\x7e/\x2econfig/fish/completions/fisher\x2efish
+SETUVAR _fisher_plugins:jorgebucaran/fisher
+SETUVAR _fisher_upgraded_to_4_4:\x1d
 SETUVAR fish_color_history_current:\x2d\x2dbold
 SETUVAR fish_color_host_remote:yellow
 SETUVAR fish_color_search_match:bryellow\x1e\x2d\x2dbackground\x3dbrblack
 SETUVAR fish_color_status:red
+SETUVAR fish_key_bindings:fish_vi_key_bindings
 SETUVAR fish_pager_color_completion:normal
 SETUVAR fish_pager_color_description:yellow\x1e\x2di
 SETUVAR fish_pager_color_prefix:normal\x1e\x2d\x2dbold\x1e\x2d\x2dunderline

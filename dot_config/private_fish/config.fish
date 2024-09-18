@@ -35,9 +35,6 @@ source ~/.config/fish/aliases.fish
 source ~/.config/fish/functions.fish
 
 
-function multicd
-    echo cd (string repeat -n (math (string length -- $argv[1]) - 1) ../)
-end
 
 
 
