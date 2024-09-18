@@ -89,7 +89,7 @@
       "smooth-scrolling-threshold": 0
     },
     "clock": {
-      "format": "%H:%M ",
+      "format": "%H:%M %d.%m ",
       "tooltip-text": "%a, %d.%m (%B)",
       "on-left-click": "",
       "on-middle-click": "",
@@ -204,7 +204,24 @@
       "css-name": "",
       "icon-placement": "left",
       "icon-size": 16,
-      "interval": 10,
+      "interval": 3,
+      "angle": 0.0,
+      "sigrt": 34,
+      "use-sigrt": false
+    },
+    "executor-hypr-active": {
+      "script": "/home/vdawg/.config/nwg-panel/executors/hypr-active.sh",
+      "tooltip-text": "",
+      "on-left-click": "",
+      "on-middle-click": "",
+      "on-right-click": "",
+      "on-scroll-up": "",
+      "on-scroll-down": "",
+      "root-css-name": "",
+      "css-name": "",
+      "icon-placement": "left",
+      "icon-size": 16,
+      "interval": 1,
       "angle": 0.0,
       "sigrt": 34,
       "use-sigrt": false
