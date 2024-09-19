@@ -33,5 +33,5 @@ git config --global user.email "vdawg@tuta.io"
 # Install Material Gram (Telgram Client)
 sudo sh -c "curl -s https://raw.githubusercontent.com/materialgram/arch/x86_64/installer.sh | bash"
 
-# Fore WireGuard
+# For WireGuard
 sudo systemctl enable --now systemd-resolved

@@ -13,7 +13,9 @@ btop
 chezmoi
 cliphist
 converseen
+dragon-drop-git
 eog
+expect
 fastfetch
 firefox
 fish
@@ -44,6 +46,7 @@ kvantum
 mailspring
 megacmd
 morgen-bin
+mpv
 mullvad-vpn-bin
 nautilus
 neovim-git
@@ -69,6 +72,7 @@ pipewire-pulse
 pnpm
 podman
 polkit-kde-agent
+qbittorrent
 qt5ct
 qt5-graphicaleffects
 qt5-imageformats
@@ -88,8 +92,8 @@ swappy
 swaync
 swww
 tesseract
+tesseract-data-deu
 tesseract-data-eng
-tesseract-data-ger
 tesseract-data-rus
 topgrade
 tree
@@ -105,5 +109,6 @@ wlr-randr
 wlsunset-git
 xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland-git
+yazi
 zoxide
 zx

@@ -14,7 +14,7 @@ grep chaotic-aur /etc/pacman.conf || sudo sh -c "echo -e '[chaotic-aur]\nInclude
 sudo pacman -Sy
 
 # Install Rust via rustup
-# We do this before installing other packages to prevent them using Rust from the Arch repo
+# We do this before installing other packages to prevent them from using the Rust package from the Arch repo
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 
