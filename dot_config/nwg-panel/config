@@ -1,13 +1,13 @@
 [
   {
     "name": "panel-top",
-    "output": "All",
+    "output": "eDP-1",
     "layer": "top",
     "position": "top",
     "controls": "right",
     "width": "auto",
     "height": 20,
-    "margin-bottom": -4,
+    "margin-bottom": 0,
     "padding-horizontal": 0,
     "padding-vertical": 0,
     "spacing": 0,

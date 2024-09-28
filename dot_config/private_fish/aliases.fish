@@ -22,6 +22,8 @@ abbr mvs "mullvad status"
 
 abbr lsg "ls | rg "
 
+abbr y "yazi"
+
 abbr wgu "wg-quick up job "
 abbr wgd "wg-quick down job "
 

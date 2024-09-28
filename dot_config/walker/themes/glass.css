@@ -109,9 +109,9 @@ label {
 	opacity: 0.5;
 }
 
-GtkScrolledWindow {
-	scrollbar-spacing: 0;
-}
+/* GtkScrolledWindow { */
+/* 	scrollbar-spacing: 0; */
+/* } */
 
 scrollbar {
 	min-height: 0;

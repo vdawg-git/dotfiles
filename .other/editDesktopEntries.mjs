@@ -7,12 +7,9 @@ import "zx/globals"
 import { replaceInFile } from "./script-helpers/helper.mjs"
 
 const platfromWayland = [
-  // "/usr/share/applications/tutanota-desktop.desktop",
-  "/usr/share/applications/morgen.desktop",
   "/usr/share/applications/obsidian.desktop",
-  "/usr/share/applications/GitKraken.desktop",
-  "/usr/share/applications/brave-browser-nightly.desktop",
   "/usr/share/applications/brave-browser.desktop",
+  "/usr/share/applications/figma-linux.desktop",
 ]
 
 /** @type {{entry: string, replacers:[RegExp, (match: string)=> string][]}[]} */

@@ -366,9 +366,6 @@
         "RoleColorEverywhere": {
             "enabled": false
         },
-        "SearchReply": {
-            "enabled": true
-        },
         "SecretRingToneEnabler": {
             "enabled": false
         },
@@ -646,7 +643,7 @@
             "enabled": false
         },
         "CopyEmojiMarkdown": {
-            "enabled": false
+            "enabled": true
         },
         "SettingsStoreAPI": {
             "enabled": false
@@ -663,10 +660,25 @@
         "MentionAvatars": {
             "enabled": true
         },
-        "ShowAllRoles": {
+        "YoutubeAdblock": {
+            "enabled": true
+        },
+        "AlwaysExpandRoles": {
             "enabled": false
         },
-        "YoutubeAdblock": {
+        "CopyFileContents": {
+            "enabled": true
+        },
+        "NoMaskedUrlPaste": {
+            "enabled": false
+        },
+        "StickerPaste": {
+            "enabled": false
+        },
+        "VolumeBooster": {
+            "enabled": false
+        },
+        "FullSearchContext": {
             "enabled": true
         }
     },
@@ -680,6 +692,6 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1722585322974
+        "settingsSyncVersion": 1726862962537
     }
 }
