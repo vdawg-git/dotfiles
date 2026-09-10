@@ -1,0 +1,5 @@
+*.log
+*.sock
+*.pid
+history.toml
+resume.json
