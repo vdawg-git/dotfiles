@@ -6,7 +6,7 @@ volume = 0
 volume_min = -50
 
 # Repeat mode: "off", "all", or "one"
-repeat = "off"
+repeat = "All"
 
 # Start with shuffle enabled
 shuffle = true
@@ -54,3 +54,6 @@ compact = false
 # Logs are written to ~/.config/cliamp/cliamp.log
 log_level = "error"
 
+
+theme = ""
+speed = 1.00
