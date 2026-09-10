@@ -17,17 +17,12 @@ const ASSISTANT_SNIPPET_LENGTH = 420;
 const RECENT_USER_LIMIT = 20;
 const RECENT_ASSISTANT_LIMIT = 5;
 const CHEAP_MODEL_PREFERENCES = [
-	"gpt-4.1-mini",
-	"gpt-4o-mini",
+	"gpt-5.5-mini",
 	"gemini-2.5-flash",
 	"gemini-2.0-flash",
 	"claude-3-5-haiku",
 	"claude-3-haiku",
-	"gpt-5.4-mini",
-	"gpt-5.1-codex-mini",
-	"mini",
-	"flash",
-	"haiku",
+	"gpt-5.6-luna"
 ] as const;
 const GENERIC_TITLES = new Set(["conversation summary", "user request", "coding help", "new session"]);
 
