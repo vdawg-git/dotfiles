@@ -9,6 +9,7 @@
     # obs-studio
     # onlyoffice-desktopeditors
     # vscode
+    amberol
     anki
     bitwarden-desktop
     blanket
@@ -38,6 +39,7 @@
     swayosd
     switcheroo # File conversion
     telegram-desktop
+    tev # exr/hdr viewer
     vesktop
     vicinae
     zed-editor-fhs
@@ -103,23 +105,33 @@
     tree
     unzip
     wireguard-tools
+    exiftool
     wl-clipboard
+    codegraph
     wl-kbptr
     wlrctl
     yt-dlp
     zip # For (un)zipping stuff, in case you wondered
+    yazi
     zoxide # Better cd
   ];
 in {
   environment.systemPackages = baseTools ++ cliTools;
 
+  # Keep the MIME default in the user's mutable ~/.config/mimeapps.list.
+  environment.etc."xdg/applications/tev.desktop".text = ''
+    [Desktop Entry]
+    Name=tev
+    Comment=High dynamic range image viewer
+    Exec=${pkgs.tev}/bin/tev %f
+    Type=Application
+    Terminal=false
+    Categories=Graphics;Viewer;
+    MimeType=image/exr;image/x-exr;
+  '';
+
   # programs.firefox.enable = true;
   programs.fish.enable = true;
-
-  programs.yazi = {
-    enable = true;
-    settings = {};
-  };
 
   xdg.terminal-exec = {
     enable = true;

@@ -215,7 +215,9 @@ windowRules({
   {
     name = "no-screen-share",
     any = {
-      class = { "org.keepassxc.KeePassXC", "KeePassXC", "keepassxc", "1password", "vesktop", "swayosd", "qbittorrent",
+      class = {
+        "org.keepassxc.KeePassXC", "KeePassXC", "keepassxc", "1password", "swayosd", "qbittorrent",
+        "vesktop",
       },
     },
     no_screen_share = true,

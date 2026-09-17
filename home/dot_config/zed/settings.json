@@ -7,6 +7,10 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "which_key": {
+    "enabled": true,
+  },
+  "unnecessary_code_fade": 0.3,
   "edit_predictions": {
     "provider": "zed",
     "mode": "subtle",
@@ -38,6 +42,7 @@
   },
   "colorize_brackets": true,
   "scrollbar": {
+    "git_diff": true,
     "show": "auto",
     "diagnostics": "none",
   },
@@ -88,6 +93,7 @@
     "metrics": true,
   },
   "git": {
+    "enable_diff": false,
     "gutter_debounce": 10,
     "git_gutter": "hide",
     "inline_blame": {
@@ -110,6 +116,9 @@
     "enabled": true,
   },
   "gutter": {
+    "git_gutter_width": {
+      "custom": 2.0,
+    },
     "line_numbers": false,
   },
   "minimap": {
@@ -129,6 +138,8 @@
   "use_on_type_format": true,
   "show_whitespaces": "none",
   "indent_guides": {
+    "background_coloring": "disabled",
+    "coloring": "indent_aware",
     "enabled": true,
   },
   "soft_wrap": "editor_width",
@@ -157,7 +168,7 @@
 
   "languages": {
     "WGSL/WESL": {
-      "enable_language_server": false
+      "enable_language_server": false,
     },
     "Rust": {
       "formatter": "language_server",
@@ -184,4 +195,18 @@
   },
 
   "load_direnv": "shell_hook",
+  "buffer_font_features": {
+    "calt": true,
+    "liga": true,
+    "ss01": true,
+    "ss02": true,
+    "ss03": true,
+    "ss04": true,
+    "ss05": true,
+    "ss06": true,
+    "ss07": true,
+    "ss08": true,
+    "ss09": true,
+    "ss10": true,
+  },
 }

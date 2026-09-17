@@ -3,9 +3,9 @@
 # Config relating to git
 git:
   # See https://github.com/jesseduffield/lazygit/blob/master/docs/Custom_Pagers.md
-  pagers:
+  diffRenderers:
     - # e.g.
       # diff-so-fancy
       # delta --dark --paging=never
       # ydiff -p cat -s --wrap --width={{columnWidth}}
-      pager: "delta --syntax-theme gruvbox-dark --paging=never"
+      command: "delta --syntax-theme gruvbox-dark --paging=never"
