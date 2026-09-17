@@ -1,0 +1,9 @@
+{
+  "lsp": {
+    "lua-language-server": {
+      "settings": {
+        "workspace.ignoreDir": ["*", "!home/dot_config/hypr"],
+      },
+    },
+  },
+}
