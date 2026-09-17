@@ -15,6 +15,6 @@
     "noImplicitOverride": true,
     "types": ["node"]
   },
-  "include": ["*.ts", "*/src/**/*.ts", "*/index.ts"],
-  "exclude": ["node_modules"]
+  "include": ["*.ts", "vim/**/*.ts", "*/src/**/*.ts", "*/index.ts"],
+  "exclude": ["node_modules", "vim/**/*.test.ts"]
 }

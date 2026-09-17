@@ -14,13 +14,13 @@
   ],
   "packages": [
     "npm:pi-rtk-optimizer",
-    "git:github.com/elpapi42/pi-fork",
     "npm:pi-observational-memory",
-    "git:github.com/elpapi42/pi-minimal-subagent",
+    "git:github.com/elpapi42/pi-codegraph",
     "npm:pi-smart-fetch",
-    "npm:pi-zentui"
+    "npm:pi-zentui",
+    "npm:pi-hermes-memory"
   ],
   "terminal": {
-    "showTerminalProgress": true
+    "showTerminalProgress": false
   }
 }

@@ -2,7 +2,7 @@
 name: explore
 description: Legacy reconnaissance alias. Prefer scripts dispatching `developer` for exploration work.
 tools: read, bash
-model: openai-codex/gpt-5.4-mini
+model: openai-codex/gpt-5.5
 ---
 
 You are an exploration subagent. Read/search/trace only; do not edit.

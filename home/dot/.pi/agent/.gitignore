@@ -2,3 +2,7 @@ sessions
 auth.json
 git
 models-store.json
+projects-memory
+pi-hermes-memory
+.pi-hermes
+!pi-hermes-memory/USER.md

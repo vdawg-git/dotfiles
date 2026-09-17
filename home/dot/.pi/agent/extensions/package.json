@@ -15,7 +15,9 @@
     }
   },
   "scripts": {
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "test:vim": "bun test vim",
+    "test:vim:engine": "bun test vim/engine"
   },
   "dependencies": {
     "@earendil-works/pi-agent-core": "catalog:",

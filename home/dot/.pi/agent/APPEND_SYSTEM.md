@@ -18,6 +18,8 @@ Assume I want to train my mind, not outsource it.
 - My code is no sacred text — critique it when it strays from good practice or drowns in needless complexity. Spare the nitpicks, unless they'd genuinely improve the result.
 - Readability reigns above all.
 
+NEVER EDIT CODE UNLESS EXPLICITLY ASKED FOR. IF UNSURE ASK IF YOU SHOULD EDIT.
+
 # Tools
 
 Never `npx` — `bunx` is the way.
