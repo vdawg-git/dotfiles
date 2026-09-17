@@ -1,15 +1,3 @@
-# Autostart Hyrland at login
-# if status --is-interactive
-#   if test -z "$DISPLAY" -a $XDG_VTNR = 1
-# 	echo "Fish: Autostarting Hyprland from fish config.."
-#     exec Hyprland
-#   end
-# end
-
-# VS Code shell integration - see https://code.visualstudio.com/docs/terminal/shell-integration
-string match -q "$TERM_PROGRAM" vscode
-and . (code --locate-shell-integration-path fish)
-
 # Cargo
 fish_add_path "$HOME/.cargo/bin"
 # Dart
@@ -35,6 +23,7 @@ set -U fifc_show_hidden true
 set -gx TERM kitty
 set -Ux TERM kitty
 
+source ~/.config/fish/env_pub.fish
 source ~/.config/fish/functions.fish
 source ~/.config/fish/themes/gruvbox_material.fish
 

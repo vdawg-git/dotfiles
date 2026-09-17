@@ -4,6 +4,8 @@ SETUVAR --export CARAPACE_BRIDGES:zsh\x2cfish\x2cbash\x2cinshellisense
 SETUVAR --export EDITOR:nvim
 SETUVAR --export MANPAGER:nvim\x20\x2bMan\x21
 SETUVAR --export --path PATH:/home/vdawg/\x2ecargo/bin\x1e/usr/local/sbin\x1e/usr/local/bin\x1e/usr/bin\x1e/usr/bin/site_perl\x1e/usr/bin/vendor_perl\x1e/usr/bin/core_perl\x1e/home/vdawg/\x2epub\x2dcache/bin
+SETUVAR --export PI_CODING_AGENT_DIR:/home/vdawg/\x2econfig/pi
+SETUVAR --export PI_CODING_AGENT_SESSION_DIR:/home/vdawg/\x2elocal/share/pi\x2dsessions
 SETUVAR --export SUDO_EDITOR:nvim
 SETUVAR --export TERM:kitty
 SETUVAR --export VISUAL:nvim
