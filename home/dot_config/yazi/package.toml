@@ -1,0 +1,12 @@
+[[plugin.deps]]
+use = "AminurAlam/yazi-plugins:preview-audio"
+rev = "9997d5b"
+hash = "475141b0337cf9934b0bc81202e2537c"
+
+[[plugin.deps]]
+use = "AminurAlam/yazi-plugins:preview-git"
+rev = "9997d5b"
+hash = "ba369f2f02be9e932cf7882c113d6844"
+
+[flavor]
+deps = []
