@@ -1,5 +1,5 @@
 {
-  "lastChangelogVersion": "0.85.1",
+  "lastChangelogVersion": "1.0.0",
   "defaultProvider": "openai-codex",
   "defaultModel": "gpt-5.6-terra",
   "defaultThinkingLevel": "low",
@@ -18,7 +18,9 @@
     "git:github.com/elpapi42/pi-codegraph",
     "npm:pi-smart-fetch",
     "npm:pi-zentui",
-    "npm:pi-hermes-memory"
+    "npm:pi-hermes-memory",
+    "npm:@tintinweb/pi-subagents",
+    "git:github.com/nicobailon/visual-explainer"
   ],
   "terminal": {
     "showTerminalProgress": false

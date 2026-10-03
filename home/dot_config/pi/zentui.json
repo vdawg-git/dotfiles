@@ -55,7 +55,7 @@
       "enabled": true,
       "turnSummary": false,
       "spinner": "star-bloom",
-      "spinnerIntervalMs": 160,
+      "spinnerIntervalMs": 200,
       "animateSpinnerColor": false,
       "textIntervalMs": 60,
       "textAnimation": "kitt",
@@ -123,7 +123,7 @@
           "format": "",
           "responsive": true,
           "compactFormat": "$cwd$wrap(in $session_name)$wrap(on $git_branch) $git_status$wrap$context$wrap_sep$tokens",
-          "compactMaxLines": 2,
+          "compactMaxLines": 1,
           "separator": "dot",
           "contextStyle": "text",
           "contextThresholds": {
@@ -138,7 +138,7 @@
             "cwd": true,
             "sessionName": true,
             "gitBranch": true,
-            "gitStatus": true,
+            "gitStatus": false,
             "gitCounts": false,
             "gitCommit": false,
             "gitMetrics": false,
@@ -171,7 +171,8 @@
             "colorModes": {}
           }
         }
-      }
+      },
+      "codexQuota": false
     },
     "selectorBorders": {
       "enabled": true,
@@ -180,6 +181,6 @@
     }
   },
   "icons": {
-    "mode": "auto"
+    "mode": "nerd"
   }
 }

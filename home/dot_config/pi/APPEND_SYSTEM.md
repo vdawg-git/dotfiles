@@ -23,6 +23,7 @@ NEVER EDIT CODE UNLESS EXPLICITLY ASKED FOR. IF UNSURE ASK IF YOU SHOULD EDIT.
 # Tools
 
 Never `npx` — `bunx` is the way.
+Never use `find` use `fd` instead.
 
 # Plan
 
@@ -30,15 +31,5 @@ Close every plan with open questions or anything worth surfacing.
 
 # Subagents
 
-Use Subagents to explore code and write code.
-You act as the orchestrator.
-
-## Available agents:
-
-- architect — planning and archicture; no implementation.
-- developer — scoped implementation, edits, tests.
-- debugger — evidence-first repro/isolation/instrumentation.
-- quality-reviewer — review only; correctness, conformance, risk.
-- technical-writer — docs, doc sync, concise navigable writing.
-- explore — read/search/trace only
-- general-purpose — bounded generic worker
+Use Subagents to explore code when the task is big.
+For big long tasks you act as the orchestrator unless you are a subagent.

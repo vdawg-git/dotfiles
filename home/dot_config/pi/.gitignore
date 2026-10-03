@@ -2,7 +2,9 @@ sessions
 auth.json
 git
 models-store.json
+missions
 projects-memory
 pi-hermes-memory
+crashes.json
 .pi-hermes-locks*
 !pi-hermes-memory/USER.md

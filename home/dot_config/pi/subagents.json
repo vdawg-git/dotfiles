@@ -1,0 +1,6 @@
+{
+  "disableDefaultAgents": true,
+  "fallbackSubagent": "none",
+  "maxSubagentDepth": 2,
+  "worktreeIsolation": false
+}
