@@ -26,9 +26,9 @@
 
           # Homerow mods
           # From https://github.com/rvaiya/keyd/issues/437
-          a = "overloadt2(shift, a, 140)";
-          semicolon = "overloadt2(shift, ;, 140)";
-          d = "overloadt2(meta, d, 140)";
+          a = "overloadt2(shift, a, 170)";
+          semicolon = "overloadt2(shift, ;, 170)";
+          d = "overloadt2(meta, d, 170)";
           # f = overloadt2(shift, f, 220)
           # s = overloadt2(alt, s, 220);
           # a = overloadt2(control, a, 220)
