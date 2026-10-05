@@ -209,4 +209,5 @@
     "ss09": true,
     "ss10": true,
   },
+  "read_only_files": ["*/.cargo/registry/**/*"],
 }

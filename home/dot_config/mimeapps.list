@@ -15,6 +15,7 @@ x-scheme-handler/claude-cli=claude-code-url-handler.desktop
 image/jpeg=org.gnome.eog.desktop
 image/exr=tev.desktop
 x-scheme-handler/bitwarden=bitwarden.desktop
+text/plain=nvim.desktop
 
 [Added Associations]
 x-scheme-handler/tg=org.telegram.desktop.desktop;
@@ -23,3 +24,4 @@ video/x-matroska=org.kde.haruna.desktop;umpv.desktop;
 image/jpeg=org.gnome.eog.desktop;
 image/exr=tev.desktop;
 x-scheme-handler/bitwarden=bitwarden.desktop;
+text/plain=nvim.desktop;
