@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   services.gnome.gnome-keyring.enable = true;
 
-  services.dbus.packages = [pkgs.gnome-keyring pkgs.gcr];
+  services.dbus.packages = [pkgs.gnome-keyring pkgs.gcr_4];
 
   # Unlock GPG keyring on login
   # https://github.com/JohnRTitor/nix-conf/commit/53bc83aef18849976d5a42cc727d38dd0e38c5b0

@@ -1,7 +1,18 @@
-{
-  services = {
-    keyd.enable = true;
-    keyd.keyboards.default = {
+{pkgs, ...}: {
+  services.keyd = {
+    enable = true;
+
+    package = pkgs.keyd.overrideAttrs (_: {
+      version = "2.5.0";
+      src = pkgs.fetchFromGitHub {
+        owner = "rvaiya";
+        repo = "keyd";
+        rev = "f20bd7a441907f4b7e38c222e37bd608223db420";
+        hash = "sha256-u4V5wSqLHkvmwraSt2h1C8F4cCx+v2YmZNly52V2g5k=";
+      };
+    });
+
+    keyboards.default = {
       ids = [
         "*"
         # Ignore split keyboard
@@ -26,9 +37,9 @@
 
           # Homerow mods
           # From https://github.com/rvaiya/keyd/issues/437
-          a = "overloadt2(shift, a, 170)";
-          semicolon = "overloadt2(shift, ;, 170)";
-          d = "overloadt2(meta, d, 170)";
+          a = "lettermod(shift, a, 220)";
+          semicolon = "overloadt2(shift, ;, 220)";
+          d = "lettermod(meta, d, 170)";
           # f = overloadt2(shift, f, 220)
           # s = overloadt2(alt, s, 220);
           # a = overloadt2(control, a, 220)
