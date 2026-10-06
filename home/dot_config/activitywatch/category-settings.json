@@ -5,7 +5,9 @@
       "score": 10
     },
     "id": 0,
-    "name": ["Work"],
+    "name": [
+      "Work"
+    ],
     "rule": {
       "regex": "Google Docs|libreoffice|ReText",
       "type": "regex"
@@ -14,7 +16,10 @@
   {
     "data": {},
     "id": 1,
-    "name": ["Work", "Programming"],
+    "name": [
+      "Work",
+      "Programming"
+    ],
     "rule": {
       "regex": "GitHub|Stack Overflow|BitBucket|Gitlab|vim|Spyder|kate|Ghidra|Scite|zed",
       "type": "regex"
@@ -22,7 +27,11 @@
   },
   {
     "id": 2,
-    "name": ["Work", "Programming", "ActivityWatch"],
+    "name": [
+      "Work",
+      "Programming",
+      "ActivityWatch"
+    ],
     "rule": {
       "ignore_case": true,
       "regex": "ActivityWatch|aw-",
@@ -31,7 +40,10 @@
   },
   {
     "id": 3,
-    "name": ["Work", "Image"],
+    "name": [
+      "Work",
+      "Image"
+    ],
     "rule": {
       "regex": "GIMP|Inkscape",
       "type": "regex"
@@ -39,7 +51,10 @@
   },
   {
     "id": 4,
-    "name": ["Work", "Video"],
+    "name": [
+      "Work",
+      "Video"
+    ],
     "rule": {
       "regex": "Kdenlive",
       "type": "regex"
@@ -47,7 +62,10 @@
   },
   {
     "id": 5,
-    "name": ["Work", "Audio"],
+    "name": [
+      "Work",
+      "Audio"
+    ],
     "rule": {
       "regex": "Audacity",
       "type": "regex"
@@ -55,7 +73,10 @@
   },
   {
     "id": 6,
-    "name": ["Work", "3D"],
+    "name": [
+      "Work",
+      "3D"
+    ],
     "rule": {
       "regex": "Blender",
       "type": "regex"
@@ -66,7 +87,9 @@
       "color": "#F33"
     },
     "id": 7,
-    "name": ["Media"],
+    "name": [
+      "Media"
+    ],
     "rule": {
       "type": "none"
     }
@@ -76,7 +99,10 @@
       "color": "#F80"
     },
     "id": 8,
-    "name": ["Media", "Games"],
+    "name": [
+      "Media",
+      "Games"
+    ],
     "rule": {
       "regex": "Minecraft|RimWorld",
       "type": "regex"
@@ -87,7 +113,10 @@
       "color": "#F33"
     },
     "id": 9,
-    "name": ["Media", "Video"],
+    "name": [
+      "Media",
+      "Video"
+    ],
     "rule": {
       "regex": "YouTube|Plex|VLC",
       "type": "regex"
@@ -98,7 +127,10 @@
       "color": "#FCC400"
     },
     "id": 10,
-    "name": ["Media", "Social Media"],
+    "name": [
+      "Media",
+      "Social Media"
+    ],
     "rule": {
       "ignore_case": true,
       "regex": "reddit|Facebook|Twitter|Instagram|devRant",
@@ -110,7 +142,10 @@
       "color": "#A8FC00"
     },
     "id": 11,
-    "name": ["Media", "Music"],
+    "name": [
+      "Media",
+      "Music"
+    ],
     "rule": {
       "ignore_case": true,
       "regex": "Spotify|Deezer",
@@ -122,14 +157,19 @@
       "color": "#9FF"
     },
     "id": 12,
-    "name": ["Comms"],
+    "name": [
+      "Comms"
+    ],
     "rule": {
       "type": "none"
     }
   },
   {
     "id": 13,
-    "name": ["Comms", "IM"],
+    "name": [
+      "Comms",
+      "IM"
+    ],
     "rule": {
       "regex": "Messenger|Telegram|Signal|WhatsApp|Rambox|Slack|Riot|Element|Discord|Nheko|NeoChat|Mattermost",
       "type": "regex"
@@ -137,7 +177,10 @@
   },
   {
     "id": 14,
-    "name": ["Comms", "Email"],
+    "name": [
+      "Comms",
+      "Email"
+    ],
     "rule": {
       "regex": "Gmail|Thunderbird|mutt|alpine",
       "type": "regex"
@@ -148,7 +191,9 @@
       "color": "#CCC"
     },
     "id": 15,
-    "name": ["Uncategorized"],
+    "name": [
+      "Uncategorized"
+    ],
     "rule": {
       "type": "none"
     }
@@ -156,7 +201,11 @@
   {
     "data": {},
     "id": 16,
-    "name": ["Media", "Video", "Movies/Series"],
+    "name": [
+      "Media",
+      "Video",
+      "Movies/Series"
+    ],
     "rule": {
       "regex": "mpv",
       "type": "regex"
@@ -165,7 +214,11 @@
   {
     "data": {},
     "id": 17,
-    "name": ["Work", "Programming", "vaibz"],
+    "name": [
+      "Work",
+      "Programming",
+      "vaibz"
+    ],
     "rule": {
       "ignore_case": true,
       "regex": "vaibz",
