@@ -1,5 +1,4 @@
 hl.on("hyprland.start", function()
-  hl.exec_cmd("~/.config/hypr/scripts/polkit.sh")
   hl.exec_cmd("sleep 1 && dbus-update-activation-environment --systemd --all && systemctl --user start hyprland-session.target")
 
   hl.exec_cmd("hypridle")

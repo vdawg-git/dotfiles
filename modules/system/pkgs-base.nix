@@ -57,11 +57,14 @@
     carapace # Fancy shell completions
     chafa # preview images, gif , pdf etc (works with fifc)
     cliamp
+    codegraph
     codex
     ctx7
     delta # Git differ
     dotbot
     dust
+    impression
+    exiftool
     eza # Better ls (works with fish fifc)
     fastfetch
     fd # Complete paths (works with fifc)
@@ -105,14 +108,12 @@
     tree
     unzip
     wireguard-tools
-    exiftool
     wl-clipboard
-    codegraph
     wl-kbptr
     wlrctl
+    yazi
     yt-dlp
     zip # For (un)zipping stuff, in case you wondered
-    yazi
     zoxide # Better cd
   ];
 in {

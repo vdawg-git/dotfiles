@@ -18,6 +18,7 @@
     ./nixx.nix
     ./pam.nix
     ./pkgs-base.nix
+    ./polkit.nix
     ./qt.nix
     ./rust.nix
     ./theme.nix
