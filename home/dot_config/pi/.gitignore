@@ -5,6 +5,7 @@ git
 models-store.json
 missions
 projects-memory
+pi-web-access
 pi-hermes-memory
 crashes.json
 .pi-hermes-locks*

@@ -1,7 +1,7 @@
 {
-  "lastChangelogVersion": "1.0.0",
-  "defaultProvider": "openai-codex",
-  "defaultModel": "gpt-5.6-terra",
+  "lastChangelogVersion": "1.4.0",
+  "defaultProvider": "openai",
+  "defaultModel": "gpt-6-sol",
   "defaultThinkingLevel": "low",
   "quietStartup": true,
   "collapseChangelog": true,
@@ -16,11 +16,12 @@
     "npm:pi-rtk-optimizer",
     "npm:pi-observational-memory",
     "git:github.com/elpapi42/pi-codegraph",
-    "npm:pi-smart-fetch",
     "npm:pi-zentui",
     "npm:pi-hermes-memory",
     "npm:@tintinweb/pi-subagents",
-    "git:github.com/nicobailon/visual-explainer"
+    "git:github.com/nicobailon/visual-explainer",
+    "npm:pi-web-access",
+    "npm:pi-btw"
   ],
   "terminal": {
     "showTerminalProgress": false

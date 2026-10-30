@@ -1,5 +1,6 @@
 ---
 name: general-purpose
+model: openai/gpt-6-sol
 display_name: General Purpose
 color: purple
 description: Full-capability delegated pair-programmer for bounded implementation work.

@@ -1,5 +1,7 @@
 ---
 name: Explore
+model: openai/gpt-6-luna
+thinking: low
 display_name: Explore & Research
 color: cyan
 description: Read-only codebase cartographer and primary-source research scout.

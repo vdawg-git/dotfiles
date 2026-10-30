@@ -178,6 +178,36 @@
       "enabled": true,
       "style": "zentui",
       "colorSource": "theme"
+    },
+    "toolDisplay": {
+      "enabled": true,
+      "style": "opencode",
+      "registerToolOverrides": {
+        "read": true,
+        "write": true,
+        "edit": true,
+        "bash": true,
+        "grep": true,
+        "find": true,
+        "ls": true
+      },
+      "builtinRendererOverrides": {
+        "bash": true
+      },
+      "customToolOverrides": {},
+      "readOutputMode": "hidden",
+      "searchOutputMode": "hidden",
+      "mcpOutputMode": "hidden",
+      "bashOutputMode": "opencode",
+      "previewLines": 8,
+      "expandedPreviewMaxLines": 4000,
+      "bashCollapsedLines": 10,
+      "diffViewMode": "auto",
+      "diffIndicatorMode": "bars",
+      "diffSplitMinWidth": 120,
+      "diffCollapsedLines": 24,
+      "diffWordWrap": true,
+      "showTruncationHints": false
     }
   },
   "icons": {

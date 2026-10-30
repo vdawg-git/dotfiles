@@ -17,7 +17,7 @@ const ASSISTANT_SNIPPET_LENGTH = 420;
 const RECENT_USER_LIMIT = 20;
 const RECENT_ASSISTANT_LIMIT = 5;
 const CHEAP_MODEL_PREFERENCES = [
-	"gpt-5.6-luna"
+	"gpt-6-luna"
 ] as const;
 const GENERIC_TITLES = new Set(["conversation summary", "user request", "coding help", "new session"]);
 
@@ -49,13 +49,6 @@ type TextSample = Readonly<{
 	firstAssistantText: string | undefined;
 	firstUserText: string | undefined;
 	userTexts: readonly string[];
-}>;
-
-type CandidateModel = Readonly<{
-	model: Model<Api>;
-	preferenceRank: number;
-	reasoningRank: number;
-	score: number;
 }>;
 
 /** Install a background session-name generator with conservative ownership rules. */
@@ -101,7 +94,7 @@ async function runAutoName(options: Readonly<{
 			return;
 		}
 
-		const model = getNamingModel({ currentModel: options.context.model, models: options.context.modelRegistry.getAvailable() });
+		const model = getNamingModel({ models: options.context.modelRegistry.getAvailable() });
 		const title = await generateTitle({ context: options.context, decision, messages, model, provenance });
 		options.pi.setSessionName(title);
 		options.pi.appendEntry<AutoNameProvenance>(CUSTOM_TYPE, {
@@ -245,49 +238,19 @@ function createUserMessage(content: string): UserMessage {
 	return message;
 }
 
-/** Select the cheapest available text model, using preference names only as tie-breakers. */
-function getNamingModel(options: Readonly<{ currentModel: Model<Api> | undefined; models: readonly Model<Api>[] }>): Model<Api> {
-	const candidates = options.models.filter((model) => model.input.includes("text")).map(createCandidateModel);
-	const candidate = [...candidates].sort(compareCandidateModels).at(0);
-	const model = candidate?.model ?? options.currentModel;
+/** Select the first available text model from the explicit naming-model allowlist. */
+function getNamingModel(options: Readonly<{ models: readonly Model<Api>[] }>): Model<Api> {
+	for (const preferredModelId of CHEAP_MODEL_PREFERENCES) {
+		const model = options.models.find((candidate) => candidate.id === preferredModelId && candidate.input.includes("text"));
 
-	if (model === undefined) {
-		throw new Error("No available model for automatic session naming");
+		if (model !== undefined) {
+			return model;
+		}
 	}
 
-	return model;
+	throw new Error(`No configured naming model is available: ${CHEAP_MODEL_PREFERENCES.join(", ")}`);
 }
 
-function createCandidateModel(model: Model<Api>): CandidateModel {
-	const candidate: CandidateModel = {
-		model,
-		preferenceRank: getModelPreferenceRank(model),
-		reasoningRank: model.reasoning ? 1 : 0,
-		score: model.cost.input * 4 + model.cost.output,
-	};
-
-	return candidate;
-}
-
-function compareCandidateModels(left: CandidateModel, right: CandidateModel): number {
-	const comparisons = [
-		left.reasoningRank - right.reasoningRank,
-		left.preferenceRank - right.preferenceRank,
-		left.score - right.score,
-		getModelKey(left.model).localeCompare(getModelKey(right.model)),
-	];
-	const order = comparisons.find((comparison) => comparison !== 0) ?? 0;
-
-	return order;
-}
-
-function getModelPreferenceRank(model: Model<Api>): number {
-	const key = getModelKey(model).toLowerCase();
-	const matchedIndex = CHEAP_MODEL_PREFERENCES.findIndex((preference) => key.includes(preference));
-	const rank = matchedIndex === -1 ? CHEAP_MODEL_PREFERENCES.length : matchedIndex;
-
-	return rank;
-}
 
 function getModelKey(model: Model<Api>): string {
 	const key = `${model.provider}:${model.id}`;
@@ -460,11 +423,14 @@ function validateTitle(title: string): string {
 }
 
 function notifyFailure(context: ExtensionContext, error: unknown): void {
+	const message = `Auto session name failed: ${getErrorMessage(error)}`;
+	console.error(message);
+
 	if (!context.hasUI) {
 		return;
 	}
 
-	context.ui.notify(`Auto session name failed: ${getErrorMessage(error)}`, "error");
+	context.ui.notify(message, "error");
 }
 
 function getErrorMessage(error: unknown): string {
