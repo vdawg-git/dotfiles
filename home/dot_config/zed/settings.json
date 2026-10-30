@@ -7,6 +7,9 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "cursor_animation": {
+    "enabled": true
+  },
   "which_key": {
     "enabled": true,
   },
@@ -85,7 +88,7 @@
   "terminal": {
     "button": false,
     "env": {},
-    "font_size": 14.0,
+    "font_size": 16.0,
     "copy_on_select": true,
   },
   "telemetry": {
