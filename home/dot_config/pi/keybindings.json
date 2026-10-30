@@ -1,0 +1,4 @@
+{
+  "tui.editor.cursorUp": "up",
+  "tui.editor.historyPrevious": "ctrl+up"
+}
