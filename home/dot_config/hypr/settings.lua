@@ -58,13 +58,14 @@ hl.config({
 		blur = {
 			enabled = true,
 			size = 10,
+			proportional = true,
 			passes = 3,
 			new_optimizations = true,
 			xray = false,
 			contrast = 0.9,
 			brightness = 0.9,
 			noise = 0.4,
-			vibrancy = 2,
+			vibrancy = 1,
 			vibrancy_darkness = 0.2,
 			special = false,
 			popups = true,
@@ -73,9 +74,9 @@ hl.config({
 
 		shadow = {
 			enabled = true,
-			range = 120,
+			range = 100,
 			scale = 0.95,
-			render_power = 80,
+			render_power = 4,
 			offset = { 0, 4 },
 			color = "rgba(000000FC)",
 			color_inactive = "rgba(00000050)",
