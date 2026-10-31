@@ -88,11 +88,6 @@ hl.config({
 		workspace_wraparound = false,
 	},
 
-	dwindle = {
-		preserve_split = true,
-		special_scale_factor = 0.8,
-	},
-
 	binds = {
 		workspace_back_and_forth = false,
 		allow_workspace_cycles = true,
