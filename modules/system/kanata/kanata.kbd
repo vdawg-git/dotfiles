@@ -8,9 +8,9 @@
 
 (defalias
   ;; Activate hold on another key press or after 170 ms.
-  a-shift    (tap-hold-press 170 170 a lsft)
-  d-meta     (tap-hold-press 170 170 d lmet)
-  semi-shift (tap-hold-press 170 170 scln lsft)
+  a-shift    (tap-hold-release 250 170 a lsft)
+  d-meta     (tap-hold-release 250 170 d lmet)
+  semi-shift (tap-hold-release 250 170 scln lsft)
 
   ;; tap Esc, hold navigation layer.
   caps-nav   (tap-hold-press 200 200 esc (layer-while-held arrows))
