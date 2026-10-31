@@ -1,7 +1,7 @@
 {
   imports = [
     ./audio-video-hardware.nix
-    ./activity-watch.nix
+    # ./activity-watch.nix
     ./autologin.nix
     ./bootloader.nix
     ./devstuff.nix
@@ -23,5 +23,6 @@
     ./rust.nix
     ./theme.nix
     ./thumbnails/thumbnails.nix
+	./garbage-collection.nix
   ];
 }

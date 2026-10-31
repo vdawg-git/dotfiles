@@ -4,28 +4,23 @@
   ...
 }: let
   baseTools = with pkgs; [
-    # anki
+    # anki # learning cards
     # mangayomi
     # obs-studio
     # onlyoffice-desktopeditors
     # vscode
     amberol
-    anki
-    bitwarden-desktop
     blanket
     blueman
     brave
-    dragon-drop
     easyeffects
     eog
     file-roller
     fsearch
     gnome-control-center
     gnome-system-monitor
-    haruna # Video player
     kitty
     lemmeknow # Identify strings and files
-    mangayomi
     mpv
     nautilus
     networkmanagerapplet

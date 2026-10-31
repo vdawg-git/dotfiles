@@ -8,12 +8,6 @@
       timeout = 2;
     };
 
-    initrd = {
-      enable = true;
-      verbose = false;
-      systemd.enable = true;
-    };
-
     consoleLogLevel = 3;
     plymouth.enable = false;
 
