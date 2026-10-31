@@ -1,0 +1,25 @@
+(defcfg
+  process-unmapped-keys yes
+)
+
+(defsrc
+  lmet lctl lalt caps a d scln h j k l f m . u o
+)
+
+(defalias
+  ;; Activate hold on another key press or after 170 ms.
+  a-shift    (tap-hold-press 170 170 a lsft)
+  d-meta     (tap-hold-press 170 170 d lmet)
+  semi-shift (tap-hold-press 170 170 scln lsft)
+
+  ;; tap Esc, hold navigation layer.
+  caps-nav   (tap-hold-press 200 200 esc (layer-while-held arrows))
+)
+
+(deflayer base
+  lalt lmet lctl @caps-nav @a-shift @d-meta @semi-shift _ _ _ _ _ _ _ _ _
+)
+
+(deflayer arrows
+  _ _ _ _ _ _ _ left down up right lsft home end C-left C-right
+)

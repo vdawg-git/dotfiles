@@ -12,7 +12,7 @@
     ./host-base.nix
     ./hyprland.nix
     ./keyboard.nix
-    ./keyd.nix
+    ./kanata/kanata.nix
     ./neovim.nix
     ./networking.nix
     ./nixx.nix
@@ -23,6 +23,5 @@
     ./rust.nix
     ./theme.nix
     ./thumbnails/thumbnails.nix
-	./garbage-collection.nix
   ];
 }

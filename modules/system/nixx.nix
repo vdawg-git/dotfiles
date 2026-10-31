@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-let
+{pkgs, ...}: let
   # For some reason the nix-index module just isnt working well with comma, so lets do it manually.
   updateNixIndex = pkgs.writeShellScriptBin "update-nix-index" ''
     set -euo pipefail
@@ -20,8 +19,7 @@ let
 
     echo "✔ nix-index database updated"
   '';
-in
-{
+in {
   environment.systemPackages = with pkgs; [
     alejandra # Fast nice nix code formatter
     any-nix-shell # Use Fish after going into a shell
@@ -38,9 +36,23 @@ in
 
   programs.nh = {
     enable = true;
-    clean.enable = true;
-    clean.extraArgs = "--keep-since 90d --keep 3";
     flake = "/home/vdawg/dotfiles"; # sets NH_OS_FLAKE variable for you
   };
 
+  programs.nh.clean = {
+    enable = true;
+    dates = "monthly";
+    extraArgs = "--keep-since 90d --keep 10 --no-direnv";
+  };
+
+  nix.gc = {
+    automatic = false;
+    dates = "monthly";
+    options = "--delete-older-than 90d";
+  };
+
+  nix.settings = {
+    min-free = 50 * 1024 * 1024 * 1024; # 5 GiB
+    max-free = 100 * 1024 * 1024 * 1024; # 20 GiB
+  };
 }
