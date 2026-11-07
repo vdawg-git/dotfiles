@@ -1,3 +1,10 @@
+-- Sugar for Hyprland rules: plain strings match whole values without regard to case;
+-- rx(...) keeps regex syntax. `match` ANDs its fields, while `any` emits one
+-- independent rule per field (OR). Options such as float/center are copied to
+-- every emitted rule. This keeps rules.lua declarative without repeating
+-- anchors, regex escaping, and hl.window_rule/hl.layer_rule calls.
+-- Use native Hyprland matcher names (e.g. initial_title), not event/window field names.
+
 ---@class Rules.Regex
 ---@field __kind "rx"
 ---@field pattern string
@@ -20,29 +27,34 @@
 ---@field windowRules fun(rules: Rules.WindowRule[])
 ---@field layerRules fun(rules: Rules.LayerRule[])
 
+---Mark a pattern as raw regex; plain strings would be escaped and anchored.
 ---@param pattern string
 ---@return Rules.Regex
 local function rx(pattern)
 	return { __kind = "rx", pattern = pattern }
 end
 
+-- Only these match fields accept regexes; other match values pass through unchanged.
+-- Also gates `any`, since it can only expand a single pattern field at a time.
 ---@type table<string, true>
 local patternKeys = {
 	class = true,
 	title = true,
-	initialClass = true,
-	initialTitle = true,
+	initial_class = true,
+	initial_title = true,
 	tag = true,
 	workspace = true,
 	namespace = true,
 }
 
+---Distinguish an rx marker from a list of alternatives.
 ---@param value unknown
 ---@return boolean
 local function isRx(value)
 	return type(value) == "table" and value.__kind == "rx"
 end
 
+---Escape regex metacharacters so a plain string is treated literally.
 ---@param s string
 ---@return string
 local function escapeRegex(s)
@@ -51,12 +63,14 @@ local function escapeRegex(s)
 	end)
 end
 
+---Match a whole value, case-insensitively (rather than a substring).
 ---@param s string
 ---@return string
 local function compileExact(s)
 	return "^(?i:" .. escapeRegex(s) .. ")$"
 end
 
+---Compile one matcher: preserve raw regex, or make a literal exact match.
 ---@param value string|Rules.Regex
 ---@return string
 local function compileOne(value)
@@ -69,6 +83,7 @@ local function compileOne(value)
 	return compileExact(value)
 end
 
+---Join alternatives as a regex OR; a single value needs no join.
 ---@param values Rules.Pattern
 ---@return string
 local function compileList(values)
@@ -88,6 +103,7 @@ local function compileList(values)
 	return table.concat(parts, "|")
 end
 
+---Compile pattern fields in an AND-style `match`; leave booleans/numbers alone.
 ---@param match Rules.Match|nil
 ---@return table<string, string|number|boolean>
 local function compileMatch(match)
@@ -104,6 +120,7 @@ local function compileMatch(match)
 	return out
 end
 
+---Shallow-copy options so each emitted rule has its own match table.
 ---@param tbl table
 ---@return table
 local function copy(tbl)
@@ -114,6 +131,7 @@ local function copy(tbl)
 	return out
 end
 
+---Keep effect options and name; `match`/`any` are helper-only input fields.
 ---@param rule Rules.WindowRule|Rules.LayerRule
 ---@return table
 local function ruleOptions(rule)
@@ -128,6 +146,7 @@ local function ruleOptions(rule)
 	return opts
 end
 
+---Reject unnamed rules or rules with no matcher before registering them.
 ---@param kind string
 ---@param rule Rules.WindowRule|Rules.LayerRule
 local function validateRule(kind, rule)
@@ -140,6 +159,7 @@ local function validateRule(kind, rule)
 	end
 end
 
+---Reject `any` fields that cannot be compiled as pattern matchers.
 ---@param kind string
 ---@param rule Rules.WindowRule|Rules.LayerRule
 local function validateAny(kind, rule)
@@ -154,6 +174,8 @@ local function validateAny(kind, rule)
 	end
 end
 
+---Register window rules: one for `match`, plus one per `any` field.
+---Each `any` rule gets a distinct name (name-key) and the same effects.
 ---@param rules Rules.WindowRule[]
 local function windowRules(rules)
 	for _, rule in ipairs(rules) do
@@ -181,6 +203,7 @@ local function windowRules(rules)
 	end
 end
 
+---Register layer rules with the same AND/OR expansion as windowRules.
 ---@param rules Rules.LayerRule[]
 local function layerRules(rules)
 	for _, rule in ipairs(rules) do

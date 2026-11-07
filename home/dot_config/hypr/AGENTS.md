@@ -1,1 +1,1 @@
-Dont forget to read the ./stubs/hl.meta.lua for the Lua types.
+Dont forget to read .luarc.json for the Lua types path.

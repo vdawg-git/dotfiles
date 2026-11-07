@@ -66,6 +66,14 @@ windowRules({
     no_screen_share = true,
   },
   {
+    name = "chrome-extension-windows",
+    match = {
+      initial_title = rx("^_crx_.*$"),
+    },
+    float = true,
+    center = true,
+  },
+  {
     name = "steam-child-windows",
     match = {
       class = "steam",
