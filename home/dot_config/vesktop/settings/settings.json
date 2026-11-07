@@ -690,9 +690,6 @@
         "IrcColors": {
             "enabled": false
         },
-        "ExpressionCloner": {
-            "enabled": false
-        },
         "CustomCommands": {
             "enabled": false,
             "clyde": true
@@ -720,6 +717,9 @@
         },
         "NoMiddleClickPaste": {
             "enabled": false
+        },
+        "ExpressionManager": {
+            "enabled": false
         }
     },
     "notifications": {
@@ -732,7 +732,7 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1792841997694
+        "settingsSyncVersion": 1793544498625
     },
     "eagerPatches": false,
     "uiElements": {
