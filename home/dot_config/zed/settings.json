@@ -8,10 +8,11 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
   "cursor_animation": {
-    "enabled": true
+    "enabled": true,
   },
   "which_key": {
     "enabled": true,
+    "delay_ms": 500,
   },
   "unnecessary_code_fade": 0.3,
   "edit_predictions": {
@@ -29,6 +30,7 @@
     "tree_view": true,
     "dock": "right",
     "button": false,
+    "show_count_badge": true,
   },
   "collaboration_panel": {
     "dock": "right",
@@ -141,7 +143,6 @@
   "use_on_type_format": true,
   "show_whitespaces": "none",
   "indent_guides": {
-    "background_coloring": "disabled",
     "coloring": "indent_aware",
     "enabled": true,
   },
@@ -194,6 +195,7 @@
 
     "TOML": {
       "formatter": { "language_server": { "name": "tombi" } },
+      "language_servers": ["tombi", "!taplo"],
     },
   },
 
