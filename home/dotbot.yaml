@@ -54,8 +54,6 @@
       path: ../assets/wallpaper
       glob: true
       create: true
-      
-
 
 - create:
     - ~/Documents/obsidian

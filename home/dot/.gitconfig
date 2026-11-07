@@ -37,3 +37,8 @@
 	defaultBranch = master
 [rerere]
 	enabled = true
+
+[filter "pi-settings"]
+# Pi is stupid when it comes to XDG and proper settings files
+	clean = jq 'del(.deviceId, .lastChangelogVersion, .extensionChangelogVersions)'
+	required = true

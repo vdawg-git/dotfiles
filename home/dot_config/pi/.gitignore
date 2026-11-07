@@ -8,5 +8,6 @@ projects-memory
 pi-web-access
 pi-hermes-memory
 crashes.json
+web-search-cache
 .pi-hermes-locks*
 !pi-hermes-memory/USER.md
