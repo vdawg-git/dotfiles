@@ -24,5 +24,6 @@
   ],
   "terminal": {
     "showTerminalProgress": false
-  }
+  },
+  "hideThinkingBlock": true
 }

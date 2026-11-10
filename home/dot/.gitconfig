@@ -3,7 +3,8 @@
 	email = vdawg@tuta.io
 
 [core]
-    pager = delta
+  pager = delta
+  excludesFile = /home/vdawg/.config/git/ignore
 
 [interactive]
     diffFilter = delta --color-only
@@ -40,5 +41,5 @@
 
 [filter "pi-settings"]
 # Pi is stupid when it comes to XDG and proper settings files
-	clean = jq 'del(.deviceId, .lastChangelogVersion, .extensionChangelogVersions)'
+	clean = jq 'del(.deviceId, .lastChangelogVersion, .extensionChangelogVersions, hideThinkingBlock)'
 	required = true

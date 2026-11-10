@@ -16,6 +16,7 @@ image/jpeg=org.gnome.eog.desktop
 image/exr=tev.desktop
 x-scheme-handler/bitwarden=bitwarden.desktop
 text/plain=nvim.desktop
+x-scheme-handler/ton=org.telegram.desktop.desktop
 
 [Added Associations]
 x-scheme-handler/tg=org.telegram.desktop.desktop;
@@ -25,3 +26,4 @@ image/jpeg=org.gnome.eog.desktop;
 image/exr=tev.desktop;
 x-scheme-handler/bitwarden=bitwarden.desktop;
 text/plain=nvim.desktop;
+x-scheme-handler/ton=org.telegram.desktop.desktop;
